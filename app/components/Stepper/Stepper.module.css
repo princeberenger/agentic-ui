@@ -49,6 +49,12 @@
   border-color: var(--color-border-medium);
 }
 
+.stepCompleted:focus-visible,
+.stepDisabled:focus-visible {
+  outline: 2px solid var(--color-border-strong);
+  outline-offset: 2px;
+}
+
 .stepCompleted:hover::after {
   background: var(--color-hover-overlay);
 }
