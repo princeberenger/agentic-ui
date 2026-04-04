@@ -1,13 +1,266 @@
+/* ==========================================================================
+   AGENTIC DESIGN SYSTEM — Design Tokens
+   Source of truth: Figma AGENTIC-DESIGN-SYSTEM v1.1
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. COLOR PRIMITIVES
+   -------------------------------------------------------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f7f7f7;
+  --color-bg-tertiary: #e0e0e0;
+
+  /* Content */
+  --color-content-primary: #191919;
+  --color-content-secondary: #616161;
+  --color-content-disabled: #e0e0e0;
+  --color-content-icon: #8f8f8f;
+
+  /* Border */
+  --color-border-subtle: #e5e5e5;
+  --color-border-medium: #8f8f8f;
+  --color-border-strong: #000000;
+
+  /* Content — Success */
+  --color-content-success: #1b561a;
+
+  /* Badge */
+  --color-badge-label-gray: #363636;
+
+  /* Button */
+  --color-button-disabled: #f7f7f7;
+
+  /* Switch */
+  --color-switch-knob-active: #ffffff;
+  --color-switch-knob-inactive: #ffffff;
+  --color-switch-knob-icon: #000000;
+  --color-switch-bg-active: #000000;
+  --color-switch-bg-inactive: #e0e0e0;
+
+  /* Badge — Yellow */
+  --color-badge-bg-yellow: #fff8d5;
+  --color-badge-label-yellow: #553b06;
+
+  /* Interaction overlays */
+  --color-hover-overlay: rgba(0, 0, 0, 0.06);
+
+  /* Attention / Error */
+  --color-border-attention: #d50b0b;
+  --color-bg-attention-light: #ffdede;
+  --color-content-attention: #570303;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* --------------------------------------------------------------------------
+   2. TYPOGRAPHY PRIMITIVES
+   -------------------------------------------------------------------------- */
+:root {
+  /* Font Families */
+  --font-body: var(--font-geist), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: var(--font-new-york-large), "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --font-label: var(--font-departure-mono), "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-code: var(--font-jetbrains-mono), "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Font Sizes */
+  --text-super-tiny: 0.625rem;  /* 10px */
+  --text-button: 0.75rem;       /* 12px */
+  --text-tiny: 0.8125rem;       /* 13px */
+  --text-small: 0.875rem;       /* 14px */
+  --text-regular: 1rem;         /* 16px */
+  --text-medium: 1.125rem;      /* 18px */
+  --text-large: 1.25rem;        /* 20px */
+  --text-huge: 2rem;            /* 32px */
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* Line Heights */
+  --leading-buttons: 0.6875rem;  /* 11px */
+  --leading-tiny: 0.9375rem;     /* 15px */
+  --leading-small: 1.125rem;     /* 18px */
+  --leading-regular: 1.5rem;     /* 24px */
+  --leading-huge: 2.5rem;        /* 40px */
+
+  /* Letter Spacing */
+  --tracking-tight: -0.3px;
+  --tracking-normal: 0;
+  --tracking-spacious: 0.3px;
+}
+
+/* --------------------------------------------------------------------------
+   3. SPACING / PADDING
+   -------------------------------------------------------------------------- */
+:root {
+  --space-none: 0;
+  --space-2: 0.125rem;   /* 2px */
+  --space-4: 0.25rem;    /* 4px */
+  --space-8: 0.5rem;     /* 8px */
+  --space-10: 0.625rem;  /* 10px */
+  --space-12: 0.75rem;   /* 12px */
+  --space-16: 1rem;      /* 16px */
+  --space-20: 1.25rem;   /* 20px */
+  --space-24: 1.5rem;    /* 24px */
+  --space-128: 8rem;     /* 128px */
+}
+
+/* --------------------------------------------------------------------------
+   4. ICON SIZES
+   -------------------------------------------------------------------------- */
+:root {
+  --icon-12: 0.75rem;    /* 12px */
+  --icon-13: 0.8125rem;  /* 13px */
+  --icon-14: 0.875rem;   /* 14px */
+  --icon-16: 1rem;       /* 16px */
+  --icon-20: 1.25rem;    /* 20px */
+  --icon-24: 1.5rem;     /* 24px */
+  --icon-32: 2rem;       /* 32px */
+  --icon-40: 2.5rem;     /* 40px */
+}
+
+/* --------------------------------------------------------------------------
+   5. BORDER RADIUS
+   -------------------------------------------------------------------------- */
+:root {
+  --radius-xs: 0.25rem;    /* 4px — checkbox corners */
+  --radius-sm: 0.5rem;     /* 8px — Figma "sm" = 0.5 (in rem-like units) */
+  --radius-md: 0.75rem;    /* 12px — upload zones, detail blocks */
+  --radius-default: 1rem;  /* 16px — Figma "default" = 1 */
+  --radius-lg: 1.25rem;    /* 20px — cards, large containers */
+  --radius-full: 9999px;
+}
+
+/* --------------------------------------------------------------------------
+   6. SHADOWS / ELEVATION
+   -------------------------------------------------------------------------- */
+:root {
+  --shadow-elevation-2:
+    0 8px 16px -8px rgba(0, 0, 0, 0.04),
+    0 6px 6px -3px rgba(0, 0, 0, 0.04),
+    0 3px 3px -1.5px rgba(0, 0, 0, 0.04),
+    0 1px 1px -0.5px rgba(0, 0, 0, 0.04);
+
+  --shadow-elevation-4:
+    0 0 0 1px rgba(0, 0, 0, 0.08),
+    0 16px 16px 0 rgba(0, 0, 0, 0.04),
+    0 12px 12px 0 rgba(0, 0, 0, 0.04),
+    0 6px 6px 0 rgba(0, 0, 0, 0.04),
+    0 3px 3px 0 rgba(0, 0, 0, 0.04),
+    0 1px 1px -0.5px rgba(0, 0, 0, 0.04);
+
+  --shadow-switch-toggle:
+    0 6px 6px 0 rgba(0, 0, 0, 0.04),
+    0 3px 3px 0 rgba(0, 0, 0, 0.04),
+    0 1px 1px 0 rgba(0, 0, 0, 0.04),
+    inset 1px 2px 3px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   7. COMPOSITE TYPOGRAPHY SYSTEM
+   Usage: apply these classes directly or reference the individual tokens.
+   ========================================================================== */
+
+/* --- Headings (New York Large) --- */
+.heading-h1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-huge);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-huge);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-content-primary);
+}
+
+.heading-h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-large);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-regular);
+  letter-spacing: var(--tracking-normal);
+  color: var(--color-content-primary);
+}
+
+.heading-h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-medium);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-regular);
+  letter-spacing: var(--tracking-normal);
+  color: var(--color-content-primary);
+}
+
+/* --- Body (Geist) --- */
+.body-md {
+  font-family: var(--font-body);
+  font-size: var(--text-regular);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-regular);
+  letter-spacing: var(--tracking-normal);
+  color: var(--color-content-primary);
+}
+
+.body-sm {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-normal);
+  color: var(--color-content-primary);
+}
+
+.body-xs {
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-normal);
+  color: var(--color-content-primary);
+}
+
+/* --- Labels (Departure Mono) --- */
+.label-md {
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  /* Departure Mono only has weight 400 — avoid synthetic bold */
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  color: var(--color-content-primary);
+}
+
+/* --- Button Label (Departure Mono) --- */
+.button-label-sm {
+  font-family: var(--font-label);
+  font-size: var(--text-super-tiny);
+  /* Departure Mono only has weight 400 — avoid synthetic bold */
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-buttons);
+  letter-spacing: var(--tracking-normal);
+  text-transform: uppercase;
+  color: var(--color-content-primary);
+}
+
+/* --- Code (JetBrains Mono) --- */
+.code-md {
+  font-family: var(--font-code);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-normal);
+  color: var(--color-content-primary);
+}
+
+/* ==========================================================================
+   8. BASE RESET & DEFAULTS
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -24,26 +277,17 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  font-size: var(--text-regular);
+  line-height: var(--leading-regular);
+  color: var(--color-content-primary);
+  background: var(--color-bg-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  text-rendering: optimizeLegibility;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
