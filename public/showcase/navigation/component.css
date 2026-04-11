@@ -1,0 +1,395 @@
+/* ==========================================================================
+   Navigation Component Showcase — Design Tokens & Styles
+   Source: Figma AGENTIC-DESIGN-SYSTEM v1.2 (node 230:699)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESIGN TOKENS (CSS Custom Properties)
+   -------------------------------------------------------------------------- */
+:root {
+  /* --- Colors --- */
+  --color-bg-primary: #ffffff;           /* BACKGROUND/Primary */
+  --color-bg-secondary: #f7f7f7;         /* BACKGROUND/Secondary */
+  --color-content-primary: #191919;      /* CONTENT/Primary */
+  --color-content-secondary: #616161;    /* CONTENT/Secondary */
+  --color-content-icon: #8f8f8f;         /* CONTENT/Icon */
+  --color-border-subtle: #e5e5e5;        /* BORDER/Subtle */
+  --color-button-secondary: #ffffff;     /* BUTTON/Secondary */
+  --color-transparent-8: rgba(0, 0, 0, 0.08); /* Transparent 8% */
+
+  /* --- Spacing --- */
+  --space-none: 0;              /* PADDING/none */
+  --space-2: 0.125rem;          /* PADDING/2 — 2px */
+  --space-4: 0.25rem;           /* PADDING/4 — 4px */
+  --space-8: 0.5rem;            /* PADDING/8 — 8px */
+  --space-12: 0.75rem;          /* PADDING/12 — 12px */
+  --space-16: 1rem;             /* PADDING/16 — 16px */
+  --space-24: 1.5rem;           /* PADDING/24 — 24px */
+  --space-32: 2rem;             /* PADDING/32 — 32px */
+
+  /* --- Border Radius --- */
+  --radius-xs: 0.25rem;         /* 4px */
+  --radius-sm: 0.5rem;          /* 8px */
+  --radius-md: 0.75rem;         /* 12px */
+
+  /* --- Typography — Families --- */
+  --font-body: 'Geist', system-ui, -apple-system, sans-serif;
+  --font-label: 'Departure Mono', 'SF Mono', Menlo, monospace;
+
+  /* --- Typography — Sizes --- */
+  --text-button: 0.75rem;       /* 12px — size/Button */
+  --text-tiny: 0.8125rem;       /* 13px — size/Tiny */
+  --text-small: 0.875rem;       /* 14px — size/Small */
+  --text-regular: 1rem;         /* 16px — size/Regular */
+
+  /* --- Typography — Weights --- */
+  --weight-regular: 400;        /* weight/Regular */
+  --weight-medium: 500;         /* weight/Medium */
+
+  /* --- Typography — Line Heights --- */
+  --leading-tiny: 0.9375rem;    /* 15px — line-height/Tiny Text */
+  --leading-small: 1.125rem;    /* 18px — line-height/Small Text */
+  --leading-regular: 1.5rem;    /* 24px — line-height/Regular Text */
+
+  /* --- Typography — Letter Spacing --- */
+  --tracking-normal: 0;
+  --tracking-spacious: 0.3px;
+
+  /* --- Icon Sizes --- */
+  --icon-12: 0.75rem;           /* ICONS/12 — 12px */
+  --icon-16: 1rem;              /* ICONS/16 — 16px */
+  --icon-20: 1.25rem;           /* ICONS/20 — 20px */
+  --icon-24: 1.5rem;            /* ICONS/24 — 24px */
+
+  /* --- Shadows --- */
+  --shadow-elevation-4:
+    0 0 0 1px rgba(0, 0, 0, 0.08),
+    0 16px 16px 0 rgba(0, 0, 0, 0.04),
+    0 12px 12px 0 rgba(0, 0, 0, 0.04),
+    0 6px 6px 0 rgba(0, 0, 0, 0.04),
+    0 3px 3px 0 rgba(0, 0, 0, 0.04),
+    0 1px 1px -0.5px rgba(0, 0, 0, 0.04);
+}
+
+
+/* --------------------------------------------------------------------------
+   2. NAVIGATION — Base Shell
+   -------------------------------------------------------------------------- */
+.bn-navigation {
+  display: flex;
+  flex-direction: column;
+  width: 247px;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  font-family: var(--font-label);
+}
+
+.bn-navigation-full {
+  height: 100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. NAVIGATION — Logo Header
+   -------------------------------------------------------------------------- */
+.bn-nav-logo {
+  display: flex;
+  align-items: center;
+  padding: var(--space-24) var(--space-24) var(--space-16);
+  flex-shrink: 0;
+}
+
+.bn-nav-logo-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.bn-nav-logo-wordmark {
+  display: inline-block;
+  width: 75px;
+  height: 20px;
+  background-color: var(--color-content-primary);
+  mask-image: url('/assets/logo-wordmark.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: left center;
+  -webkit-mask-image: url('/assets/logo-wordmark.svg');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: left center;
+  flex-shrink: 0;
+}
+
+.bn-nav-menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-content-icon);
+  flex-shrink: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. NAVIGATION — Body (scrollable link area)
+   -------------------------------------------------------------------------- */
+.bn-nav-body {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-24) var(--space-24) 0 var(--space-16);
+  gap: var(--space-4);
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.bn-nav-body-tree {
+  gap: var(--space-16);
+}
+
+
+/* --------------------------------------------------------------------------
+   5. NAVIGATION — Footer
+   -------------------------------------------------------------------------- */
+.bn-nav-footer {
+  display: flex;
+  align-items: center;
+  padding: var(--space-24);
+  flex-shrink: 0;
+}
+
+.bn-nav-user-settings {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.bn-nav-user-name {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-normal);
+  color: var(--color-content-primary);
+}
+
+.bn-nav-overflow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-content-primary);
+  flex-shrink: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. NAV-LINK — Link Type (default + hover)
+   -------------------------------------------------------------------------- */
+.bn-nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--color-content-primary);
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--font-label);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-normal);
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.bn-nav-link:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.bn-nav-link-full {
+  width: 100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   7. NAV-LINK — Label Type (non-interactive header)
+   -------------------------------------------------------------------------- */
+.bn-nav-link-label {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: var(--space-8);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-label);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-normal);
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-content-secondary);
+  cursor: default;
+  flex-shrink: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. NAV-LINK — Chevron Wrapper
+   -------------------------------------------------------------------------- */
+.bn-nav-link-chevron {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   9. NAV-SUB-LINK — States (default, hover, active)
+   -------------------------------------------------------------------------- */
+.bn-sub-link {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: var(--space-8);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  font-family: var(--font-label);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-normal);
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-content-secondary);
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.bn-sub-link:hover {
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--color-content-primary);
+}
+
+.bn-sub-link-active {
+  gap: var(--space-4);
+  color: var(--color-content-primary);
+  width: 100%;
+}
+
+.bn-sub-link-indicator {
+  width: 8px;
+  height: 12px;
+  background: var(--color-content-primary);
+  flex-shrink: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   10. NAV-SECTION — Tree section wrappers
+   -------------------------------------------------------------------------- */
+.bn-nav-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.bn-nav-section-divider {
+  padding-top: var(--space-24);
+}
+
+.bn-sub-links-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--space-16);
+  width: 100%;
+}
+
+.bn-sub-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-left: var(--space-16);
+  border-left: 1px solid var(--color-border-subtle);
+}
+
+
+/* --------------------------------------------------------------------------
+   11. ICON — Mask-based rendering
+   -------------------------------------------------------------------------- */
+.bn-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  background-color: currentColor;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.bn-icon-16 {
+  width: var(--icon-16);
+  height: var(--icon-16);
+}
+
+.bn-icon-24 {
+  width: var(--icon-24);
+  height: var(--icon-24);
+}
+
+
+/* --------------------------------------------------------------------------
+   12. STATE CLASSES — for showcase interactive demos
+   -------------------------------------------------------------------------- */
+.bn-state-hover {
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+
+.bn-state-active .bn-sub-link {
+  color: var(--color-content-primary);
+}
+
+.bn-state-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   13. FOCUS STYLES — Accessibility
+   -------------------------------------------------------------------------- */
+.bn-nav-link:focus-visible,
+.bn-sub-link:focus-visible,
+.bn-nav-menu-toggle:focus-visible,
+.bn-nav-overflow-btn:focus-visible {
+  outline: 2px solid var(--color-content-primary);
+  outline-offset: 2px;
+}

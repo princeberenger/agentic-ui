@@ -1,0 +1,445 @@
+/* ==========================================================================
+   STYLE TESTER - 3
+   Assembled component patterns — 1280x800 reference
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Page Shell
+   -------------------------------------------------------------------------- */
+.page {
+  width: 1280px;
+  height: 800px;
+  background: var(--color-bg-tertiary);
+  border-radius: 24px;
+  padding: var(--space-24);
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 404px 404px 400px;
+  grid-template-rows: 370px 370px;
+  gap: var(--space-12);
+  height: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Card Base
+   -------------------------------------------------------------------------- */
+.card {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Contacts Navigation Card (Top Left)
+   -------------------------------------------------------------------------- */
+.contactsTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-huge);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-huge);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-content-primary);
+}
+
+.contactsSubtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-regular);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-regular);
+  color: var(--color-content-secondary);
+  margin-top: var(--space-8);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border-subtle);
+  margin: var(--space-24) 0;
+  flex-shrink: 0;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  list-style: none;
+}
+
+.linkItem {
+  font-family: var(--font-heading);
+  font-size: var(--text-large);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-regular);
+  color: var(--color-content-primary);
+}
+
+.linkItemSmall {
+  composes: linkItem;
+  font-size: var(--text-medium);
+}
+
+.linkDivider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   Rate Sheet Details Card (Bottom Left)
+   -------------------------------------------------------------------------- */
+.kvList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.kvPair {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.kvLabel {
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  /* Departure Mono only has weight 400 — avoid synthetic bold */
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+}
+
+.kvValue {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  color: var(--color-content-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Enable Alerts Card (Top Middle)
+   -------------------------------------------------------------------------- */
+.alertsTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-large);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-regular);
+  color: var(--color-content-primary);
+}
+
+.switchList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  margin-top: var(--space-24);
+}
+
+.switchRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-16);
+  cursor: pointer;
+}
+
+.switchTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  flex: 1;
+  min-width: 0;
+}
+
+.switchLabel {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  color: var(--color-content-primary);
+}
+
+.switchDescription {
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  color: var(--color-content-secondary);
+}
+
+/* Switch toggle — small variant (29x16) */
+.switchTrack {
+  width: 29px;
+  height: 16px;
+  border-radius: var(--radius-full);
+  background: var(--color-switch-bg-inactive);
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 1px;
+  box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+}
+
+.switchTrackActive {
+  composes: switchTrack;
+  background: var(--color-switch-bg-active);
+}
+
+.switchKnob {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+  background: var(--color-switch-knob-inactive);
+  box-shadow: var(--shadow-switch-toggle);
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: left 0.15s ease;
+}
+
+.switchKnobActive {
+  composes: switchKnob;
+  background: var(--color-switch-knob-active);
+  left: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   Parse Result Summary Card (Bottom Middle)
+   -------------------------------------------------------------------------- */
+.parseTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-large);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-regular);
+  color: var(--color-content-primary);
+}
+
+.codeBlockWrapper {
+  margin-top: var(--space-24);
+  background: var(--color-bg-secondary);
+  border: 0.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-16);
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  min-height: 0;
+}
+
+.copyButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-content-icon);
+  border-radius: var(--radius-sm);
+  padding: 0;
+}
+
+.copyButton:hover {
+  background: var(--color-hover-overlay);
+}
+
+.codeText {
+  font-family: var(--font-code);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  color: var(--color-content-primary);
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.showMore {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  height: var(--icon-24);
+  padding: var(--space-8);
+  font-family: var(--font-label);
+  font-size: var(--text-super-tiny);
+  /* Departure Mono only has weight 400 — avoid synthetic bold */
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-buttons);
+  letter-spacing: var(--tracking-normal);
+  text-transform: uppercase;
+  color: var(--color-content-primary);
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: var(--radius-xs);
+}
+
+.showMore:hover {
+  background: var(--color-hover-overlay);
+}
+
+.showMoreIcon {
+  color: var(--color-content-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Chat Interface Card (Right Column — spans both rows)
+   -------------------------------------------------------------------------- */
+.chatCard {
+  grid-row: 1 / 3;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-24) var(--space-12) var(--space-12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-12);
+}
+
+.chatLogo {
+  color: var(--color-content-primary);
+}
+
+.newChatButton {
+  height: 32px;
+  padding: 0 var(--space-12);
+  border-radius: var(--radius-sm);
+  border: none;
+  background: none;
+  font-family: var(--font-label);
+  font-size: var(--text-super-tiny);
+  /* Departure Mono only has weight 400 — avoid synthetic bold */
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-buttons);
+  letter-spacing: var(--tracking-normal);
+  text-transform: uppercase;
+  color: var(--color-content-primary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.newChatButtonIcon {
+  color: var(--color-content-icon);
+}
+
+.newChatButton:hover {
+  background: var(--color-hover-overlay);
+}
+
+/* Suggestion chips */
+.suggestionsArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-8);
+  margin-top: auto;
+  padding: 0 var(--space-12);
+}
+
+.suggestionChip {
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  color: var(--color-badge-label-gray);
+  height: 20px;
+  padding: var(--space-2) var(--space-10);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-primary);
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+.suggestionChip:hover {
+  background: var(--color-bg-tertiary);
+}
+
+/* Chat input */
+.chatInputWrapper {
+  background: var(--color-bg-primary);
+  border: 0.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elevation-2);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  height: 128px;
+  margin-top: var(--space-12);
+  flex-shrink: 0;
+}
+
+.chatInputPlaceholder {
+  font-family: var(--font-body);
+  font-size: var(--text-regular);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-regular);
+  color: var(--color-content-secondary);
+  padding: var(--space-8);
+  flex: 1;
+}
+
+.chatInputActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatIconButton {
+  width: var(--icon-40);
+  height: var(--icon-40);
+  border-radius: var(--radius-full);
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-content-icon);
+}
+
+.chatIconButton:hover {
+  background: var(--color-hover-overlay);
+}
+
+.chatActionsRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.sendButton {
+  width: var(--icon-40);
+  height: var(--icon-40);
+  border-radius: var(--radius-full);
+  border: none;
+  background: var(--color-button-disabled);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  color: var(--color-content-disabled);
+}

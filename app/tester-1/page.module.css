@@ -1,0 +1,521 @@
+/* ==========================================================================
+   STYLE TESTER - 1
+   Component showcase page — 1280x800 reference
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Page Shell
+   -------------------------------------------------------------------------- */
+.page {
+  min-height: 100vh;
+  background: var(--color-bg-secondary);
+  padding: var(--space-24);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 236px 1fr 1fr 1fr;
+  gap: var(--space-24);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Column 1 — Color Palettes (stacked, no card wrapper)
+   -------------------------------------------------------------------------- */
+.palettesColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.paletteCard {
+  width: 236px;
+  border-radius: var(--radius-default);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.paletteHeader {
+  position: relative;
+  height: 115px;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--space-12);
+}
+
+.paletteLabel {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  color: var(--color-bg-primary); /* white text on dark gradient */
+  position: relative;
+  z-index: 1;
+}
+
+.paletteSwatches {
+  display: flex;
+  height: 64px;
+}
+
+.paletteSwatch {
+  flex: 1;
+  min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Columns 2-4 — Component Cards (3x3 grid)
+   -------------------------------------------------------------------------- */
+.cardsGrid {
+  grid-column: 2 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-24);
+}
+
+.card {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-default);
+  padding: var(--space-24);
+  display: flex;
+  flex-direction: column;
+  min-height: 243px;
+  position: relative;
+}
+
+.cardLabel {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  color: var(--color-content-secondary);
+  margin-bottom: var(--space-16);
+}
+
+/* --------------------------------------------------------------------------
+   Card 1, 4, 7 — Typography Showcase (Aa)
+   -------------------------------------------------------------------------- */
+.typographyDisplay {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aaHeading {
+  font-family: var(--font-heading);
+  font-size: 120px;
+  font-weight: var(--weight-regular);
+  line-height: 1;
+  color: var(--color-content-primary);
+  letter-spacing: var(--tracking-tight);
+}
+
+.aaBody {
+  font-family: var(--font-body);
+  font-size: 120px;
+  font-weight: var(--weight-regular);
+  line-height: 1;
+  color: var(--color-content-primary);
+}
+
+.aaLabel {
+  font-family: var(--font-label);
+  font-size: 120px;
+  font-weight: var(--weight-regular);
+  line-height: 1;
+  color: var(--color-content-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Card 2 — Buttons
+   -------------------------------------------------------------------------- */
+.buttonsStack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+.btnBase {
+  height: 40px;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-label);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+}
+
+.btnPrimary {
+  composes: btnBase;
+  background: var(--color-content-primary);
+  color: var(--color-bg-primary);
+}
+
+.btnSecondary {
+  composes: btnBase;
+  background: var(--color-bg-primary);
+  color: var(--color-content-primary);
+  border: 0.5px solid var(--color-border-subtle);
+}
+
+.btnGhost {
+  composes: btnBase;
+  color: var(--color-content-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Card 3 — Search Input
+   -------------------------------------------------------------------------- */
+.searchWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchInput {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  background: var(--color-bg-secondary);
+  border: 0.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-default);
+  height: 40px;
+  width: 235px;
+  padding: 0 var(--space-12);
+}
+
+.searchIcon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  color: var(--color-content-icon);
+}
+
+.searchPlaceholder {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  color: var(--color-content-secondary);
+}
+
+.searchShortcut {
+  flex-shrink: 0;
+  background: var(--color-bg-secondary);
+  border: 0.5px solid var(--color-border-subtle);
+  border-radius: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  /* Departure Mono only has weight 400 — avoid synthetic bold */
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  color: var(--color-content-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Card 5 — Progress Bars
+   -------------------------------------------------------------------------- */
+.progressStack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 34px;
+}
+
+.progressRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.progressTrack {
+  flex: 1;
+  height: 4px;
+  background: var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--color-content-primary);
+  border-radius: var(--radius-full);
+}
+
+.progressLabel {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  color: var(--color-content-primary);
+  min-width: 32px;
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   Card 6 — Tab Group
+   -------------------------------------------------------------------------- */
+.tabGroupWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-default);
+  padding: var(--space-4);
+}
+
+.tab {
+  padding: var(--space-12) var(--space-24);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  /* Departure Mono only has weight 400 — avoid synthetic bold */
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--color-content-secondary);
+}
+
+.tabActive {
+  composes: tab;
+  background: var(--color-bg-primary);
+  color: var(--color-content-primary);
+  box-shadow: var(--shadow-elevation-2);
+}
+
+/* --------------------------------------------------------------------------
+   Card 8 — Badges + Controls (split card)
+   -------------------------------------------------------------------------- */
+.splitCard {
+  display: flex;
+  gap: var(--space-24);
+  min-height: 243px;
+}
+
+.splitHalf {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-default);
+  padding: var(--space-24);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Badges */
+.badgesStack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-16);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-2) var(--space-10);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  width: fit-content;
+}
+
+.badgeQueued {
+  composes: badge;
+  background: #e2ddfd;
+  color: #271a68;
+}
+
+.badgePending {
+  composes: badge;
+  background: #fef3c7;
+  color: #78350f;
+}
+
+.badgeSuccess {
+  composes: badge;
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badgeFailed {
+  composes: badge;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badgePassed {
+  composes: badge;
+  background: #f3f4f6;
+  color: var(--color-content-primary);
+}
+
+/* Controls */
+.controlsStack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 36px;
+}
+
+.controlRow {
+  display: flex;
+  align-items: center;
+  gap: 53px;
+}
+
+/* Radio buttons */
+.radio {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.radioSelected {
+  composes: radio;
+  border-color: var(--color-content-primary);
+}
+
+.radioDot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--color-content-primary);
+}
+
+/* Checkboxes */
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.checkboxSelected {
+  composes: checkbox;
+  background: var(--color-content-primary);
+  border-color: var(--color-content-primary);
+}
+
+.checkmark {
+  color: var(--color-bg-primary);
+  width: 14px;
+  height: 14px;
+}
+
+/* Switches */
+.switch {
+  width: 44px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background: var(--color-switch-bg-inactive);
+  position: relative;
+  cursor: pointer;
+  padding: var(--space-2);
+}
+
+.switchActive {
+  composes: switch;
+  background: var(--color-switch-bg-active);
+}
+
+.switchKnob {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--color-switch-knob-inactive);
+  box-shadow: var(--shadow-switch-toggle);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.15s ease;
+}
+
+.switchKnobActive {
+  composes: switchKnob;
+  left: 22px;
+  background: var(--color-switch-knob-active);
+}
+
+/* --------------------------------------------------------------------------
+   Card 9 — Menu / Dropdown
+   -------------------------------------------------------------------------- */
+.menuWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  width: 160px;
+  border: 0.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-default);
+  overflow: hidden;
+  box-shadow: var(--shadow-elevation-2);
+  background: var(--color-bg-primary);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: var(--space-8) var(--space-12);
+  min-height: 40px;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  color: var(--color-content-primary);
+  cursor: pointer;
+}
+
+.menuItemSelected {
+  composes: menuItem;
+  background: var(--color-bg-secondary);
+  font-weight: var(--weight-medium);
+}

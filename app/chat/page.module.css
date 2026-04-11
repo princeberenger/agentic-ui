@@ -1,0 +1,428 @@
+/* ==========================================================================
+   CHAT DEMO PAGE
+   Source: Figma AGENTIC-DESIGN-SYSTEM v1.2 — node 4041:887
+   ========================================================================== */
+.demo {
+  width: 1280px;
+  height: 800px;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-elevation-4);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header --- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-24) var(--space-24) 0;
+}
+
+.headerLeft,
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  display: inline-block;
+  width: 24px;
+  height: 20px;
+  background-color: currentColor;
+  color: var(--color-content-icon);
+  mask-image: url('/assets/logo-icon.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url('/assets/logo-icon.svg');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  flex-shrink: 0;
+}
+
+.headerSeparator {
+  width: 1px;
+  height: 20px;
+  background: var(--color-border-subtle);
+  transform: rotate(-25deg);
+  flex-shrink: 0;
+}
+
+.headerLabel {
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+}
+
+.kbdGroup {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.kbd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  min-height: 24px;
+  background: var(--color-bg-primary);
+  border: 0.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-body);
+  font-size: var(--text-regular);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-regular);
+  color: var(--color-content-secondary);
+  padding: var(--space-2);
+}
+
+/* ==========================================================================
+   CHAT THREAD
+   ========================================================================== */
+.thread {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  overflow-y: auto;
+  position: relative;
+}
+
+.threadContent {
+  width: 716px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* --- Divider --- */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  width: 100%;
+  margin-bottom: var(--space-24);
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border-subtle);
+}
+
+.dividerLabel {
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   AGENT STEPS (vertical timeline)
+   ========================================================================== */
+.steps {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: var(--space-8);
+}
+
+/* --- Step row --- */
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-8);
+  position: relative;
+}
+
+/* Vertical connector line */
+.step::before {
+  content: '';
+  position: absolute;
+  left: 7.5px;
+  top: 18px;
+  bottom: -2px;
+  width: 1px;
+  background: var(--color-border-subtle);
+}
+
+.step:last-child::before {
+  display: none;
+}
+
+/* Dot indicator */
+.stepDot {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.stepDotSmall {
+  composes: stepDot;
+}
+
+.stepDotSmall::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: var(--color-content-icon);
+}
+
+.stepDotMedium {
+  composes: stepDot;
+}
+
+.stepDotMedium::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--color-content-icon);
+}
+
+.stepDotLarge {
+  composes: stepDot;
+}
+
+.stepDotLarge::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-content-primary);
+}
+
+/* Step label row */
+.stepLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: 0 0 var(--space-8);
+  flex: 1;
+}
+
+.stepIcon {
+  color: var(--color-content-icon);
+}
+
+.stepName {
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+}
+
+.stepChevron {
+  color: var(--color-content-icon);
+}
+
+/* Active step with gradient text */
+.stepNameActive {
+  composes: stepName;
+  background: linear-gradient(to right, var(--color-content-primary) 19.231%, var(--color-content-disabled));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ==========================================================================
+   SUBTASKS (indented under a step)
+   ========================================================================== */
+.subtasks {
+  display: flex;
+  flex-direction: column;
+  padding-left: 27px;
+  padding-bottom: var(--space-4);
+}
+
+.subtask {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-2) 0;
+  position: relative;
+}
+
+/* L-shaped branch connector */
+.subtask::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 0;
+  width: 11px;
+  height: 50%;
+  border-left: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+  border-bottom-left-radius: 4px;
+}
+
+.subtaskIcon {
+  color: var(--color-content-icon);
+}
+
+.subtaskLabel {
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+}
+
+/* ==========================================================================
+   USER MESSAGE BUBBLE
+   ========================================================================== */
+.messageBubble {
+  align-self: flex-end;
+  max-width: 560px;
+  padding: var(--space-8) var(--space-12);
+  background: var(--color-bg-primary);
+  border: 0.5px solid var(--color-border-subtle);
+  border-radius: 12px 12px 4px 12px;
+  box-shadow:
+    0 1px 2px 0 rgba(0, 0, 0, 0.05),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+  font-family: var(--font-body);
+  font-size: var(--text-regular);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-regular);
+  color: var(--color-content-primary);
+  margin: var(--space-8) 0 var(--space-16);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.messageBubble:hover {
+  background: var(--color-hover-overlay);
+}
+
+.messageBubble:focus-visible {
+  outline: 2px solid var(--color-border-strong);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   RESPONSE TEXT
+   ========================================================================== */
+.responseText {
+  font-family: var(--font-body);
+  font-size: var(--text-regular);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-regular);
+  color: var(--color-content-primary);
+  padding-left: 24px;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-16);
+}
+
+/* ==========================================================================
+   CHAT INPUT
+   ========================================================================== */
+.inputWrapper {
+  padding: 0 calc((100% - 716px) / 2) var(--space-12);
+}
+
+.chatInput {
+  width: 716px;
+  height: 128px;
+  background: var(--color-bg-primary);
+  border: 0.5px solid var(--color-border-subtle);
+  border-radius: 20px;
+  box-shadow: var(--shadow-elevation-2);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-8);
+  transition: border-color 0.15s ease;
+}
+
+.chatInput:focus-within {
+  border-color: var(--color-border-strong);
+}
+
+.chatInputArea {
+  flex: 1;
+  padding: var(--space-8);
+}
+
+.chatInputPlaceholder {
+  font-family: var(--font-body);
+  font-size: var(--text-regular);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-regular);
+  color: var(--color-content-secondary);
+}
+
+.chatInputActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionsLeft {
+  display: flex;
+  align-items: center;
+}
+
+.actionsRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Chat input round buttons */
+.chatButton {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-content-icon);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.chatButton:hover {
+  background: var(--color-hover-overlay);
+  color: var(--color-content-primary);
+}
+
+.chatButton:focus-visible {
+  outline: 2px solid var(--color-border-strong);
+  outline-offset: 2px;
+}
+
+.chatButtonDisabled {
+  composes: chatButton;
+  background: var(--color-button-disabled);
+  color: var(--color-content-disabled);
+  cursor: default;
+  pointer-events: none;
+}

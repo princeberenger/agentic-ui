@@ -1,0 +1,63 @@
+/* Navigation Demo Page */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-bg-primary);
+  padding: var(--space-24);
+  gap: var(--space-24);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-huge);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-huge);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-content-primary);
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  line-height: var(--leading-small);
+  color: var(--color-content-secondary);
+  max-width: 600px;
+}
+
+/* === Demo Container === */
+.demoContainer {
+  display: flex;
+  gap: var(--space-24);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.demoCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.demoLabel {
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+}
+
+.navWrapper {
+  height: 617px;
+  box-shadow: var(--shadow-elevation-4);
+  border-radius: var(--radius-sm);
+}

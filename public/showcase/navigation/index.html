@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Component Showcase</title>
+  <link rel="stylesheet" href="component.css">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      src: url('/fonts/Geist-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Geist';
+      src: url('/fonts/Geist-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Departure Mono';
+      src: url('/fonts/DepartureMono-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      font-family: 'Geist', system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8fafc;
+      color: #1f2937;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .showcase-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Header */
+    .showcase-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .showcase-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin: 0 0 0.5rem;
+    }
+    .showcase-header p {
+      color: #6b7280;
+      font-size: 1.125rem;
+      margin: 0 0 1.5rem;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .stat-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 0.75rem 1.25rem;
+      text-align: center;
+      min-width: 140px;
+    }
+    .stat-card .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #191919;
+    }
+    .stat-card .stat-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.25rem;
+    }
+
+    /* Reset Button */
+    .reset-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #191919;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .reset-btn:hover { opacity: 0.85; }
+
+    /* Sections */
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+    .section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin: 0 0 0.25rem;
+    }
+    .section .section-desc {
+      color: #6b7280;
+      font-size: 0.9375rem;
+      margin: 0 0 1.5rem;
+    }
+
+    /* Component Grid */
+    .component-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    /* Single Demo Box */
+    .demo-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .demo-box .demo-label {
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      font-weight: 600;
+    }
+
+    /* Code Sections */
+    .code-section {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1.5rem;
+    }
+    .code-section summary {
+      cursor: pointer;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      user-select: none;
+    }
+    .code-block {
+      background: #1f2937;
+      color: #f9fafb;
+      font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-top: 0.75rem;
+      white-space: pre;
+    }
+
+    /* Inline component wrapper for sub-components */
+    .inline-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    /* Table styles for token reference */
+    .token-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    .token-table th {
+      text-align: left;
+      padding: 0.625rem 0.75rem;
+      background: #f8fafc;
+      border-bottom: 2px solid #e5e7eb;
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #6b7280;
+    }
+    .token-table td {
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #f3f4f6;
+      vertical-align: top;
+    }
+    .token-table code {
+      background: #f3f4f6;
+      padding: 0.125rem 0.375rem;
+      border-radius: 4px;
+      font-family: 'Monaco', monospace;
+      font-size: 0.75rem;
+    }
+    .color-swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      border: 1px solid #e5e7eb;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    /* Interactive examples log */
+    .log-output {
+      background: #1f2937;
+      color: #86efac;
+      font-family: 'Monaco', monospace;
+      font-size: 0.75rem;
+      line-height: 1.8;
+      padding: 1rem;
+      border-radius: 6px;
+      min-height: 80px;
+      max-height: 200px;
+      overflow-y: auto;
+      margin-top: 1rem;
+    }
+    .log-output .log-entry {
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 2px 0;
+    }
+    .log-timestamp {
+      color: #6b7280;
+      margin-right: 0.5rem;
+    }
+
+    /* Sub-section labels */
+    .sub-heading {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #374151;
+      margin: 1.5rem 0 0.75rem;
+    }
+    .sub-heading:first-child {
+      margin-top: 0;
+    }
+
+    /* CSS class reference list */
+    .class-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.375rem;
+      font-size: 0.8125rem;
+    }
+    .class-list code {
+      background: #f3f4f6;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'Monaco', monospace;
+      font-size: 0.75rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useCallback, useRef, useEffect } = React;
+
+    /* ====================================================================
+       ICON — mask-based monochrome icon
+       ==================================================================== */
+    function Icon({ name, size = 16, className = '' }) {
+      const src = `/assets/icons/${name}.svg`;
+      const dim = size === 16 ? 'var(--icon-16)' : size === 24 ? 'var(--icon-24)' : `${size}px`;
+      return (
+        <span
+          role="presentation"
+          aria-hidden="true"
+          className={`bn-icon ${className}`}
+          style={{
+            width: dim,
+            height: dim,
+            maskImage: `url(${src})`,
+            WebkitMaskImage: `url(${src})`,
+          }}
+        />
+      );
+    }
+
+    /* ====================================================================
+       NAV-SUB-LINK
+       ==================================================================== */
+    function NavSubLink({ label, active, onClick, href }) {
+      const cls = `bn-sub-link ${active ? 'bn-sub-link-active' : ''}`;
+      const content = active ? (
+        <>
+          <span>../</span>
+          <span>{label}</span>
+          <span className="bn-sub-link-indicator" aria-hidden="true" />
+        </>
+      ) : (
+        <span>{label}</span>
+      );
+
+      if (href) {
+        return <a className={cls} href={href} aria-current={active ? 'page' : undefined}>{content}</a>;
+      }
+      return (
+        <button className={cls} type="button" onClick={onClick} aria-current={active ? 'page' : undefined}>
+          {content}
+        </button>
+      );
+    }
+
+    /* ====================================================================
+       NAV-LINK — Link + Label types
+       ==================================================================== */
+    function NavLink({ label, icon, href, active, chevron, expanded, asLabel, onClick }) {
+      if (asLabel) {
+        return <div className="bn-nav-link-label"><span>{label}</span></div>;
+      }
+      const cls = `bn-nav-link ${chevron ? 'bn-nav-link-full' : ''}`;
+      const inner = (
+        <>
+          {icon && <Icon name={icon} size={16} />}
+          <span>{label}</span>
+          {chevron && (
+            <span className="bn-nav-link-chevron">
+              <Icon name={expanded ? 'chevron-up' : 'chevron-down'} size={16} />
+            </span>
+          )}
+        </>
+      );
+
+      if (href) {
+        return <a className={cls} href={href} aria-current={active ? 'page' : undefined}>{inner}</a>;
+      }
+      return (
+        <button className={cls} type="button" onClick={onClick} aria-current={active ? 'page' : undefined} aria-expanded={chevron ? expanded : undefined}>
+          {inner}
+        </button>
+      );
+    }
+
+    /* ====================================================================
+       NAV-SECTION
+       ==================================================================== */
+    function NavSection({ children, label, icon, divider }) {
+      const isTree = Boolean(label && icon);
+      return (
+        <div className={`bn-nav-section ${divider ? 'bn-nav-section-divider' : ''}`}>
+          {label && !icon && <div className="bn-nav-link-label"><span>{label}</span></div>}
+          {isTree && (
+            <div className="bn-nav-link">
+              <Icon name={icon} size={16} />
+              <span>{label}</span>
+            </div>
+          )}
+          {isTree ? (
+            <div className="bn-sub-links-wrapper">
+              <div className="bn-sub-links-container">{children}</div>
+            </div>
+          ) : children}
+        </div>
+      );
+    }
+
+    /* ====================================================================
+       NAVIGATION — Full shell
+       ==================================================================== */
+    function Navigation({ children, userName = 'Alex', variant = 'classic', onToggle, onUserMenu, style }) {
+      return (
+        <nav className="bn-navigation" style={style}>
+          <div className="bn-nav-logo">
+            <div className="bn-nav-logo-container">
+              <span className="bn-nav-logo-wordmark" role="img" aria-label="Agentic UI" />
+              <button className="bn-nav-menu-toggle" onClick={onToggle} aria-label="Toggle navigation" type="button">
+                <Icon name="menu-open" size={16} />
+              </button>
+            </div>
+          </div>
+          <div className={`bn-nav-body ${variant === 'tree' ? 'bn-nav-body-tree' : ''}`}>
+            {children}
+          </div>
+          <div className="bn-nav-footer">
+            <div className="bn-nav-user-settings">
+              <span className="bn-nav-user-name">Hi, {userName}</span>
+              <button className="bn-nav-overflow-btn" onClick={onUserMenu} aria-label="User menu" type="button">
+                <Icon name="overflow-menu-vertical" size={16} />
+              </button>
+            </div>
+          </div>
+        </nav>
+      );
+    }
+
+
+    /* ====================================================================
+       SHOWCASE APP
+       ==================================================================== */
+    function ShowcaseApp() {
+      const [logs, setLogs] = useState([]);
+      const [activeLink, setActiveLink] = useState('Agents');
+      const [expandedSections, setExpandedSections] = useState({ monitor: true, orchestrate: true, delegate: true });
+      const logRef = useRef(null);
+
+      const addLog = useCallback((msg) => {
+        const ts = new Date().toLocaleTimeString();
+        setLogs(prev => [...prev, { ts, msg }]);
+      }, []);
+
+      useEffect(() => {
+        if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
+      }, [logs]);
+
+      const handleReset = () => {
+        setLogs([]);
+        setActiveLink('Agents');
+        setExpandedSections({ monitor: true, orchestrate: true, delegate: true });
+      };
+
+      const handleLinkClick = (label) => {
+        setActiveLink(label);
+        addLog(`NavLink clicked: "${label}"`);
+      };
+
+      const handleSubLinkClick = (label) => {
+        setActiveLink(label);
+        addLog(`NavSubLink clicked: "${label}" — now active`);
+      };
+
+      const handleToggleSection = (section) => {
+        setExpandedSections(prev => ({ ...prev, [section]: !prev[section] }));
+        addLog(`Section toggled: "${section}" → ${expandedSections[section] ? 'collapsed' : 'expanded'}`);
+      };
+
+      /* ---------- Variant Data ---------- */
+      const navTypes = [
+        { key: 'classic', label: 'Classic' },
+        { key: 'tree', label: 'Tree' },
+      ];
+
+      const navStates = [
+        { key: 'open', label: 'Open' },
+        { key: 'closed', label: 'Closed' },
+      ];
+
+      const navLinkTypes = [
+        { key: 'link-default', label: 'Link (Default)' },
+        { key: 'link-hover', label: 'Link (Hover)' },
+        { key: 'label', label: 'Label' },
+      ];
+
+      const subLinkStates = [
+        { key: 'default', label: 'Default' },
+        { key: 'hover', label: 'Hover' },
+        { key: 'active', label: 'Active' },
+      ];
+
+      const classicLinks = [
+        { icon: 'meter', label: 'Dashboard' },
+        { icon: 'event-schedule', label: 'Events' },
+        { icon: 'code', label: 'Agents' },
+        { icon: 'play', label: 'Playbooks' },
+        { icon: 'money', label: 'Campaigns' },
+      ];
+
+      return (
+        <div className="showcase-container">
+          {/* ── HEADER ── */}
+          <header className="showcase-header">
+            <h1>Navigation</h1>
+            <p>Enterprise sidebar navigation system with Classic and Tree layout variants.</p>
+            <div className="stats-grid">
+              <div className="stat-card">
+                <div className="stat-value">2</div>
+                <div className="stat-label">Type Variants</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">2</div>
+                <div className="stat-label">State Variants</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">3</div>
+                <div className="stat-label">NavLink Types</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">3</div>
+                <div className="stat-label">SubLink States</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-value">36</div>
+                <div className="stat-label">Total Combinations</div>
+              </div>
+            </div>
+            <button className="reset-btn" onClick={handleReset}>Reset All</button>
+          </header>
+
+
+          {/* ── SECTION 1: Navigation Types ── */}
+          <section className="section">
+            <h2>Navigation Types</h2>
+            <p className="section-desc">The two primary layout types: Classic (flat list) and Tree (hierarchical sections).</p>
+
+            <div className="component-grid">
+              {/* Classic */}
+              <div className="demo-box">
+                <div className="demo-label">Type = Classic, State = Open</div>
+                <Navigation variant="classic" onToggle={() => addLog('Toggle clicked (classic)')} onUserMenu={() => addLog('User menu clicked (classic)')}>
+                  {classicLinks.map(l => (
+                    <NavLink key={l.label} icon={l.icon} label={l.label} onClick={() => handleLinkClick(l.label)} />
+                  ))}
+                </Navigation>
+              </div>
+
+              {/* Tree */}
+              <div className="demo-box">
+                <div className="demo-label">Type = Tree, State = Open</div>
+                <Navigation variant="tree" onToggle={() => addLog('Toggle clicked (tree)')} onUserMenu={() => addLog('User menu clicked (tree)')}>
+                  <NavSection label="Monitor" icon="meter">
+                    <NavSubLink label="Dashboard" onClick={() => handleSubLinkClick('Dashboard')} active={activeLink === 'Dashboard'} />
+                    <NavSubLink label="Call History" onClick={() => handleSubLinkClick('Call History')} active={activeLink === 'Call History'} />
+                    <NavSubLink label="Live Calls" onClick={() => handleSubLinkClick('Live Calls')} active={activeLink === 'Live Calls'} />
+                  </NavSection>
+                  <NavSection label="Orchestrate" icon="load-balancer-classic">
+                    <NavSubLink label="Agents" onClick={() => handleSubLinkClick('Agents')} active={activeLink === 'Agents'} />
+                    <NavSubLink label="Campaigns" onClick={() => handleSubLinkClick('Campaigns')} active={activeLink === 'Campaigns'} />
+                    <NavSubLink label="Playbooks" onClick={() => handleSubLinkClick('Playbooks')} active={activeLink === 'Playbooks'} />
+                  </NavSection>
+                  <NavSection label="Delegate" icon="deploy">
+                    <NavSubLink label="Phone Numbers" onClick={() => handleSubLinkClick('Phone Numbers')} active={activeLink === 'Phone Numbers'} />
+                    <NavSubLink label="Voice Library" onClick={() => handleSubLinkClick('Voice Library')} active={activeLink === 'Voice Library'} />
+                    <NavSubLink label="Integrations" onClick={() => handleSubLinkClick('Integrations')} active={activeLink === 'Integrations'} />
+                    <NavSubLink label="Events" onClick={() => handleSubLinkClick('Events')} active={activeLink === 'Events'} />
+                  </NavSection>
+                </Navigation>
+              </div>
+
+              {/* Classic with Sections */}
+              <div className="demo-box">
+                <div className="demo-label">Classic + Section Labels</div>
+                <Navigation variant="classic" onToggle={() => addLog('Toggle clicked')} onUserMenu={() => addLog('User menu clicked')}>
+                  <NavLink label="Engage" asLabel />
+                  <NavLink icon="filter" label="Audiences" onClick={() => handleLinkClick('Audiences')} />
+                  <NavLink icon="code" label="Agents" onClick={() => handleLinkClick('Agents')} />
+                  <NavLink icon="send-alt" label="Sequences" onClick={() => handleLinkClick('Sequences')} />
+                  <NavLink icon="cut" label="Snippets" onClick={() => handleLinkClick('Snippets')} />
+                  <NavLink icon="play" label="Playbooks" onClick={() => handleLinkClick('Playbooks')} />
+                  <NavSection label="Dashboards" divider>
+                    <NavLink icon="direction-bear-right" label="Leading" chevron expanded onClick={() => handleToggleSection('leading')} />
+                    <NavLink icon="direction-loop-left" label="Lagging" chevron expanded={false} onClick={() => handleToggleSection('lagging')} />
+                    <NavLink icon="email" label="Email Backlog" onClick={() => handleLinkClick('Email Backlog')} />
+                  </NavSection>
+                </Navigation>
+              </div>
+            </div>
+
+            <details className="code-section">
+              <summary>Code Example</summary>
+              <div className="code-block">{`<Navigation variant="classic">
+  <NavLink icon="meter" label="Dashboard" />
+  <NavLink icon="event-schedule" label="Events" />
+  <NavLink icon="code" label="Agents" />
+  <NavLink icon="play" label="Playbooks" />
+  <NavLink icon="money" label="Campaigns" />
+</Navigation>
+
+<Navigation variant="tree">
+  <NavSection label="Monitor" icon="meter">
+    <NavSubLink label="Dashboard" />
+    <NavSubLink label="Call History" />
+    <NavSubLink label="Live Calls" />
+  </NavSection>
+  <NavSection label="Orchestrate" icon="load-balancer-classic">
+    <NavSubLink label="Agents" active />
+    <NavSubLink label="Campaigns" />
+    <NavSubLink label="Playbooks" />
+  </NavSection>
+</Navigation>`}</div>
+            </details>
+          </section>
+
+
+          {/* ── SECTION 2: NavLink Variants ── */}
+          <section className="section">
+            <h2>NavLink Variants</h2>
+            <p className="section-desc">The nav-link component supports two types: an interactive Link with optional icon and chevron, and a non-interactive Label for section headers.</p>
+
+            <h3 className="sub-heading">Type = Link (Default)</h3>
+            <div className="inline-grid">
+              <NavLink icon="meter" label="Dashboard" onClick={() => handleLinkClick('Dashboard')} />
+              <NavLink icon="code" label="Agents" onClick={() => handleLinkClick('Agents')} />
+              <NavLink icon="play" label="Playbooks" onClick={() => handleLinkClick('Playbooks')} />
+            </div>
+
+            <h3 className="sub-heading">Type = Link with Chevron</h3>
+            <div className="inline-grid" style={{ maxWidth: 247 }}>
+              <NavLink icon="direction-bear-right" label="Leading" chevron expanded onClick={() => addLog('Chevron link: Leading')} />
+              <NavLink icon="direction-loop-left" label="Lagging" chevron expanded={false} onClick={() => addLog('Chevron link: Lagging')} />
+            </div>
+
+            <h3 className="sub-heading">Type = Link (without Icon)</h3>
+            <div className="inline-grid">
+              <NavLink label="Dashboard" onClick={() => handleLinkClick('Dashboard')} />
+              <NavLink label="Settings" onClick={() => handleLinkClick('Settings')} />
+            </div>
+
+            <h3 className="sub-heading">Type = Label (Section Header)</h3>
+            <div className="inline-grid">
+              <NavLink label="Engage" asLabel />
+              <NavLink label="Dashboards" asLabel />
+              <NavLink label="Settings" asLabel />
+            </div>
+
+            <details className="code-section">
+              <summary>Code Example</summary>
+              <div className="code-block">{`{/* Link with icon */}
+<NavLink icon="meter" label="Dashboard" onClick={handleClick} />
+
+{/* Link with chevron (expandable section) */}
+<NavLink icon="direction-bear-right" label="Leading" chevron expanded />
+
+{/* Section header label */}
+<NavLink label="Engage" asLabel />`}</div>
+            </details>
+          </section>
+
+
+          {/* ── SECTION 3: NavSubLink States ── */}
+          <section className="section">
+            <h2>NavSubLink States</h2>
+            <p className="section-desc">Sub-links used inside tree sections. Three visual states: default (secondary color), hover, and active (with "../" prefix and indicator block).</p>
+
+            <div className="component-grid">
+              <div className="demo-box">
+                <div className="demo-label">State = Default</div>
+                <div style={{ padding: '8px', background: 'var(--color-bg-secondary)', borderRadius: 8 }}>
+                  <NavSubLink label="Dashboard" onClick={() => addLog('SubLink default: Dashboard')} />
+                </div>
+              </div>
+              <div className="demo-box">
+                <div className="demo-label">State = Hover</div>
+                <div style={{ padding: '8px', background: 'var(--color-bg-secondary)', borderRadius: 8 }}>
+                  <div className="bn-sub-link bn-state-hover" style={{ pointerEvents: 'none' }}>
+                    <span>Call History</span>
+                  </div>
+                </div>
+              </div>
+              <div className="demo-box">
+                <div className="demo-label">State = Active</div>
+                <div style={{ padding: '8px', background: 'var(--color-bg-secondary)', borderRadius: 8 }}>
+                  <NavSubLink label="Agents" active onClick={() => addLog('SubLink active: Agents')} />
+                </div>
+              </div>
+            </div>
+
+            <h3 className="sub-heading">In Context (with border)</h3>
+            <div style={{ background: 'var(--color-bg-secondary)', padding: 16, borderRadius: 8, maxWidth: 220 }}>
+              <div className="bn-sub-links-container">
+                <NavSubLink label="Dashboard" onClick={() => handleSubLinkClick('Dashboard')} active={activeLink === 'Dashboard'} />
+                <NavSubLink label="Call History" onClick={() => handleSubLinkClick('Call History')} active={activeLink === 'Call History'} />
+                <NavSubLink label="Live Calls" onClick={() => handleSubLinkClick('Live Calls')} active={activeLink === 'Live Calls'} />
+              </div>
+            </div>
+
+            <details className="code-section">
+              <summary>Code Example</summary>
+              <div className="code-block">{`{/* Default sub-link */}
+<NavSubLink label="Dashboard" onClick={handleClick} />
+
+{/* Active sub-link — shows "../" prefix + indicator */}
+<NavSubLink label="Agents" active onClick={handleClick} />
+
+{/* Inside a tree section */}
+<NavSection label="Monitor" icon="meter">
+  <NavSubLink label="Dashboard" />
+  <NavSubLink label="Agents" active />
+</NavSection>`}</div>
+            </details>
+          </section>
+
+
+          {/* ── SECTION 4: NavSection ── */}
+          <section className="section">
+            <h2>NavSection</h2>
+            <p className="section-desc">Grouping component for navigation links. In tree variant, renders with an icon header and indented sub-links with a left border.</p>
+
+            <div className="component-grid">
+              <div className="demo-box">
+                <div className="demo-label">Classic Section (Label Only)</div>
+                <div style={{ background: 'var(--color-bg-secondary)', padding: 16, borderRadius: 8, width: 220 }}>
+                  <NavSection label="Dashboards">
+                    <NavLink icon="direction-bear-right" label="Leading" onClick={() => addLog('Leading')} />
+                    <NavLink icon="direction-loop-left" label="Lagging" onClick={() => addLog('Lagging')} />
+                    <NavLink icon="email" label="Email Backlog" onClick={() => addLog('Email Backlog')} />
+                  </NavSection>
+                </div>
+              </div>
+              <div className="demo-box">
+                <div className="demo-label">Tree Section (Icon + Label)</div>
+                <div style={{ background: 'var(--color-bg-secondary)', padding: 16, borderRadius: 8, width: 220 }}>
+                  <NavSection label="Monitor" icon="meter">
+                    <NavSubLink label="Dashboard" onClick={() => addLog('Dashboard')} />
+                    <NavSubLink label="Call History" onClick={() => addLog('Call History')} />
+                    <NavSubLink label="Live Calls" onClick={() => addLog('Live Calls')} />
+                  </NavSection>
+                </div>
+              </div>
+              <div className="demo-box">
+                <div className="demo-label">Tree Section with Active Link</div>
+                <div style={{ background: 'var(--color-bg-secondary)', padding: 16, borderRadius: 8, width: 220 }}>
+                  <NavSection label="Orchestrate" icon="load-balancer-classic">
+                    <NavSubLink label="Agents" active onClick={() => addLog('Agents')} />
+                    <NavSubLink label="Campaigns" onClick={() => addLog('Campaigns')} />
+                    <NavSubLink label="Playbooks" onClick={() => addLog('Playbooks')} />
+                  </NavSection>
+                </div>
+              </div>
+            </div>
+
+            <details className="code-section">
+              <summary>Code Example</summary>
+              <div className="code-block">{`{/* Classic section with label header */}
+<NavSection label="Dashboards">
+  <NavLink icon="direction-bear-right" label="Leading" />
+  <NavLink icon="email" label="Email Backlog" />
+</NavSection>
+
+{/* Tree section with icon + label header + sub-links */}
+<NavSection label="Monitor" icon="meter">
+  <NavSubLink label="Dashboard" />
+  <NavSubLink label="Agents" active />
+</NavSection>`}</div>
+            </details>
+          </section>
+
+
+          {/* ── SECTION 5: Complete Matrix ── */}
+          <section className="section">
+            <h2>All Combinations</h2>
+            <p className="section-desc">All Navigation variant combinations: Type (classic, tree) x State (open) with all sub-component states.</p>
+
+            <div className="component-grid">
+              {/* Classic - Full */}
+              <div className="demo-box">
+                <div className="demo-label">Classic / Open / 5 Links</div>
+                <Navigation variant="classic" style={{ height: 500 }} onToggle={() => addLog('Toggle: classic')} onUserMenu={() => addLog('Menu: classic')}>
+                  {classicLinks.map(l => <NavLink key={l.label} icon={l.icon} label={l.label} onClick={() => handleLinkClick(l.label)} />)}
+                </Navigation>
+              </div>
+
+              {/* Classic with sections */}
+              <div className="demo-box">
+                <div className="demo-label">Classic / Open / Sections</div>
+                <Navigation variant="classic" style={{ height: 500 }} onToggle={() => addLog('Toggle: classic-sections')} onUserMenu={() => addLog('Menu: classic-sections')}>
+                  <NavLink label="Engage" asLabel />
+                  <NavLink icon="filter" label="Audiences" onClick={() => handleLinkClick('Audiences')} />
+                  <NavLink icon="code" label="Agents" onClick={() => handleLinkClick('Agents')} />
+                  <NavLink icon="send-alt" label="Sequences" onClick={() => handleLinkClick('Sequences')} />
+                  <NavSection label="Dashboards" divider>
+                    <NavLink icon="direction-bear-right" label="Leading" chevron expanded onClick={() => handleToggleSection('leading')} />
+                    <NavLink icon="direction-loop-left" label="Lagging" chevron expanded={false} onClick={() => handleToggleSection('lagging')} />
+                  </NavSection>
+                </Navigation>
+              </div>
+
+              {/* Tree - All sections */}
+              <div className="demo-box">
+                <div className="demo-label">Tree / Open / All Sections</div>
+                <Navigation variant="tree" style={{ height: 500 }} onToggle={() => addLog('Toggle: tree-all')} onUserMenu={() => addLog('Menu: tree-all')}>
+                  <NavSection label="Monitor" icon="meter">
+                    <NavSubLink label="Dashboard" onClick={() => handleSubLinkClick('Dashboard')} active={activeLink === 'Dashboard'} />
+                    <NavSubLink label="Call History" onClick={() => handleSubLinkClick('Call History')} active={activeLink === 'Call History'} />
+                    <NavSubLink label="Live Calls" onClick={() => handleSubLinkClick('Live Calls')} active={activeLink === 'Live Calls'} />
+                  </NavSection>
+                  <NavSection label="Orchestrate" icon="load-balancer-classic">
+                    <NavSubLink label="Agents" onClick={() => handleSubLinkClick('Agents')} active={activeLink === 'Agents'} />
+                    <NavSubLink label="Campaigns" onClick={() => handleSubLinkClick('Campaigns')} active={activeLink === 'Campaigns'} />
+                    <NavSubLink label="Playbooks" onClick={() => handleSubLinkClick('Playbooks')} active={activeLink === 'Playbooks'} />
+                  </NavSection>
+                  <NavSection label="Delegate" icon="deploy">
+                    <NavSubLink label="Phone Numbers" onClick={() => handleSubLinkClick('Phone Numbers')} active={activeLink === 'Phone Numbers'} />
+                    <NavSubLink label="Voice Library" onClick={() => handleSubLinkClick('Voice Library')} active={activeLink === 'Voice Library'} />
+                    <NavSubLink label="Integrations" onClick={() => handleSubLinkClick('Integrations')} active={activeLink === 'Integrations'} />
+                    <NavSubLink label="Events" onClick={() => handleSubLinkClick('Events')} active={activeLink === 'Events'} />
+                  </NavSection>
+                </Navigation>
+              </div>
+
+              {/* Tree - Partial (Monitor only) */}
+              <div className="demo-box">
+                <div className="demo-label">Tree / Monitor Only</div>
+                <Navigation variant="tree" style={{ height: 500 }} onToggle={() => addLog('Toggle: tree-monitor')} onUserMenu={() => addLog('Menu: tree-monitor')}>
+                  <NavSection label="Monitor" icon="meter">
+                    <NavSubLink label="Dashboard" active onClick={() => addLog('Dashboard')} />
+                    <NavSubLink label="Call History" onClick={() => addLog('Call History')} />
+                    <NavSubLink label="Live Calls" onClick={() => addLog('Live Calls')} />
+                  </NavSection>
+                </Navigation>
+              </div>
+            </div>
+          </section>
+
+
+          {/* ── SECTION 6: Interactive Examples ── */}
+          <section className="section">
+            <h2>Interactive Examples</h2>
+            <p className="section-desc">Click any link to change active state. All interactions are logged below. Use Reset to restore initial state.</p>
+
+            <div className="component-grid">
+              <div className="demo-box">
+                <div className="demo-label">Live Navigation (Click to navigate)</div>
+                <Navigation variant="tree" style={{ height: 480 }} onToggle={() => addLog('Sidebar toggle clicked')} onUserMenu={() => addLog('User overflow menu clicked')}>
+                  <NavSection label="Monitor" icon="meter">
+                    <NavSubLink label="Dashboard" onClick={() => handleSubLinkClick('Dashboard')} active={activeLink === 'Dashboard'} />
+                    <NavSubLink label="Call History" onClick={() => handleSubLinkClick('Call History')} active={activeLink === 'Call History'} />
+                    <NavSubLink label="Live Calls" onClick={() => handleSubLinkClick('Live Calls')} active={activeLink === 'Live Calls'} />
+                  </NavSection>
+                  <NavSection label="Orchestrate" icon="load-balancer-classic">
+                    <NavSubLink label="Agents" onClick={() => handleSubLinkClick('Agents')} active={activeLink === 'Agents'} />
+                    <NavSubLink label="Campaigns" onClick={() => handleSubLinkClick('Campaigns')} active={activeLink === 'Campaigns'} />
+                    <NavSubLink label="Playbooks" onClick={() => handleSubLinkClick('Playbooks')} active={activeLink === 'Playbooks'} />
+                  </NavSection>
+                  <NavSection label="Delegate" icon="deploy">
+                    <NavSubLink label="Phone Numbers" onClick={() => handleSubLinkClick('Phone Numbers')} active={activeLink === 'Phone Numbers'} />
+                    <NavSubLink label="Voice Library" onClick={() => handleSubLinkClick('Voice Library')} active={activeLink === 'Voice Library'} />
+                    <NavSubLink label="Integrations" onClick={() => handleSubLinkClick('Integrations')} active={activeLink === 'Integrations'} />
+                    <NavSubLink label="Events" onClick={() => handleSubLinkClick('Events')} active={activeLink === 'Events'} />
+                  </NavSection>
+                </Navigation>
+              </div>
+
+              <div style={{ flex: 1, minWidth: 300 }}>
+                <div className="demo-label" style={{ marginBottom: 8 }}>Event Log</div>
+                <div className="log-output" ref={logRef}>
+                  {logs.length === 0 && (
+                    <div style={{ color: '#6b7280' }}>Click on navigation items to see events here...</div>
+                  )}
+                  {logs.map((entry, i) => (
+                    <div key={i} className="log-entry">
+                      <span className="log-timestamp">[{entry.ts}]</span>
+                      {entry.msg}
+                    </div>
+                  ))}
+                </div>
+
+                <div style={{ marginTop: 16 }}>
+                  <div className="demo-label" style={{ marginBottom: 8 }}>Current Active Link</div>
+                  <div style={{
+                    background: '#f3f4f6',
+                    padding: '8px 12px',
+                    borderRadius: 6,
+                    fontFamily: 'Monaco, monospace',
+                    fontSize: '0.875rem'
+                  }}>
+                    activeLink = "<strong>{activeLink}</strong>"
+                  </div>
+                </div>
+
+                <div style={{ marginTop: 16 }}>
+                  <button className="reset-btn" onClick={handleReset}>Reset State</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          {/* ── SECTION 7: Design Tokens Reference ── */}
+          <section className="section">
+            <h2>Design Tokens Reference</h2>
+            <p className="section-desc">Mapping of design properties to Figma tokens and CSS implementation.</p>
+
+            <h3 className="sub-heading">Colors</h3>
+            <table className="token-table">
+              <thead>
+                <tr><th>Property</th><th>Figma Token</th><th>Value</th><th>CSS Variable</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nav background</td>
+                  <td>BACKGROUND/Secondary</td>
+                  <td><span className="color-swatch" style={{background:'#f7f7f7'}} />#f7f7f7</td>
+                  <td><code>--color-bg-secondary</code></td>
+                </tr>
+                <tr>
+                  <td>Link text (primary)</td>
+                  <td>CONTENT/Primary</td>
+                  <td><span className="color-swatch" style={{background:'#191919'}} />#191919</td>
+                  <td><code>--color-content-primary</code></td>
+                </tr>
+                <tr>
+                  <td>Link text (secondary)</td>
+                  <td>CONTENT/Secondary</td>
+                  <td><span className="color-swatch" style={{background:'#616161'}} />#616161</td>
+                  <td><code>--color-content-secondary</code></td>
+                </tr>
+                <tr>
+                  <td>Icon default color</td>
+                  <td>CONTENT/Icon</td>
+                  <td><span className="color-swatch" style={{background:'#8f8f8f'}} />#8f8f8f</td>
+                  <td><code>--color-content-icon</code></td>
+                </tr>
+                <tr>
+                  <td>Border / divider</td>
+                  <td>BORDER/Subtle</td>
+                  <td><span className="color-swatch" style={{background:'#e5e5e5'}} />#e5e5e5</td>
+                  <td><code>--color-border-subtle</code></td>
+                </tr>
+                <tr>
+                  <td>Active indicator</td>
+                  <td>CONTENT/Primary</td>
+                  <td><span className="color-swatch" style={{background:'#191919'}} />#191919</td>
+                  <td><code>--color-content-primary</code></td>
+                </tr>
+                <tr>
+                  <td>Hover background</td>
+                  <td>Transparent 8%</td>
+                  <td><span className="color-swatch" style={{background:'rgba(0,0,0,0.04)'}} />rgba(0,0,0,0.04)</td>
+                  <td><code>rgba(0, 0, 0, 0.04)</code></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 className="sub-heading">Typography</h3>
+            <table className="token-table">
+              <thead>
+                <tr><th>Property</th><th>Figma Token</th><th>Value</th><th>CSS Variable</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nav link font</td>
+                  <td>family/Labels, Links</td>
+                  <td>Departure Mono</td>
+                  <td><code>--font-label</code></td>
+                </tr>
+                <tr>
+                  <td>Nav link size</td>
+                  <td>size/Tiny</td>
+                  <td>13px</td>
+                  <td><code>--text-tiny</code></td>
+                </tr>
+                <tr>
+                  <td>Nav link line-height</td>
+                  <td>line-height/Tiny Text</td>
+                  <td>15px</td>
+                  <td><code>--leading-tiny</code></td>
+                </tr>
+                <tr>
+                  <td>User name font</td>
+                  <td>family/Body</td>
+                  <td>Geist</td>
+                  <td><code>--font-body</code></td>
+                </tr>
+                <tr>
+                  <td>User name size</td>
+                  <td>size/Small</td>
+                  <td>14px</td>
+                  <td><code>--text-small</code></td>
+                </tr>
+                <tr>
+                  <td>User name weight</td>
+                  <td>weight/Medium</td>
+                  <td>500</td>
+                  <td><code>--weight-medium</code></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 className="sub-heading">Spacing</h3>
+            <table className="token-table">
+              <thead>
+                <tr><th>Property</th><th>Figma Token</th><th>Value</th><th>CSS Variable</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Link padding</td><td>PADDING/8</td><td>8px</td><td><code>--space-8</code></td></tr>
+                <tr><td>Link gap (icon to label)</td><td>PADDING/8</td><td>8px</td><td><code>--space-8</code></td></tr>
+                <tr><td>Body top padding</td><td>PADDING/24</td><td>24px</td><td><code>--space-24</code></td></tr>
+                <tr><td>Body left padding</td><td>PADDING/16</td><td>16px</td><td><code>--space-16</code></td></tr>
+                <tr><td>Body right padding</td><td>PADDING/24</td><td>24px</td><td><code>--space-24</code></td></tr>
+                <tr><td>Section gap (tree)</td><td>PADDING/16</td><td>16px</td><td><code>--space-16</code></td></tr>
+                <tr><td>Sub-link gap</td><td>PADDING/2</td><td>2px</td><td><code>--space-2</code></td></tr>
+                <tr><td>Sub-link indent</td><td>PADDING/16</td><td>16px</td><td><code>--space-16</code></td></tr>
+                <tr><td>Logo padding</td><td>PADDING/24 / PADDING/16</td><td>24px top, 16px bottom</td><td><code>--space-24</code> / <code>--space-16</code></td></tr>
+                <tr><td>Footer padding</td><td>PADDING/24</td><td>24px</td><td><code>--space-24</code></td></tr>
+              </tbody>
+            </table>
+
+            <h3 className="sub-heading">Dimensions</h3>
+            <table className="token-table">
+              <thead>
+                <tr><th>Property</th><th>Figma Token</th><th>Value</th><th>CSS Variable</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Nav width</td><td>Fixed width</td><td>247px</td><td>Hardcoded</td></tr>
+                <tr><td>Icon size (links)</td><td>ICONS/16</td><td>16px</td><td><code>--icon-16</code></td></tr>
+                <tr><td>Active indicator</td><td>Fixed</td><td>8px x 12px</td><td>Hardcoded</td></tr>
+                <tr><td>Logo wordmark</td><td>Fixed</td><td>75px x 20px</td><td>Hardcoded</td></tr>
+                <tr><td>Border radius</td><td>8</td><td>8px</td><td><code>--radius-sm</code></td></tr>
+              </tbody>
+            </table>
+          </section>
+
+
+          {/* ── SECTION 8: CSS Classes Reference ── */}
+          <section className="section">
+            <h2>CSS Classes Reference</h2>
+            <p className="section-desc">All CSS classes used by the Navigation component system, following the <code>bn-</code> prefix convention.</p>
+
+            <h3 className="sub-heading">Naming Convention</h3>
+            <div style={{ background: '#f8fafc', border: '1px solid #e5e7eb', borderRadius: 8, padding: '1rem', marginBottom: '1rem', fontSize: '0.875rem', lineHeight: 1.8 }}>
+              <strong>Base:</strong> <code>.bn-[component]</code> (e.g. <code>.bn-navigation</code>)<br/>
+              <strong>Sub-elements:</strong> <code>.bn-[component]-[element]</code> (e.g. <code>.bn-nav-link</code>)<br/>
+              <strong>States:</strong> <code>.bn-[component]-[state]</code> (e.g. <code>.bn-sub-link-active</code>)<br/>
+              <strong>Modifiers:</strong> <code>.bn-[component]-[modifier]</code> (e.g. <code>.bn-nav-body-tree</code>)
+            </div>
+
+            <h3 className="sub-heading">Navigation Shell</h3>
+            <div className="class-list">
+              <code>.bn-navigation</code>
+              <code>.bn-navigation-full</code>
+              <code>.bn-nav-logo</code>
+              <code>.bn-nav-logo-container</code>
+              <code>.bn-nav-logo-wordmark</code>
+              <code>.bn-nav-menu-toggle</code>
+              <code>.bn-nav-body</code>
+              <code>.bn-nav-body-tree</code>
+              <code>.bn-nav-footer</code>
+              <code>.bn-nav-user-settings</code>
+              <code>.bn-nav-user-name</code>
+              <code>.bn-nav-overflow-btn</code>
+            </div>
+
+            <h3 className="sub-heading">NavLink</h3>
+            <div className="class-list">
+              <code>.bn-nav-link</code>
+              <code>.bn-nav-link-full</code>
+              <code>.bn-nav-link-label</code>
+              <code>.bn-nav-link-chevron</code>
+            </div>
+
+            <h3 className="sub-heading">NavSubLink</h3>
+            <div className="class-list">
+              <code>.bn-sub-link</code>
+              <code>.bn-sub-link-active</code>
+              <code>.bn-sub-link-indicator</code>
+            </div>
+
+            <h3 className="sub-heading">NavSection</h3>
+            <div className="class-list">
+              <code>.bn-nav-section</code>
+              <code>.bn-nav-section-divider</code>
+              <code>.bn-sub-links-wrapper</code>
+              <code>.bn-sub-links-container</code>
+            </div>
+
+            <h3 className="sub-heading">Utility / State</h3>
+            <div className="class-list">
+              <code>.bn-icon</code>
+              <code>.bn-icon-16</code>
+              <code>.bn-icon-24</code>
+              <code>.bn-state-hover</code>
+              <code>.bn-state-active</code>
+              <code>.bn-state-disabled</code>
+            </div>
+          </section>
+
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<ShowcaseApp />);
+  </script>
+</body>
+</html>

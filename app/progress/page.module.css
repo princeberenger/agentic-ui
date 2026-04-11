@@ -1,0 +1,210 @@
+/* ==========================================================================
+   PROGRESS DEMO PAGE
+   ========================================================================== */
+.demo {
+  width: 1280px;
+  height: 800px;
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-elevation-4);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header --- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-24) var(--space-24) 0;
+}
+
+.headerLeft,
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.logoIcon {
+  display: inline-block;
+  width: 24px;
+  height: 20px;
+  background-color: currentColor;
+  color: var(--color-content-icon);
+  mask-image: url('/assets/logo-icon.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url('/assets/logo-icon.svg');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  flex-shrink: 0;
+}
+
+.headerSeparator {
+  width: 1px;
+  height: 20px;
+  background: var(--color-border-subtle);
+  transform: rotate(-25deg);
+  flex-shrink: 0;
+}
+
+.headerLabel {
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+}
+
+.kbdGroup {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.kbd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  min-height: 24px;
+  background: var(--color-bg-primary);
+  border: 0.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-badge);
+  font-family: var(--font-body);
+  font-size: var(--text-regular);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-regular);
+  color: var(--color-content-secondary);
+  padding: var(--space-2);
+}
+
+/* --- Centered content --- */
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  width: 340px;
+}
+
+/* --- Card --- */
+.card {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-default);
+  padding: var(--space-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-12);
+}
+
+.cardTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.cardIcon {
+  color: var(--color-content-icon);
+}
+
+.cardTitle {
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+}
+
+/* --- Card meta text --- */
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.metaPrimary {
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  color: var(--color-content-primary);
+}
+
+.metaSecondary {
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+}
+
+/* --- Badges --- */
+/* Shared badge transition: smooth color/background interpolation
+   when category changes (e.g. Medium → High on slider drag) */
+.badgeGreen,
+.badgeYellow,
+.badgeRed {
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  border: 1px solid var(--color-badge-stroke-default);
+  padding: var(--space-2) var(--space-8);
+  border-radius: var(--radius-badge);
+  height: 24px;
+  display: flex;
+  align-items: center;
+  transition: var(--duration-hover) ease;
+  transition-property: color, background-color;
+}
+
+.badgeGreen {
+  color: var(--color-badge-label-green);
+  background: var(--color-badge-bg-green);
+}
+
+.badgeYellow {
+  color: var(--color-badge-label-yellow);
+  background: var(--color-badge-bg-yellow);
+}
+
+.badgeRed {
+  color: var(--color-badge-label-red);
+  background: var(--color-badge-bg-red);
+}
+
+/* --- Helper text --- */
+.helperText {
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+}
