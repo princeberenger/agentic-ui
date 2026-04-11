@@ -215,6 +215,18 @@
   --duration-enter: 300ms;   /* enter/exit animations */
 }
 
+/* Reduced motion — collapse all transitions/animations when OS preference is set */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* ==========================================================================
    7. COMPOSITE TYPOGRAPHY SYSTEM
    Usage: apply these classes directly or reference the individual tokens.
