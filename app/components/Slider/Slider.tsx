@@ -5,7 +5,7 @@
 
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, forwardRef } from 'react';
 import { motion } from 'motion/react';
 import { SlidingText } from '@/app/components/SlidingText';
 import { EASE_OUT_EXPO, DURATION_ENTER, DURATION_HOVER, DURATION_PRESS } from '@/app/components/motion';
@@ -32,6 +32,8 @@ export interface SliderProps {
   animated?: boolean;
   /** Delay before mount animation starts (seconds) */
   animationDelay?: number;
+  /** Whether the slider is disabled */
+  disabled?: boolean;
   className?: string;
 }
 
@@ -45,119 +47,138 @@ function snapValue(raw: number, step: number | undefined): number {
   return Math.round(raw / step) * step;
 }
 
-export function Slider({
-  value: controlledValue,
-  defaultValue = 0,
-  onChange,
-  step,
-  size = 'sm',
-  showLabel = false,
-  scaleLabels,
-  animated = false,
-  animationDelay = 0,
-  className,
-}: SliderProps) {
-  const [internalValue, setInternalValue] = useState(defaultValue);
-  const currentValue = controlledValue !== undefined ? controlledValue : internalValue;
-  const clamped = Math.max(0, Math.min(100, currentValue));
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [dragging, setDragging] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
+export const Slider = forwardRef<HTMLDivElement, SliderProps>(
+  function Slider({
+    value: controlledValue,
+    defaultValue = 0,
+    onChange,
+    step,
+    size = 'sm',
+    showLabel = false,
+    scaleLabels,
+    animated = false,
+    animationDelay = 0,
+    disabled = false,
+    className,
+  }, ref) {
+    const [internalValue, setInternalValue] = useState(defaultValue);
+    const currentValue = controlledValue !== undefined ? controlledValue : internalValue;
+    const clamped = Math.max(0, Math.min(100, currentValue));
+    const trackRef = useRef<HTMLDivElement>(null);
+    const [dragging, setDragging] = useState(false);
+    const [hasInteracted, setHasInteracted] = useState(false);
 
-  const updateFromPointer = useCallback((clientX: number) => {
-    const track = trackRef.current;
-    if (!track) return;
-    const rect = track.getBoundingClientRect();
-    const raw = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
-    const next = snapValue(Math.round(raw), step);
-    if (controlledValue === undefined) {
-      setInternalValue(next);
-    }
-    onChange?.(next);
-  }, [controlledValue, onChange, step]);
+    const mergedTrackRef = useCallback(
+      (node: HTMLDivElement | null) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (trackRef as any).current = node;
+        if (typeof ref === 'function') {
+          ref(node);
+        } else if (ref) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (ref as any).current = node;
+        }
+      },
+      [ref],
+    );
 
-  const handlePointerDown = useCallback((e: React.PointerEvent) => {
-    e.currentTarget.setPointerCapture(e.pointerId);
-    setHasInteracted(true);
-    setDragging(true);
-    updateFromPointer(e.clientX);
-  }, [updateFromPointer]);
+    const updateFromPointer = useCallback((clientX: number) => {
+      const track = trackRef.current;
+      if (!track) return;
+      const rect = track.getBoundingClientRect();
+      const raw = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+      const next = snapValue(Math.round(raw), step);
+      if (controlledValue === undefined) {
+        setInternalValue(next);
+      }
+      onChange?.(next);
+    }, [controlledValue, onChange, step]);
 
-  const handlePointerMove = useCallback((e: React.PointerEvent) => {
-    if (!e.currentTarget.hasPointerCapture(e.pointerId)) return;
-    updateFromPointer(e.clientX);
-  }, [updateFromPointer]);
+    const handlePointerDown = useCallback((e: React.PointerEvent) => {
+      e.currentTarget.setPointerCapture(e.pointerId);
+      setHasInteracted(true);
+      setDragging(true);
+      updateFromPointer(e.clientX);
+    }, [updateFromPointer]);
 
-  const handlePointerUp = useCallback(() => {
-    setDragging(false);
-  }, []);
+    const handlePointerMove = useCallback((e: React.PointerEvent) => {
+      if (!e.currentTarget.hasPointerCapture(e.pointerId)) return;
+      updateFromPointer(e.clientX);
+    }, [updateFromPointer]);
 
-  // Transition strategy:
-  // - Dragging with step: short magnetic snap (DURATION_PRESS, EASE_OUT_EXPO)
-  // - Dragging without step: duration 0 — follow cursor exactly
-  // - Mount animation: entrance ease with delay
-  // - After interaction, not dragging: fast snap
-  const fillTransition = dragging
-    ? step
-      ? { duration: DURATION_PRESS, ease: EASE_OUT_EXPO }
-      : { duration: 0 }
-    : !hasInteracted && animated
-      ? { delay: animationDelay, duration: DURATION_ENTER * 1.5, ease: EASE_OUT_EXPO }
-      : { duration: DURATION_HOVER, ease: EASE_OUT_EXPO };
+    const handlePointerUp = useCallback(() => {
+      setDragging(false);
+    }, []);
 
-  return (
-    <div className={`${styles.slider} ${className ?? ''}`}>
-      {scaleLabels && (
-        <div className={styles.scaleLabels}>
-          {scaleLabels.map((label, i) => (
-            <span key={i} className={styles.scaleLabel}>{label}</span>
-          ))}
-        </div>
-      )}
-      <div
-        ref={trackRef}
-        className={`${styles.track} ${SIZE_CLASSES[size]} ${dragging ? styles.trackDragging : ''}`}
-        onPointerDown={handlePointerDown}
-        onPointerMove={handlePointerMove}
-        onPointerUp={handlePointerUp}
-        role="slider"
-        aria-valuenow={clamped}
-        aria-valuemin={0}
-        aria-valuemax={100}
-        aria-label={`${clamped}%`}
-        tabIndex={0}
-      >
-        {step && (
-          <div className={styles.snapDots}>
-            {Array.from({ length: Math.floor(100 / step) - 1 }, (_, i) => {
-              const pct = (i + 1) * step;
-              if (pct === clamped) return null;
-              return (
-                <span
-                  key={pct}
-                  className={styles.snapDot}
-                  style={{ left: `${pct}%`, transform: 'translateX(-50%)' }}
-                />
-              );
-            })}
+    // Transition strategy:
+    // - Dragging with step: short magnetic snap (DURATION_PRESS, EASE_OUT_EXPO)
+    // - Dragging without step: duration 0 — follow cursor exactly
+    // - Mount animation: entrance ease with delay
+    // - After interaction, not dragging: fast snap
+    const fillTransition = dragging
+      ? step
+        ? { duration: DURATION_PRESS, ease: EASE_OUT_EXPO }
+        : { duration: 0 }
+      : !hasInteracted && animated
+        ? { delay: animationDelay, duration: DURATION_ENTER * 1.5, ease: EASE_OUT_EXPO }
+        : { duration: DURATION_HOVER, ease: EASE_OUT_EXPO };
+
+    return (
+      <div className={`${styles.slider} ${className ?? ''}`}>
+        {scaleLabels && (
+          <div className={styles.scaleLabels}>
+            {scaleLabels.map((label, i) => (
+              <span key={i} className={styles.scaleLabel}>{label}</span>
+            ))}
           </div>
         )}
-        <motion.div
-          className={styles.fill}
-          initial={animated ? { width: '0%' } : false}
-          animate={{ width: `${clamped}%` }}
-          transition={fillTransition}
+        <div
+          ref={mergedTrackRef}
+          className={`${styles.track} ${SIZE_CLASSES[size]} ${dragging ? styles.trackDragging : ''} ${disabled ? styles.trackDisabled : ''}`}
+          onPointerDown={disabled ? undefined : handlePointerDown}
+          onPointerMove={disabled ? undefined : handlePointerMove}
+          onPointerUp={disabled ? undefined : handlePointerUp}
+          role="slider"
+          aria-valuenow={clamped}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label={`${clamped}%`}
+          aria-disabled={disabled || undefined}
+          tabIndex={disabled ? -1 : 0}
+          style={disabled ? { pointerEvents: 'none' } : undefined}
         >
-          <div className={styles.handle}>
-            <span className={styles.handleLine} />
-          </div>
-        </motion.div>
-        {showLabel && (
-          <span className={styles.valueLabel}>
-            <SlidingText>{`${clamped}%`}</SlidingText>
-          </span>
-        )}
+          {step && (
+            <div className={styles.snapDots}>
+              {Array.from({ length: Math.floor(100 / step) - 1 }, (_, i) => {
+                const pct = (i + 1) * step;
+                if (pct === clamped) return null;
+                return (
+                  <span
+                    key={pct}
+                    className={styles.snapDot}
+                    style={{ left: `${pct}%`, transform: 'translateX(-50%)' }}
+                  />
+                );
+              })}
+            </div>
+          )}
+          <motion.div
+            className={styles.fill}
+            initial={animated ? { width: '0%' } : false}
+            animate={{ width: `${clamped}%` }}
+            transition={fillTransition}
+          >
+            <div className={styles.handle}>
+              <span className={styles.handleLine} />
+            </div>
+          </motion.div>
+          {showLabel && (
+            <span className={styles.valueLabel}>
+              <SlidingText>{`${clamped}%`}</SlidingText>
+            </span>
+          )}
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
+);

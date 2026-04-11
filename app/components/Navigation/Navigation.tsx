@@ -1,6 +1,6 @@
 'use client';
 
-import { type ReactNode } from 'react';
+import { type ReactNode, forwardRef } from 'react';
 import { Icon } from '../Icon/Icon';
 import styles from './Navigation.module.css';
 
@@ -19,56 +19,58 @@ interface NavigationProps {
   onUserMenu?: () => void;
 }
 
-export function Navigation({
-  children,
-  userName = 'Alex',
-  variant = 'classic',
-  className,
-  onToggle,
-  onUserMenu,
-}: NavigationProps) {
-  return (
-    <nav className={`${styles.navigation} ${className ?? ''}`}>
-      {/* Logo header */}
-      <div className={styles.logo}>
-        <div className={styles.logoContainer}>
-          <span
-            className={styles.logoWordmark}
-            role="img"
-            aria-label="Agentic UI"
-          />
-          <button
-            className={styles.menuToggle}
-            onClick={onToggle}
-            aria-label="Toggle navigation"
-            type="button"
-          >
-            <Icon name="menu-open" size={16} />
-          </button>
+export const Navigation = forwardRef<HTMLElement, NavigationProps>(
+  function Navigation({
+    children,
+    userName = 'Alex',
+    variant = 'classic',
+    className,
+    onToggle,
+    onUserMenu,
+  }, ref) {
+    return (
+      <nav ref={ref} className={`${styles.navigation} ${className ?? ''}`}>
+        {/* Logo header */}
+        <div className={styles.logo}>
+          <div className={styles.logoContainer}>
+            <span
+              className={styles.logoWordmark}
+              role="img"
+              aria-label="Agentic UI"
+            />
+            <button
+              className={styles.menuToggle}
+              onClick={onToggle}
+              aria-label="Toggle navigation"
+              type="button"
+            >
+              <Icon name="menu-open" size={16} />
+            </button>
+          </div>
         </div>
-      </div>
 
-      {/* Scrollable nav body */}
-      <div
-        className={`${styles.body} ${variant === 'tree' ? styles.bodyTree : ''}`}
-      >
-        {children}
-      </div>
-
-      {/* User footer */}
-      <div className={styles.footer}>
-        <div className={styles.userSettings}>
-          <span className={styles.userName}>Hi, {userName}</span>
-          <button
-            className={styles.overflowButton}
-            onClick={onUserMenu}
-            aria-label="User menu"
-            type="button"
-          >
-            <Icon name="overflow-menu-vertical" size={16} />
-          </button>
+        {/* Scrollable nav body */}
+        <div
+          className={`${styles.body} ${variant === 'tree' ? styles.bodyTree : ''}`}
+        >
+          {children}
         </div>
-      </div>
-    </nav>
-  );
-}
+
+        {/* User footer */}
+        <div className={styles.footer}>
+          <div className={styles.userSettings}>
+            <span className={styles.userName}>Hi, {userName}</span>
+            <button
+              className={styles.overflowButton}
+              onClick={onUserMenu}
+              aria-label="User menu"
+              type="button"
+            >
+              <Icon name="overflow-menu-vertical" size={16} />
+            </button>
+          </div>
+        </div>
+      </nav>
+    );
+  }
+);

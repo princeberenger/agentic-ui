@@ -21,6 +21,8 @@ interface TabProps {
   children: React.ReactNode;
   /** Click handler */
   onClick?: () => void;
+  /** Whether the tab is disabled */
+  disabled?: boolean;
   /** Additional CSS class */
   className?: string;
   /** @internal Injected by TabGroup for scoped layoutId */
@@ -28,15 +30,16 @@ interface TabProps {
 }
 
 export const Tab = React.forwardRef<HTMLButtonElement, TabProps>(
-  function Tab({ active = false, leadIcon, tailIcon, children, onClick, className, _groupId }, ref) {
+  function Tab({ active = false, leadIcon, tailIcon, children, onClick, disabled = false, className, _groupId }, ref) {
     return (
       <button
         ref={ref}
         role="tab"
         aria-selected={active}
-        tabIndex={active ? 0 : -1}
-        className={`${styles.tab} ${active ? styles.tabActive : ''} ${className ?? ''}`}
-        onClick={onClick}
+        aria-disabled={disabled || undefined}
+        tabIndex={disabled ? -1 : active ? 0 : -1}
+        className={`${styles.tab} ${active ? styles.tabActive : ''} ${disabled ? styles.tabDisabled : ''} ${className ?? ''}`}
+        onClick={disabled ? undefined : onClick}
       >
         {active && (
           <motion.span

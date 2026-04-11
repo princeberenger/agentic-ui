@@ -50,6 +50,11 @@
   width: 3px;
 }
 
+.trackDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .trackSm {
   composes: track;
   height: 32px;

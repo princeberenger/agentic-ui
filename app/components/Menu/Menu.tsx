@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import { type ReactNode, forwardRef } from 'react';
 import styles from './Menu.module.css';
 
 export type MenuSize = 'regular' | 'sm';
@@ -15,14 +15,17 @@ const SIZE_CLASSES: Record<MenuSize, string> = {
   sm: styles.menuSm,
 };
 
-export function Menu({ children, size = 'regular', width, className }: MenuProps) {
-  return (
-    <div
-      className={`${SIZE_CLASSES[size]} ${className ?? ''}`}
-      role="menu"
-      style={width ? { width } : undefined}
-    >
-      {children}
-    </div>
-  );
-}
+export const Menu = forwardRef<HTMLDivElement, MenuProps>(
+  function Menu({ children, size = 'regular', width, className }, ref) {
+    return (
+      <div
+        ref={ref}
+        className={`${SIZE_CLASSES[size]} ${className ?? ''}`}
+        role="menu"
+        style={width ? { width } : undefined}
+      >
+        {children}
+      </div>
+    );
+  }
+);

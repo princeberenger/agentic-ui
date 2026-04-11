@@ -55,6 +55,12 @@
   color: var(--color-content-primary);
 }
 
+.tabDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 /* --- Sub-elements (z-index above indicator) --- */
 .label {
   display: flex;
