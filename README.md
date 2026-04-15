@@ -9,7 +9,7 @@ A production-grade design system built with Next.js, React, and CSS Modules. Com
 - Node.js 20+
 - npm
 - [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code)
-- Figma MCP server (for design extraction)
+- [Figma MCP Plugin](https://github.com/southleft/figma-console-mcp)
 
 ### Install and run
 
