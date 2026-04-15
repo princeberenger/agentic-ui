@@ -3,6 +3,8 @@ import { Geist } from "next/font/google";
 import { JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { SubNav } from "./components/SubNav";
+import styles from "./layout.module.css";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -65,7 +67,10 @@ export default function RootLayout({
       lang="en"
       className={`${geist.variable} ${jetbrainsMono.variable} ${newYorkLarge.variable} ${departureMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <SubNav />
+        <div className={styles.content}>{children}</div>
+      </body>
     </html>
   );
 }
