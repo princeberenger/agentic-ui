@@ -1,0 +1,60 @@
+/* ==========================================================================
+   KEYBOARD SHORTCUT — Figma _Keyboard shortcut 554:1360
+   Contexts: shortcut, icon, caret, slash, Return
+   ========================================================================== */
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0;
+  flex-shrink: 0;
+  /* CONTENT/Icon; a host (e.g. Button) can override it through --keyboard-shortcut-color */
+  color: var(--keyboard-shortcut-color, var(--color-content-icon));
+  font: inherit;
+}
+
+.key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-14);
+  height: var(--icon-14);
+  font: inherit;
+}
+
+/* Icons / Return is 16px centered in the 14px frame (Figma -1,-1 offset) */
+.return {
+  overflow: visible;
+}
+
+.return > * {
+  margin: calc((var(--icon-14) - var(--icon-16)) / 2);
+}
+
+/* letters X / Y / Z */
+.letter {
+  font-family: var(--font-label);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+}
+
+/* Context=slash — SYSTEM/Label/sm/regular on BACKGROUND/Secondary */
+.slash {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-14);
+  height: var(--icon-14);
+  border-radius: var(--radius-2);
+  background-color: var(--color-bg-secondary);
+  font-family: var(--font-label);
+  font-size: var(--text-super-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-normal);
+  text-transform: uppercase;
+}

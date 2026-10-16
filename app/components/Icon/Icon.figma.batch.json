@@ -16,6 +16,13 @@
       "figmaName": "Icons / Arrow--up"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14020",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "arrow-up-right",
+      "figmaName": "Icons / Arrow--up-right"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13884",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
@@ -28,6 +35,13 @@
       "component": "Icon",
       "name": "calendar",
       "figmaName": "icons / Calendar"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14018",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "caret-right",
+      "figmaName": "Icons / Caret--right"
     },
     {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14504",
@@ -280,6 +294,13 @@
       "component": "Icon",
       "name": "play",
       "figmaName": "Icons / Play"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14428",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "return",
+      "figmaName": "Icons / Return"
     },
     {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14419",

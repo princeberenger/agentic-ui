@@ -177,6 +177,7 @@
   --radius-full: 9999px;
 
   /* Figma BORDER RADIUS collection (DEFAULT mode) */
+  --radius-2: 0.125rem;    /* 2 — keyboard shortcut slash */
   --radius-6: 0.375rem;    /* 6 — buttons xs, sm */
   --radius-10: 0.625rem;   /* 10 — buttons md, lg */
 }
