@@ -1,0 +1,7 @@
+{
+  "codeConnect": {
+    "include": ["app/components/**/*.figma.ts"],
+    "label": "React",
+    "documentUrlSubstitutions": {}
+  }
+}

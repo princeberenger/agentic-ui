@@ -6,7 +6,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "sync:motion": "tsx scripts/sync-motion-tokens.ts"
+    "sync:motion": "tsx scripts/sync-motion-tokens.ts",
+    "figma:typecheck": "tsc -p tsconfig.figma.json",
+    "figma:parse": "figma connect parse",
+    "figma:publish": "figma connect publish"
   },
   "dependencies": {
     "motion": "^12.38.0",
@@ -15,6 +18,7 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@figma/code-connect": "^2.0.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
