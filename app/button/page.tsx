@@ -4,6 +4,7 @@
 
 import { Button, type ButtonSize, type ButtonVariant } from '@/app/components/Button';
 import { Icon } from '@/app/components/Icon/Icon';
+import { KeyboardShortcut } from '@/app/components/KeyboardShortcut';
 import styles from './page.module.css';
 
 const VARIANTS: ButtonVariant[] = [
@@ -33,6 +34,24 @@ export default function ButtonPage() {
           </div>
         </section>
       ))}
+
+      <section className={styles.section}>
+        <h2 className={styles.title}>Shortcut</h2>
+        <div className={styles.row}>
+          <Button variant="secondary" size="lg" shortcut={<KeyboardShortcut keys={['command', 'K']} />}>Label</Button>
+          <Button variant="secondary-filled" size="md" shortcut={<KeyboardShortcut keys={['command', 'shift']} />}>Label</Button>
+          <Button variant="ghost" size="sm" shortcut={<KeyboardShortcut keys={['command', 'K']} />}>Label</Button>
+          <Button variant="secondary" size="md" shortcut={<KeyboardShortcut keys={['command', 'shift']} />} aria-label="Command shift" />
+          <Button variant="secondary" size="md" shortcut={<KeyboardShortcut keys={['command', 'K']} />} disabled>Label</Button>
+        </div>
+        <div className={styles.row}>
+          <KeyboardShortcut keys={['command', 'option', 'shift', 'delete', 'X']} />
+          <KeyboardShortcut context="return" />
+          <KeyboardShortcut context="caret" />
+          <KeyboardShortcut context="slash" />
+          <KeyboardShortcut context="icon" icon={<Icon name="arrow-up-right" size={14} />} />
+        </div>
+      </section>
 
       <section className={styles.section}>
         <h2 className={styles.title}>Badge, xs</h2>

@@ -84,6 +84,7 @@
 
 .shortcut {
   display: inline-flex;
+  --keyboard-shortcut-color: var(--_icon);
 }
 
 /* --- Sizes ---------------------------------------------------------------- */
