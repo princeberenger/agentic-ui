@@ -157,7 +157,7 @@ export default function StyleGuide() {
           <span className={styles.colorGroupLabel}>Font Size Scale</span>
           <div className={styles.scaleGrid}>
             {[
-              { name: "--text-super-tiny", size: "10px", rem: "0.625rem" },
+              { name: "--text-super-tiny", size: "9px", rem: "0.5625rem" },
               { name: "--text-button", size: "12px", rem: "0.75rem" },
               { name: "--text-tiny", size: "13px", rem: "0.8125rem" },
               { name: "--text-small", size: "14px", rem: "0.875rem" },
@@ -184,7 +184,7 @@ export default function StyleGuide() {
           <span className={styles.colorGroupLabel}>Line Height Scale</span>
           <div className={styles.scaleGrid}>
             {[
-              { name: "--leading-buttons", value: "11px", rem: "0.6875rem" },
+              { name: "--leading-buttons", value: "10px", rem: "0.625rem" },
               { name: "--leading-tiny", value: "15px", rem: "0.9375rem" },
               { name: "--leading-small", value: "18px", rem: "1.125rem" },
               { name: "--leading-regular", value: "24px", rem: "1.5rem" },
