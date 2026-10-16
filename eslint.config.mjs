@@ -13,6 +13,11 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  // Code Connect templates must default-export an anonymous object
+  {
+    files: ["**/*.figma.ts", "**/*.figma.batch.ts"],
+    rules: { "import/no-anonymous-default-export": "off" },
+  },
 ]);
 
 export default eslintConfig;

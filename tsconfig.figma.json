@@ -1,13 +1,20 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["esnext"],
+    "lib": [
+      "esnext"
+    ],
     "module": "esnext",
     "moduleResolution": "bundler",
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "types": ["@figma/code-connect/figma-types"]
+    "types": [
+      "@figma/code-connect/figma-types"
+    ]
   },
-  "include": ["app/components/**/*.figma.ts"]
+  "include": [
+    "app/components/**/*.figma.ts",
+    "app/components/**/*.figma.batch.ts"
+  ]
 }
