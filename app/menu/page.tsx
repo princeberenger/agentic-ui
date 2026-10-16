@@ -1,4 +1,5 @@
 import { Icon } from '@/app/components/Icon/Icon';
+import { KeyboardShortcut } from '@/app/components/KeyboardShortcut';
 import { Menu, MenuItem, MenuDivider, MenuSectionHeader } from '@/app/components/Menu';
 import styles from './page.module.css';
 
@@ -7,16 +8,6 @@ function ModelIcon() {
     <div className={styles.modelBadge}>
       <Icon name="anthropic" size={13} />
     </div>
-  );
-}
-
-function Shortcut({ keys }: { keys: string[] }) {
-  return (
-    <span className={styles.shortcutKeys}>
-      {keys.map((key, i) => (
-        <span key={i}>{key}</span>
-      ))}
-    </span>
   );
 }
 
@@ -115,10 +106,10 @@ export default function MenuPage() {
         <Menu width={220}>
           <MenuItem label="Paste here" size="sm" />
           <MenuDivider />
-          <MenuItem label="Show/Hide UI" size="sm" shortcut={<Shortcut keys={['⌘', '\\']} />} />
-          <MenuItem label="Show/Hide Comments" size="sm" shortcut={<Shortcut keys={['⌥', 'C']} />} />
+          <MenuItem label="Show/Hide UI" size="sm" shortcut={<KeyboardShortcut keys={['command', '\\']} />} />
+          <MenuItem label="Show/Hide Comments" size="sm" shortcut={<KeyboardShortcut keys={['option', 'C']} />} />
           <MenuDivider />
-          <MenuItem label="Actions" size="sm" shortcut={<Shortcut keys={['⌘', 'K']} />} />
+          <MenuItem label="Actions" size="sm" shortcut={<KeyboardShortcut keys={['command', 'K']} />} />
           <MenuItem label="Tools" size="sm" hasSubmenu />
           <MenuItem label="Widgets" size="sm" hasSubmenu />
         </Menu>

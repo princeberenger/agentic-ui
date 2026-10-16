@@ -115,20 +115,6 @@
   justify-content: center;
 }
 
-/* --- Shortcut display in menu items --- */
-.shortcutKeys {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  font-family: var(--font-label);
-  font-size: var(--text-small);
-  font-weight: var(--weight-regular);
-  line-height: var(--leading-tiny);
-  letter-spacing: var(--tracking-tight);
-  color: var(--color-content-secondary);
-  text-transform: uppercase;
-}
-
 /* --- Trailing icon (e.g. logout) --- */
 .trailingIcon {
   display: flex;
