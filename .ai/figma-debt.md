@@ -29,6 +29,13 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Close : aucun état hover ni pressed défini. Le code n'a que le focus clavier (`--shadow-components-focus`).
 - [ ] Libellé d'accessibilité de Close : absent de Figma. Le code met `closeLabel="Remove"` par défaut.
 
+### Avatar — 179:17313
+- [ ] Type=agent : illustration exportée de Figma (48 SVG, un par couleur et taille, couleurs figées).
+      Le blob flouté n'a pas la même géométrie selon la couleur (32px : gray 23px de haut, blue 19, purple 13…)
+      et les couleurs des quarts de la silhouette ne sont pas tokenisées : pas de mode dark possible.
+- [ ] Type=initials : Figma montre 1 lettre (`Label (Sm)`) en 16 et 20, 2 lettres (`Label (Med)`) dès 24.
+      Le code affiche le texte reçu, sans tronquer.
+
 ## 3. Tokens
 
 - [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`

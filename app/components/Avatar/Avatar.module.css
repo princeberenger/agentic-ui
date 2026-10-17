@@ -1,0 +1,68 @@
+/* ==========================================================================
+   AVATAR — Figma Avatar 179:17313
+   Type: agent (figma export per color and size), photo, initials
+   Size: 16, 20, 24, 32, 40, 48, 56, 64
+   Every value below is a Figma variable (see globals.css).
+   ========================================================================== */
+
+.avatar {
+  --_size: var(--icon-32);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--_size);
+  height: var(--_size);
+  border-radius: var(--radius-full);
+}
+
+.size16 { --_size: var(--icon-16); }
+.size20 { --_size: var(--icon-20); }
+.size24 { --_size: var(--icon-24); }
+.size32 { --_size: var(--icon-32); }
+.size40 { --_size: var(--icon-40); }
+.size48 { --_size: var(--icon-48); }
+.size56 { --_size: var(--icon-56); }
+.size64 { --_size: var(--icon-64); }
+
+/* photo and initials: BORDER/Subtle, 0.5px inside, drawn above the image */
+.bordered {
+  overflow: hidden;
+  background-color: var(--color-bg-primary);
+}
+
+.bordered::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 var(--stroke-sm) var(--color-border-subtle);
+  pointer-events: none;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* initials: 11px / spacious up to 40, 14px / tight from 48 */
+.initials {
+  color: var(--color-content-primary);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.initials.size48,
+.initials.size56,
+.initials.size64 {
+  font-size: var(--text-small);
+  letter-spacing: var(--tracking-tight);
+}

@@ -8,6 +8,7 @@ const pages = [
   { href: '/', label: 'Tokens' },
   { href: '/button', label: 'Button' },
   { href: '/badge', label: 'Badge' },
+  { href: '/avatar', label: 'Avatar' },
   { href: '/tabs', label: 'Tabs' },
   { href: '/table', label: 'Table' },
   { href: '/menu', label: 'Menu' },
