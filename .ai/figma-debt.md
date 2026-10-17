@@ -80,8 +80,16 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Icône de titre : Icons / Checkmark pour les 4 types, y compris warning et destructive.
 - [ ] Padding droit du texte : 32px (info, success, warning), 16px (destructive).
 - [ ] Aucune animation, durée d'affichage ni empilement définis. Le code fournit le toast seul.
-- [ ] Le champ de destructive est `Text input` sm (32px). Le composant Input du repo n'est pas encore aligné
+- [x] Le champ de destructive est `Text input` sm (32px). Le composant Input du repo n'est pas encore aligné
       sur Figma (40px) : le toast destructive fait 187px au lieu de 179px.
+
+### Text input — 761:20738
+- [ ] Largeur fixe de 288px. Le code remplit le conteneur.
+- [ ] Hauteur du champ (40 / 32px) non liée aux variables `INPUTS/Regular` et `INPUTS/Small`.
+      Le code utilise `--input-regular` et `--input-small`.
+- [ ] Pas de variante focus + error / success. Le code donne la priorité au focus (`BORDER/Strong`).
+- [ ] State=warning garde le contour `BORDER/Subtle` (error et success colorent le contour).
+- [ ] Pas de variante disabled + rempli. Le code met le texte en `CONTENT/Disabled`.
 
 ### HelperText — 4066:7007
 - [ ] Pas de variante warning + sm + solid. Le code applique les couleurs de warning lg solid.

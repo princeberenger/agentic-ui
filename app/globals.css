@@ -86,6 +86,7 @@
 
   /* Attention / Error */
   --color-border-attention: #d50b0b;
+  --color-border-success: #288034;  /* BORDER/Success */
   --color-bg-attention: #d50b0b;
   --color-bg-attention-light: #fff5f5; /* BACKGROUND/Attention (Light) */
   --color-content-attention: #570303;
@@ -189,6 +190,11 @@
   --icon-48: 3rem;       /* 48px */
   --icon-56: 3.5rem;     /* 56px */
   --icon-64: 4rem;       /* 64px */
+
+  /* Input heights (Figma SPACING / INPUTS) */
+  --input-small: 2rem;     /* 32px */
+  --input-regular: 2.5rem; /* 40px */
+  --input-large: 2.75rem;  /* 44px */
 }
 
 /* --------------------------------------------------------------------------

@@ -22,7 +22,7 @@ const actions = type === 'destructive'
 export default {
   example: hasInput
     ? figma.tsx`<Toast type="${type}" title="${title}" description="${text}"${actions}${hasClose ? ' onClose={() => {}}' : ''}>
-  <Input />
+  <Input size="sm" />
 </Toast>`
     : figma.tsx`<Toast${type !== 'info' ? ` type="${type}"` : ''} title="${title}" description="${text}"${actions}${hasClose ? ' onClose={() => {}}' : ''} />`,
   imports: [

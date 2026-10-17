@@ -33,7 +33,7 @@ export default function ToastPage() {
         <div className={styles.row}>
           <Toast title="Toast label" description="Snackbar text" actions={ACTIONS} onClose={() => {}} />
           <Toast type="destructive" title="Toast label" description="Snackbar text" actions={<Button variant="destructive">Delete</Button>} onClose={() => {}}>
-            <Input aria-label="Confirmation" />
+            <Input size="sm" aria-label="Confirmation" />
           </Toast>
           <Toast type="warning" title="Toast label" description="Snackbar text" actions={ACTIONS} onClose={() => {}} />
           <Toast type="success" title="Toast label" description="Snackbar text" actions={ACTIONS} />
