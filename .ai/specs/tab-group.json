@@ -1,0 +1,1076 @@
+{
+ "id": "4056:1461",
+ "name": "tab-group",
+ "props": {
+  "Size": {
+   "type": "VARIANT",
+   "default": "lg",
+   "options": [
+    "lg",
+    "sm"
+   ]
+  },
+  "Style": {
+   "type": "VARIANT",
+   "default": "segmented",
+   "options": [
+    "pill",
+    "rounded",
+    "segmented",
+    "underline"
+   ]
+  },
+  "Tabs": {
+   "type": "VARIANT",
+   "default": "2",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ]
+  }
+ },
+ "variants": {
+  "Size=lg, Style=segmented, Tabs=3": {
+   "(root)": {
+    "size": "174×48",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=pill-segmented, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill-segmented, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "2"
+   }
+  },
+  "Size=lg, Style=pill, Tabs=3": {
+   "(root)": {
+    "size": "166×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "9999=full",
+    "instance": "tab › State=active, Shape=pill, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "2"
+   }
+  },
+  "Size=lg, Style=rounded, Tabs=3": {
+   "(root)": {
+    "size": "222×48",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "12=12"
+   },
+   "tab": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "10=10",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=rounded, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "radius": "10=10",
+    "instance": "tab › State=default, Shape=rounded, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "2"
+   }
+  },
+  "Size=lg, Style=underline, Tabs=3": {
+   "(root)": {
+    "size": "210×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "tab": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Strong",
+    "instance": "tab › State=active, Shape=underline, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "instance": "tab › State=default, Shape=underline, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "2"
+   }
+  },
+  "Size=lg, Style=segmented, Tabs=2": {
+   "(root)": {
+    "size": "122×48",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "56×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=pill-segmented, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "tab#2": {
+    "size": "56×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill-segmented, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   }
+  },
+  "Size=lg, Style=pill, Tabs=2": {
+   "(root)": {
+    "size": "110×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "9999=full",
+    "instance": "tab › State=active, Shape=pill, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "tab#2": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   }
+  },
+  "Size=lg, Style=rounded, Tabs=2": {
+   "(root)": {
+    "size": "150×48",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "12=12"
+   },
+   "tab": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "10=10",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=rounded, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "tab#2": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "radius": "10=10",
+    "instance": "tab › State=default, Shape=rounded, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   }
+  },
+  "Size=lg, Style=underline, Tabs=2": {
+   "(root)": {
+    "size": "140×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "tab": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Strong",
+    "instance": "tab › State=active, Shape=underline, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "tab#2": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "instance": "tab › State=default, Shape=underline, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   }
+  },
+  "Size=sm, Style=segmented, Tabs=3": {
+   "(root)": {
+    "size": "150×38",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=pill-segmented, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill-segmented, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "2"
+   }
+  },
+  "Size=sm, Style=pill, Tabs=3": {
+   "(root)": {
+    "size": "142×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "9999=full",
+    "instance": "tab › State=active, Shape=pill, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "2"
+   }
+  },
+  "Size=sm, Style=rounded, Tabs=3": {
+   "(root)": {
+    "size": "150×38",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "12=12"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "10=10",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=rounded, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "10=10",
+    "instance": "tab › State=default, Shape=rounded, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "2"
+   }
+  },
+  "Size=sm, Style=underline, Tabs=3": {
+   "(root)": {
+    "size": "138×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Strong",
+    "instance": "tab › State=active, Shape=sharp, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "instance": "tab › State=default, Shape=sharp, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "2"
+   }
+  },
+  "Size=sm, Style=segmented, Tabs=2": {
+   "(root)": {
+    "size": "102×38",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=pill-segmented, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "tab#2": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill-segmented, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   }
+  },
+  "Size=sm, Style=pill, Tabs=2": {
+   "(root)": {
+    "size": "94×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "9999=full",
+    "instance": "tab › State=active, Shape=pill, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "tab#2": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   }
+  },
+  "Size=sm, Style=rounded, Tabs=2": {
+   "(root)": {
+    "size": "102×38",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "12=12"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "10=10",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=rounded, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "tab#2": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "10=10",
+    "instance": "tab › State=default, Shape=rounded, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   }
+  },
+  "Size=sm, Style=underline, Tabs=2": {
+   "(root)": {
+    "size": "92×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Strong",
+    "instance": "tab › State=active, Shape=sharp, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "tab#2": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "instance": "tab › State=default, Shape=sharp, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   }
+  },
+  "Size=lg, Style=segmented, Tabs=4": {
+   "(root)": {
+    "size": "230×48",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=pill-segmented, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill-segmented, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "3"
+   }
+  },
+  "Size=lg, Style=pill, Tabs=4": {
+   "(root)": {
+    "size": "222×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "9999=full",
+    "instance": "tab › State=active, Shape=pill, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "3"
+   }
+  },
+  "Size=lg, Style=rounded, Tabs=4": {
+   "(root)": {
+    "size": "294×48",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "12=12"
+   },
+   "tab": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "10=10",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=rounded, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "radius": "10=10",
+    "instance": "tab › State=default, Shape=rounded, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "3"
+   }
+  },
+  "Size=lg, Style=underline, Tabs=4": {
+   "(root)": {
+    "size": "280×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "tab": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Strong",
+    "instance": "tab › State=active, Shape=underline, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "instance": "tab › State=default, Shape=underline, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "3"
+   }
+  },
+  "Size=sm, Style=segmented, Tabs=4": {
+   "(root)": {
+    "size": "198×38",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=pill-segmented, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill-segmented, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "3"
+   }
+  },
+  "Size=sm, Style=pill, Tabs=4": {
+   "(root)": {
+    "size": "190×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "9999=full",
+    "instance": "tab › State=active, Shape=pill, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "3"
+   }
+  },
+  "Size=sm, Style=rounded, Tabs=4": {
+   "(root)": {
+    "size": "198×38",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "12=12"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "10=10",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=rounded, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "10=10",
+    "instance": "tab › State=default, Shape=rounded, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "3"
+   }
+  },
+  "Size=sm, Style=underline, Tabs=4": {
+   "(root)": {
+    "size": "184×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Strong",
+    "instance": "tab › State=active, Shape=sharp, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "instance": "tab › State=default, Shape=sharp, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "3"
+   }
+  },
+  "Size=lg, Style=segmented, Tabs=5": {
+   "(root)": {
+    "size": "286×48",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=pill-segmented, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill-segmented, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "4"
+   }
+  },
+  "Size=lg, Style=pill, Tabs=5": {
+   "(root)": {
+    "size": "278×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "9999=full",
+    "instance": "tab › State=active, Shape=pill, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "4"
+   }
+  },
+  "Size=lg, Style=rounded, Tabs=5": {
+   "(root)": {
+    "size": "366×48",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "12=12"
+   },
+   "tab": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "10=10",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=rounded, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "radius": "10=10",
+    "instance": "tab › State=default, Shape=rounded, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "4"
+   }
+  },
+  "Size=lg, Style=underline, Tabs=5": {
+   "(root)": {
+    "size": "350×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "tab": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Strong",
+    "instance": "tab › State=active, Shape=underline, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "instance": "tab › State=default, Shape=underline, Size=lg",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "4"
+   }
+  },
+  "Size=sm, Style=segmented, Tabs=5": {
+   "(root)": {
+    "size": "246×38",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=pill-segmented, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill-segmented, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "4"
+   }
+  },
+  "Size=sm, Style=pill, Tabs=5": {
+   "(root)": {
+    "size": "238×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2",
+    "radius": "9999=full"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "9999=full",
+    "instance": "tab › State=active, Shape=pill, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "tab › State=default, Shape=pill, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "4"
+   }
+  },
+  "Size=sm, Style=rounded, Tabs=5": {
+   "(root)": {
+    "size": "246×38",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "12=12"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/On Primary",
+    "radius": "10=10",
+    "effect": "Shadows/elevation1",
+    "instance": "tab › State=active, Shape=rounded, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "10=10",
+    "instance": "tab › State=default, Shape=rounded, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "4"
+   }
+  },
+  "Size=sm, Style=underline, Tabs=5": {
+   "(root)": {
+    "size": "230×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "tab": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Strong",
+    "instance": "tab › State=active, Shape=sharp, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\""
+   },
+   "[run 1]": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "instance": "tab › State=default, Shape=sharp, Size=sm",
+    "props": "↪ Tail icon =Icons / Close--filled, Lead icon=false, ↪ Lead icon=Icons / Add, Tail icon=false, Label=\"Tab\"",
+    "count": "4"
+   }
+  }
+ }
+}

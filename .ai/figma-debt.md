@@ -386,8 +386,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] stepper-substep disabled : cercle 7.09 sans variable. Connecteur : trait 1px, 25 de haut, sans variable.
 - [ ] Cursor blink : 1 × 17 sans variable. SCROLL FADE : largeur 320, flou 2 sans effect style.
 - [ ] DEMO PAGE HEADER : largeur 1280, gaps 12, trait 9 × 20 de 1px, boutons fixés à 24 de large, sans variable.
-- [ ] Tokens CSS ajoutés : `--color-transparent-white-0`, `--color-transparent-black-0`, `--color-transparent-black-100`.
-      Code syntax WEB à écrire.
+- [x] Tokens CSS ajoutés : `--color-transparent-white-0`, `--color-transparent-black-0`, `--color-transparent-black-100`.
+      Code syntax WEB écrite.
 
 ### Validation text, Switch (Theme)
 - [ ] validation-text-line : largeur fixe 308 dans Validation Text (Password). Le code prend toute la largeur.
@@ -440,17 +440,18 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 
 - [x] Icônes ajoutées par le script : `sun` (179:17087), `moon-filled` (6114:852).
 
-## 5. Détection des changements Figma (à construire)
+## 5. Détection des changements Figma
 
-L'API REST répond avec le token d'environnement (`/v1/files/:key/nodes` renvoie padding, rayons,
-fills, strokes et `boundVariables` de chaque variante ; `version` et `lastModified` du fichier).
+`scripts/figma/diff.mjs` (lecture seule côté Figma) compare le fichier aux snapshots `.ai/specs/*.json`.
 
-Plan :
-1. `scripts/figma-snapshot.mjs` : pour chaque composant mappé en Code Connect (`*.figma.ts`), lit le nœud,
-   normalise chaque variante (dimensions, padding, gap, rayon, fills, strokes, texte, icônes, nom de la
-   variable liée ou valeur brute) et écrit `.ai/figma-snapshots/<Component>.json`. Idem pour les variables
-   locales (`.ai/figma-snapshots/variables.json`).
-2. `npm run figma:diff` : relit Figma, compare aux snapshots commités, liste les changements par composant
-   et par variante, et signale les valeurs sans variable (section 2).
-3. Après chaque mise à jour Figma : `figma:diff` → on applique les changements en code → on régénère le
-   snapshot → on coche les entrées corrigées ici.
+- `npm run figma:diff` : sort tout de suite si la version du fichier n'a pas bougé depuis `.ai/figma/snapshot.json`.
+  Sinon relit les snapshots, les composants publiés (hors page ICONS) et les nœuds mappés en Code Connect,
+  et écrit `.ai/figma/changes.md` : composants modifiés (props, variantes, calques, tailles, padding, gap,
+  rayons, fills, strokes, effets, textes, variables liées) avec le fichier de code concerné, composants sans
+  snapshot, nœuds supprimés, tokens dont la variable CSS manque dans globals.css. Code de sortie 1 s'il y a
+  des changements.
+- `--force` : compare même si la version n'a pas changé. `<id>...` : limite à ces nœuds.
+- `--vars <dump.json>` : compare aussi un dump `scripts/figma/dump-variables.js` (use_figma) au cache :
+  variables ajoutées, supprimées, renommées, code syntax WEB modifiée.
+- Après une mise à jour Figma : `figma:diff` → on applique les changements en code (et `--merge-vars` si des
+  variables ont changé) → `npm run figma:diff:update` (réécrit les specs modifiées, stocke la version) → commit.

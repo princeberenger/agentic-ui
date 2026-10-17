@@ -1,0 +1,216 @@
+{
+ "id": "4001:1395",
+ "name": "stepper-step",
+ "props": {
+  "Label": {
+   "type": "TEXT",
+   "default": "Step"
+  },
+  "Icon": {
+   "type": "INSTANCE_SWAP",
+   "default": "179:13367"
+  },
+  "Variant": {
+   "type": "VARIANT",
+   "default": "completed",
+   "options": [
+    "active",
+    "completed",
+    "disabled"
+   ]
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "hover"
+   ]
+  }
+ },
+ "variants": {
+  "Variant=completed, State=default": {
+   "(root)": {
+    "size": "102×48",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/md (8) 24=?3ed398f685b81124befa2c267e3b69f1b9c7811c/388:13 8=PADDING/md (8) 8=PADDING/md (8)",
+    "gap": "8=PADDING/md (8)",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70"
+   },
+   "icon": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "layout": "column align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70"
+   },
+   "icon/Icons / Magic-wand--filled": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Magic-wand--filled"
+   },
+   "icon/Icons / Magic-wand--filled/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Step": {
+    "size": "30×18",
+    "sizing": "hug/hug",
+    "text": "\"Step\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Variant=completed, State=hover": {
+   "(root)": {
+    "size": "102×48",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/md (8) 24=?3ed398f685b81124befa2c267e3b69f1b9c7811c/388:13 8=PADDING/md (8) 8=PADDING/md (8)",
+    "gap": "8=PADDING/md (8)",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Medium",
+    "radius": "9999=?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70"
+   },
+   "icon": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "layout": "column align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70"
+   },
+   "icon/Icons / Magic-wand--filled": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Magic-wand--filled"
+   },
+   "icon/Icons / Magic-wand--filled/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Step": {
+    "size": "30×18",
+    "sizing": "hug/hug",
+    "text": "\"Step\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Variant=active, State=default": {
+   "(root)": {
+    "size": "103×48",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/md (8) 24=?3ed398f685b81124befa2c267e3b69f1b9c7811c/388:13 8=PADDING/md (8) 8=PADDING/md (8)",
+    "gap": "8=PADDING/md (8)",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=?f1a6137e95d229c9573dab4cea316f192617e230/202:131 inside BORDER/Strong",
+    "radius": "9999=?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70"
+   },
+   "icon": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "layout": "column align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "radius": "9999=?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70"
+   },
+   "icon/Icons / Magic-wand--filled": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Magic-wand--filled"
+   },
+   "icon/Icons / Magic-wand--filled/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Step": {
+    "size": "31×18",
+    "sizing": "hug/hug",
+    "text": "\"Step\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Variant=disabled, State=default": {
+   "(root)": {
+    "size": "102×48",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/md (8) 24=?3ed398f685b81124befa2c267e3b69f1b9c7811c/388:13 8=PADDING/md (8) 8=PADDING/md (8)",
+    "gap": "8=PADDING/md (8)",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "9999=?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70"
+   },
+   "icon": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "layout": "column align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "9999=?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70"
+   },
+   "icon/Icons / Magic-wand--filled": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Magic-wand--filled"
+   },
+   "icon/Icons / Magic-wand--filled/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Step": {
+    "size": "30×18",
+    "sizing": "hug/hug",
+    "text": "\"Step\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Variant=disabled, State=hover": {
+   "(root)": {
+    "size": "102×48",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/md (8) 24=?3ed398f685b81124befa2c267e3b69f1b9c7811c/388:13 8=PADDING/md (8) 8=PADDING/md (8)",
+    "gap": "8=PADDING/md (8)",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Medium",
+    "radius": "9999=?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70"
+   },
+   "icon": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "layout": "column align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70"
+   },
+   "icon/Icons / Magic-wand--filled": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Magic-wand--filled"
+   },
+   "icon/Icons / Magic-wand--filled/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Step": {
+    "size": "30×18",
+    "sizing": "hug/hug",
+    "text": "\"Step\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  }
+ }
+}

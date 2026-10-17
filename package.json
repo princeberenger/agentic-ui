@@ -10,7 +10,9 @@
     "figma:typecheck": "tsc -p tsconfig.figma.json",
     "figma:parse": "figma connect parse",
     "figma:publish": "figma connect publish",
-    "figma:extract": "node scripts/figma/extract.mjs"
+    "figma:extract": "node scripts/figma/extract.mjs",
+    "figma:diff": "node scripts/figma/diff.mjs",
+    "figma:diff:update": "node scripts/figma/diff.mjs --update"
   },
   "dependencies": {
     "motion": "^12.38.0",

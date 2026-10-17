@@ -1,0 +1,672 @@
+{
+ "id": "4066:7007",
+ "name": "HelperText",
+ "props": {
+  "Label": {
+   "type": "TEXT",
+   "default": "Helper text"
+  },
+  "show Icon": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "error",
+    "success",
+    "warning"
+   ]
+  },
+  "Size": {
+   "type": "VARIANT",
+   "default": "sm",
+   "options": [
+    "lg",
+    "sm"
+   ]
+  },
+  "Style": {
+   "type": "VARIANT",
+   "default": "light",
+   "options": [
+    "solid",
+    "light"
+   ]
+  }
+ },
+ "variants": {
+  "Type=default, Size=sm, Style=light": {
+   "(root)": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "106×23",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "helper-text-bg/icon": {
+    "size": "21×13",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0 8=PADDING/8 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Information"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "69×15",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/xs/bold · Geist 500 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Medium, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Type=default, Size=sm, Style=solid": {
+   "(root)": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "106×23",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "10=10"
+   },
+   "helper-text-bg/icon": {
+    "size": "21×13",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0 8=PADDING/8 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Information"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "CONTENT/Secondary"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "69×15",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/xs/bold · Geist 500 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Medium, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Type=default, Size=lg, Style=light": {
+   "(root)": {
+    "size": "118×30",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "118×30",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "6=PADDING/6 10=PADDING/10 6=PADDING/6 10=PADDING/10",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full"
+   },
+   "helper-text-bg/icon": {
+    "size": "24×16",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0 8=PADDING/8 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Information"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "74×18",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Type=default, Size=lg, Style=solid": {
+   "(root)": {
+    "size": "122×30",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "122×30",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "0",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "9999=full"
+   },
+   "helper-text-bg/icon": {
+    "size": "24×16",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0 8=PADDING/8 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Information"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "CONTENT/Secondary"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "74×18",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Type=warning, Size=sm, Style=light": {
+   "(root)": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "106×23",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Warning",
+    "radius": "10=10"
+   },
+   "helper-text-bg/icon": {
+    "size": "21×13",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "0=PADDING/none 8=PADDING/8 0=PADDING/none 0=PADDING/none",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13 × ICONS/13",
+    "instance": "Icons / Warning--alt--filled"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "CONTENT/Warning (Text)"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "69×15",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/xs/bold · Geist 500 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Medium, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Warning (Text)"
+   }
+  },
+  "Type=warning, Size=lg, Style=light": {
+   "(root)": {
+    "size": "118×30",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "118×30",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "6=PADDING/6 10=PADDING/10 6=PADDING/6 10=PADDING/10",
+    "gap": "0",
+    "fill": "BACKGROUND/Warning",
+    "radius": "9999=full"
+   },
+   "helper-text-bg/icon": {
+    "size": "24×13",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "0=PADDING/none 8=PADDING/8 0=PADDING/none 0=PADDING/none",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Warning--alt--filled"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "CONTENT/Warning (Text)"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "74×18",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Warning (Text)"
+   }
+  },
+  "Type=warning, Size=lg, Style=solid": {
+   "(root)": {
+    "size": "122×30",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "122×30",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "0",
+    "fill": "CONTENT/Warning (Text)",
+    "radius": "9999=full"
+   },
+   "helper-text-bg/icon": {
+    "size": "24×13",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "0=PADDING/none 8=PADDING/8 0=PADDING/none 0=PADDING/none",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Warning--alt--filled"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "CONTENT/Warning (Icons)"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "74×18",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Warning (Icons)"
+   }
+  },
+  "Type=success, Size=sm, Style=light": {
+   "(root)": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "106×23",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Success (Light)",
+    "radius": "10=10"
+   },
+   "helper-text-bg/icon": {
+    "size": "21×13",
+    "sizing": "hug/fixed",
+    "layout": "row align max/center",
+    "padding": "0 8=PADDING/8 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13 × ICONS/13",
+    "instance": "Icons / Checkmark--filled"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "BACKGROUND/Success"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "69×15",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/xs/bold · Geist 500 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Medium, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Success"
+   }
+  },
+  "Type=success, Size=sm, Style=solid": {
+   "(root)": {
+    "size": "104×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "104×23",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Success",
+    "radius": "10=10"
+   },
+   "helper-text-bg/icon": {
+    "size": "21×13",
+    "sizing": "hug/fixed",
+    "layout": "row align max/center",
+    "padding": "0 8=PADDING/8 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13 × ICONS/13",
+    "instance": "Icons / Checkmark--filled"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "CONTENT/Success (Light)"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "67×15",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Success (Light)"
+   }
+  },
+  "Type=success, Size=lg, Style=light": {
+   "(root)": {
+    "size": "118×30",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "118×30",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "6=PADDING/6 10=PADDING/10 6=PADDING/6 10=PADDING/10",
+    "gap": "0",
+    "fill": "BACKGROUND/Success (Light)",
+    "radius": "9999=full"
+   },
+   "helper-text-bg/icon": {
+    "size": "24×13",
+    "sizing": "hug/fixed",
+    "layout": "row align max/center",
+    "padding": "0 8=PADDING/8 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Checkmark--filled"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "BACKGROUND/Success"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "74×18",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Success"
+   }
+  },
+  "Type=success, Size=lg, Style=solid": {
+   "(root)": {
+    "size": "122×30",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "122×30",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "0",
+    "fill": "BACKGROUND/Success",
+    "radius": "9999=full"
+   },
+   "helper-text-bg/icon": {
+    "size": "24×13",
+    "sizing": "hug/fixed",
+    "layout": "row align max/center",
+    "padding": "0 8=PADDING/8 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Checkmark--filled"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "CONTENT/Success (Light)"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "74×18",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Success (Light)"
+   }
+  },
+  "Type=error, Size=sm, Style=light": {
+   "(root)": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "106×23",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Attention (Light)",
+    "radius": "10=10"
+   },
+   "helper-text-bg/icon": {
+    "size": "21×13",
+    "sizing": "hug/fixed",
+    "layout": "row align max/center",
+    "padding": "0 8=PADDING/8 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13 × ICONS/13",
+    "instance": "Icons / Error--filled"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "BADGE/label/red"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "69×15",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/xs/bold · Geist 500 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Medium, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   }
+  },
+  "Type=error, Size=sm, Style=solid": {
+   "(root)": {
+    "size": "104×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "104×23",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Attention",
+    "radius": "10=10"
+   },
+   "helper-text-bg/icon": {
+    "size": "21×13",
+    "sizing": "hug/fixed",
+    "layout": "row align max/center",
+    "padding": "0 8=PADDING/8 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/icon/Status notification": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13 × ICONS/13",
+    "instance": "Icons / Error--filled"
+   },
+   "helper-text-bg/icon/Status notification/icon-color": {
+    "fill": "CONTENT/Attention (Light)"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "67×15",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Attention (Light)"
+   }
+  },
+  "Type=error, Size=lg, Style=light": {
+   "(root)": {
+    "size": "118×30",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0=PADDING/none 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "118×30",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "6=PADDING/6 10=PADDING/10 6=PADDING/6 10=PADDING/10",
+    "gap": "0",
+    "fill": "BACKGROUND/Attention (Light)",
+    "radius": "9999=full"
+   },
+   "helper-text-bg/Icon": {
+    "size": "24×16",
+    "sizing": "hug/fixed",
+    "layout": "row align max/center",
+    "padding": "0 8=PADDING/8 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/Icon/Status notification": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Error--filled"
+   },
+   "helper-text-bg/Icon/Status notification/icon-color": {
+    "fill": "BADGE/label/red"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "74×18",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   }
+  },
+  "Type=error, Size=lg, Style=solid": {
+   "(root)": {
+    "size": "122×30",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0=PADDING/none 0 0 0",
+    "gap": "0"
+   },
+   "helper-text-bg": {
+    "size": "122×30",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "0",
+    "fill": "BACKGROUND/Attention",
+    "radius": "9999=full"
+   },
+   "helper-text-bg/Icon": {
+    "size": "24×16",
+    "sizing": "hug/fixed",
+    "layout": "row align max/center",
+    "padding": "0 8=PADDING/8 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "helper-text-bg/Icon/Status notification": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Error--filled"
+   },
+   "helper-text-bg/Icon/Status notification/icon-color": {
+    "fill": "CONTENT/On Primary"
+   },
+   "helper-text-bg/Helper text": {
+    "size": "74×18",
+    "sizing": "hug/hug",
+    "text": "\"Helper text\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   }
+  }
+ }
+}

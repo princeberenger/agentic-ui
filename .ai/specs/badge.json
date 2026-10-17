@@ -1,0 +1,5386 @@
+{
+ "id": "124:2898",
+ "name": "Badge",
+ "props": {
+  "hasCloseIcon": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Icon": {
+   "type": "INSTANCE_SWAP",
+   "default": "179:14029"
+  },
+  "Label": {
+   "type": "TEXT",
+   "default": "Label"
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "rounded",
+   "options": [
+    "pill",
+    "rounded"
+   ]
+  },
+  "Size": {
+   "type": "VARIANT",
+   "default": "sm",
+   "options": [
+    "sm",
+    "lg"
+   ]
+  },
+  "Color": {
+   "type": "VARIANT",
+   "default": "green",
+   "options": [
+    "blue",
+    "green",
+    "neutral",
+    "none",
+    "orange",
+    "pink",
+    "purple",
+    "red",
+    "teal",
+    "yellow"
+   ]
+  },
+  "Border": {
+   "type": "VARIANT",
+   "default": "true",
+   "options": [
+    "false",
+    "true"
+   ]
+  },
+  "iconLeft": {
+   "type": "VARIANT",
+   "default": "false",
+   "options": [
+    "false",
+    "true"
+   ]
+  },
+  "iconRight": {
+   "type": "VARIANT",
+   "default": "false",
+   "options": [
+    "false",
+    "true"
+   ]
+  }
+ },
+ "variants": {
+  "Type=rounded, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=red, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=yellow, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=orange, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=blue, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=purple, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=teal, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=pink, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=neutral, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/default",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/default"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=none, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/default"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=green, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/green"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=red, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/red"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=yellow, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/yellow"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=orange, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/orange"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=blue, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/blue"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=purple, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/purple"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=teal, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/teal"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=pink, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/pink"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=neutral, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/default",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/default"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/default"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=none, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/default"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/default"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=red, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=yellow, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=orange, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=blue, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=purple, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=teal, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=pink, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=neutral, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/default",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/default"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/default"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=none, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/default"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/default"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=green, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=red, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=yellow, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=orange, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=blue, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=purple, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=teal, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=pink, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=neutral, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/gray",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=none, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=rounded, Size=sm, Color=green, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/green"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=red, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/red"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=yellow, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/yellow"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=orange, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/orange"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=blue, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/blue"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=purple, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/purple"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=teal, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/teal"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=pink, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/pink"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=neutral, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/gray",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/gray"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=none, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "6=6"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/gray"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=green, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=red, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=yellow, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=orange, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=blue, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=purple, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=teal, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=pink, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=neutral, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/gray",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=rounded, Size=sm, Color=none, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "67×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "6=6"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=green, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=red, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=yellow, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=orange, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=blue, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=purple, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=teal, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=pink, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=neutral, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/gray",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=none, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "49×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=green, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/green"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=red, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/red"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=yellow, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/yellow"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=orange, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/orange"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=blue, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/blue"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=purple, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/purple"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=teal, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/teal"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=pink, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/pink"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=neutral, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/gray",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/gray"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=none, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/gray"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=green, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=red, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=yellow, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=orange, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=blue, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=purple, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=teal, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=pink, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=neutral, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/gray",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=none, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "66×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Add": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "53×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=red, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "53×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=yellow, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "53×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=orange, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "53×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=blue, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "53×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=purple, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "53×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=teal, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "53×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=pink, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "53×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=neutral, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "53×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/default",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/default"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=none, Border=true, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "53×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/default"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=sm, Color=green, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/green"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=red, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/red"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=yellow, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/yellow"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=orange, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/orange"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=blue, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/blue"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=purple, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/purple"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=teal, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/teal"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=pink, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/pink"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=neutral, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/default",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/default"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/default"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=none, Border=true, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/default"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/default"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=red, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=yellow, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=orange, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=blue, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=purple, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=teal, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=pink, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=neutral, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/default",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/default"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/default"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=sm, Color=none, Border=true, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "71×19",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 10=PADDING/10 2=PADDING/2 10=PADDING/10",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/default"
+   },
+   "Icons / Add": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/default"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Success"
+   }
+  },
+  "Type=pill, Size=lg, Color=green, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "57×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=red, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "57×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=yellow, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "57×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=orange, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "57×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=blue, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "57×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=purple, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "57×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=teal, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "57×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=pink, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "57×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=neutral, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "57×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/gray",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=none, Border=false, iconLeft=false, iconRight=false": {
+   "(root)": {
+    "size": "57×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=green, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/green"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=red, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/red"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=yellow, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/yellow"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=orange, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/orange"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=blue, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/blue"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=purple, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/purple"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=teal, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/teal"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=pink, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/pink"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=neutral, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/gray",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/gray"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=none, Border=false, iconLeft=true, iconRight=false": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "9999=full"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/gray"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=green, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/green"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/green"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=red, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/red",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/red"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=yellow, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/yellow",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/yellow"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/yellow"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=orange, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/orange",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/orange"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/orange"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=blue, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/blue",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/blue"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/blue"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=purple, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/purple"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/purple"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=teal, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/teal",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/teal"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/teal"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=pink, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/pink",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/pink"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/pink"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=neutral, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/gray",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=pill, Size=lg, Color=none, Border=false, iconLeft=false, iconRight=true": {
+   "(root)": {
+    "size": "77×28",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "9999=full"
+   },
+   "text-label": {
+    "size": "41×24",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "Icons / Add": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Add"
+   },
+   "Icons / Add/icon-color": {
+    "fill": "BADGE/label/gray"
+   },
+   "Icons / Close": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "hidden": "true",
+    "instance": "Icons / Close"
+   },
+   "Icons / Close/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  }
+ }
+}

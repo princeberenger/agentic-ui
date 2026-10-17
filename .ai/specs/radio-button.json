@@ -1,0 +1,90 @@
+{
+ "id": "124:2977",
+ "name": "Radio button",
+ "props": {
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "disabled"
+   ]
+  },
+  "Selected": {
+   "type": "VARIANT",
+   "default": "true",
+   "options": [
+    "true",
+    "false"
+   ]
+  }
+ },
+ "variants": {
+  "State=default, Selected=true": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0"
+   },
+   "Ellipse 1": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "1 inside CONTENT/Primary"
+   },
+   "Ellipse 2": {
+    "size": "10×10",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "State=disabled, Selected=true": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0"
+   },
+   "Ellipse 1": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "1 inside CONTENT/Disabled"
+   },
+   "Ellipse 2": {
+    "size": "10×10",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "State=default, Selected=false": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0"
+   },
+   "Ellipse 1": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "1 inside CONTENT/Primary"
+   }
+  },
+  "State=disabled, Selected=false": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0"
+   },
+   "Ellipse 1": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "1 inside CONTENT/Disabled"
+   }
+  }
+ }
+}

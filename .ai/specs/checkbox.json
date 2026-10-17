@@ -1,0 +1,293 @@
+{
+ "id": "124:2639",
+ "name": "Checkbox",
+ "props": {
+  "Type": {
+   "type": "VARIANT",
+   "default": "stroke",
+   "options": [
+    "filled",
+    "stroke"
+   ]
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "disabled"
+   ]
+  },
+  "Selected": {
+   "type": "VARIANT",
+   "default": "false",
+   "options": [
+    "true",
+    "false",
+    "indeterminate"
+   ]
+  }
+ },
+ "variants": {
+  "Type=stroke, State=default, Selected=true": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0"
+   },
+   "Selected": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "Selected/filled": {
+    "size": "20×20"
+   },
+   "Selected/filled/Subtract": {
+    "size": "16×16",
+    "fill": "CONTENT/Primary"
+   },
+   "Selected/filled/Subtract/vector": {
+    "size": "16×16",
+    "fill": "CONTENT/Primary"
+   },
+   "Selected/filled/Subtract/Vector": {
+    "size": "11.63×8.31",
+    "fill": "CONTENT/On Primary"
+   }
+  },
+  "Type=filled, State=default, Selected=true": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0"
+   },
+   "filled": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "filled/Subtract": {
+    "size": "16×16",
+    "fill": "CONTENT/Primary"
+   },
+   "filled/Subtract/vector": {
+    "size": "16×16",
+    "fill": "CONTENT/Primary",
+    "radius": "4=4"
+   },
+   "filled/Subtract/Vector": {
+    "size": "10×8",
+    "fill": "CONTENT/On Primary"
+   }
+  },
+  "Type=stroke, State=disabled, Selected=true": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0"
+   },
+   "Selected": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "Selected/filled": {
+    "size": "20×20"
+   },
+   "Selected/filled/Subtract": {
+    "size": "16×16",
+    "fill": "CONTENT/Disabled"
+   },
+   "Selected/filled/Subtract/vector": {
+    "size": "16×16",
+    "fill": "CONTENT/Disabled"
+   },
+   "Selected/filled/Subtract/Vector": {
+    "size": "11.63×8.31",
+    "fill": "CONTENT/On Primary"
+   }
+  },
+  "Type=filled, State=disabled, Selected=true": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0"
+   },
+   "filled": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "filled/Subtract": {
+    "size": "16×16",
+    "fill": "CONTENT/Disabled"
+   },
+   "filled/Subtract/vector": {
+    "size": "16×16",
+    "fill": "CONTENT/Disabled",
+    "radius": "4=4"
+   },
+   "filled/Subtract/Vector": {
+    "size": "10×8",
+    "fill": "CONTENT/On Primary"
+   }
+  },
+  "Type=stroke, State=default, Selected=indeterminate": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0"
+   },
+   "checkbox_minus": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "checkbox_minus/filled": {
+    "size": "20×20"
+   },
+   "checkbox_minus/filled/vector": {
+    "size": "16×16",
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=filled, State=default, Selected=indeterminate": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0"
+   },
+   "filled": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "filled/vector": {
+    "size": "16×16",
+    "fill": "CONTENT/Primary",
+    "radius": "4=4"
+   }
+  },
+  "Type=stroke, State=disabled, Selected=indeterminate": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0"
+   },
+   "checkbox_minus": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "checkbox_minus/filled": {
+    "size": "20×20"
+   },
+   "checkbox_minus/filled/vector": {
+    "size": "16×16",
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Type=filled, State=disabled, Selected=indeterminate": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0"
+   },
+   "filled": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "filled/vector": {
+    "size": "16×16",
+    "fill": "CONTENT/Disabled",
+    "radius": "4=4"
+   }
+  },
+  "Type=stroke, State=default, Selected=false": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0"
+   },
+   "Unselected": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "Unselected/vector": {
+    "size": "16×16",
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Type=filled, State=disabled, Selected=false": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "opacity": 0.5
+   },
+   "Unselected": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "radius": "4=4"
+   }
+  },
+  "Type=filled, State=default, Selected=false": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0"
+   },
+   "Unselected": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "4=4",
+    "opacity": 0.5
+   }
+  },
+  "Type=stroke, State=disabled, Selected=false": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0"
+   },
+   "Unselected": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "Unselected/vector": {
+    "size": "16×16",
+    "fill": "CONTENT/Disabled"
+   }
+  }
+ }
+}

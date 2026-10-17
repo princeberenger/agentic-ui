@@ -22,19 +22,20 @@
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { pathToFileURL } from 'node:url';
 
-const FILE_KEY = 'Dqy0QA70ThT4iZXNgJljkG';
-const FILE_URL = `https://www.figma.com/design/${FILE_KEY}/AGENTIC-DESIGN-SYSTEM`;
-const ROOT = new URL('../..', import.meta.url).pathname;
-const VARS_PATH = join(ROOT, '.ai/figma/variables.json');
-const SPECS_DIR = join(ROOT, '.ai/specs');
+export const FILE_KEY = 'Dqy0QA70ThT4iZXNgJljkG';
+export const FILE_URL = `https://www.figma.com/design/${FILE_KEY}/AGENTIC-DESIGN-SYSTEM`;
+export const ROOT = new URL('../..', import.meta.url).pathname;
+export const VARS_PATH = join(ROOT, '.ai/figma/variables.json');
+export const SPECS_DIR = join(ROOT, '.ai/specs');
 const ICONS_DIR = join(ROOT, 'public/assets/icons');
 const ICON_BATCH = join(ROOT, 'app/components/Icon/Icon.figma.batch.json');
-const GLOBALS_CSS = join(ROOT, 'app/globals.css');
+export const GLOBALS_CSS = join(ROOT, 'app/globals.css');
 
 // --- io ---------------------------------------------------------------------
 
-function api(path) {
+export function api(path) {
   const args = ['-sS', '--fail-with-body', `https://api.figma.com/v1/${path}`];
   const token = process.env.FIGMA_ACCESS_TOKEN;
   if (token && token !== 'placeholder') args.push('-H', `X-Figma-Token: ${token}`);
@@ -46,15 +47,15 @@ function download(url, dest) {
   execFileSync('curl', ['-sS', '-L', '-o', dest, url]);
 }
 
-const readJson = (p, fallback) => (existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : fallback);
+export const readJson = (p, fallback) => (existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : fallback);
 
 // --- lookups ------------------------------------------------------------------
 
 const variables = readJson(VARS_PATH, {});
 const cssTokens = new Set([...readFileSync(GLOBALS_CSS, 'utf8').matchAll(/(--[\w-]+)\s*:/g)].map((m) => m[1]));
-const unresolved = new Set();
+export const unresolved = new Set();
 
-function walkFiles(dir, test, acc = []) {
+export function walkFiles(dir, test, acc = []) {
   for (const name of readdirSync(dir)) {
     if (name === 'node_modules' || name.startsWith('.')) continue;
     const p = join(dir, name);
@@ -65,7 +66,7 @@ function walkFiles(dir, test, acc = []) {
 }
 
 // node ids published with Code Connect (templates + icon batch)
-const connected = new Map();
+export const connected = new Map();
 for (const f of walkFiles(join(ROOT, 'app'), (n) => n.endsWith('.figma.ts'))) {
   const m = readFileSync(f, 'utf8').match(/node-id=(\d+)-(\d+)/);
   if (m) connected.set(`${m[1]}:${m[2]}`, relative(ROOT, f));
@@ -376,7 +377,7 @@ function parseVariant(name) {
   return Object.fromEntries(name.split(',').map((p) => p.split('=').map((s) => s.trim())));
 }
 
-function spec(node, ctx) {
+export function spec(node, ctx) {
   const isSet = node.type === 'COMPONENT_SET';
   const variants = isSet ? node.children.filter((c) => c.type === 'COMPONENT') : [node];
   const defs = node.componentPropertyDefinitions ?? {};
@@ -532,7 +533,7 @@ function spec(node, ctx) {
 
 // --- targets --------------------------------------------------------------------
 
-function collectTargets(node) {
+export function collectTargets(node) {
   if (node.type === 'COMPONENT_SET') return [node];
   if (node.type === 'COMPONENT') return [node];
   const out = [];
@@ -642,4 +643,5 @@ function main() {
   }
 }
 
-main();
+// run only as a script, not when diff.mjs imports the helpers
+if (import.meta.url === pathToFileURL(process.argv[1]).href) main();
