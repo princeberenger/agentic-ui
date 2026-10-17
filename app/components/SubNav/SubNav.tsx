@@ -21,6 +21,7 @@ const pages = [
   { href: '/modal', label: 'Modal' },
   { href: '/file-upload', label: 'File upload' },
   { href: '/breadcrumbs', label: 'Breadcrumbs' },
+  { href: '/code-block', label: 'Code block' },
   { href: '/pagination', label: 'Pagination' },
   { href: '/tabs', label: 'Tabs' },
   { href: '/table', label: 'Table' },

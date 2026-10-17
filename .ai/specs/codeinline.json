@@ -1,0 +1,119 @@
+{
+ "id": "4124:7606",
+ "name": "CodeInline",
+ "props": {
+  "Label": {
+   "type": "TEXT",
+   "default": "style_taxonomy"
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "active",
+    "default",
+    "disabled",
+    "focus",
+    "hover"
+   ]
+  }
+ },
+ "variants": {
+  "State=default": {
+   "(root)": {
+    "size": "151×28",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "4=4"
+   },
+   "style_taxonomy": {
+    "size": "135×24",
+    "sizing": "hug/hug",
+    "text": "\"style_taxonomy\"",
+    "font": "SYSTEM/Code/lg · JetBrains Mono 400 16/24 ls 0",
+    "font.vars": "family/code, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "State=hover": {
+   "(root)": {
+    "size": "151×28",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "4=4"
+   },
+   "style_taxonomy": {
+    "size": "135×24",
+    "sizing": "hug/hug",
+    "text": "\"style_taxonomy\"",
+    "font": "SYSTEM/Code/lg · JetBrains Mono 400 16/24 ls 0",
+    "font.vars": "family/code, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "State=active": {
+   "(root)": {
+    "size": "151×28",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "4=4"
+   },
+   "style_taxonomy": {
+    "size": "135×24",
+    "sizing": "hug/hug",
+    "text": "\"style_taxonomy\"",
+    "font": "SYSTEM/Code/lg · JetBrains Mono 400 16/24 ls 0",
+    "font.vars": "family/code, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "State=focus": {
+   "(root)": {
+    "size": "151×28",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "style_taxonomy": {
+    "size": "135×24",
+    "sizing": "hug/hug",
+    "text": "\"style_taxonomy\"",
+    "font": "SYSTEM/Code/lg · JetBrains Mono 400 16/24 ls 0",
+    "font.vars": "family/code, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "State=disabled": {
+   "(root)": {
+    "size": "151×28",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary On Elevated",
+    "radius": "4=4"
+   },
+   "style_taxonomy": {
+    "size": "135×24",
+    "sizing": "hug/hug",
+    "text": "\"style_taxonomy\"",
+    "font": "SYSTEM/Code/lg · JetBrains Mono 400 16/24 ls 0",
+    "font.vars": "family/code, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  }
+ }
+}

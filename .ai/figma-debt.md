@@ -95,6 +95,20 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Icons/ Menu --collapsed : deux couleurs (`CONTENT/Icon` et trait `CONTENT/Primary`), nommé hors convention `Icons / `.
       Le code le rend d'une seule couleur (Icon seul, Primary dans Navigation).
 
+### Code block — CodeInline 4124:7606, CopyButton 4124:12068, Simple 4126:5641, Advanced 4125:6917 (`app/components/CodeBlock/`)
+- [ ] CodeInline a des états hover, active, focus sans dire ce que fait le clic. Le code ne les applique que si `onClick` est passé.
+- [ ] CopyButton : le focus ajoute un contour 1,5px `BORDER/Accent` au focus standard ; en sm le rayon passe de 6 à 4 au survol.
+      Reproduit.
+- [ ] CopyButton : « Copied » apparaît en State=pressed sans durée. Le code le garde jusqu'à la fermeture de l'infobulle.
+- [ ] Code block (Simple) : le survol du bloc montre le CopyButton survolé et son infobulle. Reproduit (le bouton reste
+      le seul élément cliquable).
+- [ ] Code block (Advanced) : aucun état hover ni focus, contrairement au Simple. Rien d'ajouté.
+- [ ] Code block (Advanced) : texte tronqué par la boîte (5 lignes, 18 déplié) avec points de suspension. Le code utilise
+      `line-clamp`, le texte masqué n'est pas défilable.
+
+### Skeleton loading animation — 761:23192 (`app/components/Skeleton/`)
+- [ ] Animation définie en prototype (Phase 1 → 5, 3,4s, smart animate ease in and out). Le code la reproduit en keyframes CSS.
+
 ## 2. Valeurs sans variable (non tokenisées dans Figma)
 
 ### Badge
@@ -272,6 +286,14 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Rail des sous-liens 1px sans variable (`--stroke-default`), indicateur actif 8×12 (`--space-8`, `--space-12`),
       logo 75×20 et largeur 187 du libellé utilisateur sans variable.
 
+### Code block, Skeleton
+- [ ] Largeurs 400 (Simple) et 640 (Advanced), hauteurs 160 et 480 sans variable. Le code prend la largeur du parent,
+      les hauteurs sont en px.
+- [ ] Simple : CopyButton à 5px du coin sans variable (`--space-4` + `--stroke-default`).
+- [ ] Skeleton : couleurs #e8e8e8 et #c6c6c6 sans variable. Tokens CSS ajoutés `--color-skeleton-bg`, `--color-skeleton-highlight`.
+- [ ] Variables supprimées encore liées : `21:22` (CodeInline, CopyButton, Simple), `Transparent 4%` (124:3050, collection
+      TRANSPARENCY), probablement dans l'effet `Components/Focus`.
+
 ## 3. Tokens
 
 - [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
@@ -282,6 +304,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Modes SHARP et ROUNDED de BORDER RADIUS : non gérés en code.
 - [x] Code syntax WEB à écrire pour les 12 variables BADGE/bg et BADGE/label ajoutées avec Badge.
 - [ ] Sans code syntax WEB et utilisées par des composants : `BORDER RADIUS/none`.
+- [ ] Tokens CSS ajoutés avec Code block, code syntax WEB à écrire : `PADDING/64` → `--space-64`,
+      `BACKGROUND/Secondary On Elevated` → `--color-bg-secondary-on-elevated`, `BORDER/Accent` → `--color-border-accent`.
 - [x] Tokens CSS ajoutés avec Table, code syntax WEB écrite : `STROKE/md` → `--stroke-md` (1.5px),
       `STROKE/lg` → `--stroke-lg` (2px), `INPUT/Pressed` → `--color-input-pressed` (noir 8 %).
 

@@ -222,6 +222,8 @@ function signature(node, ctx) {
   return sig;
 }
 
+const shortName = (name) => (name.length > 60 ? `${name.slice(0, 57).replace(/\s+/g, ' ')}…` : name);
+
 const LINE_KEYS = ['size', 'sizing', 'size.vars', 'minWidth', 'maxWidth', 'layout', 'padding', 'gap', 'fill', 'stroke', 'radius', 'effect', 'opacity', 'text', 'font', 'font.vars', 'color', 'instance', 'props', 'hidden'];
 
 const lineOf = (d) => LINE_KEYS.filter((k) => d[k] !== undefined).map((k) => `${k} ${d[k]}`).join(' · ');
@@ -275,7 +277,7 @@ function walk(root, ctx) {
     const d = describe(node, ctx);
     if (count > 1) d.count = String(count);
     flat[path] = d;
-    lines.push(`${'  '.repeat(depth)}- **${node.name}**${count > 1 ? ` ×${count}` : ''} \`${node.type.toLowerCase()}\` ${lineOf(d)}`);
+    lines.push(`${'  '.repeat(depth)}- **${shortName(node.name)}**${count > 1 ? ` ×${count}` : ''} \`${node.type.toLowerCase()}\` ${lineOf(d)}`);
     if (!inInstance) loose.push(...unbound(node, d, path, ctx));
     if (node.type === 'INSTANCE') {
       instances.push({ id: node.componentId, path });

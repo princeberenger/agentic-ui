@@ -1,0 +1,225 @@
+{
+ "id": "4124:12068",
+ "name": "CopyButton",
+ "props": {
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "disabled",
+    "focus",
+    "hover",
+    "pressed"
+   ]
+  },
+  "Size": {
+   "type": "VARIANT",
+   "default": "lg",
+   "options": [
+    "lg",
+    "sm"
+   ]
+  }
+ },
+ "variants": {
+  "State=default, Size=lg": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "4=4"
+   },
+   "Button": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Copy"
+   }
+  },
+  "State=hover, Size=lg": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Button": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=ghost, Type=icon-only, State=hover, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Copy"
+   },
+   "Button/icon": {
+    "size": "16×16"
+   },
+   "Tooltip item": {
+    "size": "122×27",
+    "sizing": "hug/hug",
+    "layout": "column align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "Tooltip › Position=Bottom, Caret alignment=Center",
+    "props": "Tooltip text=\"Copy to clipboard\""
+   }
+  },
+  "State=focus, Size=lg": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "effect": "Components/Focus"
+   },
+   "Button": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "stroke": "1.5=md inside BORDER/Accent",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Copy"
+   },
+   "Tooltip item": {
+    "size": "122×27",
+    "sizing": "hug/hug",
+    "layout": "column align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "Tooltip › Position=Bottom, Caret alignment=Center",
+    "props": "Tooltip text=\"Copy to clipboard\""
+   }
+  },
+  "State=pressed, Size=lg": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "4=4"
+   },
+   "Button": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=ghost, Type=icon-only, State=hover, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Copy"
+   },
+   "Button/icon": {
+    "size": "16×16"
+   },
+   "Tooltip item": {
+    "size": "58×27",
+    "sizing": "hug/hug",
+    "layout": "column align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "Tooltip › Position=Bottom, Caret alignment=Center",
+    "props": "Tooltip text=\"Copied\""
+   }
+  },
+  "State=default, Size=sm": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "4=4"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Copy"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   }
+  },
+  "State=hover, Size=sm": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "4=4",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=hover, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Copy"
+   },
+   "Tooltip": {
+    "size": "122×27",
+    "sizing": "hug/hug",
+    "layout": "column align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "Tooltip › Position=Bottom, Caret alignment=Center",
+    "props": "Tooltip text=\"Copy to clipboard\""
+   }
+  },
+  "State=disabled, Size=lg": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "4=4"
+   },
+   "Button": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=ghost, Type=icon-only, State=disabled, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Label=\"Label\", Swap icon=Icons / Copy"
+   },
+   "Button/icon/Vector (Stroke)": {
+    "fill": "CONTENT/Disabled"
+   }
+  }
+ }
+}

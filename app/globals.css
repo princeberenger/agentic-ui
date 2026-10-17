@@ -10,10 +10,14 @@
   /* Background */
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #f7f7f7;
+  --color-bg-secondary-on-elevated: #f7f7f7; /* BACKGROUND/Secondary On Elevated */
   --color-bg-tertiary: #e5e5e5;
   --color-bg-inverse: #000000;  /* BACKGROUND/Inverse */
   --color-bg-accent-light: #e0ecfe;  /* BACKGROUND/Accent (Light) */
   --color-content-accent: #002a69;   /* CONTENT/Accent */
+  --color-border-accent: #0968f6;    /* BORDER/Accent */
+  --color-skeleton-bg: #e8e8e8;      /* Skeleton loading animation, no Figma variable */
+  --color-skeleton-highlight: #c6c6c6; /* Skeleton loading animation gradient, no Figma variable */
 
   /* Content */
   --color-content-primary: #191919;
@@ -176,6 +180,7 @@
   --space-24: 1.5rem;    /* 24px */
   --space-32: 2rem;      /* 32px */
   --space-48: 3rem;      /* 48px */
+  --space-64: 4rem;      /* 64px */
   --space-128: 8rem;     /* 128px */
 }
 
