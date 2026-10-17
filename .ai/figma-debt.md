@@ -1,0 +1,55 @@
+# Figma debt — à corriger dans Figma, puis à répercuter en code
+
+Fichier Figma : `Dqy0QA70ThT4iZXNgJljkG` (AGENTIC-DESIGN-SYSTEM).
+Règle : Figma fait foi. Le code reproduit Figma tel quel, y compris les incohérences ci-dessous.
+Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l'entrée.
+
+## 1. Incohérences de variantes (reproduites telles quelles)
+
+### Badge — 124:2898 (`app/components/Badge/Badge.module.css`, `Badge.tsx`)
+- [ ] Pill sm avec bordure : padding horizontal 10px (`PADDING/10`), toutes les autres variantes 8px.
+      Code : règle `.pill.sm.border`.
+- [ ] Pill sm sans bordure : icône 13px, les autres variantes sm 14px.
+      Code : `iconSize()` dans `Badge.tsx`.
+- [ ] Color neutral et none : avec bordure le label passe à `BADGE/label/default` (#191919)
+      et neutral passe à `BADGE/bg/default` ; sans bordure le label reste `BADGE/label/gray` (#363636).
+      Code : règles `.neutral.border`, `.none.border`.
+
+### Button — 147:2305 (`app/components/Button/`)
+- [ ] Destructive disabled : 3 rendus différents selon les variantes.
+- [ ] Largeur en loading : les variantes et la description du composant se contredisent.
+- [ ] Padding destructive md : 16px ou 12px selon les variantes.
+- [ ] Hover secondary filled : devient blanc. Hover destructive light : devient rouge plein. Intentionnel ?
+
+## 2. Valeurs sans variable (non tokenisées dans Figma)
+
+### Badge
+- [ ] Couleur de l'icône Close : aucune variable liée. Le code utilise la couleur du label (`currentColor`).
+      Deux variantes green ont une Close masquée liée à `CONTENT/Primary` et `CONTENT/Success` (restes probables).
+- [ ] Close : aucun état hover ni pressed défini. Le code n'a que le focus clavier (`--shadow-components-focus`).
+- [ ] Libellé d'accessibilité de Close : absent de Figma. Le code met `closeLabel="Remove"` par défaut.
+
+## 3. Tokens
+
+- [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
+      (variable `2` référencée par KeyboardShortcut mais absente des variables locales),
+      `--radius-sm` (8px), `--radius-badge` (doublon de `--radius-6`), `--space-20`, `--icon-8`.
+- [ ] `--color-focus-ring` doublonne `--color-transparent-blue-50`.
+- [ ] Mode DARK de la collection MODE : non implémenté en CSS.
+- [ ] Modes SHARP et ROUNDED de BORDER RADIUS : non gérés en code.
+- [ ] Code syntax WEB à écrire pour les 12 variables BADGE/bg et BADGE/label ajoutées avec Badge.
+
+## 4. Détection des changements Figma (à construire)
+
+L'API REST répond avec le token d'environnement (`/v1/files/:key/nodes` renvoie padding, rayons,
+fills, strokes et `boundVariables` de chaque variante ; `version` et `lastModified` du fichier).
+
+Plan :
+1. `scripts/figma-snapshot.mjs` : pour chaque composant mappé en Code Connect (`*.figma.ts`), lit le nœud,
+   normalise chaque variante (dimensions, padding, gap, rayon, fills, strokes, texte, icônes, nom de la
+   variable liée ou valeur brute) et écrit `.ai/figma-snapshots/<Component>.json`. Idem pour les variables
+   locales (`.ai/figma-snapshots/variables.json`).
+2. `npm run figma:diff` : relit Figma, compare aux snapshots commités, liste les changements par composant
+   et par variante, et signale les valeurs sans variable (section 2).
+3. Après chaque mise à jour Figma : `figma:diff` → on applique les changements en code → on régénère le
+   snapshot → on coche les entrées corrigées ici.
