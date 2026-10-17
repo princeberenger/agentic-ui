@@ -380,6 +380,13 @@
       "figmaName": "Icons / todo"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13293",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "trash-can",
+      "figmaName": "Icons / Trash-can"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12744",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",

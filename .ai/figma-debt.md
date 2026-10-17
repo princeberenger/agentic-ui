@@ -136,6 +136,20 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       `--duration-enter` / `--ease-out-expo`.
 - [ ] `.heading-h2` de globals.css (20/24 Medium) ne correspond pas à `SYSTEM/Heading/h2` (24/28 Regular).
 
+### File upload area — 4028:6848, File loading — 4028:6912
+- [ ] Disabled : le bouton passe en style primary disabled (secondary dans les autres états).
+- [ ] Hover : le bouton prend `Shadows/elevation1` par surcharge d'instance.
+- [ ] File loading : boutons de suppression = Button secondary surchargé sans fond ni contour. Le code utilise
+      la variante ghost.
+- [ ] File loading : hauteur fixe de 32px avec un padding vertical de 8px que le bouton de 24px déborde.
+- [ ] Contour pointillé 4/4 : le code le dessine en SVG (le `border: dashed` CSS n'a pas ce motif).
+- [ ] Largeurs fixes (320px). Le code remplit le conteneur.
+- [ ] Aucun comportement défini (glisser-déposer, sélection). Le code accepte le dépôt et le choix de fichiers.
+
+### Loading animation — 4030:7034
+- [ ] Animation en 4 variantes Phase (smart animate linéaire 180ms). Le code fait une rotation CSS continue (720ms le tour).
+- [ ] Seule la taille Small existe.
+
 ### HelperText — 4066:7007
 - [ ] Pas de variante warning + sm + solid. Le code applique les couleurs de warning lg solid.
 - [ ] Error solid : texte et icône en `CONTENT/Attention (Light)` en sm, `CONTENT/On Primary` en lg.
@@ -161,6 +175,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       (vert `#1B561A` gardé pour l'usage `mode="img"` de StepperSubstep, qui devrait passer en mask + `--color-content-success`).
 
 - [x] `search.svg` : version retransformée, décalée d'environ 0,3px. Remplacé par l'export de `Icons / Search`.
+
+- [x] `upload.svg` : agrandi pour remplir sa boîte, différent de `Icons / Upload`. Remplacé par l'export Figma.
 
 ## 5. Détection des changements Figma (à construire)
 

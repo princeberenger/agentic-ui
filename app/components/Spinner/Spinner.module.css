@@ -1,0 +1,32 @@
+/* ==========================================================================
+   SPINNER — Figma Loading animation 4030:7034 (Size=Small, Phase 1 to 4)
+   Each phase turns the loader 90° clockwise with a 180ms linear smart animate.
+   ========================================================================== */
+
+.spinner {
+  flex-shrink: 0;
+  width: var(--icon-14);
+  height: var(--icon-14);
+  /* 720ms a turn (4 phases x 180ms); constant-speed rotation: linear is the motion-rules exception for spinners */
+  animation: spin calc(var(--duration-press) * 4.8) linear infinite;
+}
+
+.track {
+  stroke: var(--color-border-subtle);
+}
+
+.arc {
+  stroke: var(--color-content-primary);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: calc(var(--duration-press) * 4.8 * 4);
+  }
+}

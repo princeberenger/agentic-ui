@@ -1,0 +1,175 @@
+/* ==========================================================================
+   FILE UPLOAD — Figma File upload area 4028:6848, File loading 4028:6912
+   Every value below is a Figma variable (see globals.css).
+   ========================================================================== */
+
+/* --- Dashed stroke: 1px inside, 4/4 dash ------------------------------------ */
+.dash {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.dashRect {
+  width: calc(100% - var(--stroke-default));
+  height: calc(100% - var(--stroke-default));
+  rx: calc(var(--_radius) - var(--stroke-default) / 2);
+  fill: none;
+  stroke: var(--_border);
+  stroke-width: var(--stroke-default);
+  stroke-dasharray: 4 4;
+}
+
+/* --- File upload area --------------------------------------------------------- */
+.area {
+  --_radius: var(--radius-md);
+  --_border: var(--color-border-subtle);
+  --_icon: var(--color-content-icon);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-16);
+  width: 100%;
+  padding: var(--space-32) var(--space-24);
+  border-radius: var(--_radius);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-content-primary);
+  text-align: center;
+  transition: var(--duration-hover) ease;
+  transition-property: background-color;
+}
+
+.icon {
+  display: inline-flex;
+  color: var(--_icon);
+}
+
+/* SYSTEM/Body/sm/regular */
+.label {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+}
+
+.hints {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* SYSTEM/Body/xs/regular */
+.hint {
+  margin: 0;
+  color: var(--color-content-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+}
+
+.input {
+  display: none;
+}
+
+/* State=hover, also while files are dragged over the area */
+.dragging {
+  --_border: var(--color-border-medium);
+  --_icon: var(--color-content-primary);
+  background-image: linear-gradient(var(--color-input-hover-dark), var(--color-input-hover-dark));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .area:not(.disabled):hover {
+    --_border: var(--color-border-medium);
+    --_icon: var(--color-content-primary);
+    background-image: linear-gradient(var(--color-input-hover-dark), var(--color-input-hover-dark));
+  }
+}
+
+/* State=disabled */
+.disabled {
+  --_border: var(--color-border-disabled);
+  --_icon: var(--color-content-disabled);
+  background-color: var(--color-bg-primary);
+  color: var(--color-content-disabled);
+}
+
+.disabled .hint {
+  color: var(--color-content-disabled);
+}
+
+/* --- File loading ------------------------------------------------------------ */
+.fileItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.file {
+  --_radius: var(--radius-10);
+  --_border: var(--color-border-subtle);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+  /* Figma: fixed 32px row; the 8px vertical padding is overlapped by the 24px button */
+  height: var(--input-small);
+  padding: 0 var(--space-12);
+  border-radius: var(--_radius);
+  background-color: var(--color-bg-primary);
+}
+
+/* SYSTEM/Label/md/regular */
+.fileName {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--color-content-primary);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.fileActions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+/* State=uploaded: BACKGROUND/Secondary, no stroke */
+.uploaded {
+  background-color: var(--color-bg-secondary);
+}
+
+/* State=uploading: dashed BORDER/Subtle, CONTENT/Secondary name */
+.uploading .fileName {
+  color: var(--color-content-secondary);
+}
+
+/* State=success: dashed BORDER/Subtle, Checkmark--filled, 16px right padding */
+.success {
+  padding-right: var(--space-16);
+}
+
+.successIcon {
+  color: var(--color-content-success);
+}
+
+/* State=error: solid BORDER/Attention + HelperText error */
+.error {
+  box-shadow: inset 0 0 0 var(--stroke-default) var(--color-border-attention);
+}
