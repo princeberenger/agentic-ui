@@ -107,6 +107,14 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] SCROLL FADE : flou d'arrière-plan de 2px invisible dans le rendu Figma. Le code ne garde que le dégradé.
 - [ ] Texte tronqué avec « … » à 4 lignes dans Figma ; un vrai textarea fait défiler le texte.
 
+### DropdownMenu — 4084:4742
+- [ ] Le composant ne contient que le déclencheur : la liste d'options et sa position ne sont pas définies.
+      Le code ouvre le Menu existant (role listbox) pleine largeur, 4px sous le déclencheur (`--space-4`).
+- [ ] State=active masque le texte (placeholder caché). Le code garde le texte visible quand le menu est ouvert.
+- [ ] `Shadows/elevation1` = ombre portée + ombre intérieure, mais `--shadow-elevation-1` ne contient que l'ombre portée :
+      le code ajoute `--shadow-inset-bottom` (comme DialerCard). TabGroup utilise `--shadow-elevation-1` seul.
+- [ ] Hover : le calque `INPUT/Hover (Dark)` est appliqué avec une opacité de calque de 4 % en plus de l'alpha de la variable.
+
 ### HelperText — 4066:7007
 - [ ] Pas de variante warning + sm + solid. Le code applique les couleurs de warning lg solid.
 - [ ] Error solid : texte et icône en `CONTENT/Attention (Light)` en sm, `CONTENT/On Primary` en lg.

@@ -7,6 +7,9 @@ export interface MenuProps {
   children: ReactNode;
   size?: MenuSize;
   width?: number;
+  /** `listbox` when the menu lists the options of a Dropdown. */
+  role?: 'menu' | 'listbox';
+  id?: string;
   className?: string;
 }
 
@@ -16,12 +19,13 @@ const SIZE_CLASSES: Record<MenuSize, string> = {
 };
 
 export const Menu = forwardRef<HTMLDivElement, MenuProps>(
-  function Menu({ children, size = 'regular', width, className }, ref) {
+  function Menu({ children, size = 'regular', width, role = 'menu', id, className }, ref) {
     return (
       <div
         ref={ref}
         className={`${SIZE_CLASSES[size]} ${className ?? ''}`}
-        role="menu"
+        id={id}
+        role={role}
         style={width ? { width } : undefined}
       >
         {children}

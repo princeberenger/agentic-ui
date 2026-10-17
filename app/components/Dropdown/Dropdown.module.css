@@ -1,0 +1,99 @@
+/* ==========================================================================
+   DROPDOWN — Figma DropdownMenu 4084:4742 (trigger) + Menu (options)
+   State: default, filled, hover, active (open), focus (:focus-visible), disabled
+   Every value below is a Figma variable or effect style (see globals.css).
+   ========================================================================== */
+
+.root {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.trigger {
+  --_icon: var(--color-content-icon);
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--input-regular);
+  padding: 0 var(--space-12);
+  border: var(--stroke-default) solid var(--color-border-subtle);
+  border-radius: var(--radius-10);
+  background-color: var(--color-button-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  text-align: left;
+  cursor: pointer;
+  transition: var(--duration-hover) ease;
+  transition-property: border-color, box-shadow;
+}
+
+.placeholder,
+.value {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placeholder {
+  color: var(--color-content-secondary);
+}
+
+/* State=filled */
+.value {
+  color: var(--color-content-primary);
+}
+
+.icon {
+  color: var(--_icon);
+}
+
+/* --- State: hover: INPUT/Hover (Dark) over the fill, BORDER/Medium, Shadows/elevation1 */
+@media (hover: hover) and (pointer: fine) {
+  .trigger:hover:not(:disabled):not(.open) {
+    --_icon: var(--color-content-secondary);
+    border-color: var(--color-border-medium);
+    background-image: linear-gradient(var(--color-input-hover-dark), var(--color-input-hover-dark));
+    box-shadow: var(--shadow-elevation-1), var(--shadow-inset-bottom);
+  }
+}
+
+/* --- State: focus: BORDER/Medium + Components/Focus ------------------------- */
+.trigger:focus-visible {
+  outline: none;
+  border-color: var(--color-border-medium);
+  box-shadow: var(--shadow-components-focus);
+}
+
+/* --- State: active (menu open): BORDER/Strong, no fill ---------------------- */
+.open {
+  --_icon: var(--color-content-primary);
+  border-color: var(--color-border-strong);
+  background-color: transparent;
+}
+
+/* --- State: disabled ------------------------------------------------------- */
+.trigger:disabled {
+  --_icon: var(--color-content-disabled);
+  border-color: var(--color-border-disabled);
+  cursor: default;
+}
+
+.trigger:disabled .placeholder,
+.trigger:disabled .value {
+  color: var(--color-content-disabled);
+}
+
+/* --- Options: the Menu, full width, under the trigger ---------------------- */
+.menu {
+  position: absolute;
+  top: calc(100% + var(--space-4));
+  right: 0;
+  left: 0;
+  z-index: 10;
+}

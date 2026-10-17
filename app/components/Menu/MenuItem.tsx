@@ -14,6 +14,9 @@ export interface MenuItemProps {
   hasSubmenu?: boolean;
   size?: MenuItemSize;
   onClick?: () => void;
+  /** `option` inside a Dropdown listbox: exposes `selected` as aria-selected. */
+  role?: 'menuitem' | 'option';
+  onKeyDown?: React.KeyboardEventHandler<HTMLButtonElement>;
 }
 
 export const MenuItem = forwardRef<HTMLButtonElement, MenuItemProps>(
@@ -27,6 +30,8 @@ export const MenuItem = forwardRef<HTMLButtonElement, MenuItemProps>(
     hasSubmenu = false,
     size = 'regular',
     onClick,
+    role = 'menuitem',
+    onKeyDown,
   }, ref) {
     const itemClass = disabled ? styles.itemDisabled : styles.item;
     const sizeClass = size === 'sm' ? styles.itemSm : styles.itemRegular;
@@ -40,11 +45,13 @@ export const MenuItem = forwardRef<HTMLButtonElement, MenuItemProps>(
         ref={ref}
         type="button"
         className={`${itemClass} ${sizeClass}`}
-        role="menuitem"
+        role={role}
         aria-disabled={disabled || undefined}
-        aria-checked={selected || undefined}
+        aria-checked={role === 'menuitem' ? selected || undefined : undefined}
+        aria-selected={role === 'option' ? selected : undefined}
         tabIndex={disabled ? -1 : 0}
         onClick={disabled ? undefined : onClick}
+        onKeyDown={onKeyDown}
       >
         <div className={contentClass}>
           {icon && icon}

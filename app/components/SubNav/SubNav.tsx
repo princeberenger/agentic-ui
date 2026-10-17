@@ -16,6 +16,7 @@ const pages = [
   { href: '/tooltip', label: 'Tooltip' },
   { href: '/toast', label: 'Toast' },
   { href: '/text-input', label: 'Text input' },
+  { href: '/dropdown', label: 'Dropdown' },
   { href: '/tabs', label: 'Tabs' },
   { href: '/table', label: 'Table' },
   { href: '/menu', label: 'Menu' },

@@ -100,6 +100,13 @@
       "figmaName": "Icons / Chevron--right"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14521",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "chevron-sort",
+      "figmaName": "Icons / Chevron--sort"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14030",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
