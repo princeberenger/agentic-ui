@@ -18,6 +18,7 @@ const pages = [
   { href: '/text-input', label: 'Text input' },
   { href: '/dropdown', label: 'Dropdown' },
   { href: '/search', label: 'Search' },
+  { href: '/modal', label: 'Modal' },
   { href: '/tabs', label: 'Tabs' },
   { href: '/table', label: 'Table' },
   { href: '/menu', label: 'Menu' },

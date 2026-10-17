@@ -126,6 +126,16 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Le raccourci « ⌘S » est un texte affiché : aucun comportement défini. Le code l'affiche seulement.
 - [ ] Largeurs fixes (320 / 240px). Le code remplit le conteneur.
 
+### MODAL — 4092:1641
+- [ ] Largeur fixe de 480px sans variable.
+- [ ] Bouton fermer : même surcharge du Button secondary que Toast (rayon full, `BACKGROUND/Secondary`, sans contour).
+- [ ] Le Text area de la modal est surchargé à 200px de haut (le composant fait 100px).
+- [ ] La zone « Agent can access: » + File upload area n'est pas encore intégrée (File upload à faire).
+- [ ] Gap de 10px du ButtonGroup sans variable. Le code utilise `--space-10`.
+- [ ] Aucune animation ni overlay définis dans le composant. Le code utilise `OVERLAY/Background` et un fondu
+      `--duration-enter` / `--ease-out-expo`.
+- [ ] `.heading-h2` de globals.css (20/24 Medium) ne correspond pas à `SYSTEM/Heading/h2` (24/28 Regular).
+
 ### HelperText — 4066:7007
 - [ ] Pas de variante warning + sm + solid. Le code applique les couleurs de warning lg solid.
 - [ ] Error solid : texte et icône en `CONTENT/Attention (Light)` en sm, `CONTENT/On Primary` en lg.

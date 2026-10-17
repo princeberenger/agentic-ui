@@ -83,6 +83,7 @@
   /* Interaction overlays */
   --color-hover-overlay: rgba(0, 0, 0, 0.06);
   --color-focus-ring: rgba(9, 104, 246, 0.5);
+  --color-overlay-bg: rgba(0, 0, 0, 0.03);  /* OVERLAY/Background */
 
   /* Attention / Error */
   --color-border-attention: #d50b0b;
@@ -136,6 +137,7 @@
   --text-regular: 1rem;         /* 16px */
   --text-medium: 1.125rem;      /* 18px */
   --text-large: 1.25rem;        /* 20px */
+  --text-x-large: 1.5rem;       /* 24px — size/X-Large */
   --text-huge: 2rem;            /* 32px */
 
   /* Font Weights */
@@ -148,6 +150,7 @@
   --leading-tiny: 0.9375rem;     /* 15px */
   --leading-small: 1.125rem;     /* 18px */
   --leading-regular: 1.5rem;     /* 24px */
+  --leading-large: 1.75rem;    /* 28px — line-height/Large Text */
   --leading-huge: 2.5rem;        /* 40px */
 
   /* Letter Spacing */
