@@ -52,6 +52,16 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Contour 1px et point de 10px sans variable. Le code utilise `--stroke-default` et `--space-10`.
 - [ ] Pas de RadioGroup (label de groupe, helper text) contrairement à Checkbox.
 
+### Switch — 814:110, Switch with label — 816:3579
+- [ ] Largeur du rail (29px sm, 43px lg) sans variable. Le code la calcule depuis `--icon-*`.
+- [ ] Ombre intérieure du rail (inset 0 1px 2px 12 %) appliquée en effet brut, pas en effect style.
+      Le code l'a nommée `--shadow-switch-track`.
+- [ ] Switch with label : largeur fixe de 217px. Le code laisse la largeur au contenu ;
+      Position=right pousse le switch au bout du conteneur.
+- [ ] Switch with label : label disabled en `CONTENT/Secondary` (Checkbox et Radio utilisent `CONTENT/Disabled`).
+- [ ] Switch (Theme) 6114:855 non intégré : en mode Light, la lune (`CONTENT/On Primary`) est blanche sur le knob blanc.
+      À reprendre avec le mode dark.
+
 ### HelperText — 4066:7007
 - [ ] Pas de variante warning + sm + solid. Le code applique les couleurs de warning lg solid.
 - [ ] Error solid : texte et icône en `CONTENT/Attention (Light)` en sm, `CONTENT/On Primary` en lg.

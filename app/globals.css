@@ -22,6 +22,7 @@
   --color-border-subtle: #e5e5e5;
   --color-border-medium: #8f8f8f;
   --color-border-strong: #000000;
+  --color-border-disabled: #e5e5e5;       /* BORDER/Disabled */
 
   /* Content — Success */
   --color-content-success: #1b561a;
@@ -36,6 +37,7 @@
   --color-switch-knob-active: #ffffff;
   --color-switch-knob-inactive: #ffffff;
   --color-switch-knob-icon: #000000;
+  --color-switch-knob-disabled: #e0e0e0;  /* SWITCH/knob/Disabled */
   --color-switch-bg-active: #000000;
   --color-switch-bg-inactive: #e0e0e0;
 
@@ -258,6 +260,10 @@
     0 3px 3px 0 rgba(0, 0, 0, 0.04),
     0 1px 1px 0 rgba(0, 0, 0, 0.04),
     inset 1px 2px 3px 0 rgba(0, 0, 0, 0.15);
+
+  /* Switch track inner shadow (Figma effect on Switch, not an effect style) */
+  --shadow-switch-track:
+    inset 0 1px 2px 0 rgba(0, 0, 0, 0.12);
 }
 
 /* --------------------------------------------------------------------------
