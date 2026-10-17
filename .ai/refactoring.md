@@ -30,8 +30,8 @@ After the component is generated AND the user has visually approved it (QC-1 pas
   → No type assertions (`as Type`) unless justified with comment
   → Discriminated unions for variant combos that change structure
 - [ ] File organization:
-  → Types in `.types.ts`
-  → Constants at top of file or in `.constants.ts`
+  → Exported types at the top of `<ComponentName>.tsx`
+  → Constants at top of file
   → No magic strings — variant values as `const` union types
 
 ---
@@ -46,13 +46,8 @@ After the component is generated AND the user has visually approved it (QC-1 pas
   → Font sizes: verify all reference tokens
   → Radii: same treatment
 - [ ] Token naming consistency:
-  → Every CSS custom property follows: `--ag-[category]-[role]-[modifier]`
-  → Component-level tokens alias global tokens (never skip the alias layer):
-    ```
-    GLOBAL:    --ag-color-primary-default: #2563EB;
-    COMPONENT: --ag-button-bg: var(--ag-color-primary-default);
-    USAGE:     background: var(--ag-button-bg);
-    ```
+  → Every value uses a token of `app/globals.css` (`--color-*`, `--space-*`, `--radius-*`, `--icon-*`…), named after the Figma variable
+  → A value with no Figma variable is logged in `.ai/figma-debt.md`, not turned into a new token
 - [ ] Dark mode verification:
   → Every token resolves correctly under `[data-theme="dark"]`
   → No color that only works in light mode
@@ -78,7 +73,7 @@ After the component is generated AND the user has visually approved it (QC-1 pas
   → Use `:where()` for inherited custom properties to avoid specificity wars
   → Remove unused CSS classes (cross-reference with JSX)
 - [ ] Bundle impact:
-  → SVG icons: named exports for tree-shaking
+  → Icons through `<Icon name>` (svg files), not inlined
   → No imports that pull entire libraries
   → Component code-splittable? (dynamic import if route-specific)
 - [ ] Render analysis:
@@ -112,33 +107,23 @@ After the component is generated AND the user has visually approved it (QC-1 pas
   → Focus ring visible in ALL themes
   → Disabled: opacity ≥ 0.4, `cursor: not-allowed`
   → No information by color alone (add icon/text pairing)
-- [ ] Run `jest-axe` on every Storybook story → zero violations = pass
+- [ ] Tab through the demo page, in light and dark mode → every control reachable, focus ring visible
 
 ---
 
-## Pass 5: Documentation & Storybook
+## Pass 5: Demo page & Code Connect
 
-**Commit**: `docs: component documentation`
+**Commit**: `docs: demo page and code connect`
 
-- [ ] Storybook stories cover:
-  → Default story (most common usage)
-  → Every variant (one story per value)
+- [ ] Demo page `app/<component-slug>/page.tsx` covers:
+  → Every variant (one row per value)
   → Every size
-  → All interactive states (hover via decorators, focus, disabled, loading)
+  → All interactive states (default, hover, focus, active, disabled, loading)
   → Composition examples (icon + label, label only, icon only)
   → Edge cases (long text, empty, missing props)
-  → Dark mode via Storybook theme decorator
-- [ ] README.md contains:
-  → One-sentence description
-  → Import example
-  → Props table: name | type | default | description
-  → Usage examples (basic, advanced, composition)
-  → Do / Don't with code
-  → Token reference table
-  → Related components
-  → Figma source link
-- [ ] Props table matches TypeScript interface exactly
-- [ ] Changelog entry added
+- [ ] JSDoc on every prop, naming the Figma property
+- [ ] `<ComponentName>.figma.ts` maps every Figma property → `npm run figma:typecheck` and `npm run figma:parse` pass
+- [ ] Inconsistencies reproduced from Figma are listed in `.ai/figma-debt.md`
 
 ---
 
@@ -159,7 +144,7 @@ After the component is generated AND the user has visually approved it (QC-1 pas
   → CSS classes map to structure, not appearance:
     `GOOD: .root, .label, .icon, .content`
     `BAD:  .blueButton, .smallText, .leftAligned`
-- [ ] Import order (ESLint enforced):
+- [ ] Import order (convention):
   1. React
   2. Third-party
   3. Internal components
@@ -167,6 +152,5 @@ After the component is generated AND the user has visually approved it (QC-1 pas
   5. Styles
   6. Assets
 - [ ] Export verification:
-  → Barrel `index.ts` exports component + types
-  → Named exports (not default) for tree-shaking
-  → Types exported separately for consumers
+  → `index.ts` exports component + types
+  → Named exports (not default), except Code Connect templates
