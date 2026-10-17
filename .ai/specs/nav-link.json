@@ -1,0 +1,183 @@
+{
+ "id": "750:8765",
+ "name": "nav-link",
+ "props": {
+  "Icon": {
+   "type": "INSTANCE_SWAP",
+   "default": "179:13879"
+  },
+  "Label": {
+   "type": "TEXT",
+   "default": "Section label"
+  },
+  "Show icon": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Section Open": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Section Closed": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "hover"
+   ]
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "link",
+   "options": [
+    "label",
+    "link"
+   ]
+  }
+ },
+ "variants": {
+  "State=default, Type=link": {
+   "(root)": {
+    "size": "148×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "8=PADDING/8"
+   },
+   "Icons / Meter": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Meter"
+   },
+   "Icons / Meter/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Section label": {
+    "size": "108×15",
+    "sizing": "hug/hug",
+    "text": "\"Section label\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper",
+    "font.vars": "family/Labels, Links, size/Tiny, weight/Semibold, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "chevron-icon-wrapper": {
+    "size": "1×20",
+    "sizing": "fixed/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "chevron-icon-wrapper/Icons / Chevron--up": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Chevron--up"
+   },
+   "chevron-icon-wrapper/Icons / Chevron--up/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "chevron-icon-wrapper#2": {
+    "size": "1×16",
+    "sizing": "fixed/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "chevron-icon-wrapper#2/Icons / Chevron--down": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Chevron--down"
+   },
+   "chevron-icon-wrapper#2/Icons / Chevron--down/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "State=default, Type=label": {
+   "(root)": {
+    "size": "94×31",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "8=PADDING/8"
+   },
+   "Section label": {
+    "size": "78×15",
+    "sizing": "hug/hug",
+    "text": "\"Section label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=hover, Type=link": {
+   "(root)": {
+    "size": "148×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "fill": "INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Icons / Meter": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Meter"
+   },
+   "Icons / Meter/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Section label": {
+    "size": "108×15",
+    "sizing": "hug/hug",
+    "text": "\"Section label\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper",
+    "font.vars": "family/Labels, Links, size/Tiny, weight/Semibold, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "chevron-icon-wrapper": {
+    "size": "1×20",
+    "sizing": "fixed/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "chevron-icon-wrapper/Icons / Chevron--up": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Chevron--up"
+   },
+   "chevron-icon-wrapper/Icons / Chevron--up/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "chevron-icon-wrapper#2": {
+    "size": "1×16",
+    "sizing": "fixed/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "chevron-icon-wrapper#2/Icons / Chevron--down": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Chevron--down"
+   },
+   "chevron-icon-wrapper#2/Icons / Chevron--down/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  }
+ }
+}

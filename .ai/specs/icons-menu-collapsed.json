@@ -1,0 +1,26 @@
+{
+ "id": "230:694",
+ "name": "Icons/ Menu --collapsed",
+ "props": {},
+ "variants": {
+  "Icons/ Menu --collapsed": {
+   " Menu --collapsed": {
+    "size": "16×16",
+    "sizing": "fixed/fixed"
+   },
+   " Menu --collapsed/icon": {
+    "size": "12×12",
+    "fill": "CONTENT/Icon"
+   },
+   " Menu --collapsed/icon/btn": {
+    "size": "12×12",
+    "stroke": "1 inside CONTENT/Primary",
+    "radius": "2"
+   },
+   " Menu --collapsed/btn": {
+    "size": "1×8",
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

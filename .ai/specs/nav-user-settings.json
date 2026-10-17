@@ -1,0 +1,48 @@
+{
+ "id": "6008:14270",
+ "name": "nav-user-settings",
+ "props": {
+  "Property 1": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default"
+   ]
+  }
+ },
+ "variants": {
+  "Property 1=Default": {
+   "(root)": {
+    "size": "203×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "label": {
+    "size": "187×18",
+    "sizing": "fixed/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "label/Hi, Alex": {
+    "size": "187×18",
+    "sizing": "fill/hug",
+    "text": "\"Hi, Alex\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Icons / Overflow-menu--vertical": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Overflow-menu--vertical"
+   },
+   "Icons / Overflow-menu--vertical/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

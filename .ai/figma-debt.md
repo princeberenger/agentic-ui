@@ -81,6 +81,20 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] cell-type-action : le bouton overflow perd son contour, et son fond au survol de la cellule. Reproduit.
 - [ ] Disabled : opacité 0,3 sur les barres et les avatars, 0,5 sur le badge. Reproduit.
 
+### Navigation — 230:699, nav-logo 484:13150, nav-link 750:8765, nav-user-settings 6008:14270 (`app/components/Navigation/`)
+- [ ] Navigation n'a ni fond, ni contour, ni rayon (l'ancien code avait fond secondary, contour et rayon 8). Le code suit Figma.
+- [ ] Type=tree, State=closed garde la largeur 247 et ne montre que la ligne du logo. Reproduit.
+- [ ] Type=tree : le titre `Orchestrate` est en fill (207) alors que `Monitor` et `Delegate` sont en hug ; son conteneur
+      de sous-liens a une largeur fixe 199, un gap 12 et `space-between`. Le code traite les trois sections pareil.
+- [ ] nav-link : pas d'état actif (seul nav-sub-link en a un) ni focus. Le code expose `aria-current` sans visuel
+      et met le focus `--shadow-components-focus`.
+- [ ] nav-link : les chevrons de section sont dans des cadres de 1px de large, l'icône de 16 déborde. Le code place
+      le chevron 8px après le libellé.
+- [ ] nav-link : le rayon 10 n'existe qu'au survol. Le code le garde en permanence (invisible sans fond).
+- [ ] Boutons menu du logo et overflow de nav-user-settings : aucun état. Le code n'a que le focus clavier.
+- [ ] Icons/ Menu --collapsed : deux couleurs (`CONTENT/Icon` et trait `CONTENT/Primary`), nommé hors convention `Icons / `.
+      Le code le rend d'une seule couleur (Icon seul, Primary dans Navigation).
+
 ## 2. Valeurs sans variable (non tokenisées dans Figma)
 
 ### Badge
@@ -253,6 +267,11 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       `radius/formInput`, `boarder/width/medium`, `64px (spacing-10)`. Le code utilise les tokens locaux de même valeur.
 - [ ] AvatarGroup et squelette multiple : chevauchement -8 sans variable (`--space-8` en négatif).
 
+### Navigation
+- [ ] Largeur 247 et hauteur 700 sans variable (247px dans le CSS, hauteur laissée au conteneur).
+- [ ] Rail des sous-liens 1px sans variable (`--stroke-default`), indicateur actif 8×12 (`--space-8`, `--space-12`),
+      logo 75×20 et largeur 187 du libellé utilisateur sans variable.
+
 ## 3. Tokens
 
 - [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
@@ -262,8 +281,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Mode DARK de la collection MODE : non implémenté en CSS.
 - [ ] Modes SHARP et ROUNDED de BORDER RADIUS : non gérés en code.
 - [x] Code syntax WEB à écrire pour les 12 variables BADGE/bg et BADGE/label ajoutées avec Badge.
-- [ ] Sans code syntax WEB et utilisées par des composants : `STROKE/lg`, `BORDER RADIUS/none`.
-- [ ] Tokens CSS ajoutés avec Table, code syntax WEB à écrire : `STROKE/md` → `--stroke-md` (1.5px),
+- [ ] Sans code syntax WEB et utilisées par des composants : `BORDER RADIUS/none`.
+- [x] Tokens CSS ajoutés avec Table, code syntax WEB écrite : `STROKE/md` → `--stroke-md` (1.5px),
       `STROKE/lg` → `--stroke-lg` (2px), `INPUT/Pressed` → `--color-input-pressed` (noir 8 %).
 
 ## 4. Assets du repo différents de Figma
@@ -283,6 +302,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [x] `folder.svg` : absent du repo. Ajouté depuis `Icons / Folder` (179:12822).
 
 - [x] `arrows-vertical.svg` : absent du repo. Exporté par le script (`Icons / Arrows--vertical`, 179:14549).
+
+- [x] `menu-collapsed.svg` : absent du repo. Ajouté depuis `Icons/ Menu --collapsed` (230:694).
 
 ## 5. Détection des changements Figma (à construire)
 

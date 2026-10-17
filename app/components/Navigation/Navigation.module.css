@@ -1,27 +1,29 @@
 /* ==========================================================================
-   Navigation Component — Design System
-   Enterprise sidebar navigation with Classic and Tree variants.
-   Figma source: NAVIGATION (node 230:699)
+   NAVIGATION — Figma Navigation 230:699, nav-logo 484:13150, nav-link 750:8765,
+   nav-sub-link 226:1312, nav-user-settings 6008:14270
+   Link states: default, hover, focus (:focus-visible, not in Figma), active (sub-link)
    ========================================================================== */
 
-/* === Navigation Shell === */
+/* --- Shell --------------------------------------------------------------- */
 .navigation {
   display: flex;
   flex-direction: column;
+  /* Figma: 247 × 700 fixed, no variable (see .ai/figma-debt.md) */
   width: 247px;
   height: 100%;
-  background: var(--color-bg-secondary);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
 }
 
-/* === Logo Header === */
+/* --- nav-logo -------------------------------------------------------------- */
 .logo {
   display: flex;
-  align-items: center;
-  padding: var(--space-24) var(--space-24) var(--space-16);
   flex-shrink: 0;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-24) var(--space-24) var(--space-16);
+}
+
+.logo[data-collapsed] {
+  padding-top: var(--space-16);
 }
 
 .logoContainer {
@@ -30,204 +32,243 @@
   gap: var(--space-16);
 }
 
-.logoWordmark {
-  display: inline-block;
-  width: 75px;
-  height: 20px;
-  background-color: currentColor;
-  color: var(--color-content-primary);
-  mask-image: url('/assets/logo-wordmark.svg');
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: left center;
-  -webkit-mask-image: url('/assets/logo-wordmark.svg');
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: left center;
+/* AGENTIC UI LOGO, Variant=Logo: 75 × 20 wordmark, CONTENT/Primary */
+.wordmark {
+  display: block;
   flex-shrink: 0;
+  width: calc(var(--icon-20) * 3.75);
+  height: var(--icon-20);
+  background-color: var(--color-content-primary);
+  mask: url('/assets/logo-wordmark.svg') left center / contain no-repeat;
+  -webkit-mask: url('/assets/logo-wordmark.svg') left center / contain no-repeat;
 }
 
-.menuToggle {
+/* AGENTIC UI LOGO, Variant=Symbol: 24px box, 2px padding */
+.symbol {
+  display: block;
+  flex-shrink: 0;
+  width: var(--icon-24);
+  height: var(--icon-24);
+  padding: var(--space-2);
+  background-color: var(--color-content-primary);
+  background-clip: content-box;
+  mask: url('/assets/logo-icon.svg') center / var(--icon-20) var(--icon-20) no-repeat;
+  -webkit-mask: url('/assets/logo-icon.svg') center / var(--icon-20) var(--icon-20) no-repeat;
+}
+
+/* Icons/ Menu --open, --collapsed */
+.iconButton {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: var(--icon-16);
+  height: var(--icon-16);
   padding: 0;
   border: none;
+  border-radius: var(--radius-xs);
   background: none;
+  color: var(--color-content-primary);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition-property: box-shadow;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
+}
+
+/* nav-logo alone: the collapsed icon is CONTENT/Icon (Navigation overrides it to Primary) */
+.logo:not(.inNav)[data-collapsed] .iconButton {
   color: var(--color-content-icon);
-  flex-shrink: 0;
 }
 
-/* === Nav Body (Scrollable) === */
+/* no hover defined in Figma: keyboard focus only */
+.iconButton:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-components-focus);
+}
+
+/* --- Body ----------------------------------------------------------------- */
 .body {
-  flex: 1 1 0;
   display: flex;
+  flex: 1 1 0;
   flex-direction: column;
-  padding: var(--space-24) var(--space-24) 0 var(--space-16);
+  align-items: flex-start;
   gap: var(--space-4);
-  overflow-y: auto;
   min-height: 0;
+  padding: var(--space-24) var(--space-24) 0 var(--space-16);
+  overflow-y: auto;
 }
 
-.bodyTree {
+.tree {
   gap: var(--space-16);
 }
 
-/* === Footer === */
+/* --- Footer: nav-user-settings ---------------------------------------------- */
 .footer {
   display: flex;
-  align-items: center;
-  padding: var(--space-24);
   flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-24);
 }
 
 .userSettings {
   display: flex;
+  flex: 1;
   align-items: center;
-  width: 100%;
+  min-width: 0;
 }
 
+/* SYSTEM/Body/sm/bold */
 .userName {
   flex: 1;
   min-width: 0;
+  overflow: hidden;
+  color: var(--color-content-primary);
   font-family: var(--font-body);
   font-size: var(--text-small);
   font-weight: var(--weight-medium);
   line-height: var(--leading-small);
   letter-spacing: var(--tracking-normal);
-  color: var(--color-content-primary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.overflowButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: var(--color-content-primary);
-  flex-shrink: 0;
+/* nav-user-settings alone: Icons / Overflow-menu--vertical is CONTENT/Icon */
+.userSettings:not(.inNav) .iconButton {
+  color: var(--color-content-icon);
 }
 
-/* === NavLink === */
+/* --- nav-link -------------------------------------------------------------- */
 .navLink {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: var(--space-8);
   padding: var(--space-8);
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  color: var(--color-content-primary);
-  cursor: pointer;
-  background: none;
   border: none;
+  border-radius: var(--radius-10);
+  background: none;
+  color: var(--color-content-primary);
+  /* BUTTON/Label/md/regular */
   font-family: var(--font-label);
   font-size: var(--text-tiny);
   font-weight: var(--weight-regular);
   line-height: var(--leading-tiny);
   letter-spacing: var(--tracking-normal);
+  text-align: left;
+  text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
-  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
 }
 
-.navLink:hover {
-  background: rgba(0, 0, 0, 0.04);
+a.navLink,
+button.navLink {
+  cursor: pointer;
 }
 
-.navLinkFull {
-  width: 100%;
-}
-
-/* Section label style — non-interactive header */
-.navLinkLabel {
-  composes: navLink;
-  gap: 0;
-  color: var(--color-content-secondary);
-  cursor: default;
-}
-
-.navLinkLabel:hover {
-  background: none;
-}
-
-.navLinkChevron {
-  flex: 1;
+.navIcon {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  min-width: 0;
+  flex-shrink: 0;
+  color: var(--color-content-primary);
 }
 
-/* === NavSubLink === */
+/* Type=label: SYSTEM/Body/xs/regular, CONTENT/Secondary, no icon */
+.navLabel {
+  padding: var(--space-8);
+  color: var(--color-content-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-normal);
+  white-space: nowrap;
+}
+
+/* --- nav-sub-link ---------------------------------------------------------- */
 .subLink {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
-  gap: 0;
+  gap: var(--space-4);
   padding: var(--space-8);
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-10);
+  background: none;
+  color: var(--color-content-secondary);
   font-family: var(--font-label);
   font-size: var(--text-tiny);
   font-weight: var(--weight-regular);
   line-height: var(--leading-tiny);
   letter-spacing: var(--tracking-normal);
+  text-align: left;
+  text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
-  color: var(--color-content-secondary);
-  background: none;
-  border: none;
-  flex-shrink: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
 }
 
-.subLink:hover {
-  background: rgba(0, 0, 0, 0.04);
+.subLink[aria-current='page'] {
   color: var(--color-content-primary);
 }
 
-.subLinkActive {
-  gap: var(--space-4);
-  color: var(--color-content-primary);
-  width: 100%;
-}
-
+/* active: `../` prefix and an 8 × 12 CONTENT/Primary block */
 .subLinkIndicator {
-  width: 8px;
-  height: 12px;
-  background: var(--color-content-primary);
   flex-shrink: 0;
+  width: var(--space-8);
+  height: var(--space-12);
+  background-color: var(--color-content-primary);
 }
 
-/* === NavSection === */
+/* hover: INPUT/Hover (Dark), text CONTENT/Primary */
+@media (hover: hover) and (pointer: fine) {
+  a.navLink:hover,
+  button.navLink:hover,
+  .subLink:hover {
+    background-color: var(--color-input-hover-dark);
+    color: var(--color-content-primary);
+  }
+}
+
+.navLink:focus-visible,
+.subLink:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-components-focus);
+}
+
+/* --- Tree sections ----------------------------------------------------------- */
 .section {
   display: flex;
   flex-direction: column;
+  align-self: stretch;
   gap: var(--space-4);
-  width: 100%;
 }
 
-.sectionDivider {
-  padding-top: var(--space-24);
-}
-
-.subLinksWrapper {
+.subLinks {
   display: flex;
   flex-direction: column;
   padding-left: var(--space-16);
-  width: 100%;
 }
 
-.subLinksContainer {
+/* 1px BORDER/Subtle rail, weight without variable */
+.subLinksRail {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: var(--space-2);
   padding-left: var(--space-16);
-  border-left: 1px solid var(--color-border-subtle);
+  box-shadow: inset var(--stroke-default) 0 0 var(--color-border-subtle);
+}
+
+/* the active sub-link fills the rail width */
+.subLinksRail > [aria-current='page'] {
+  align-self: stretch;
 }

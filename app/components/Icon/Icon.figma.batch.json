@@ -282,6 +282,13 @@
       "figmaName": "Icons / Magic-wand--filled"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=230-694",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "menu-collapsed",
+      "figmaName": "Icons/ Menu --collapsed"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=226-1269",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",

@@ -1,4 +1,12 @@
 export { Navigation } from './Navigation';
+export type { NavigationProps } from './Navigation';
+export { NavLogo } from './NavLogo';
+export type { NavLogoProps } from './NavLogo';
 export { NavLink } from './NavLink';
+export type { NavLinkProps } from './NavLink';
 export { NavSubLink } from './NavSubLink';
+export type { NavSubLinkProps } from './NavSubLink';
 export { NavSection } from './NavSection';
+export type { NavSectionProps } from './NavSection';
+export { NavUserSettings } from './NavUserSettings';
+export type { NavUserSettingsProps } from './NavUserSettings';
