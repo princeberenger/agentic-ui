@@ -6,6 +6,7 @@
 'use client';
 
 import { Icon } from '../Icon/Icon';
+import { Logo } from '../Logo';
 import styles from './Navigation.module.css';
 
 export interface NavLogoProps {
@@ -24,7 +25,7 @@ export function NavLogo({ collapsed = false, onToggle, showLogo = true, inNav = 
   return (
     <div className={[styles.logo, inNav ? styles.inNav : '', className ?? ''].filter(Boolean).join(' ')} data-collapsed={collapsed || undefined}>
       <div className={styles.logoContainer}>
-        {showLogo && <span className={collapsed ? styles.symbol : styles.wordmark} role="img" aria-label="Agentic UI" />}
+        {showLogo && <Logo variant={collapsed ? 'symbol' : 'logo'} />}
         {onToggle && (
           <button
             type="button"

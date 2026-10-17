@@ -13,61 +13,6 @@
   flex-direction: column;
 }
 
-/* --- Header --- */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-24) var(--space-24) 0;
-}
-
-.headerLeft,
-.headerRight {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logoIcon {
-  display: inline-block;
-  width: 24px;
-  height: 20px;
-  background-color: currentColor;
-  color: var(--color-content-icon);
-  mask-image: url('/assets/logo-icon.svg');
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-image: url('/assets/logo-icon.svg');
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  flex-shrink: 0;
-}
-
-.headerSeparator {
-  width: 1px;
-  height: 20px;
-  background: var(--color-border-subtle);
-  transform: rotate(-25deg);
-  flex-shrink: 0;
-}
-
-.headerLabel {
-  font-family: var(--font-label);
-  font-size: var(--text-button);
-  font-weight: var(--weight-regular);
-  line-height: var(--leading-small);
-  letter-spacing: var(--tracking-spacious);
-  text-transform: uppercase;
-  color: var(--color-content-secondary);
-}
-
-.kbdGroup {
-  display: flex;
-  align-items: center;
-}
-
 /* --- Model Selection Menu (top center) --- */
 .modelMenuWrapper {
   display: flex;

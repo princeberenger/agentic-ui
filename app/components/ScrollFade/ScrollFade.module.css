@@ -1,0 +1,32 @@
+/* ==========================================================================
+   SCROLL FADE — Figma 4092:1131
+   Mode: light, dark. Not interactive (no state in Figma).
+   ========================================================================== */
+
+/* Figma: 320 fixed (no variable), the code fills its container; min height 48 */
+.fade {
+  --_from: var(--color-transparent-white-0);
+  --_to: var(--color-bg-primary);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  min-height: var(--icon-48);
+  padding: var(--space-none) var(--space-none) var(--space-8);
+  /* Gradient/Scrollfade (Light)(V1), applied twice */
+  background-image: linear-gradient(var(--_from), var(--_to)), linear-gradient(var(--_from), var(--_to));
+  /* background blur 2, no effect style */
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+.dark {
+  --_from: var(--color-transparent-black-0);
+  --_to: var(--color-transparent-black-100);
+}
+
+/* Icons / Down-to-bottom, CONTENT/Primary in both modes */
+.icon {
+  color: var(--color-content-primary);
+}

@@ -1,6 +1,7 @@
 'use client';
 
 import { type ReactNode } from 'react';
+import { StepperSubsteps } from './StepperSubsteps';
 import styles from './Stepper.module.css';
 
 export type StepperStepVariant = 'completed' | 'active' | 'disabled';
@@ -55,9 +56,7 @@ export function StepperStep({ variant, label, icon, children, onClick }: Stepper
         <span className={LABEL_CLASSES[variant]}>{label}</span>
       </div>
       {children && (
-        <div className={styles.substepsWrapper} role="group" aria-label={`${label} substeps`}>
-          {children}
-        </div>
+        <StepperSubsteps aria-label={`${label} substeps`}>{children}</StepperSubsteps>
       )}
     </>
   );

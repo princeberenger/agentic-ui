@@ -1,0 +1,54 @@
+{
+ "id": "4092:1131",
+ "name": "SCROLL FADE",
+ "props": {
+  "Mode": {
+   "type": "VARIANT",
+   "default": "Light",
+   "options": [
+    "Light",
+    "Dark"
+   ]
+  }
+ },
+ "variants": {
+  "Mode=Light": {
+   "(root)": {
+    "size": "320×48",
+    "sizing": "fixed/hug",
+    "layout": "row align center/max",
+    "padding": "0=PADDING/none 0=PADDING/none 8=PADDING/8 0=PADDING/none",
+    "gap": "0",
+    "fill": "gradient_linear(TRANSPARENT/white/0 0%, BACKGROUND/Primary 100%) from 0.5,0 to 0.5,1 + gradient_linear(TRANSPARENT/white/0 0%, BACKGROUND/Primary 100%) from 0.5,0 to 0.5,1",
+    "effect": "background_blur 2  (no style)"
+   },
+   "Icons / Down-to-bottom": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Down-to-bottom"
+   },
+   "Icons / Down-to-bottom/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Mode=Dark": {
+   "(root)": {
+    "size": "320×48",
+    "sizing": "fixed/hug",
+    "layout": "row align center/max",
+    "padding": "0=PADDING/none 0=PADDING/none 8=PADDING/8 0=PADDING/none",
+    "gap": "10",
+    "fill": "gradient_linear(TRANSPARENT/black/0 0%, TRANSPARENT/black/100 100%) from 0.5,0 to 0.5,1 + gradient_linear(TRANSPARENT/black/0 0%, TRANSPARENT/black/100 100%) from 0.5,0 to 0.5,1",
+    "effect": "background_blur 2  (no style)"
+   },
+   "Icons / Down-to-bottom": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Down-to-bottom"
+   },
+   "Icons / Down-to-bottom/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  }
+ }
+}

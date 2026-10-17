@@ -1,0 +1,29 @@
+/* ==========================================================================
+   AGENTIC UI LOGO — Figma 146:1787
+   Variant: symbol (24px box, 2px padding, 20px mark), logo (75 × 20 wordmark)
+   Fill CONTENT/Primary by default; instances override it through `color`.
+   ========================================================================== */
+
+.logo {
+  display: block;
+  flex-shrink: 0;
+  color: var(--color-content-primary);
+  background-color: currentColor;
+}
+
+.symbol {
+  width: var(--icon-24);
+  height: var(--icon-24);
+  padding: var(--space-2);
+  background-clip: content-box;
+  mask: url('/assets/logo-icon.svg') center / var(--icon-20) var(--icon-20) no-repeat;
+  -webkit-mask: url('/assets/logo-icon.svg') center / var(--icon-20) var(--icon-20) no-repeat;
+}
+
+/* 75 × 20, width without variable */
+.wordmark {
+  width: calc(var(--icon-20) * 3.75);
+  height: var(--icon-20);
+  mask: url('/assets/logo-wordmark.svg') left center / contain no-repeat;
+  -webkit-mask: url('/assets/logo-wordmark.svg') left center / contain no-repeat;
+}

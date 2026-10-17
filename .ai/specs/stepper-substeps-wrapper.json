@@ -1,0 +1,101 @@
+{
+ "id": "4004:466",
+ "name": "stepper-substeps-wrapper",
+ "props": {},
+ "variants": {
+  "stepper-substeps-wrapper": {
+   "(root)": {
+    "size": "113×188",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 8=PADDING/8 16=PADDING/16",
+    "gap": "0=PADDING/none"
+   },
+   "stepper-substep": {
+    "size": "75×26",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 0 4=PADDING/4 0",
+    "gap": "8=PADDING/8",
+    "instance": "stepper-substep › State=completed",
+    "props": "Label=\"Concept\""
+   },
+   "stepper-substep#2": {
+    "size": "97×26",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 0 4=PADDING/4 0",
+    "gap": "8=PADDING/8",
+    "instance": "stepper-substep › State=completed",
+    "props": "Label=\"Simulation\""
+   },
+   "stepper-substep#3": {
+    "size": "97×16",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "stepper-substep#3/dot-wrapper": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "stepper-substep#3/dot-wrapper/divider": {
+    "size": "0×25",
+    "sizing": "fixed/fixed",
+    "stroke": "1 center gradient_linear(BORDER/Medium 0%, #e5e5e500 100%) from 0,0.5 to 1,0.5"
+   },
+   "stepper-substep#4": {
+    "size": "61×26",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 0 4=PADDING/4 0",
+    "gap": "8=PADDING/8",
+    "instance": "stepper-substep › State=active",
+    "props": "Label=\"World\""
+   },
+   "stepper-substep#5": {
+    "size": "61×26",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 0 4=PADDING/4 0",
+    "gap": "8=PADDING/8",
+    "instance": "stepper-substep › State=disabled",
+    "props": "Label=\"Story\""
+   },
+   "stepper-substep#6": {
+    "size": "68×26",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 0 4=PADDING/4 0",
+    "gap": "8=PADDING/8",
+    "instance": "stepper-substep › State=disabled",
+    "props": "Label=\"Script\""
+   },
+   "stepper-substep#7": {
+    "size": "90×26",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 0 4=PADDING/4 0",
+    "gap": "8=PADDING/8",
+    "instance": "stepper-substep › State=disabled",
+    "props": "Label=\"Expand IP\""
+   },
+   "[run 1]": {
+    "size": "112×26",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 0 4=PADDING/4 0",
+    "gap": "8=PADDING/8",
+    "hidden": "true",
+    "instance": "stepper-substep › State=disabled",
+    "props": "Label=\"Substep name\"",
+    "count": "3"
+   }
+  }
+ }
+}

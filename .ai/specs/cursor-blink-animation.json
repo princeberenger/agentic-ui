@@ -1,0 +1,49 @@
+{
+ "id": "338:6698",
+ "name": "Cursor blink animation",
+ "props": {
+  "State": {
+   "type": "VARIANT",
+   "default": "Visible",
+   "options": [
+    "Visible",
+    "Invisible"
+   ]
+  }
+ },
+ "variants": {
+  "State=Visible": {
+   "(root)": {
+    "size": "1×17",
+    "sizing": "fixed/fixed",
+    "minWidth": "1",
+    "maxWidth": "1",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "Caret": {
+    "size": "1×17",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "State=Invisible": {
+   "(root)": {
+    "size": "1×17",
+    "sizing": "fixed/fixed",
+    "minWidth": "1",
+    "maxWidth": "1",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10",
+    "fill": "CONTENT/On Primary"
+   },
+   "Caret": {
+    "size": "1×17",
+    "sizing": "fill/fill",
+    "opacity": 0
+   }
+  }
+ }
+}

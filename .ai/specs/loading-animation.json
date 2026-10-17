@@ -1,0 +1,109 @@
+{
+ "id": "4030:7034",
+ "name": "Loading animation",
+ "props": {
+  "Size": {
+   "type": "VARIANT",
+   "default": "Small",
+   "options": [
+    "Small"
+   ]
+  },
+  "Phase": {
+   "type": "VARIANT",
+   "default": "1",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ]
+  }
+ },
+ "variants": {
+  "Size=Small, Phase=1": {
+   "(root)": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "loader-container": {
+    "size": "14×14",
+    "sizing": "fixed/fixed"
+   },
+   "loader-container/Ellipse": {
+    "size": "14×14",
+    "stroke": "2=lg inside BORDER/Subtle"
+   },
+   "loader-container/Ellipse#2": {
+    "size": "14×14",
+    "stroke": "2=lg inside CONTENT/Primary"
+   }
+  },
+  "Size=Small, Phase=2": {
+   "(root)": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "loader-container": {
+    "size": "14×14",
+    "sizing": "fixed/fixed"
+   },
+   "loader-container/Ellipse": {
+    "size": "14×14",
+    "stroke": "2=lg inside BORDER/Subtle"
+   },
+   "loader-container/Ellipse#2": {
+    "size": "14×14",
+    "stroke": "2=lg inside CONTENT/Primary"
+   }
+  },
+  "Size=Small, Phase=3": {
+   "(root)": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "loader-container": {
+    "size": "14×14",
+    "sizing": "fixed/fixed"
+   },
+   "loader-container/Ellipse": {
+    "size": "14×14",
+    "stroke": "2=lg inside BORDER/Subtle"
+   },
+   "loader-container/Ellipse#2": {
+    "size": "14×14",
+    "stroke": "2=lg inside CONTENT/Primary"
+   }
+  },
+  "Size=Small, Phase=4": {
+   "(root)": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "loader-container": {
+    "size": "14×14",
+    "sizing": "fixed/fixed"
+   },
+   "loader-container/Ellipse": {
+    "size": "14×14",
+    "stroke": "2=lg inside BORDER/Subtle"
+   },
+   "loader-container/Ellipse#2": {
+    "size": "14×14",
+    "stroke": "2=lg inside CONTENT/Primary"
+   }
+  }
+ }
+}

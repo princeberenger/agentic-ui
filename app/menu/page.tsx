@@ -2,6 +2,7 @@ import { Icon } from '@/app/components/Icon/Icon';
 import { KeyboardShortcut } from '@/app/components/KeyboardShortcut';
 import { Menu, MenuItem, MenuDivider } from '@/app/components/Menu';
 import { ModelLogo, type ModelProvider } from '@/app/components/ModelLogo';
+import { DemoPageHeader } from '@/app/components/DemoPageHeader';
 import styles from './page.module.css';
 
 const MODELS = [
@@ -17,21 +18,7 @@ const PROVIDERS: ModelProvider[] = ['anthropic', 'gemini', 'openai', 'mistral', 
 export default function MenuPage() {
   return (
     <div className={styles.demo}>
-      {/* Header */}
-      <header className={styles.header}>
-        <div className={styles.headerLeft}>
-          <span className={styles.logoIcon} role="img" aria-label="Agentic UI" />
-          <span className={styles.headerSeparator} aria-hidden="true" />
-          <span className={styles.headerLabel}>Menu</span>
-        </div>
-        <div className={styles.headerRight}>
-          <span className={styles.headerLabel}>Launch Demo</span>
-          <span className={styles.kbdGroup}>
-            <KeyboardShortcut keys={['option', 'command']} />
-            <KeyboardShortcut context="return" />
-          </span>
-        </div>
-      </header>
+      <DemoPageHeader label="Menu" />
 
       {/* Model Selection Menu — centered top */}
       <div className={styles.modelMenuWrapper}>

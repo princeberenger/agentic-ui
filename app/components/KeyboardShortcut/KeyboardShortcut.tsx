@@ -12,7 +12,7 @@ import styles from './KeyboardShortcut.module.css';
 export type KeyboardShortcutContext = 'shortcut' | 'icon' | 'caret' | 'slash' | 'return';
 
 /** Modifier keys rendered with the Figma icons (Icon 1–3, Icon 4 (Any)). */
-export type KeyboardModifier = 'command' | 'option' | 'shift' | 'delete';
+export type KeyboardModifier = 'command' | 'option' | 'shift' | 'delete' | 'return';
 
 /** A modifier key or a single character (Figma letters X, Y, Z). */
 export type KeyboardKey = KeyboardModifier | (string & {});
@@ -32,6 +32,8 @@ const MODIFIERS: Record<KeyboardModifier, { icon: string; label: string }> = {
   option: { icon: 'mac-option', label: 'Option' },
   shift: { icon: 'mac-shift', label: 'Shift' },
   delete: { icon: 'delete', label: 'Delete' },
+  // Icons / Return swapped into a modifier slot (DEMO PAGE HEADER)
+  return: { icon: 'return', label: 'Return' },
 };
 
 function isModifier(key: KeyboardKey): key is KeyboardModifier {

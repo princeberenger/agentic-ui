@@ -1,0 +1,54 @@
+{
+ "id": "4004:93",
+ "name": "PULSATING-DOT",
+ "props": {
+  "State": {
+   "type": "VARIANT",
+   "default": "Low",
+   "options": [
+    "Low",
+    "High"
+   ]
+  }
+ },
+ "variants": {
+  "State=Low": {
+   "(root)": {
+    "size": "16×16"
+   },
+   "dot-3": {
+    "size": "8×8",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.2
+   },
+   "dot-2": {
+    "size": "6×6",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.4
+   },
+   "dot-1": {
+    "size": "8×8",
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "State=High": {
+   "(root)": {
+    "size": "16×16"
+   },
+   "dot-3": {
+    "size": "16×16",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.2
+   },
+   "dot-2": {
+    "size": "12×12",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.4
+   },
+   "dot-1": {
+    "size": "8×8",
+    "fill": "CONTENT/Primary"
+   }
+  }
+ }
+}

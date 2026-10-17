@@ -18,6 +18,7 @@ import {
   TableTextCell,
   type TableSort,
 } from '@/app/components/Table';
+import { DemoPageHeader } from '@/app/components/DemoPageHeader';
 import styles from './page.module.css';
 
 interface Row {
@@ -56,13 +57,7 @@ export default function TablePage() {
 
   return (
     <div className={styles.demo}>
-      <header className={styles.header}>
-        <div className={styles.headerLeft}>
-          <span className={styles.logoIcon} role="img" aria-label="Agentic UI" />
-          <span className={styles.headerSeparator} aria-hidden="true" />
-          <span className={styles.headerLabel}>Table</span>
-        </div>
-      </header>
+      <DemoPageHeader label="Table" />
 
       <div className={styles.content}>
         <div className={styles.tableWrapper}>

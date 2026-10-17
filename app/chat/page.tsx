@@ -16,6 +16,7 @@ import {
   UserMessage,
 } from '@/app/components/Chat';
 import { FileType } from '@/app/components/FileType';
+import { DemoPageHeader } from '@/app/components/DemoPageHeader';
 import styles from './page.module.css';
 
 type Sent = { id: number; text: string };
@@ -26,13 +27,7 @@ export default function ChatPage() {
 
   return (
     <div className={styles.demo}>
-      <header className={styles.header}>
-        <div className={styles.headerLeft}>
-          <span className={styles.logoIcon} role="img" aria-label="Agentic UI" />
-          <span className={styles.headerSeparator} aria-hidden="true" />
-          <span className={styles.headerLabel}>Chat</span>
-        </div>
-      </header>
+      <DemoPageHeader label="Chat" />
 
       <div className={styles.thread}>
         <div className={styles.threadContent}>

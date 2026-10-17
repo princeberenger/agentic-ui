@@ -32,30 +32,6 @@
   gap: var(--space-16);
 }
 
-/* AGENTIC UI LOGO, Variant=Logo: 75 × 20 wordmark, CONTENT/Primary */
-.wordmark {
-  display: block;
-  flex-shrink: 0;
-  width: calc(var(--icon-20) * 3.75);
-  height: var(--icon-20);
-  background-color: var(--color-content-primary);
-  mask: url('/assets/logo-wordmark.svg') left center / contain no-repeat;
-  -webkit-mask: url('/assets/logo-wordmark.svg') left center / contain no-repeat;
-}
-
-/* AGENTIC UI LOGO, Variant=Symbol: 24px box, 2px padding */
-.symbol {
-  display: block;
-  flex-shrink: 0;
-  width: var(--icon-24);
-  height: var(--icon-24);
-  padding: var(--space-2);
-  background-color: var(--color-content-primary);
-  background-clip: content-box;
-  mask: url('/assets/logo-icon.svg') center / var(--icon-20) var(--icon-20) no-repeat;
-  -webkit-mask: url('/assets/logo-icon.svg') center / var(--icon-20) var(--icon-20) no-repeat;
-}
-
 /* Icons/ Menu --open, --collapsed */
 .iconButton {
   display: flex;

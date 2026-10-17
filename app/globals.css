@@ -23,6 +23,9 @@
   --color-social-discord: #5865f2;   /* SOCIALS/discord */
   --color-social-linkedin: #0077b5;  /* SOCIALS/linkedin */
   --color-transparent-black-20: rgba(0, 0, 0, 0.2); /* TRANSPARENT/black/20 */
+  --color-transparent-black-0: rgba(0, 0, 0, 0);     /* TRANSPARENT/black/0 */
+  --color-transparent-black-100: #000000;            /* TRANSPARENT/black/100 */
+  --color-transparent-white-0: rgba(255, 255, 255, 0); /* TRANSPARENT/white/0 */
   --color-skeleton-bg: #e8e8e8;      /* Skeleton loading animation, no Figma variable */
   --color-skeleton-highlight: #c6c6c6; /* Skeleton loading animation gradient, no Figma variable */
 

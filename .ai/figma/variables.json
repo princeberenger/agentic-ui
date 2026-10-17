@@ -193,6 +193,7 @@
 "4162:5949":["BORDER/Teal (Light)","MODE",""],
 "4177:6980":["BADGE/stroke/default","MODE","var(--color-badge-stroke-default)"],
 "4715397382d48ea1c0f58275924c74cb67b69d9c/4:2":["Core/25","Spacing",""],
+"508b85ce17f36e353759b5297c25e4cec2e5d72d/4168:2228":["Default/Gray/100","Colors (external library)",""],
 "539fe0f04461124afef1ac30def4bbb7a7713393/34590:272":["64px (4rem) (spacing-10)","Spacing","spacing-10"],
 "58:36":["BACKGROUND/Primary","MODE","var(--color-bg-primary)"],
 "58:37":["BACKGROUND/Secondary","MODE","var(--color-bg-secondary)"],

@@ -1,0 +1,106 @@
+{
+ "id": "4004:82",
+ "name": "stepper-substep",
+ "props": {
+  "Label": {
+   "type": "TEXT",
+   "default": "Substep name"
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "disabled",
+   "options": [
+    "active",
+    "completed",
+    "disabled"
+   ]
+  }
+ },
+ "variants": {
+  "State=disabled": {
+   "(root)": {
+    "size": "112×26",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 0 4=PADDING/4 0",
+    "gap": "8=PADDING/8"
+   },
+   "dot-wrapper": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "dot-wrapper/Ellipse 34": {
+    "size": "7.09×7.09",
+    "sizing": "fixed/fixed",
+    "stroke": "1=default center BORDER/Medium"
+   },
+   "Substep name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Substep name\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=completed": {
+   "(root)": {
+    "size": "112×26",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 0 4=PADDING/4 0",
+    "gap": "8=PADDING/8"
+   },
+   "dot-wrapper": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "dot-wrapper/Icons / Checkmark--filled": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Checkmark--filled"
+   },
+   "dot-wrapper/Icons / Checkmark--filled/icon-color": {
+    "fill": "CONTENT/Success"
+   },
+   "Substep name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Substep name\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Success"
+   }
+  },
+  "State=active": {
+   "(root)": {
+    "size": "112×26",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 0 4=PADDING/4 0",
+    "gap": "8=PADDING/8"
+   },
+   "PULSATING-DOT": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "PULSATING-DOT › State=Low"
+   },
+   "Substep name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Substep name\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "gradient_linear(CONTENT/Primary 19%, CONTENT/Disabled 100%) from 0,0.5 to 1,0.5"
+   }
+  }
+ }
+}

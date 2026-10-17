@@ -10,6 +10,7 @@ import { ProgressBars } from '@/app/components/ProgressBars';
 import { Slider } from '@/app/components/Slider';
 import { SlidingText } from '@/app/components/SlidingText';
 import { EASE_OUT_EXPO, DURATION_ENTER } from '@/app/components/motion';
+import { DemoPageHeader } from '@/app/components/DemoPageHeader';
 import styles from './page.module.css';
 
 const CARD_STAGGER = 0.12;
@@ -42,22 +43,7 @@ export default function ProgressPage() {
 
   return (
     <div className={styles.demo}>
-      {/* Header */}
-      <header className={styles.header}>
-        <div className={styles.headerLeft}>
-          <span className={styles.logoIcon} role="img" aria-label="Agentic UI" />
-          <span className={styles.headerSeparator} aria-hidden="true" />
-          <span className={styles.headerLabel}>Progress</span>
-        </div>
-        <div className={styles.headerRight}>
-          <span className={styles.headerLabel}>Launch Demo</span>
-          <div className={styles.kbdGroup}>
-            <kbd className={styles.kbd}>⌥</kbd>
-            <kbd className={styles.kbd}>⌘</kbd>
-            <kbd className={styles.kbd}>↩</kbd>
-          </div>
-        </div>
-      </header>
+      <DemoPageHeader label="Progress" />
 
       {/* Centered content */}
       <div className={styles.content}>

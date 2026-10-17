@@ -167,6 +167,12 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       convention `Icons / `. Assets dans `public/assets/social/` (Google réutilise `Icons / Google`).
 - [ ] Models : variante `Provider10` (xAI 20px) mal nommée ; Gemini est une image matricielle dans un SVG.
 
+### Stepper, MISC
+- [ ] PULSATING-DOT : prototype Low ↔ High en LINEAR 900ms (linear est interdit hors timers par `.ai/motion-rules.md`), reproduit.
+- [ ] SCROLL FADE Mode=Dark : l'icône reste CONTENT/Primary (noir) sur le fond noir, donc invisible. Reproduit.
+- [ ] DEMO PAGE HEADER : le logo fait 24×22.59 (hauteur fill) ; le code garde le carré 24 du symbole.
+- [ ] Variable de bibliothèque externe `Default/Gray/100` (collection Colors) référencée par un ancien menu-list-item ; plus utilisée par les specs actuelles.
+
 ## 2. Valeurs sans variable (non tokenisées dans Figma)
 
 ### Badge
@@ -375,6 +381,13 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Mistral #e10500 sans variable (logo en couleurs). Google : couleurs de marque sans variable.
 - [x] Tokens CSS ajoutés : `--color-neutral-100`, `--color-neutral-900`, `--color-social-discord`, `--color-social-linkedin`.
       Code syntax WEB écrite.
+
+### Stepper, MISC
+- [ ] stepper-substep disabled : cercle 7.09 sans variable. Connecteur : trait 1px, 25 de haut, sans variable.
+- [ ] Cursor blink : 1 × 17 sans variable. SCROLL FADE : largeur 320, flou 2 sans effect style.
+- [ ] DEMO PAGE HEADER : largeur 1280, gaps 12, trait 9 × 20 de 1px, boutons fixés à 24 de large, sans variable.
+- [ ] Tokens CSS ajoutés : `--color-transparent-white-0`, `--color-transparent-black-0`, `--color-transparent-black-100`.
+      Code syntax WEB à écrire.
 
 ### Validation text, Switch (Theme)
 - [ ] validation-text-line : largeur fixe 308 dans Validation Text (Password). Le code prend toute la largeur.
