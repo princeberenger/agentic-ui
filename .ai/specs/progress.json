@@ -1,0 +1,115 @@
+{
+ "id": "8017:11583",
+ "name": "progress",
+ "props": {
+  "Property 1": {
+   "type": "VARIANT",
+   "default": "0%",
+   "options": [
+    "0%",
+    "15%",
+    "50%",
+    "75%",
+    "100%"
+   ]
+  }
+ },
+ "variants": {
+  "Property 1=0%": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "shape": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg inside BORDER/Subtle"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg inside BORDER/Strong",
+    "hidden": "true"
+   }
+  },
+  "Property 1=15%": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "shape": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg inside BORDER/Subtle"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg inside BORDER/Strong"
+   }
+  },
+  "Property 1=50%": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "shape": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg inside BORDER/Subtle"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg inside BORDER/Strong"
+   }
+  },
+  "Property 1=75%": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "shape": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg inside BORDER/Subtle"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg inside BORDER/Strong"
+   }
+  },
+  "Property 1=100%": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "shape": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg inside BORDER/Subtle"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg inside BORDER/Strong"
+   }
+  }
+ }
+}

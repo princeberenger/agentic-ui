@@ -44,6 +44,13 @@
       "figmaName": "Icons / Arrows--vertical"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4115-15549",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "brain",
+      "figmaName": "Icons / Brain"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13884",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
@@ -91,6 +98,13 @@
       "component": "Icon",
       "name": "checkmark-filled",
       "figmaName": "Icons / Checkmark--filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17188",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "checkmark-outline",
+      "figmaName": "Icons / Checkmark--outline"
     },
     {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13773",
@@ -205,11 +219,25 @@
       "figmaName": "Icons / Dna"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12910",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "document",
+      "figmaName": "Icons / Document"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14013",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
       "name": "down-to-bottom",
       "figmaName": "Icons / Down-to-bottom"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12860",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "download",
+      "figmaName": "Icons / Download"
     },
     {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13389",
@@ -448,6 +476,13 @@
       "component": "Icon",
       "name": "todo",
       "figmaName": "Icons / todo"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13867",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "tools",
+      "figmaName": "Icons / Tools"
     },
     {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13293",

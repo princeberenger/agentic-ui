@@ -1,0 +1,158 @@
+/* ==========================================================================
+   FILE TYPE — Figma File type 6111:11622
+   Style: filled (BACKGROUND/Secondary), outline (1px BORDER/Subtle)
+   Size: large (156 card), medium (row + download button), small (chip)
+   State: default, hover (download icon, INPUT/Hover overlay), focus (not in Figma)
+   ========================================================================== */
+
+.file {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  border-radius: var(--radius-10);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-content-primary);
+  transition-property: background-color, box-shadow;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
+}
+
+.outline {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 var(--stroke-default) var(--color-border-subtle);
+}
+
+/* the main link or button covers the whole file */
+.main {
+  display: flex;
+  flex: 1;
+  gap: var(--space-8);
+  min-width: 0;
+  padding: 0;
+  border: none;
+  border-radius: inherit;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+}
+
+.interactive .main {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.interactive .main::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.main:focus-visible {
+  outline: none;
+}
+
+.interactive:has(.main:focus-visible) {
+  box-shadow: var(--shadow-components-focus);
+}
+
+.icon {
+  display: flex;
+  flex-shrink: 0;
+  color: var(--color-content-icon);
+}
+
+.fileIcon {
+  display: flex;
+}
+
+.downloadIcon {
+  display: none;
+  color: var(--color-content-primary);
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* SYSTEM/Label/md/regular */
+.name,
+.size {
+  overflow: hidden;
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.size {
+  color: var(--color-content-secondary);
+}
+
+/* --- Sizes ---------------------------------------------------------------- */
+.large {
+  width: calc(var(--space-48) * 3 + var(--space-12));
+  padding: var(--space-24);
+  border-radius: var(--radius-default);
+}
+
+.large .main {
+  flex-direction: column;
+  gap: var(--space-48);
+}
+
+.medium {
+  gap: var(--space-24);
+  padding: var(--space-8) var(--space-12);
+}
+
+.small {
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-8) var(--space-12);
+}
+
+.action {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Hover ------------------------------------------------------------------- */
+@media (hover: hover) and (pointer: fine) {
+  .interactive:hover {
+    background-image: linear-gradient(var(--color-input-hover-dark), var(--color-input-hover-dark));
+  }
+
+  .outline.interactive:hover {
+    background-color: var(--color-button-secondary);
+    box-shadow: none;
+  }
+
+  .interactive:not(.medium):hover .fileIcon {
+    display: none;
+  }
+
+  .interactive:not(.medium):hover .downloadIcon {
+    display: flex;
+  }
+
+  .medium.interactive:hover .action {
+    --_icon: var(--color-content-primary);
+  }
+}
+
+.interactive:not(.medium):has(.main:focus-visible) .fileIcon {
+  display: none;
+}
+
+.interactive:not(.medium):has(.main:focus-visible) .downloadIcon {
+  display: flex;
+}

@@ -126,6 +126,32 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       avec `Shadows/elevation2`, reproduit.
 - [ ] `icons / Time` (179:15826) nommé en minuscules hors convention `Icons / `.
 
+### Chat agent — Agent step 4119:17981, toolcall-base 6282:12965, Chat Tool Call 6231:10080, Multistepper 6295:15285,
+### progress 8017:11583, CONTEXT 8017:11604, CONTEXT-TOOLTIP 8017:42354, ChatComposer 4133:11200 (`app/components/Chat/`)
+- [ ] Agent step : variante `Sub-step=Incoplete` (faute de frappe). Aucun état hover ni focus pour le chevron.
+- [ ] Agent step active et ChatMetadataRead « Sending » : `Gradient/Shimmer` statique, pas d'animation définie.
+- [ ] Multistepper : structure à marges négatives (gap -8 et -32) et traits superposés pour les sous-étapes.
+      Le code dessine un rail et une courbe par sous-étape (asset `public/assets/chat/substep-curve.svg`).
+- [ ] progress : 15 % dessine un quart de cercle (25 %), l'arc part de 3 heures. Le code dessine la valeur exacte,
+      depuis 3 heures.
+- [ ] CONTEXT : la position du CONTEXT-TOOLTIP n'est pas définie. Le code l'ouvre au-dessus, aligné à droite, au survol et au focus.
+- [ ] CONTEXT-TOOLTIP : un calque `blur` blanc (flou 0) recouvre le fond `BACKGROUND/menu/background` jusqu'au total.
+      Le code met un fond blanc.
+- [ ] ChatComposer : la variante par défaut du set est `drag-drop`. Le calque `blur` (flou 0) blanchit le haut de la zone
+      (rouge en erreur). Le code fait un dégradé blanc → `BACKGROUND/Secondary` sur 80px.
+- [ ] ChatComposer : le hover change le contour (0,5 `BORDER/Strong`), l'active passe à 1px, filled 0,5 `BORDER/Medium`,
+      error 1px `BORDER/Attention`, warning 0,5 `BORDER/Warning`. Reproduit, le focus l'emporte sur le hover.
+- [ ] ChatComposer : `Cursor blink animation` (active) est le curseur natif du champ dans le code.
+- [ ] ChatComposer : la poignée 20×4 des pièces jointes et le « N Items » n'ont pas d'état. Le code en fait des boutons
+      (replier, déplier) avec focus clavier.
+- [ ] ChatComposer condensed : pas de bouton d'envoi (Entrée envoie).
+
+### File type — 6111:11622 (`app/components/FileType/`)
+- [ ] `Type` (Document, Code, Video, Image, Audio) ne change que les textes d'exemple, l'icône reste Icons / Document.
+- [ ] Hover : l'icône devient Icons / Download (large, small) ; en medium elle reste et le bouton passe en CONTENT/Primary.
+      Pas d'état focus. Le code fait du fichier entier un lien de téléchargement.
+- [ ] Small : le bouton est fermer (`Show close icon`), medium : télécharger. Reproduit.
+
 ## 2. Valeurs sans variable (non tokenisées dans Figma)
 
 ### Badge
@@ -320,6 +346,14 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       avec `TRANSPARENT/white/0`, `TRANSPARENT/black/0`, `TRANSPARENT/black/100`, `NEUTRAL/Neutral 800` sans code syntax.
 - [ ] Variables de bibliothèque externe : `PADDING/md` (8), `ICONS/2xs` (14). Le code utilise `--space-8`, `--icon-14`.
 
+### Chat agent, File type
+- [ ] Icône des sous-étapes 13, chevrons 14, écart texte/durée 8 et opacité 0,5 du temps d'outil sans variable.
+- [ ] CONTEXT-TOOLTIP : largeur 220, écarts 12 et 4 sans variable.
+- [ ] ChatComposer : hauteur 128, zone de texte 72, `blur` 715×80 sans variable ; poignée 20×4.
+- [ ] File type large : 156 de large sans variable (`--space-48` × 3 + `--space-12`).
+- [ ] Tokens CSS ajoutés : `--color-border-warning` (BORDER/Warning), `--color-bg-menu` (BACKGROUND/menu/background),
+      `--color-transparent-black-20` (TRANSPARENT/black/20). Code syntax WEB à écrire.
+
 ## 3. Tokens
 
 - [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
@@ -357,6 +391,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 
 - [x] Icônes ajoutées par le script : `warning-filled`, `reset`, `thumbs-up`, `thumbs-down`, `checkmark-2`, `user`,
       plus `time` (179:15826) et `arrow-down` (179:14031).
+
+- [x] Icônes ajoutées : `brain`, `checkmark-outline`, `document`, `download`, `tools`.
 
 ## 5. Détection des changements Figma (à construire)
 

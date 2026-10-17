@@ -34,6 +34,8 @@ const pages = [
   { href: '/dialer', label: 'Dialer' },
   { href: '/chat', label: 'Chat' },
   { href: '/chat-messages', label: 'Chat messages' },
+  { href: '/chat-agent', label: 'Chat agent' },
+  { href: '/file-type', label: 'File type' },
   { href: '/tester-1', label: 'Tester 1' },
   { href: '/tester-2', label: 'Tester 2' },
   { href: '/tester-3', label: 'Tester 3' },

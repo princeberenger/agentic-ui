@@ -9,7 +9,8 @@
 // Usage:
 //   node scripts/figma/extract.mjs <node-id>...           component sets, components, frames or pages
 //   node scripts/figma/extract.mjs --page "Progress"      every component of a page (name match)
-//   options: --png      also download a 2x render to .ai/specs/<slug>.png (not committed)
+//   options: --base <variant> compare the variants to this one (e.g. "State=default")
+//            --png      also download a 2x render to .ai/specs/<slug>.png (not committed)
 //            --icons    export missing icon svgs to public/assets/icons and add them to the icon batch
 //   node scripts/figma/extract.mjs --merge-vars <file>    merge a variables dump (dump-variables.js /
 //                                                         resolve-variables.js result) into .ai/figma/variables.json
@@ -380,8 +381,11 @@ function spec(node, ctx) {
   const variants = isSet ? node.children.filter((c) => c.type === 'COMPONENT') : [node];
   const defs = node.componentPropertyDefinitions ?? {};
   const defaults = Object.fromEntries(Object.entries(defs).filter(([, d]) => d.type === 'VARIANT').map(([k, d]) => [k, String(d.defaultValue)]));
+  // --base "State=default" picks the reference variant for the diffs instead of the Figma default
   const base =
-    variants.find((v) => isSet && Object.entries(defaults).every(([k, val]) => parseVariant(v.name)[k] === val)) ?? variants[0];
+    (ctx.base && variants.find((v) => v.name === ctx.base || v.name.split(', ').includes(ctx.base))) ||
+    variants.find((v) => isSet && Object.entries(defaults).every(([k, val]) => parseVariant(v.name)[k] === val)) ||
+    variants[0];
 
   const walked = new Map(variants.map((v) => [v, walk(v, ctx)]));
   const baseWalk = walked.get(base);
@@ -580,12 +584,13 @@ function main() {
     return;
   }
   const png = args.includes('--png');
+  const baseIdx = args.indexOf('--base');
+  const baseName = baseIdx >= 0 ? args[baseIdx + 1] : undefined;
   const withIcons = args.includes('--icons');
-  let ids = args.filter((a) => !a.startsWith('--'));
+  let ids = args.filter((a, i) => !a.startsWith('--') && args[i - 1] !== '--base' && args[i - 1] !== '--page');
   const pageIdx = args.indexOf('--page');
   if (pageIdx >= 0) {
     const name = args[pageIdx + 1];
-    ids = ids.filter((i) => i !== name);
     const file = api(`files/${FILE_KEY}?depth=1`);
     const page = file.document.children.find((p) => p.name.replace(/[↳\s]+/g, ' ').trim().toLowerCase() === name.toLowerCase());
     if (!page) throw new Error(`page not found: ${name}`);
@@ -604,7 +609,7 @@ function main() {
   for (const id of Object.keys(res.nodes)) {
     const entry = res.nodes[id];
     if (!entry) { console.log(`${id}: not found`); continue; }
-    const ctx = { components: entry.components ?? {}, componentSets: entry.componentSets ?? {}, styles: entry.styles ?? {} };
+    const ctx = { components: entry.components ?? {}, componentSets: entry.componentSets ?? {}, styles: entry.styles ?? {}, base: baseName };
     for (const target of collectTargets(entry.document)) {
       const s = spec(target, ctx);
       writeFileSync(join(SPECS_DIR, `${s.slug}.md`), s.md);

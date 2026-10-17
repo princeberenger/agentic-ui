@@ -1,0 +1,290 @@
+{
+ "id": "6295:15285",
+ "name": "Multistepper",
+ "props": {
+  "Agent message label": {
+   "type": "TEXT",
+   "default": "Agentic UI is the world-first Figma design system for building scalable agentic experiences with Ai."
+  },
+  "Show agent message": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "Step",
+   "options": [
+    "Step",
+    "Step + Message",
+    "Step + Sub-steps"
+   ]
+  }
+ },
+ "variants": {
+  "Type=Step": {
+   "(root)": {
+    "size": "130×29",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "wrapper": {
+    "size": "16×29",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "4=PADDING/4 0 0=PADDING/none 0",
+    "gap": "0"
+   },
+   "wrapper/Chat status dot": {
+    "size": "16×25",
+    "sizing": "fixed/hug",
+    "layout": "column align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4",
+    "instance": "Chat status dot › Type=Gray",
+    "props": "Show connection line=true"
+   },
+   "wrapper#2": {
+    "size": "106×16",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "wrapper#2/Agent step": {
+    "size": "106×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8",
+    "instance": "Agent step › State=default, Type=Step, Sub-step=Complete",
+    "props": "Icon=Icons / Brain, Label=\"State label\", Expandable=true"
+   }
+  },
+  "Type=Step + Sub-steps": {
+   "(root)": {
+    "size": "130×120",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "-8"
+   },
+   "wrapper": {
+    "size": "16×11",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "4=PADDING/4 0 0=PADDING/none 0",
+    "gap": "0"
+   },
+   "wrapper/Chat status dot": {
+    "size": "16×7",
+    "sizing": "fixed/hug",
+    "layout": "column align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4",
+    "instance": "Chat status dot › Type=Gray",
+    "props": "Show connection line=false"
+   },
+   "wrapper#2": {
+    "size": "122×120",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "wrapper#2/wrapper": {
+    "size": "122×16",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 16=PADDING/16",
+    "gap": "6=PADDING/6"
+   },
+   "wrapper#2/wrapper/Agent step": {
+    "size": "106×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8",
+    "instance": "Agent step › State=default, Type=Step, Sub-step=Complete",
+    "props": "Icon=Icons / Brain, Label=\"State label\", Expandable=true"
+   },
+   "wrapper#2/wrapper/Agent step/label/Icons / Chevron--up/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "wrapper#2/wrapper#2": {
+    "size": "104×104",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 24=PADDING/24 0",
+    "gap": "-32"
+   },
+   "wrapper#2/wrapper#2/step 1": {
+    "size": "104×28",
+    "sizing": "hug/hug",
+    "layout": "row align min/max",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "wrapper#2/wrapper#2/step 1/connection": {
+    "size": "16×28",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 8 0",
+    "gap": "0"
+   },
+   "wrapper#2/wrapper#2/step 1/connection/connection-line": {
+    "size": "16×4",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "wrapper#2/wrapper#2/step 1/connection/connection-line/connection-line": {
+    "size": "1×14",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Disabled"
+   },
+   "wrapper#2/wrapper#2/step 1/connection/sub-step-connection-line": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "column align center/min",
+    "padding": "0 0.5 0 0.5",
+    "gap": "0"
+   },
+   "wrapper#2/wrapper#2/step 1/connection/sub-step-connection-line/Vector 1": {
+    "size": "15×16",
+    "sizing": "fill/fixed",
+    "stroke": "1 center CONTENT/Disabled"
+   },
+   "wrapper#2/wrapper#2/step 1/Agent step": {
+    "size": "88×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8",
+    "instance": "Agent step › State=default, Type=Sub-step, Sub-step=Incoplete",
+    "props": "Expandable=true, Icon=Icons / Brain, Label=\"State label\""
+   },
+   "wrapper#2/wrapper#2/[run 1]": {
+    "size": "104×54",
+    "sizing": "hug/hug",
+    "layout": "row align min/max",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none",
+    "count": "2"
+   },
+   "wrapper#2/wrapper#2/[run 1]/connection": {
+    "size": "16×54",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 8 0",
+    "gap": "0"
+   },
+   "wrapper#2/wrapper#2/[run 1]/connection/connection-line": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "wrapper#2/wrapper#2/[run 1]/connection/connection-line/connection-line": {
+    "size": "1×16",
+    "sizing": "fixed/fill",
+    "fill": "CONTENT/Disabled"
+   },
+   "wrapper#2/wrapper#2/[run 1]/connection/connection-line#2": {
+    "size": "16×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/14",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "wrapper#2/wrapper#2/[run 1]/connection/connection-line#2/connection-line": {
+    "size": "1×14",
+    "sizing": "fixed/fill",
+    "fill": "CONTENT/Disabled"
+   },
+   "wrapper#2/wrapper#2/[run 1]/connection/sub-step-connection-line": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "column align center/min",
+    "padding": "0 0.5 0 0.5",
+    "gap": "0"
+   },
+   "wrapper#2/wrapper#2/[run 1]/connection/sub-step-connection-line/Vector 1": {
+    "size": "15×16",
+    "sizing": "fill/fixed",
+    "stroke": "1 center CONTENT/Disabled"
+   },
+   "wrapper#2/wrapper#2/[run 1]/Agent step": {
+    "size": "88×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8",
+    "instance": "Agent step › State=default, Type=Sub-step, Sub-step=Incoplete",
+    "props": "Expandable=true, Icon=Icons / Brain, Label=\"State label\""
+   }
+  },
+  "Type=Step + Message": {
+   "(root)": {
+    "size": "640×88",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "wrapper": {
+    "size": "16×88",
+    "sizing": "hug/fill",
+    "layout": "row align min/min",
+    "padding": "4=PADDING/4 0 0=PADDING/none 0",
+    "gap": "0"
+   },
+   "wrapper/Chat status dot": {
+    "size": "16×84",
+    "sizing": "fixed/fill",
+    "layout": "column align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4",
+    "instance": "Chat status dot › Type=Gray",
+    "props": "Show connection line=true"
+   },
+   "wrapper#2": {
+    "size": "616×88",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "wrapper#2/Agent step": {
+    "size": "106×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8",
+    "instance": "Agent step › State=default, Type=Step, Sub-step=Complete",
+    "props": "Icon=Icons / Brain, Label=\"State label\", Expandable=true"
+   },
+   "wrapper#2/agent-message-container": {
+    "size": "616×64",
+    "sizing": "fixed/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 16=PADDING/16 0",
+    "gap": "0"
+   },
+   "wrapper#2/agent-message-container/Agentic UI is the world-first Figma design system for building scalable agentic experiences with Ai.": {
+    "size": "616×48",
+    "sizing": "fill/hug",
+    "text": "\"Agentic UI is the world-first Figma design system for building scalable agentic experiences with Ai.\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  }
+ }
+}

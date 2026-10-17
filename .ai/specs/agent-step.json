@@ -1,0 +1,246 @@
+{
+ "id": "4119:17981",
+ "name": "Agent step",
+ "props": {
+  "Expandable": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Icon": {
+   "type": "INSTANCE_SWAP",
+   "default": "4115:15549"
+  },
+  "Label": {
+   "type": "TEXT",
+   "default": "State label"
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "active",
+    "default",
+    "disabled"
+   ]
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "Step",
+   "options": [
+    "Step",
+    "Sub-step"
+   ]
+  },
+  "Sub-step": {
+   "type": "VARIANT",
+   "default": "Complete",
+   "options": [
+    "Complete",
+    "Incoplete"
+   ]
+  }
+ },
+ "variants": {
+  "State=default, Type=Step, Sub-step=Complete": {
+   "(root)": {
+    "size": "88×16",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Icons / Brain": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Brain"
+   },
+   "Icons / Brain/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "64×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/progress-label": {
+    "size": "64×15",
+    "sizing": "hug/hug",
+    "text": "\"State label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "label/Icons / Chevron--down": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Chevron--down"
+   },
+   "label/Icons / Chevron--down/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=active, Type=Step, Sub-step=Complete": {
+   "(root)": {
+    "size": "88×16",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Icons / Brain": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Brain"
+   },
+   "Icons / Brain/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "label": {
+    "size": "64×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/progress-label": {
+    "size": "64×15",
+    "sizing": "hug/hug",
+    "text": "\"State label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "gradient_linear(CONTENT/Primary 19%, CONTENT/Disabled 100%) from 0,0.5 to 1,0.5"
+   },
+   "label/Icons / Chevron--down": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Chevron--down"
+   },
+   "label/Icons / Chevron--down/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=disabled, Type=Step, Sub-step=Complete": {
+   "(root)": {
+    "size": "88×16",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Icons / Brain": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Brain"
+   },
+   "Icons / Brain/icon-color": {
+    "fill": "CONTENT/Disabled"
+   },
+   "label": {
+    "size": "64×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/progress-label": {
+    "size": "64×15",
+    "sizing": "hug/hug",
+    "text": "\"State label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "label/Icons / Chevron--down": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Chevron--down"
+   },
+   "label/Icons / Chevron--down/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=default, Type=Sub-step, Sub-step=Incoplete": {
+   "(root)": {
+    "size": "88×16",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "icon-wrapper": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "icon-wrapper/Icons / todo": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / todo"
+   },
+   "icon-wrapper/Icons / todo/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "64×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/progress-label": {
+    "size": "64×15",
+    "sizing": "hug/hug",
+    "text": "\"State label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=default, Type=Sub-step, Sub-step=Complete": {
+   "(root)": {
+    "size": "88×16",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "icon-wrapper": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "icon-wrapper/Icons / Checkmark--outline": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Checkmark--outline"
+   },
+   "icon-wrapper/Icons / Checkmark--outline/icon-color": {
+    "fill": "CONTENT/Secondary"
+   },
+   "label": {
+    "size": "64×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/progress-label": {
+    "size": "64×15",
+    "sizing": "hug/hug",
+    "text": "\"State label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  }
+ }
+}
