@@ -47,6 +47,15 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       passent en centré. Le code centre sans description et aligne en haut avec description.
 - [ ] Style=has-background n'a pas de variante disabled. Le code applique les couleurs disabled de no-background.
 
+### HelperText — 4066:7007
+- [ ] Pas de variante warning + sm + solid. Le code applique les couleurs de warning lg solid.
+- [ ] Error solid : texte et icône en `CONTENT/Attention (Light)` en sm, `CONTENT/On Primary` en lg.
+- [ ] Texte : `SYSTEM/Body/xs/regular` pour success et error sm solid, le style bold partout ailleurs.
+- [ ] Padding horizontal lg : 10px en light, 12px en solid.
+
+### CheckboxGroup — 4066:5501
+- [ ] Type=vertical a une largeur fixe de 128px. Le code laisse la largeur au contenu.
+
 ## 3. Tokens
 
 - [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
@@ -57,7 +66,12 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Modes SHARP et ROUNDED de BORDER RADIUS : non gérés en code.
 - [x] Code syntax WEB à écrire pour les 12 variables BADGE/bg et BADGE/label ajoutées avec Badge.
 
-## 4. Détection des changements Figma (à construire)
+## 4. Assets du repo différents de Figma
+
+- [x] `checkmark-filled.svg` : cercle plus petit que `Icons / Checkmark--filled`. Remplacé par l'export Figma
+      (vert `#1B561A` gardé pour l'usage `mode="img"` de StepperSubstep, qui devrait passer en mask + `--color-content-success`).
+
+## 5. Détection des changements Figma (à construire)
 
 L'API REST répond avec le token d'environnement (`/v1/files/:key/nodes` renvoie padding, rayons,
 fills, strokes et `boundVariables` de chaque variante ; `version` et `lastModified` du fichier).

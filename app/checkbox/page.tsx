@@ -1,11 +1,11 @@
 // Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=124-2639
 // Extracted: 2026-10-17
-// Demo page: Checkbox type / selected / state matrix, Checkbox with label (815:75)
+// Demo page: Checkbox type / selected / state matrix, Checkbox with label (815:75), CheckboxGroup (4066:5501)
 
 'use client';
 
 import { useState } from 'react';
-import { Checkbox, type CheckboxValue, type CheckboxVariant } from '@/app/components/Checkbox';
+import { Checkbox, CheckboxGroup, type CheckboxValue, type CheckboxVariant } from '@/app/components/Checkbox';
 import styles from './page.module.css';
 
 const VALUES: CheckboxValue[] = [false, 'indeterminate', true];
@@ -48,6 +48,18 @@ export default function CheckboxPage() {
           <Row label="disabled">
             {VALUES.map((v) => <Checkbox key={String(v)} label="Label" description="Description text" checked={v} disabled />)}
           </Row>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.title}>Group</h2>
+        <div className={styles.groups}>
+          <CheckboxGroup label="Label" helperText="Helper text">
+            {[1, 2, 3, 4].map((i) => <Checkbox key={i} label="Label" />)}
+          </CheckboxGroup>
+          <CheckboxGroup label="Label" helperText="Helper text" orientation="horizontal">
+            {[1, 2, 3].map((i) => <Checkbox key={i} label="Label" />)}
+          </CheckboxGroup>
         </div>
       </section>
 
