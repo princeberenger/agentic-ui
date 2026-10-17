@@ -226,6 +226,13 @@
       "figmaName": "Icons / Filter"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12822",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "folder",
+      "figmaName": "Icons / Folder"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12843",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",

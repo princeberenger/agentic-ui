@@ -43,6 +43,7 @@
   border: none;
   cursor: pointer;
   text-align: left;
+  text-decoration: none;
   position: relative;
   transition: background 0.15s ease;
   font-family: var(--font-body);

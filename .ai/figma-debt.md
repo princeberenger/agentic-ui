@@ -30,6 +30,17 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       au lieu de `Shadows/Components/focus` utilisé partout ailleurs. Reproduit.
 - [ ] pagination-item Type=number n'a pas d'état focus ni disabled. Le code applique le contour active au focus clavier.
 
+### Breadcrumbs — 549:163, BreadcrumbItem — 549:91 (`app/components/Breadcrumbs/`)
+- [ ] Items=5 : commence par un séparateur `<` puis l'overflow, et aucun item n'est en `current`
+      (Items=2 à 4 finissent par `current`). Le code garde le `<` et met le dernier item en `current`.
+- [ ] Items=5 ne cache qu'un item (4 visibles après l'overflow). Le code replie au-delà de `maxItems={4}`.
+- [ ] Menu de l'overflow : copie détachée de `_Menu list item` (rayon 4, contour 1px, largeur 128 avec des items
+      de 160 min), différente du composant Menu (rayon 12, contour 0,5). Le code réutilise Menu/MenuItem sm
+      avec le rayon, le contour et les espaceurs 4px de la breadcrumb.
+- [ ] Hover : style `SYSTEM/Label/md/underline` en weight Regular alors que default et current sont en Medium.
+      Departure Mono n'a que le 400, la différence ne se voit pas.
+- [ ] Aucun état focus. Le code a seulement le focus clavier (`--shadow-components-focus`).
+
 ## 2. Valeurs sans variable (non tokenisées dans Figma)
 
 ### Badge
@@ -177,6 +188,10 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Choix des pages visibles : Figma ne montre que `1 2 3 4 … 10`. Le code garde 1-4 au début, les 4 dernières à la fin,
       et `1 … p-1 p p+1 … n` au milieu (deux overflows).
 
+### Breadcrumbs — 549:163
+- [ ] `link-separator` : cadre 20x20 sans variable. Le code utilise `--icon-20`.
+- [ ] Séparateur `/` et `<` : texte sans style de texte (variables liées une à une).
+
 ## 3. Tokens
 
 - [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
@@ -200,6 +215,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       (change aussi la flèche de sous-menu de MenuItem et la pagination legacy de `app/table`).
 
 - [x] `overflow-menu-horizontal.svg` : absent du repo. Ajouté depuis `Icons / Overflow-menu--horizontal` (179:14008).
+
+- [x] `folder.svg` : absent du repo. Ajouté depuis `Icons / Folder` (179:12822).
 
 ## 5. Détection des changements Figma (à construire)
 

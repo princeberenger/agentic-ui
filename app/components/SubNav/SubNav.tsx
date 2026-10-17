@@ -20,6 +20,7 @@ const pages = [
   { href: '/search', label: 'Search' },
   { href: '/modal', label: 'Modal' },
   { href: '/file-upload', label: 'File upload' },
+  { href: '/breadcrumbs', label: 'Breadcrumbs' },
   { href: '/pagination', label: 'Pagination' },
   { href: '/tabs', label: 'Tabs' },
   { href: '/table', label: 'Table' },

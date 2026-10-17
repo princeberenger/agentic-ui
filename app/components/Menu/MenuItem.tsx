@@ -16,10 +16,12 @@ export interface MenuItemProps {
   onClick?: () => void;
   /** `option` inside a Dropdown listbox: exposes `selected` as aria-selected. */
   role?: 'menuitem' | 'option';
-  onKeyDown?: React.KeyboardEventHandler<HTMLButtonElement>;
+  onKeyDown?: React.KeyboardEventHandler<HTMLElement>;
+  /** Renders a link instead of a button. */
+  href?: string;
 }
 
-export const MenuItem = forwardRef<HTMLButtonElement, MenuItemProps>(
+export const MenuItem = forwardRef<HTMLButtonElement | HTMLAnchorElement, MenuItemProps>(
   function MenuItem({
     label,
     helperText,
@@ -32,6 +34,7 @@ export const MenuItem = forwardRef<HTMLButtonElement, MenuItemProps>(
     onClick,
     role = 'menuitem',
     onKeyDown,
+    href,
   }, ref) {
     const itemClass = disabled ? styles.itemDisabled : styles.item;
     const sizeClass = size === 'sm' ? styles.itemSm : styles.itemRegular;
@@ -40,9 +43,57 @@ export const MenuItem = forwardRef<HTMLButtonElement, MenuItemProps>(
 
     const hasHelperText = helperText != null;
 
+    const content = (
+      <div className={contentClass}>
+        {icon && icon}
+
+        {hasHelperText ? (
+          <div className={styles.labelGroup}>
+            <span className={labelClass}>{label}</span>
+            <span className={styles.helperText}>{helperText}</span>
+          </div>
+        ) : (
+          <span className={labelClass}>{label}</span>
+        )}
+
+        {selected && !shortcut && !hasSubmenu && (
+          <div className={styles.trailing}>
+            <Icon name="checkmark" size={16} />
+          </div>
+        )}
+
+        {shortcut && (
+          <div className={styles.shortcut}>
+            {shortcut}
+          </div>
+        )}
+
+        {hasSubmenu && (
+          <div className={styles.trailing}>
+            <Icon name="chevron-right" size={14} />
+          </div>
+        )}
+      </div>
+    );
+
+    if (href && !disabled) {
+      return (
+        <a
+          ref={ref as React.Ref<HTMLAnchorElement>}
+          href={href}
+          className={`${itemClass} ${sizeClass}`}
+          role={role}
+          onClick={onClick}
+          onKeyDown={onKeyDown}
+        >
+          {content}
+        </a>
+      );
+    }
+
     return (
       <button
-        ref={ref}
+        ref={ref as React.Ref<HTMLButtonElement>}
         type="button"
         className={`${itemClass} ${sizeClass}`}
         role={role}
@@ -53,36 +104,7 @@ export const MenuItem = forwardRef<HTMLButtonElement, MenuItemProps>(
         onClick={disabled ? undefined : onClick}
         onKeyDown={onKeyDown}
       >
-        <div className={contentClass}>
-          {icon && icon}
-
-          {hasHelperText ? (
-            <div className={styles.labelGroup}>
-              <span className={labelClass}>{label}</span>
-              <span className={styles.helperText}>{helperText}</span>
-            </div>
-          ) : (
-            <span className={labelClass}>{label}</span>
-          )}
-
-          {selected && !shortcut && !hasSubmenu && (
-            <div className={styles.trailing}>
-              <Icon name="checkmark" size={16} />
-            </div>
-          )}
-
-          {shortcut && (
-            <div className={styles.shortcut}>
-              {shortcut}
-            </div>
-          )}
-
-          {hasSubmenu && (
-            <div className={styles.trailing}>
-              <Icon name="chevron-right" size={14} />
-            </div>
-          )}
-        </div>
+        {content}
       </button>
     );
   }

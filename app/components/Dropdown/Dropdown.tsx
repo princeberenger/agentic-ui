@@ -56,7 +56,7 @@ export function Dropdown({
   const listId = `${triggerId}-listbox`;
   const rootRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
-  const optionRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const optionRefs = useRef<(HTMLElement | null)[]>([]);
 
   const enabled = options.map((o, i) => (o.disabled ? -1 : i)).filter((i) => i >= 0);
   const focusOption = (index: number) => optionRefs.current[index]?.focus();
