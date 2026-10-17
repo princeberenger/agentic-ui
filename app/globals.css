@@ -107,6 +107,7 @@
   --color-input-hover-light: rgba(255, 255, 255, 0.08);  /* INPUT/Hover (Light) */
   --color-input-hover-dark: rgba(0, 0, 0, 0.04);         /* INPUT/Hover (Dark) */
   --color-input-pressed-light: rgba(255, 255, 255, 0.6); /* INPUT/Pressed (Light) */
+  --color-input-selected: rgba(0, 0, 0, 0.12);     /* INPUT/Selected */
 
   /* Transparent (Figma COLORS collection) */
   --color-transparent-blue-50: rgba(9, 104, 246, 0.5);  /* TRANSPARENT/blue/50 */

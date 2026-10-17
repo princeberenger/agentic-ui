@@ -115,6 +115,17 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       le code ajoute `--shadow-inset-bottom` (comme DialerCard). TabGroup utilise `--shadow-elevation-1` seul.
 - [ ] Hover : le calque `INPUT/Hover (Dark)` est appliqué avec une opacité de calque de 4 % en plus de l'alpha de la variable.
 
+### Search — 338:6162, _Search base — 338:6250
+- [ ] lg utilise les icônes `Search` et `Close` d'une librairie distante (avec un fond blanc), sm les icônes locales.
+      La croix distante est plus petite. Le code utilise `Icons / Search` et `Icons / Close` partout.
+- [ ] Couleur de la loupe : lg `CONTENT/Icon`, sm `CONTENT/Secondary` (default), lg `CONTENT/Icon`, sm `CONTENT/Primary` (filled).
+- [ ] Rayon lg disabled : 10 au lieu de 12.
+- [ ] Anneau de focus (2px noir 12 %) en effet brut, pas en variable ni en effect style. Le code utilise `--color-input-selected`.
+- [ ] Cadre de la loupe sm : 30px au lieu de 32px.
+- [ ] Base Expanded=false : texte en style `body-short-01` et couleur brute `#150080` (masqués).
+- [ ] Le raccourci « ⌘S » est un texte affiché : aucun comportement défini. Le code l'affiche seulement.
+- [ ] Largeurs fixes (320 / 240px). Le code remplit le conteneur.
+
 ### HelperText — 4066:7007
 - [ ] Pas de variante warning + sm + solid. Le code applique les couleurs de warning lg solid.
 - [ ] Error solid : texte et icône en `CONTENT/Attention (Light)` en sm, `CONTENT/On Primary` en lg.
@@ -138,6 +149,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 
 - [x] `checkmark-filled.svg` : cercle plus petit que `Icons / Checkmark--filled`. Remplacé par l'export Figma
       (vert `#1B561A` gardé pour l'usage `mode="img"` de StepperSubstep, qui devrait passer en mask + `--color-content-success`).
+
+- [x] `search.svg` : version retransformée, décalée d'environ 0,3px. Remplacé par l'export de `Icons / Search`.
 
 ## 5. Détection des changements Figma (à construire)
 
