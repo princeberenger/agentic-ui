@@ -1,14 +1,17 @@
 // Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=761-20738
 // Extracted: 2026-10-17
-// Demo page: Text input size / state matrix, live validation, Password input (6133:736)
+// Demo page: Text input size / state matrix, live validation, Password input (6133:736), Text area (2003:3900)
 
 'use client';
 
 import { useState } from 'react';
 import { PASSWORD_RULES, PasswordInput, TextInput, type InputSize, type InputStatus } from '@/app/components/Input';
+import { Textarea } from '@/app/components/Textarea';
 import styles from './page.module.css';
 
 const SIZES: InputSize[] = ['md', 'sm'];
+const LONG_TEXT =
+  'To optimize agentic workflows: 1. Define clear objectives and metrics. 2. Automate repetitive tasks with Maestro. 3. Implement regular performance evaluations.';
 const STATES: { title: string; status?: InputStatus; disabled?: boolean; value?: string; helper: string }[] = [
   { title: 'default', helper: 'Helper text' },
   { title: 'filled', value: 'Text', helper: 'Helper text' },
@@ -53,6 +56,17 @@ export default function TextInputPage() {
           <PasswordInput label="Password" placeholder="••••••••" rules={PASSWORD_RULES} defaultValue="abc1" />
           <PasswordInput label="Confirm password" placeholder="••••••••" status="error" defaultValue="abc" helperText="Passwords do not match" />
           <PasswordInput label="Password" placeholder="••••••••" disabled helperText="Helper text" />
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.title}>Text area</h2>
+        <div className={styles.inputs}>
+          <Textarea label="default" placeholder="Placeholder" helperText="Helper text" />
+          <Textarea label="filled" placeholder="Placeholder" defaultValue={LONG_TEXT} helperText="Helper text" />
+          <Textarea label="readonly" defaultValue={LONG_TEXT} readOnly helperText="Helper text" />
+          <Textarea label="error" defaultValue={LONG_TEXT} status="error" helperText="Helper text" />
+          <Textarea label="disabled" defaultValue={LONG_TEXT} disabled helperText="Helper text" />
         </div>
       </section>
 

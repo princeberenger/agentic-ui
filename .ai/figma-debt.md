@@ -97,6 +97,16 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Les règles sont du contenu Figma (5 lignes). Le code les fournit en `PASSWORD_RULES`, évaluées sur la saisie.
 - [ ] Pas d'état focus + success / error : le focus l'emporte, comme pour Text input.
 
+### Text area — 2003:3900
+- [ ] Hauteur du champ (100px) sans variable. Le code la reprend en dur.
+- [ ] Label en `CONTENT/Primary` dans tous les états (Text input utilise `CONTENT/Secondary` au repos).
+- [ ] State=error sans fond (les autres états ont `BACKGROUND/Primary`).
+- [ ] Pas d'état hover.
+- [ ] SCROLL FADE seulement sur State=filled. Le code l'affiche quand le texte dépasse, hors focus, error,
+      readonly et disabled, et le masque une fois en bas du texte.
+- [ ] SCROLL FADE : flou d'arrière-plan de 2px invisible dans le rendu Figma. Le code ne garde que le dégradé.
+- [ ] Texte tronqué avec « … » à 4 lignes dans Figma ; un vrai textarea fait défiler le texte.
+
 ### HelperText — 4066:7007
 - [ ] Pas de variante warning + sm + solid. Le code applique les couleurs de warning lg solid.
 - [ ] Error solid : texte et icône en `CONTENT/Attention (Light)` en sm, `CONTENT/On Primary` en lg.

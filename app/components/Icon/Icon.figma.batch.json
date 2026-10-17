@@ -177,6 +177,13 @@
       "figmaName": "Icons / Dna"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14013",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "down-to-bottom",
+      "figmaName": "Icons / Down-to-bottom"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13389",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
