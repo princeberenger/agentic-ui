@@ -1,0 +1,130 @@
+{
+ "id": "638:6554",
+ "name": "Menu model selection",
+ "props": {},
+ "variants": {
+  "Menu model selection": {
+   "(root)": {
+    "size": "531×188",
+    "sizing": "fixed/hug",
+    "minWidth": "160",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0",
+    "fill": "BACKGROUND/menu/background",
+    "stroke": "0.5=sm outside BORDER/Medium",
+    "radius": "10=10",
+    "effect": "Shadows/elevation2"
+   },
+   "blur": {
+    "size": "530×180",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "_Menu list item": {
+    "size": "523×36",
+    "sizing": "fill/hug",
+    "minWidth": "132",
+    "maxWidth": "540",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=false, Model=true, Selected=false, Option text=\"Claude 4 Sonnet - High Thinking (May 2025)\", Divider=false"
+   },
+   "_Menu list item/Content/Text overflow + Menu style/Models": {
+    "fill": "BUTTON/Secondary",
+    "stroke": "1=default inside BORDER/Subtle"
+   },
+   "_Menu list item#2": {
+    "size": "523×36",
+    "sizing": "fill/hug",
+    "minWidth": "160",
+    "maxWidth": "540",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=selected",
+    "props": "Selected=true, Shortcuts / Icon=true, Option text=\"Claude 4.1 Opus (Aug 2025)\", Indented=false, Divider=false, Model=true"
+   },
+   "_Menu list item#2/Content/Models": {
+    "fill": "BUTTON/Secondary",
+    "stroke": "1=default inside BORDER/Subtle"
+   },
+   "_Menu list item#3": {
+    "size": "523×36",
+    "sizing": "fill/hug",
+    "minWidth": "132",
+    "maxWidth": "540",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=true, Selected=false, Option text=\"Claude 4.5 Sonnet - High Thinking (Sep 2025)\", Divider=false"
+   },
+   "_Menu list item#3/Content/Text overflow + Menu style/Models": {
+    "fill": "BUTTON/Secondary",
+    "stroke": "1=default inside BORDER/Subtle"
+   },
+   "_Menu list item#4": {
+    "size": "523×36",
+    "sizing": "fill/hug",
+    "minWidth": "132",
+    "maxWidth": "540",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=true, Selected=false, Option text=\"Claude 4.5 Haiku (Sep 2025)\", Divider=false"
+   },
+   "_Menu list item#4/Content/Text overflow + Menu style/Models": {
+    "fill": "BUTTON/Secondary",
+    "stroke": "1=default inside BORDER/Subtle"
+   },
+   "[run 1]": {
+    "size": "531×52",
+    "sizing": "fixed/fixed",
+    "minWidth": "132",
+    "maxWidth": "540",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=true, Selected=false, Option text=\"Claude 4.5 Haiku (Sep 2025)\", Divider=false",
+    "count": "4"
+   },
+   "[run 1]/Content/Text overflow + Menu style/Models": {
+    "stroke": "1=default inside BORDER/Subtle"
+   },
+   "_Menu list item#6": {
+    "size": "523×36",
+    "sizing": "fill/hug",
+    "minWidth": "132",
+    "maxWidth": "540",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=true, Selected=false, Option text=\"Claude 4.5 Opus (Nov 2025)\", Divider=false"
+   },
+   "_Menu list item#6/Content/Text overflow + Menu style/Models": {
+    "fill": "BUTTON/Secondary",
+    "stroke": "1=default inside BORDER/Subtle"
+   },
+   "internal-border": {
+    "size": "531×188",
+    "sizing": "fixed/fixed",
+    "stroke": "1=default inside BACKGROUND/Primary",
+    "radius": "10=10"
+   }
+  }
+ }
+}

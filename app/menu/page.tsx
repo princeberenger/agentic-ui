@@ -1,15 +1,18 @@
 import { Icon } from '@/app/components/Icon/Icon';
 import { KeyboardShortcut } from '@/app/components/KeyboardShortcut';
-import { Menu, MenuItem, MenuDivider, MenuSectionHeader } from '@/app/components/Menu';
+import { Menu, MenuItem, MenuDivider } from '@/app/components/Menu';
+import { ModelLogo, type ModelProvider } from '@/app/components/ModelLogo';
 import styles from './page.module.css';
 
-function ModelIcon() {
-  return (
-    <div className={styles.modelBadge}>
-      <Icon name="anthropic" size={13} />
-    </div>
-  );
-}
+const MODELS = [
+  'Claude 4 Sonnet - High Thinking (May 2025)',
+  'Claude 4.1 Opus (Aug 2025)',
+  'Claude 4.5 Sonnet - High Thinking (Sep 2025)',
+  'Claude 4.5 Haiku (Sep 2025)',
+  'Claude 4.5 Opus (Nov 2025)',
+];
+
+const PROVIDERS: ModelProvider[] = ['anthropic', 'gemini', 'openai', 'mistral', 'xai'];
 
 export default function MenuPage() {
   return (
@@ -32,35 +35,22 @@ export default function MenuPage() {
 
       {/* Model Selection Menu — centered top */}
       <div className={styles.modelMenuWrapper}>
-        <Menu width={531}>
-          <MenuSectionHeader label="Anthropic" />
-          <MenuItem
-            label="Claude 4 Sonnet - High Thinking (May 2025)"
-            helperText="Power 5/5 •  Context Window: 200k •  Reasoning"
-            icon={<ModelIcon />}
-          />
-          <MenuItem
-            label="Claude 4.1 Opus (Aug 2025)"
-            helperText="Power 5/5 •  Context Window: 200k •  Reasoning"
-            icon={<ModelIcon />}
-            selected
-          />
-          <MenuItem
-            label="Claude 4.5 Sonnet - High Thinking (Sep 2025)"
-            helperText="Power 5/5 •  Context Window: 200k •  Reasoning"
-            icon={<ModelIcon />}
-          />
-          <MenuItem
-            label="Claude 4.5 Haiku (Sep 2025)"
-            helperText="Power 5/5 •  Context Window: 200k •  Reasoning"
-            icon={<ModelIcon />}
-          />
-          <MenuItem
-            label="Claude 4.5 Opus (Nov 2025)"
-            helperText="Power 5/5  •  Context Window: 200k •  Complex Tasks"
-            icon={<ModelIcon />}
-          />
+        {/* Figma Menu model selection 638:6554 */}
+        <Menu width={531} aria-label="Model">
+          {MODELS.map((model, i) => (
+            <MenuItem
+              key={model}
+              label={model}
+              icon={<ModelLogo provider="anthropic" size="sm" />}
+              selected={i === 1}
+              shortcut={i > 0 ? <KeyboardShortcut keys={['command', 'X']} /> : undefined}
+            />
+          ))}
         </Menu>
+        <div className={styles.models}>
+          {PROVIDERS.map((p) => <ModelLogo key={p} provider={p} label="" />)}
+          {PROVIDERS.map((p) => <ModelLogo key={`${p}-sm`} provider={p} size="sm" label="" />)}
+        </div>
       </div>
 
       {/* Bottom row: 4 menu variants */}

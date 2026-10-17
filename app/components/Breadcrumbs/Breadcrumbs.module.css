@@ -135,6 +135,8 @@
   left: 0;
   z-index: 10;
   padding: var(--space-4) 0;
-  border: var(--stroke-default) solid var(--color-border-subtle);
   border-radius: var(--radius-xs);
+  /* the breadcrumb menu is a detached older menu: white, 1px BORDER/Subtle */
+  background: var(--color-bg-primary);
+  box-shadow: inset 0 0 0 var(--stroke-default) var(--color-border-subtle), var(--shadow-elevation-2);
 }

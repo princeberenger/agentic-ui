@@ -1,0 +1,233 @@
+{
+ "id": "118:15337",
+ "name": "Models",
+ "props": {
+  "Provider": {
+   "type": "VARIANT",
+   "default": "anthropic",
+   "options": [
+    "anthropic",
+    "anthropic --s",
+    "gemini",
+    "gemini --s",
+    "openai",
+    "openai --s",
+    "Mistral",
+    "mistral --s",
+    "xAI",
+    "Provider10"
+   ]
+  }
+ },
+ "variants": {
+  "Provider=anthropic": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fill/fixed",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Icons / Anthropic": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "column align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10",
+    "instance": "Icons / Anthropic"
+   },
+   "Icons / Anthropic/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Provider=gemini": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fill/fixed",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Icons / Gemini": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10",
+    "instance": "Icons / Gemini"
+   }
+  },
+  "Provider=openai": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fill/fixed",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Icons / Openai": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "Icons / Openai"
+   },
+   "Icons / Openai/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Provider=Mistral": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fill/fixed",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Icons / Mistral": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Mistral"
+   },
+   "Icons / Mistral/icon-color": {
+    "fill": "#e10500 (no variable)"
+   }
+  },
+  "Provider=xAI": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fill/fixed",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Icons / xAI": {
+    "size": "15×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / xAI"
+   },
+   "Icons / xAI/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Provider=Provider10": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "6=6"
+   },
+   "Icons / xAI": {
+    "size": "12×13",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / xAI"
+   },
+   "Icons / xAI/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Provider=mistral --s": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "0",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "6=6"
+   },
+   "Icons / Mistral": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Mistral"
+   },
+   "Icons / Mistral/icon-color": {
+    "fill": "#e10500 (no variable)"
+   }
+  },
+  "Provider=anthropic --s": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "maxWidth": "20",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "6=6"
+   },
+   "Icons / Anthropic": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "layout": "column align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10",
+    "instance": "Icons / Anthropic"
+   },
+   "Icons / Anthropic/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Provider=gemini --s": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "maxWidth": "20",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "6=6"
+   },
+   "Icons / Gemini": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10",
+    "instance": "Icons / Gemini"
+   }
+  },
+  "Provider=openai --s": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "maxWidth": "20",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "6=6"
+   },
+   "Vector": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary"
+   }
+  }
+ }
+}

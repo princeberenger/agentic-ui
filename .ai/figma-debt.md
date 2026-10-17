@@ -152,6 +152,21 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       Pas d'état focus. Le code fait du fichier entier un lien de téléchargement.
 - [ ] Small : le bouton est fermer (`Show close icon`), medium : télécharger. Reproduit.
 
+### Menu — 558:659, _Menu list item 554:1372, Menu model selection 638:6554 (`app/components/Menu/`)
+- [ ] Le code du Menu datait de la v1.2 (rayon 12, contour 0,5 Subtle, fond blanc). Refait d'après Figma : rayon 10, contour 0,5
+      `BORDER/Medium` extérieur, trait intérieur blanc, fond `BACKGROUND/menu/background` blanchi par le calque `blur` (dégradé).
+- [ ] _Menu list item : le padding passe de 8 à 7 en hover/focus/selected, l'écart de 4 à 12. Le code garde 8 et 12.
+- [ ] _Menu list item disabled : fond `BACKGROUND/Primary` (blanc), proche de l'état selected. Reproduit.
+- [ ] Models dans un item : 24×24 en selected/focus avec maxWidth 20. Le code garde 20.
+- [ ] Sous-menu (chevron) : absent de Figma, gardé du code existant.
+
+### ButtonGroup — 4092:2459, SocialButton — 675:3982, Models — 118:15337
+- [ ] SocialButton : Google n'existe qu'en secondary. GitHub primary est blanc avec `INPUT/Hover (Light)` au survol (invisible).
+      Reproduit.
+- [ ] SocialButton : les logos sont des composants `apple`, `twitter-x`, `discord`, `linkedin`, `github-fill`, `google` hors
+      convention `Icons / `. Assets dans `public/assets/social/` (Google réutilise `Icons / Google`).
+- [ ] Models : variante `Provider10` (xAI 20px) mal nommée ; Gemini est une image matricielle dans un SVG.
+
 ## 2. Valeurs sans variable (non tokenisées dans Figma)
 
 ### Badge
@@ -352,7 +367,14 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] ChatComposer : hauteur 128, zone de texte 72, `blur` 715×80 sans variable ; poignée 20×4.
 - [ ] File type large : 156 de large sans variable (`--space-48` × 3 + `--space-12`).
 - [ ] Tokens CSS ajoutés : `--color-border-warning` (BORDER/Warning), `--color-bg-menu` (BACKGROUND/menu/background),
-      `--color-transparent-black-20` (TRANSPARENT/black/20). Code syntax WEB à écrire.
+      `--color-transparent-black-20` (TRANSPARENT/black/20). Code syntax WEB écrite.
+
+### Boutons, menus
+- [ ] ButtonGroup : écart 10 sans variable (`--space-10`). Menu : largeurs 160, 128, 531 sans variable.
+- [ ] Models : padding 11/8 et tailles des logos (16, 15×16, 13, 12×13, 14) sans variable.
+- [ ] Mistral #e10500 sans variable (logo en couleurs). Google : couleurs de marque sans variable.
+- [ ] Tokens CSS ajoutés : `--color-neutral-100`, `--color-neutral-900`, `--color-social-discord`, `--color-social-linkedin`.
+      Code syntax WEB à écrire.
 
 ## 3. Tokens
 
@@ -393,6 +415,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       plus `time` (179:15826) et `arrow-down` (179:14031).
 
 - [x] Icônes ajoutées : `brain`, `checkmark-outline`, `document`, `download`, `tools`.
+
+- [x] Icônes ajoutées : `google`, `gemini`, `openai`, `mistral`, `xai` ; logos sociaux dans `public/assets/social/`.
 
 ## 5. Détection des changements Figma (à construire)
 

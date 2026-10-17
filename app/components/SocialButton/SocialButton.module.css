@@ -1,0 +1,139 @@
+/* ==========================================================================
+   SOCIAL BUTTON — Figma SocialButton 675:3982
+   Type: primary (brand colors), secondary (white) · Size: lg 40, sm 24
+   States: default, hover, focus (:focus-visible), disabled · Style: icon, icon-label
+   ========================================================================== */
+
+.button {
+  --_bg: var(--color-bg-primary);
+  --_fg: var(--color-content-primary);
+  --_stroke: inset 0 0 0 var(--stroke-sm) var(--color-border-subtle);
+  --_hover: var(--color-input-hover-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--_bg);
+  box-shadow: var(--_stroke);
+  color: var(--_fg);
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition-property: background-color, box-shadow;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
+}
+
+/* lg: 40px, 8/16, gap 8, radius 10, 16px mark, SYSTEM/Body/sm/regular */
+.lg {
+  --_logo: var(--icon-16);
+  gap: var(--space-8);
+  height: var(--icon-40);
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-10);
+  font-size: var(--text-small);
+  line-height: var(--leading-small);
+}
+
+/* sm: 24px, 8px sides, gap 4, radius 4, 13px mark, SYSTEM/Body/xs/regular */
+.sm {
+  --_logo: var(--icon-13);
+  gap: var(--space-4);
+  height: var(--icon-24);
+  padding: var(--space-8);
+  border-radius: var(--radius-xs);
+  font-size: var(--text-tiny);
+  line-height: var(--leading-tiny);
+}
+
+.lg.iconOnly {
+  width: var(--icon-40);
+  padding: var(--space-8) var(--space-12);
+}
+
+.sm.iconOnly {
+  width: var(--icon-24);
+}
+
+/* --- Primary brand colors ---------------------------------------------------- */
+.button[data-variant='primary'][data-brand='apple'] {
+  --_bg: var(--color-content-primary);
+  --_fg: var(--color-content-on-primary);
+  --_stroke: inset 0 0 0 var(--stroke-sm) var(--color-border-strong);
+  --_hover: var(--color-input-hover-light);
+}
+
+.button[data-variant='primary'][data-brand='x'] {
+  --_bg: var(--color-neutral-900);
+  --_fg: var(--color-neutral-100);
+  --_stroke: none;
+  --_hover: var(--color-input-hover-light);
+}
+
+.button[data-variant='primary'][data-brand='discord'] {
+  --_bg: var(--color-social-discord);
+  --_fg: var(--color-neutral-100);
+  --_stroke: none;
+}
+
+.button[data-variant='primary'][data-brand='linkedin'] {
+  --_bg: var(--color-social-linkedin);
+  --_fg: var(--color-neutral-100);
+  --_stroke: none;
+}
+
+/* github primary is white with INPUT/Hover (Light) on hover, invisible on white (see .ai/figma-debt.md) */
+.button[data-variant='primary'][data-brand='github'] {
+  --_hover: var(--color-input-hover-light);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:not(:disabled):hover {
+    background-image: linear-gradient(var(--_hover), var(--_hover));
+  }
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: var(--_stroke), var(--shadow-components-focus);
+}
+
+.button:disabled {
+  --_bg: var(--color-button-disabled);
+  --_fg: var(--color-content-disabled);
+  cursor: not-allowed;
+}
+
+.button[data-variant='primary']:disabled {
+  --_stroke: none;
+}
+
+/* --- Logo: mask in the label color, Google keeps its colors -------------------- */
+.logo {
+  flex-shrink: 0;
+  width: var(--_logo);
+  height: var(--_logo);
+  background-color: currentColor;
+  mask: var(--_mark) center / contain no-repeat;
+  -webkit-mask: var(--_mark) center / contain no-repeat;
+}
+
+.logo[data-brand='apple'] { --_mark: url('/assets/social/apple.svg'); }
+.logo[data-brand='x'] { --_mark: url('/assets/social/x.svg'); }
+.logo[data-brand='discord'] { --_mark: url('/assets/social/discord.svg'); }
+.logo[data-brand='linkedin'] { --_mark: url('/assets/social/linkedin.svg'); }
+.logo[data-brand='github'] { --_mark: url('/assets/social/github.svg'); }
+
+.logo[data-brand='google'] {
+  background: url('/assets/icons/google.svg') center / contain no-repeat;
+  mask: none;
+  -webkit-mask: none;
+}
+
+.button:disabled .logo[data-brand='google'] {
+  background: currentColor;
+  mask: url('/assets/icons/google.svg') center / contain no-repeat;
+  -webkit-mask: url('/assets/icons/google.svg') center / contain no-repeat;
+}

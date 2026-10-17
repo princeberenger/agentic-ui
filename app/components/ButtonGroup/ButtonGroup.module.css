@@ -1,0 +1,7 @@
+/* ButtonGroup — Figma 4092:2459: 10px gap without variable (see .ai/figma-debt.md) */
+.group {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: var(--space-10);
+}

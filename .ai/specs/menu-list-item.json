@@ -1,0 +1,982 @@
+{
+ "id": "554:1372",
+ "name": "_Menu list item",
+ "props": {
+  "Model": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Divider": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Option text": {
+   "type": "TEXT",
+   "default": "Menu item"
+  },
+  "Selected": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Shortcuts / Icon": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Indented": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Size": {
+   "type": "VARIANT",
+   "default": "regular",
+   "options": [
+    "regular",
+    "sm"
+   ]
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "hover",
+    "selected",
+    "focus",
+    "disabled"
+   ]
+  }
+ },
+ "variants": {
+  "Size=regular, State=default": {
+   "(root)": {
+    "size": "160×36",
+    "sizing": "fixed/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6"
+   },
+   "divider": {
+    "size": "160×3",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "1 8=PADDING/8 1 8=PADDING/8",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "divider/Divider": {
+    "size": "144×0",
+    "sizing": "fill/fixed",
+    "stroke": "1=default center BORDER/Subtle"
+   },
+   "Content": {
+    "size": "160×34",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4"
+   },
+   "Content/Text overflow + Menu style": {
+    "size": "136×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Content/Text overflow + Menu style/Models": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "maxWidth": "20",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Models › Provider=anthropic --s"
+   },
+   "Content/Text overflow + Menu style/Text overflow": {
+    "size": "101×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Spacer": {
+    "size": "20×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper": {
+    "size": "101×18",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper/Menu item": {
+    "size": "101×18",
+    "sizing": "fill/hug",
+    "text": "\"Menu item\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper/Helper text": {
+    "size": "136×45",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "text": "\"Power 5/5 •  Context Window: 200k •  Reasoning\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Content/Text overflow + Menu style/_Keyboard shortcut": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0",
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=false, Show Letter 1=true, Icon 1=Mac--command, Show Icon 2=false, Show Icon 3=false, Show Icon 1=true"
+   },
+   "Content/Icons / Checkmark": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Checkmark"
+   },
+   "Content/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, State=default": {
+   "(root)": {
+    "size": "160×28",
+    "sizing": "fixed/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "divider": {
+    "size": "160×3",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "1 8=PADDING/8 1 8=PADDING/8",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "divider/Divider": {
+    "size": "144×0",
+    "sizing": "fill/fixed",
+    "stroke": "1=default center BORDER/Subtle"
+   },
+   "Content": {
+    "size": "160×28",
+    "sizing": "fill/fixed",
+    "minWidth": "160",
+    "maxWidth": "288",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8=8px (0_5rem) (spacing-03)"
+   },
+   "Content/Text overflow + Menu style": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16"
+   },
+   "Content/Text overflow + Menu style/Text overflow": {
+    "size": "105×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Spacer": {
+    "size": "24×14",
+    "sizing": "fixed/fixed",
+    "fill": "Transparent",
+    "hidden": "true"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Menu item": {
+    "size": "105×15",
+    "sizing": "fill/hug",
+    "text": "\"Menu item\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Content/Text overflow + Menu style/_Keyboard shortcut": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0",
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=false, Show Letter 1=true, Icon 1=Mac--command, Show Icon 2=false, Show Icon 3=false, Show Icon 1=true"
+   },
+   "Content/Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Checkmark"
+   },
+   "Content/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "background": {
+    "size": "160×28",
+    "sizing": "fixed/fixed",
+    "radius": "6=6"
+   }
+  },
+  "Size=regular, State=hover": {
+   "(root)": {
+    "size": "160×36",
+    "sizing": "fixed/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6"
+   },
+   "Divider": {
+    "size": "160×0",
+    "sizing": "fixed/fixed",
+    "stroke": "1 center BORDER/Subtle",
+    "hidden": "true"
+   },
+   "Content": {
+    "size": "160×36",
+    "sizing": "fill/fill",
+    "layout": "row align min/center",
+    "padding": "7 12=PADDING/12 7 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "INPUT/Hover (Dark)@0.04"
+   },
+   "Content/Text overflow + Menu style": {
+    "size": "136×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Content/Text overflow + Menu style/Models": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "maxWidth": "20",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Models › Provider=anthropic --s"
+   },
+   "Content/Text overflow + Menu style/Text overflow": {
+    "size": "101×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Spacer": {
+    "size": "20×16",
+    "sizing": "fixed/fixed",
+    "fill": "Transparent",
+    "hidden": "true"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper": {
+    "size": "101×18",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper/Menu item": {
+    "size": "136×18",
+    "sizing": "fixed/hug",
+    "text": "\"Menu item\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper/Helper text": {
+    "size": "136×45",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "text": "\"Power 5/5 •  Context Window: 200k •  Reasoning\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Content/Text overflow + Menu style/_Keyboard shortcut": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0",
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=false, Show Letter 1=true, Icon 1=Mac--command, Show Icon 2=false, Show Icon 3=false, Show Icon 1=true"
+   },
+   "Content/Checkmark": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "fill": "#ffffff00 (no variable)",
+    "hidden": "true",
+    "instance": "Checkmark"
+   },
+   "Content/Checkmark/Vector": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, State=hover": {
+   "(root)": {
+    "size": "160×28",
+    "sizing": "fixed/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6"
+   },
+   "divider": {
+    "size": "160×3",
+    "sizing": "fixed/fixed",
+    "layout": "column align min/min",
+    "padding": "1 0 1 0",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "divider/Divider": {
+    "size": "160×0",
+    "sizing": "fill/fixed",
+    "stroke": "1 center BORDER/Subtle"
+   },
+   "background": {
+    "size": "160×28",
+    "sizing": "fixed/fixed",
+    "fill": "INPUT/Hover (Dark)@0.04",
+    "radius": "6=6"
+   },
+   "Content": {
+    "size": "160×28",
+    "sizing": "fill/fixed",
+    "minWidth": "160",
+    "maxWidth": "288",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8=8px (0_5rem) (spacing-03)"
+   },
+   "Content/Text overflow + Menu style": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16"
+   },
+   "Content/Text overflow + Menu style/Text overflow": {
+    "size": "105×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Spacer": {
+    "size": "24×15",
+    "sizing": "fixed/fixed",
+    "fill": "Transparent",
+    "hidden": "true"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Menu item": {
+    "size": "105×15",
+    "sizing": "fill/hug",
+    "text": "\"Menu item\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Content/Text overflow + Menu style/_Keyboard shortcut": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0",
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=false, Show Letter 1=true, Icon 1=Mac--command, Show Icon 2=false, Show Icon 3=false, Show Icon 1=true"
+   },
+   "Content/Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Checkmark"
+   },
+   "Content/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=regular, State=selected": {
+   "(root)": {
+    "size": "160×36",
+    "sizing": "fixed/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6"
+   },
+   "divider": {
+    "size": "160×3",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "1 8=PADDING/8 1 8=PADDING/8",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "divider/Divider": {
+    "size": "144×0",
+    "sizing": "fill/fixed",
+    "stroke": "1=default center BORDER/Subtle"
+   },
+   "Content": {
+    "size": "160×36",
+    "sizing": "fill/fill",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BUTTON/Secondary"
+   },
+   "Content/Models": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "maxWidth": "20",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Models › Provider=anthropic --s"
+   },
+   "Content/Text overflow + Menu style": {
+    "size": "136×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16"
+   },
+   "Content/Text overflow + Menu style/Text overflow": {
+    "size": "97×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/max",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Spacer": {
+    "size": "20×16",
+    "sizing": "fixed/fixed",
+    "fill": "Transparent",
+    "hidden": "true"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper": {
+    "size": "97×18",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper/Menu item": {
+    "size": "97×18",
+    "sizing": "fill/hug",
+    "text": "\"Menu item\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper/Helper text": {
+    "size": "108×60",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "text": "\"Power 5/5 •  Context Window: 200k •  Reasoning\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Content/Text overflow + Menu style/_Keyboard shortcut": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0",
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=false, Show Letter 1=true, Icon 1=Mac--command, Show Icon 2=false, Show Icon 3=false, Show Icon 1=true"
+   },
+   "Content/Icons / Checkmark": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Checkmark"
+   },
+   "Content/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, State=selected": {
+   "(root)": {
+    "size": "160×28",
+    "sizing": "fixed/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BUTTON/Secondary",
+    "radius": "6=6"
+   },
+   "divider": {
+    "size": "160×3",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "1 8=PADDING/8 1 8=PADDING/8",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "divider/Divider": {
+    "size": "144×0",
+    "sizing": "fill/fixed",
+    "stroke": "1=default center BORDER/Subtle"
+   },
+   "Content": {
+    "size": "160×28",
+    "sizing": "fill/fixed",
+    "minWidth": "160",
+    "maxWidth": "288",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8=8px (0_5rem) (spacing-03)"
+   },
+   "Content/Text overflow + Menu style": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16"
+   },
+   "Content/Text overflow + Menu style/Text overflow": {
+    "size": "105×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Spacer": {
+    "size": "24×14",
+    "sizing": "fixed/fixed",
+    "fill": "Transparent",
+    "hidden": "true"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Menu item": {
+    "size": "105×15",
+    "sizing": "fill/hug",
+    "text": "\"Menu item\"",
+    "font": "SYSTEM/Body/xs/bold · Geist 500 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Medium, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Content/Text overflow + Menu style/_Keyboard shortcut": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0",
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=false, Show Letter 1=true, Icon 1=Mac--command, Show Icon 2=false, Show Icon 3=false, Show Icon 1=true"
+   },
+   "Content/Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Checkmark"
+   },
+   "Content/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, State=focus": {
+   "(root)": {
+    "size": "160×28",
+    "sizing": "fixed/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "1 inside CONTENT/Primary",
+    "radius": "6=6"
+   },
+   "Content": {
+    "size": "160×28",
+    "sizing": "fill/fixed",
+    "minWidth": "160",
+    "maxWidth": "288",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8=8px (0_5rem) (spacing-03)"
+   },
+   "Content/Text overflow + Menu style": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16"
+   },
+   "Content/Text overflow + Menu style/Text overflow": {
+    "size": "105×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Spacer": {
+    "size": "24×14",
+    "sizing": "fixed/fixed",
+    "fill": "Transparent",
+    "hidden": "true"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Menu item": {
+    "size": "105×15",
+    "sizing": "fill/hug",
+    "text": "\"Menu item\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Content/Text overflow + Menu style/_Keyboard shortcut": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0",
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=false, Show Letter 1=true, Icon 1=Mac--command, Show Icon 2=false, Show Icon 3=false, Show Icon 1=true"
+   },
+   "Content/Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Checkmark"
+   },
+   "Content/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, State=disabled": {
+   "(root)": {
+    "size": "160×28",
+    "sizing": "fixed/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "radius": "6=6"
+   },
+   "divider": {
+    "size": "160×3",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "1 8=PADDING/8 1 8=PADDING/8",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "divider/Divider": {
+    "size": "144×0",
+    "sizing": "fill/fixed",
+    "stroke": "1=default center BORDER/Subtle"
+   },
+   "Content": {
+    "size": "160×28",
+    "sizing": "fill/fixed",
+    "minWidth": "160",
+    "maxWidth": "288",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8=8px (0_5rem) (spacing-03)"
+   },
+   "Content/Text overflow + Menu style": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16"
+   },
+   "Content/Text overflow + Menu style/Text overflow": {
+    "size": "105×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Spacer": {
+    "size": "24×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Menu item": {
+    "size": "105×15",
+    "sizing": "fill/hug",
+    "text": "\"Menu item\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "Content/Text overflow + Menu style/_Keyboard shortcut": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0",
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=false, Show Letter 1=true, Icon 1=Mac--command, Show Icon 2=false, Show Icon 3=false, Show Icon 1=true"
+   },
+   "Content/Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Checkmark"
+   },
+   "Content/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=regular, State=disabled": {
+   "(root)": {
+    "size": "160×36",
+    "sizing": "fixed/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "radius": "6=6"
+   },
+   "divider": {
+    "size": "160×3",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "1 8=PADDING/8 1 8=PADDING/8",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "divider/Divider": {
+    "size": "144×0",
+    "sizing": "fill/fixed",
+    "stroke": "1=default center BORDER/Subtle"
+   },
+   "Content": {
+    "size": "160×36",
+    "sizing": "fill/fill",
+    "layout": "row align min/center",
+    "padding": "7 12=PADDING/12 7 12=PADDING/12",
+    "gap": "8=8px (0_5rem) (spacing-03)"
+   },
+   "Content/Text overflow + Menu style": {
+    "size": "136×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Content/Text overflow + Menu style/Models": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "maxWidth": "20",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Models › Provider=anthropic --s"
+   },
+   "Content/Text overflow + Menu style/Text overflow": {
+    "size": "101×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Spacer": {
+    "size": "20×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper": {
+    "size": "101×18",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper/Menu item": {
+    "size": "136×18",
+    "sizing": "fixed/hug",
+    "text": "\"Menu item\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper/Helper text": {
+    "size": "136×45",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "text": "\"Power 5/5 •  Context Window: 200k •  Reasoning\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Content/Text overflow + Menu style/_Keyboard shortcut": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0",
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=false, Show Letter 1=true, Icon 1=Mac--command, Show Icon 2=false, Show Icon 3=false, Show Icon 1=true"
+   },
+   "Content/Icons / Checkmark": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Checkmark"
+   },
+   "Content/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=regular, State=focus": {
+   "(root)": {
+    "size": "160×36",
+    "sizing": "fixed/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "1 inside CONTENT/Primary",
+    "radius": "6=6"
+   },
+   "divider": {
+    "size": "160×3",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "1 8=PADDING/8 1 8=PADDING/8",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "divider/Divider": {
+    "size": "144×0",
+    "sizing": "fill/fixed",
+    "stroke": "1=default center BORDER/Subtle"
+   },
+   "Content": {
+    "size": "160×36",
+    "sizing": "fill/fill",
+    "layout": "row align min/center",
+    "padding": "7 12=PADDING/12 7 12=PADDING/12",
+    "gap": "12=PADDING/12"
+   },
+   "Content/Models": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "maxWidth": "20",
+    "layout": "column align center/center",
+    "padding": "11 8 11 8",
+    "gap": "8",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Models › Provider=anthropic --s"
+   },
+   "Content/Text overflow + Menu style": {
+    "size": "136×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16"
+   },
+   "Content/Text overflow + Menu style/Text overflow": {
+    "size": "97×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Content/Text overflow + Menu style/Text overflow/Spacer": {
+    "size": "20×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper": {
+    "size": "97×18",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper/Menu item": {
+    "size": "136×18",
+    "sizing": "fixed/hug",
+    "text": "\"Menu item\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Content/Text overflow + Menu style/Text overflow/wrapper/Helper text": {
+    "size": "136×45",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "text": "\"Power 5/5 •  Context Window: 200k •  Reasoning\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Content/Text overflow + Menu style/_Keyboard shortcut": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0",
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=false, Show Letter 1=true, Icon 1=Mac--command, Show Icon 2=false, Show Icon 3=false, Show Icon 1=true"
+   },
+   "Content/Icons / Checkmark": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Checkmark"
+   },
+   "Content/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  }
+ }
+}

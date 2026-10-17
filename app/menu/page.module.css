@@ -104,3 +104,11 @@
   align-items: center;
   color: var(--color-content-icon);
 }
+
+/* Figma Models 118:15337: md and sm tiles */
+.models {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  margin-top: var(--space-16);
+}

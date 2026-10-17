@@ -289,6 +289,20 @@
       "figmaName": "Icons / Gem"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4122-6215",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "gemini",
+      "figmaName": "Icons / Gemini"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6122-8113",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "google",
+      "figmaName": "Icons / Google"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17238",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
@@ -359,6 +373,13 @@
       "figmaName": "Icons / Microphone--off"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6182-2395",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "mistral",
+      "figmaName": "Icons / Mistral"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12107",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
@@ -371,6 +392,13 @@
       "component": "Icon",
       "name": "money",
       "figmaName": "Icons / Money"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4122-6214",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "openai",
+      "figmaName": "Icons / Openai"
     },
     {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14008",
@@ -532,6 +560,13 @@
       "component": "Icon",
       "name": "warning-filled",
       "figmaName": "Icons / Warning--filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6182-2368",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "xai",
+      "figmaName": "Icons / xAI"
     }
   ]
 }

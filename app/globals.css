@@ -18,6 +18,10 @@
   --color-border-accent: #0968f6;    /* BORDER/Accent */
   --color-border-warning: var(--color-content-warning-text); /* BORDER/Warning */
   --color-bg-menu: #f2f2f2;          /* BACKGROUND/menu/background */
+  --color-neutral-100: #ffffff;      /* NEUTRAL/Neutral 100 */
+  --color-neutral-900: #000000;      /* NEUTRAL/Neutral 900 */
+  --color-social-discord: #5865f2;   /* SOCIALS/discord */
+  --color-social-linkedin: #0077b5;  /* SOCIALS/linkedin */
   --color-transparent-black-20: rgba(0, 0, 0, 0.2); /* TRANSPARENT/black/20 */
   --color-skeleton-bg: #e8e8e8;      /* Skeleton loading animation, no Figma variable */
   --color-skeleton-highlight: #c6c6c6; /* Skeleton loading animation gradient, no Figma variable */

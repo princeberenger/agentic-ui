@@ -1,0 +1,240 @@
+{
+ "id": "4084:4742",
+ "name": "DropdownMenu",
+ "props": {
+  "Label": {
+   "type": "TEXT",
+   "default": "- Select -"
+  },
+  "Label (Filled)": {
+   "type": "TEXT",
+   "default": "Item 2"
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "active",
+    "default",
+    "disabled",
+    "filled",
+    "focus",
+    "hover"
+   ]
+  }
+ },
+ "variants": {
+  "State=default": {
+   "(root)": {
+    "size": "288×40",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0=PADDING/none 12=PADDING/12 0=PADDING/none 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BUTTON/Secondary",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "label": {
+    "size": "248×18",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/- Select -": {
+    "size": "248×18",
+    "sizing": "fill/hug",
+    "text": "\"- Select -\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Icons / Chevron--sort": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--sort"
+   },
+   "Icons / Chevron--sort/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=filled": {
+   "(root)": {
+    "size": "288×40",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0=PADDING/none 12=PADDING/12 0=PADDING/none 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BUTTON/Secondary",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "label": {
+    "size": "248×18",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Item 2": {
+    "size": "248×18",
+    "sizing": "fill/hug",
+    "text": "\"Item 2\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Icons / Chevron--sort": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--sort"
+   },
+   "Icons / Chevron--sort/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=hover": {
+   "(root)": {
+    "size": "288×40",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0=PADDING/none 12=PADDING/12 0=PADDING/none 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "stroke": "1=default inside BORDER/Medium",
+    "radius": "10=10",
+    "effect": "Shadows/elevation1"
+   },
+   "label": {
+    "size": "248×18",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/- Select -": {
+    "size": "248×18",
+    "sizing": "fill/hug",
+    "text": "\"- Select -\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Icons / Chevron--sort": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--sort"
+   },
+   "Icons / Chevron--sort/icon-color": {
+    "fill": "CONTENT/Secondary"
+   }
+  },
+  "State=active": {
+   "(root)": {
+    "size": "288×40",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0=PADDING/none 12=PADDING/12 0=PADDING/none 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "10=10"
+   },
+   "label": {
+    "size": "248×18",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/- Select -": {
+    "size": "248×18",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "text": "\"- Select -\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Icons / Chevron--sort": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--sort"
+   },
+   "Icons / Chevron--sort/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "State=focus": {
+   "(root)": {
+    "size": "288×40",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0=PADDING/none 12=PADDING/12 0=PADDING/none 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BUTTON/Secondary",
+    "stroke": "1=default inside BORDER/Medium",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "label": {
+    "size": "248×18",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/- Select -": {
+    "size": "248×18",
+    "sizing": "fill/hug",
+    "text": "\"- Select -\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Icons / Chevron--sort": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--sort"
+   },
+   "Icons / Chevron--sort/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=disabled": {
+   "(root)": {
+    "size": "288×40",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0=PADDING/none 12=PADDING/12 0=PADDING/none 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BUTTON/Secondary",
+    "stroke": "1=default inside BORDER/Disabled",
+    "radius": "10=10"
+   },
+   "label": {
+    "size": "248×18",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/- Select -": {
+    "size": "248×18",
+    "sizing": "fill/hug",
+    "text": "\"- Select -\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "Icons / Chevron--sort": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--sort"
+   },
+   "Icons / Chevron--sort/icon-color": {
+    "fill": "CONTENT/Disabled"
+   }
+  }
+ }
+}
