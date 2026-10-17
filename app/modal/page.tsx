@@ -6,6 +6,7 @@
 
 import { useState } from 'react';
 import { Button } from '@/app/components/Button';
+import { FileUpload } from '@/app/components/FileUpload';
 import { Modal } from '@/app/components/Modal';
 import { Textarea } from '@/app/components/Textarea';
 import styles from './page.module.css';
@@ -40,6 +41,12 @@ export default function ModalPage() {
         }
       >
         <Textarea aria-label="Instructions" defaultValue="A16z VC Startup Advisor is a cutting-edge AI assistant designed to revolutionize the venture capital and startup ecosystem. This advanced system serves as an invaluable resource for both venture capitalists and startup founders, offering deep insights and strategic guidance throughout the investment and company-building journey." />
+        <FileUpload
+          label="Click to select"
+          hints={['No items have been selected.', 'The entire knowledge base will be searched.']}
+          buttonLabel={null}
+          icon={null}
+        />
       </Modal>
     </div>
   );

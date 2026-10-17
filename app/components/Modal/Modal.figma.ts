@@ -16,12 +16,13 @@ export default {
   onClose={() => setOpen(false)}
   title="${title}"${subtitle ? `\n  subtitle="${subtitle}"` : ''}
   actions={<><Button variant="secondary" size="lg">Configure Agent</Button><Button size="lg">Start Chat</Button></>}
->${bodyText ? '\n  <p>{/* body text */}</p>' : ''}${textArea ? '\n  <Textarea />' : ''}${upload ? '\n  {/* File upload area */}' : ''}
+>${bodyText ? '\n  <p>{/* body text */}</p>' : ''}${textArea ? '\n  <Textarea />' : ''}${upload ? '\n  <FileUpload label="Click to select" hints={[\'No items have been selected.\', \'The entire knowledge base will be searched.\']} buttonLabel={null} icon={null} />' : ''}
 </Modal>`,
   imports: [
     'import { Modal } from "@/app/components/Modal"',
     'import { Button } from "@/app/components/Button"',
     'import { Textarea } from "@/app/components/Textarea"',
+    'import { FileUpload } from "@/app/components/FileUpload"',
   ],
   id: 'modal',
   metadata: { nestable: false },

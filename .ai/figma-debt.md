@@ -130,7 +130,7 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Largeur fixe de 480px sans variable.
 - [ ] Bouton fermer : même surcharge du Button secondary que Toast (rayon full, `BACKGROUND/Secondary`, sans contour).
 - [ ] Le Text area de la modal est surchargé à 200px de haut (le composant fait 100px).
-- [ ] La zone « Agent can access: » + File upload area n'est pas encore intégrée (File upload à faire).
+- [x] La zone « Agent can access: » + File upload area : le template et la démo utilisent `FileUpload`.
 - [ ] Gap de 10px du ButtonGroup sans variable. Le code utilise `--space-10`.
 - [ ] Aucune animation ni overlay définis dans le composant. Le code utilise `OVERLAY/Background` et un fondu
       `--duration-enter` / `--ease-out-expo`.
