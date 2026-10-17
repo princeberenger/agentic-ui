@@ -11,6 +11,7 @@
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #f7f7f7;
   --color-bg-tertiary: #e5e5e5;
+  --color-bg-inverse: #000000;  /* BACKGROUND/Inverse */
 
   /* Content */
   --color-content-primary: #191919;

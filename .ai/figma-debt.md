@@ -62,6 +62,13 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Switch (Theme) 6114:855 non intégré : en mode Light, la lune (`CONTENT/On Primary`) est blanche sur le knob blanc.
       À reprendre avec le mode dark.
 
+### Tooltip — 2001:2681
+- [ ] Aucun écart défini entre le déclencheur et la flèche. Le code colle la pointe de la flèche au déclencheur.
+- [ ] Caret alignment start / end : Figma place la flèche à 16px du bord de la bulle, sans dire où est le
+      déclencheur. Le code aligne la pointe sur le centre du déclencheur.
+- [ ] Left et Right n'existent qu'en Caret alignment=Center.
+- [ ] Pas de délai d'apparition ni d'animation définis. Le code fait un fondu `--duration-enter` / `--ease-out-expo`.
+
 ### HelperText — 4066:7007
 - [ ] Pas de variante warning + sm + solid. Le code applique les couleurs de warning lg solid.
 - [ ] Error solid : texte et icône en `CONTENT/Attention (Light)` en sm, `CONTENT/On Primary` en lg.
