@@ -49,3 +49,11 @@
 .cell {
   display: flex;
 }
+
+.groups {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-items: start;
+  align-items: center;
+  gap: var(--space-16) var(--space-24);
+}

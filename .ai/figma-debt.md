@@ -36,6 +36,10 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Type=initials : Figma montre 1 lettre (`Label (Sm)`) en 16 et 20, 2 lettres (`Label (Med)`) dès 24.
       Le code affiche le texte reçu, sans tronquer.
 
+### AvatarGroup — 783:773
+- [ ] Chevauchements -8px (photos, initials) et -6px (compact) sans variable.
+      Le code réutilise `--space-8` et `--space-6` en négatif.
+
 ## 3. Tokens
 
 - [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
