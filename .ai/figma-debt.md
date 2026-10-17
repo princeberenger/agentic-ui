@@ -20,6 +20,15 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Largeur en loading : les variantes et la description du composant se contredisent.
 - [ ] Padding destructive md : 16px ou 12px selon les variantes.
 - [ ] Hover secondary filled : devient blanc. Hover destructive light : devient rouge plein. Intentionnel ?
+- [ ] Secondary icon-only disabled : sm sans fond ni contour, md contour sans fond, lg fond sans contour.
+      Les autres types secondary disabled gardent fond et contour. Reproduit par taille (`.iconOnly`).
+
+### Pagination — 716:3790, pagination-item — 716:3884 (`app/components/Pagination/`)
+- [ ] Type=numbered : Icons / Chevron--left en 20px dans le bouton précédent, Chevron--right en 16px dans le suivant.
+      Reproduit (`size={20}` sur la flèche gauche).
+- [ ] pagination-item : le focus est un contour 1px `BORDER/Strong`, identique à l'état active,
+      au lieu de `Shadows/Components/focus` utilisé partout ailleurs. Reproduit.
+- [ ] pagination-item Type=number n'a pas d'état focus ni disabled. Le code applique le contour active au focus clavier.
 
 ## 2. Valeurs sans variable (non tokenisées dans Figma)
 
@@ -159,6 +168,15 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 ### CheckboxGroup — 4066:5501
 - [ ] Type=vertical a une largeur fixe de 128px. Le code laisse la largeur au contenu.
 
+### Pagination — 716:3790, pagination-item — 716:3884
+- [ ] `pagination-results-label-wrapper` : largeur fixe 280px sans variable. Le code laisse la largeur au contenu
+      (le `space-between` garde les boutons à droite).
+- [ ] Menu ouvert (`_Select menu chrome menu`) : dessin du menu natif de Chrome, texte 14/18 sans style de texte,
+      padding 4/22/16 et largeur 56 sans variable, fond `Transparent` sur les items. Le code ouvre le vrai menu natif
+      (`<select>` transparent posé sur l'item), dont le rendu dépend du navigateur et de l'OS.
+- [ ] Choix des pages visibles : Figma ne montre que `1 2 3 4 … 10`. Le code garde 1-4 au début, les 4 dernières à la fin,
+      et `1 … p-1 p p+1 … n` au milieu (deux overflows).
+
 ## 3. Tokens
 
 - [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
@@ -177,6 +195,11 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [x] `search.svg` : version retransformée, décalée d'environ 0,3px. Remplacé par l'export de `Icons / Search`.
 
 - [x] `upload.svg` : agrandi pour remplir sa boîte, différent de `Icons / Upload`. Remplacé par l'export Figma.
+
+- [x] `chevron-right.svg` : c'était un caret plein (triangle), pas `Icons / Chevron--right`. Remplacé par l'export Figma
+      (change aussi la flèche de sous-menu de MenuItem et la pagination legacy de `app/table`).
+
+- [x] `overflow-menu-horizontal.svg` : absent du repo. Ajouté depuis `Icons / Overflow-menu--horizontal` (179:14008).
 
 ## 5. Détection des changements Figma (à construire)
 

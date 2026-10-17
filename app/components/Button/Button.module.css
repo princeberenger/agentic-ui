@@ -224,6 +224,24 @@
   --_bg: var(--color-button-secondary);
 }
 
+/* secondary icon-only disabled differs per size in Figma (see .ai/figma-debt.md):
+   sm no fill no stroke, md stroke only, lg fill only */
+.secondary.iconOnly.sm:disabled:not(.loading),
+.secondary.iconOnly.sm[aria-disabled='true']:not(.loading) {
+  --_bg: transparent;
+  --_border: none;
+}
+
+.secondary.iconOnly.md:disabled:not(.loading),
+.secondary.iconOnly.md[aria-disabled='true']:not(.loading) {
+  --_bg: transparent;
+}
+
+.secondary.iconOnly.lg:disabled:not(.loading),
+.secondary.iconOnly.lg[aria-disabled='true']:not(.loading) {
+  --_border: none;
+}
+
 .destructive:disabled:not(.loading),
 .destructive[aria-disabled='true']:not(.loading),
 .destructive-light:disabled:not(.loading),

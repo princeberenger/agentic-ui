@@ -94,6 +94,7 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
       styles[variant],
       styles[size],
       square ? styles.square : '',
+      square && badge == null ? styles.iconOnly : '',
       shortcut != null ? styles.withShortcut : '',
       loading ? styles.loading : '',
       className ?? '',

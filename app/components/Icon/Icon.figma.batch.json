@@ -310,6 +310,13 @@
       "figmaName": "Icons / Money"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14008",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "overflow-menu-horizontal",
+      "figmaName": "Icons / Overflow-menu--horizontal"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14007",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
