@@ -49,7 +49,7 @@ export default function ButtonPage() {
           <KeyboardShortcut context="return" />
           <KeyboardShortcut context="caret" />
           <KeyboardShortcut context="slash" />
-          <KeyboardShortcut context="icon" icon={<Icon name="arrow-up-right" size={14} />} />
+          <KeyboardShortcut context="icon" icon={<Icon name="arrow-up-right" />} />
         </div>
       </section>
 

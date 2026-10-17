@@ -4,7 +4,7 @@
 //         font-label, text-small, leading-tiny, tracking-tight, text-super-tiny, leading-small,
 //         tracking-normal, weight-regular
 
-import { type ReactNode } from 'react';
+import { cloneElement, isValidElement, type ReactElement, type ReactNode } from 'react';
 import { Icon } from '../Icon/Icon';
 import styles from './KeyboardShortcut.module.css';
 
@@ -22,7 +22,7 @@ export interface KeyboardShortcutProps {
   context?: KeyboardShortcutContext;
   /** Keys shown in `shortcut` context, in order. Modifiers render as icons, anything else as text. */
   keys?: KeyboardKey[];
-  /** Icon shown in `icon` context (Figma `Icon`). */
+  /** Icon shown in `icon` context (Figma `Icon`). An `<Icon>` without `size` is sized to the 14px frame. */
   icon?: ReactNode;
   className?: string;
 }
@@ -36,6 +36,14 @@ const MODIFIERS: Record<KeyboardModifier, { icon: string; label: string }> = {
 
 function isModifier(key: KeyboardKey): key is KeyboardModifier {
   return key in MODIFIERS;
+}
+
+function renderIcon(icon: ReactNode) {
+  if (isValidElement(icon) && icon.type === Icon) {
+    const element = icon as ReactElement<React.ComponentProps<typeof Icon>>;
+    if (element.props.size === undefined) return cloneElement(element, { size: 14 });
+  }
+  return icon;
 }
 
 export function KeyboardShortcut({ context = 'shortcut', keys = [], icon, className }: KeyboardShortcutProps) {
@@ -74,7 +82,7 @@ export function KeyboardShortcut({ context = 'shortcut', keys = [], icon, classN
 
   return (
     <span className={frameClass} aria-hidden="true">
-      {context === 'caret' ? <Icon name="caret-right" size={14} /> : icon}
+      {context === 'caret' ? <Icon name="caret-right" size={14} /> : renderIcon(icon)}
     </span>
   );
 }
