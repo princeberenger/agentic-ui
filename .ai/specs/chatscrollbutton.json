@@ -1,0 +1,242 @@
+{
+ "id": "6255:14244",
+ "name": "ChatScrollButton",
+ "props": {
+  "Mode": {
+   "type": "VARIANT",
+   "default": "Light",
+   "options": [
+    "Light",
+    "Dark"
+   ]
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "Icon",
+   "options": [
+    "Icon",
+    "Icon + Text"
+   ]
+  },
+  "Background": {
+   "type": "VARIANT",
+   "default": "On primary",
+   "options": [
+    "On primary",
+    "On secondary"
+   ]
+  }
+ },
+ "variants": {
+  "Mode=Light, Type=Icon, Background=On primary": {
+   "(root)": {
+    "size": "360×48",
+    "sizing": "fill/hug",
+    "layout": "row align center/max",
+    "padding": "0=PADDING/none 0=PADDING/none 8=PADDING/8 0=PADDING/none",
+    "gap": "0",
+    "fill": "gradient_linear(TRANSPARENT/white/0 0%, BACKGROUND/Primary 100%) from 0.5,0 to 0.5,1 + gradient_linear(TRANSPARENT/white/0 0%, BACKGROUND/Primary 100%) from 0.5,0 to 0.5,1",
+    "effect": "background_blur 2  (no style)"
+   },
+   "Button": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation2",
+    "instance": "Button › Size=md, Style=primary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Arrow--down"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/On Primary"
+   }
+  },
+  "Mode=Light, Type=Icon, Background=On secondary": {
+   "(root)": {
+    "size": "360×48",
+    "sizing": "fill/hug",
+    "layout": "row align center/max",
+    "padding": "0=PADDING/none 0=PADDING/none 8=PADDING/8 0=PADDING/none",
+    "gap": "0",
+    "fill": "gradient_linear(#f7f7f700 0%, BACKGROUND/Secondary 100%) from 0.5,0 to 0.5,1 + gradient_linear(#f7f7f700 0%, BACKGROUND/Secondary 100%) from 0.5,0 to 0.5,1",
+    "effect": "background_blur 2  (no style)"
+   },
+   "Button": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation2",
+    "instance": "Button › Size=md, Style=primary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Arrow--down"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/On Primary"
+   }
+  },
+  "Mode=Light, Type=Icon + Text, Background=On primary": {
+   "(root)": {
+    "size": "360×48",
+    "sizing": "fill/hug",
+    "layout": "row align center/max",
+    "padding": "0=PADDING/none 0=PADDING/none 8=PADDING/8 0=PADDING/none",
+    "gap": "0",
+    "fill": "gradient_linear(TRANSPARENT/white/0 0%, BACKGROUND/Primary 100%) from 0.5,0 to 0.5,1 + gradient_linear(TRANSPARENT/white/0 0%, BACKGROUND/Primary 100%) from 0.5,0 to 0.5,1",
+    "effect": "background_blur 2  (no style)"
+   },
+   "Button": {
+    "size": "85×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation2",
+    "instance": "Button › Size=sm, Style=primary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=Icons / Arrow--down, Label=\"New messages\""
+   }
+  },
+  "Mode=Light, Type=Icon + Text, Background=On secondary": {
+   "(root)": {
+    "size": "360×48",
+    "sizing": "fill/hug",
+    "layout": "row align center/max",
+    "padding": "0=PADDING/none 0=PADDING/none 8=PADDING/8 0=PADDING/none",
+    "gap": "0",
+    "fill": "gradient_linear(#f7f7f700 0%, BACKGROUND/Secondary 100%) from 0.5,0 to 0.5,1 + gradient_linear(#f7f7f700 0%, BACKGROUND/Secondary 100%) from 0.5,0 to 0.5,1",
+    "effect": "background_blur 2  (no style)"
+   },
+   "Button": {
+    "size": "85×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation2",
+    "instance": "Button › Size=sm, Style=primary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=Icons / Arrow--down, Label=\"New messages\""
+   }
+  },
+  "Mode=Dark, Type=Icon, Background=On primary": {
+   "(root)": {
+    "size": "360×48",
+    "sizing": "fill/hug",
+    "layout": "row align center/max",
+    "padding": "0=PADDING/none 0=PADDING/none 8=PADDING/8 0=PADDING/none",
+    "gap": "10",
+    "fill": "gradient_linear(TRANSPARENT/black/0 0%, TRANSPARENT/black/100 100%) from 0.5,0 to 0.5,1 + gradient_linear(TRANSPARENT/black/0 0%, TRANSPARENT/black/100 100%) from 0.5,0 to 0.5,1",
+    "effect": "background_blur 2  (no style)"
+   },
+   "Button": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Inverse",
+    "stroke": "0.5=sm inside BORDER/Strong",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation2",
+    "instance": "Button › Size=md, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Arrow--down"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/On Primary"
+   }
+  },
+  "Mode=Dark, Type=Icon, Background=On secondary": {
+   "(root)": {
+    "size": "360×48",
+    "sizing": "fill/hug",
+    "layout": "row align center/max",
+    "padding": "0=PADDING/none 0=PADDING/none 8=PADDING/8 0=PADDING/none",
+    "gap": "10",
+    "fill": "gradient_linear(#19191900 0%, NEUTRAL/Neutral 800 100%) from 0.5,0 to 0.5,1 + gradient_linear(#19191900 0%, NEUTRAL/Neutral 800 100%) from 0.5,0 to 0.5,1",
+    "effect": "background_blur 2  (no style)"
+   },
+   "Button": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Inverse",
+    "stroke": "0.5=sm inside BORDER/Strong",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation2",
+    "instance": "Button › Size=md, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Arrow--down"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/On Primary"
+   }
+  },
+  "Mode=Dark, Type=Icon + Text, Background=On primary": {
+   "(root)": {
+    "size": "360×48",
+    "sizing": "fill/hug",
+    "layout": "row align center/max",
+    "padding": "0=PADDING/none 0=PADDING/none 8=PADDING/8 0=PADDING/none",
+    "gap": "10",
+    "fill": "gradient_linear(TRANSPARENT/black/0 0%, TRANSPARENT/black/100 100%) from 0.5,0 to 0.5,1 + gradient_linear(TRANSPARENT/black/0 0%, TRANSPARENT/black/100 100%) from 0.5,0 to 0.5,1",
+    "effect": "background_blur 2  (no style)"
+   },
+   "Button": {
+    "size": "85×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Inverse",
+    "stroke": "0.5=sm inside BORDER/Strong",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation2",
+    "instance": "Button › Size=sm, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=Icons / Arrow--down, Label=\"New messages\""
+   },
+   "Button/Label": {
+    "color": "CONTENT/On Primary"
+   }
+  },
+  "Mode=Dark, Type=Icon + Text, Background=On secondary": {
+   "(root)": {
+    "size": "360×48",
+    "sizing": "fill/hug",
+    "layout": "row align center/max",
+    "padding": "0=PADDING/none 0=PADDING/none 8=PADDING/8 0=PADDING/none",
+    "gap": "10",
+    "fill": "gradient_linear(#19191900 0%, NEUTRAL/Neutral 800 100%) from 0.5,0 to 0.5,1 + gradient_linear(#19191900 0%, NEUTRAL/Neutral 800 100%) from 0.5,0 to 0.5,1",
+    "effect": "background_blur 2  (no style)"
+   },
+   "Button": {
+    "size": "85×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Inverse",
+    "stroke": "0.5=sm inside BORDER/Strong",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation2",
+    "instance": "Button › Size=sm, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=Icons / Arrow--down, Label=\"New messages\""
+   },
+   "Button/Label": {
+    "color": "CONTENT/On Primary"
+   }
+  }
+ }
+}

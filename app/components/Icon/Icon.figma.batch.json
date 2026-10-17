@@ -16,6 +16,13 @@
       "figmaName": "Icons / Anthropic"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14031",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "arrow-down",
+      "figmaName": "Icons / Arrow--down"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14022",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
@@ -70,6 +77,13 @@
       "component": "Icon",
       "name": "checkmark",
       "figmaName": "Icons / Checkmark"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6246-10374",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "checkmark-2",
+      "figmaName": "Icons / Checkmark-2"
     },
     {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17185",
@@ -366,6 +380,13 @@
       "figmaName": "Icons / Play"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14432",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "reset",
+      "figmaName": "Icons / Reset"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14428",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
@@ -401,6 +422,27 @@
       "figmaName": "Icons / Temperature"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-16012",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "thumbs-down",
+      "figmaName": "Icons / Thumbs-down"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-16021",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "thumbs-up",
+      "figmaName": "Icons / Thumbs-up"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-15826",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "time",
+      "figmaName": "icons / Time"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4045-82",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
@@ -422,6 +464,13 @@
       "figmaName": "Icons / Upload"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-16730",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "user",
+      "figmaName": "Icons / User"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-16759",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
@@ -441,6 +490,13 @@
       "component": "Icon",
       "name": "warning-alt-filled",
       "figmaName": "Icons / Warning--alt--filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17240",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "warning-filled",
+      "figmaName": "Icons / Warning--filled"
     }
   ]
 }

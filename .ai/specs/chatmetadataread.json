@@ -1,0 +1,156 @@
+{
+ "id": "6279:11285",
+ "name": "ChatMetadataRead",
+ "props": {
+  "Label 5": {
+   "type": "TEXT",
+   "default": "Failed"
+  },
+  "Label 4": {
+   "type": "TEXT",
+   "default": "Read"
+  },
+  "Label 3": {
+   "type": "TEXT",
+   "default": "Delivered"
+  },
+  "Label 2": {
+   "type": "TEXT",
+   "default": "Sent"
+  },
+  "Label 1": {
+   "type": "TEXT",
+   "default": "Sending"
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "Sending",
+   "options": [
+    "Sending",
+    "Sent",
+    "Delivered",
+    "Read",
+    "Failed"
+   ]
+  }
+ },
+ "variants": {
+  "Type=Sending": {
+   "(root)": {
+    "size": "67×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "icons / Time": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "icons / Time"
+   },
+   "icons / Time/icon": {
+    "fill": "CONTENT/Icon"
+   },
+   "Sending": {
+    "size": "49×15",
+    "sizing": "hug/hug",
+    "text": "\"Sending\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "gradient_linear(CONTENT/Primary 19%, CONTENT/Disabled 100%) from 0,0.5 to 1,0.5"
+   }
+  },
+  "Type=Sent": {
+   "(root)": {
+    "size": "46×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Checkmark"
+   },
+   "Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Sent": {
+    "size": "28×15",
+    "sizing": "hug/hug",
+    "text": "\"Sent\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Type=Delivered": {
+   "(root)": {
+    "size": "74×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Icons / Checkmark-2": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Checkmark-2"
+   },
+   "Icons / Checkmark-2/icon-color": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Delivered": {
+    "size": "56×15",
+    "sizing": "hug/hug",
+    "text": "\"Delivered\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Type=Read": {
+   "(root)": {
+    "size": "49×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Icons / Checkmark-2": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Checkmark-2"
+   },
+   "Icons / Checkmark-2/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Read": {
+    "size": "31×15",
+    "sizing": "hug/hug",
+    "text": "\"Read\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Type=Failed": {
+   "(root)": {
+    "size": "36×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Failed": {
+    "size": "36×15",
+    "sizing": "hug/hug",
+    "text": "\"Failed\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BACKGROUND/Attention"
+   }
+  }
+ }
+}

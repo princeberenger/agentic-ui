@@ -1,0 +1,237 @@
+{
+ "id": "4119:17618",
+ "name": "UserMessage",
+ "props": {
+  "Text label": {
+   "type": "TEXT",
+   "default": "Text message goes here."
+  },
+  "Show metadata": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "hover"
+   ]
+  },
+  "Style": {
+   "type": "VARIANT",
+   "default": "Style 2",
+   "options": [
+    "Style 1",
+    "Style 2"
+   ]
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "text",
+   "options": [
+    "@mention",
+    "text"
+   ]
+  }
+ },
+ "variants": {
+  "State=default, Style=Style 2, Type=text": {
+   "(root)": {
+    "size": "322×63",
+    "sizing": "fill/hug",
+    "maxWidth": "400",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "message-container": {
+    "size": "212×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/md (8) 16=PADDING/16 8=PADDING/md (8) 16=PADDING/16",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "20/20/4/20=20",
+    "effect": "Shadows/elevation1"
+   },
+   "message-container/Text message goes here.": {
+    "size": "180×24",
+    "sizing": "hug/hug",
+    "text": "\"Text message goes here.\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "ChatMessageMetadata": {
+    "size": "322×23",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "8=PADDING/8 12=PADDING/12 0 12=PADDING/12",
+    "gap": "6=PADDING/6",
+    "instance": "ChatMessageMetadata",
+    "props": "Show Thumbs down=true, Show Reset=true, Show Duplicate=true, Divider 3=false, Show Error=false, Divider 2=false, Divider 1=true, Show Thumbs up=true, Show actions=false, Show Read receipt=true, Show Time=true"
+   }
+  },
+  "State=hover, Style=Style 2, Type=text": {
+   "(root)": {
+    "size": "322×63",
+    "sizing": "fill/hug",
+    "maxWidth": "400",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "message-container": {
+    "size": "212×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/md (8) 16=PADDING/16 8=PADDING/md (8) 16=PADDING/16",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "20/20/4/20=20",
+    "effect": "Shadows/elevation1"
+   },
+   "message-container/Text message goes here.": {
+    "size": "180×24",
+    "sizing": "hug/hug",
+    "text": "\"Text message goes here.\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "ChatMessageMetadata": {
+    "size": "322×23",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "8=PADDING/8 12=PADDING/12 0 12=PADDING/12",
+    "gap": "6=PADDING/6",
+    "instance": "ChatMessageMetadata",
+    "props": "Show Thumbs down=true, Show Reset=true, Show Duplicate=true, Divider 3=false, Show Error=false, Divider 2=false, Divider 1=true, Show Thumbs up=true, Show actions=false, Show Read receipt=true, Show Time=true"
+   }
+  },
+  "State=default, Style=Style 1, Type=text": {
+   "(root)": {
+    "size": "322×63",
+    "sizing": "fill/hug",
+    "maxWidth": "400",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "message-container": {
+    "size": "212×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/md (8) 16=PADDING/16 8=PADDING/md (8) 16=PADDING/16",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "20/20/4/20=20"
+   },
+   "message-container/Text message goes here.": {
+    "size": "180×24",
+    "sizing": "hug/hug",
+    "maxWidth": "400",
+    "text": "\"Text message goes here.\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "ChatMessageMetadata": {
+    "size": "322×23",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "8=PADDING/8 12=PADDING/12 0 12=PADDING/12",
+    "gap": "6=PADDING/6",
+    "instance": "ChatMessageMetadata",
+    "props": "Show Thumbs down=true, Show Reset=true, Show Duplicate=true, Divider 3=false, Show Error=false, Divider 2=false, Divider 1=true, Show Thumbs up=true, Show actions=false, Show Read receipt=true, Show Time=true"
+   }
+  },
+  "State=default, Style=Style 1, Type=@mention": {
+   "(root)": {
+    "size": "322×63",
+    "sizing": "fill/hug",
+    "maxWidth": "400",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "message-container": {
+    "size": "322×40",
+    "sizing": "hug/fixed",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/md (8) 16=PADDING/16 8=PADDING/md (8) 8=PADDING/8",
+    "gap": "6=PADDING/6",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "20/20/4/20=20"
+   },
+   "message-container/Badge": {
+    "size": "112×28",
+    "sizing": "hug/fixed",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 6=PADDING/6 2=PADDING/2 6=PADDING/6",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/purple",
+    "radius": "9999=full",
+    "instance": "Badge › Type=pill, Size=lg, Color=purple, Border=false, iconLeft=false, iconRight=false",
+    "props": "Icon=179:14029, Label=\"@bug_review\", hasCloseIcon=false"
+   },
+   "message-container/Text message goes here.": {
+    "size": "180×24",
+    "sizing": "hug/hug",
+    "text": "\"Text message goes here.\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "ChatMessageMetadata": {
+    "size": "322×23",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "8=PADDING/8 12=PADDING/12 0 12=PADDING/12",
+    "gap": "6=PADDING/6",
+    "instance": "ChatMessageMetadata",
+    "props": "Show Thumbs down=true, Show Reset=true, Show Duplicate=true, Divider 3=false, Show Error=false, Divider 2=false, Divider 1=true, Show Thumbs up=true, Show actions=false, Show Read receipt=true, Show Time=true"
+   }
+  },
+  "State=hover, Style=Style 1, Type=text": {
+   "(root)": {
+    "size": "212×63",
+    "sizing": "hug/hug",
+    "maxWidth": "400",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "message-container": {
+    "size": "212×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/md (8) 16=PADDING/16 8=PADDING/md (8) 16=PADDING/16",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "20/20/4/20=20"
+   },
+   "message-container/Text message goes here.": {
+    "size": "180×24",
+    "sizing": "hug/hug",
+    "text": "\"Text message goes here.\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "ChatMessageMetadata": {
+    "size": "212×23",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "8=PADDING/8 12=PADDING/12 0 12=PADDING/12",
+    "gap": "6=PADDING/6",
+    "instance": "ChatMessageMetadata",
+    "props": "Show Thumbs down=true, Show Reset=true, Show Duplicate=true, Divider 3=false, Show Error=false, Divider 2=false, Divider 1=true, Show Thumbs up=true, Show actions=false, Show Read receipt=true, Show Time=true"
+   }
+  }
+ }
+}

@@ -33,6 +33,7 @@ const pages = [
   { href: '/progress-components', label: 'Progress bars' },
   { href: '/dialer', label: 'Dialer' },
   { href: '/chat', label: 'Chat' },
+  { href: '/chat-messages', label: 'Chat messages' },
   { href: '/tester-1', label: 'Tester 1' },
   { href: '/tester-2', label: 'Tester 2' },
   { href: '/tester-3', label: 'Tester 3' },

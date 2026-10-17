@@ -123,6 +123,18 @@ function bindings(node) {
 
 function paint(p) {
   if (p.visible === false) return null;
+  if (p.type.startsWith('GRADIENT')) {
+    // stops with their variable (or hex) and position, handles give the direction
+    const stops = (p.gradientStops ?? [])
+      .map((st) => {
+        const v = st.boundVariables?.color?.id;
+        return `${v ? tokenLabel(v) : hex(st.color)} ${Math.round(st.position * 100)}%`;
+      })
+      .join(', ');
+    const h = p.gradientHandlePositions ?? [];
+    const dir = h.length >= 2 ? ` from ${r1(h[0].x)},${r1(h[0].y)} to ${r1(h[1].x)},${r1(h[1].y)}` : '';
+    return { kind: `${p.type.toLowerCase()}(${stops})${dir}${p.opacity !== undefined && p.opacity < 1 ? ` @${r1(p.opacity)}` : ''}` };
+  }
   if (p.type !== 'SOLID') return { kind: p.type.toLowerCase() };
   const bound = p.boundVariables?.color?.id;
   const opacity = p.opacity ?? 1;

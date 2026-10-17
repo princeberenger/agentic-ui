@@ -109,6 +109,23 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 ### Skeleton loading animation — 761:23192 (`app/components/Skeleton/`)
 - [ ] Animation définie en prototype (Phase 1 → 5, 3,4s, smart animate ease in and out). Le code la reproduit en keyframes CSS.
 
+### Chat messages — UserMessage 4119:17618, AgentMessage 6246:10120, ChatMessageMetadata 6270:1160,
+### ChatMetadataRead 6279:11285, Chat status dot 6293:6710, ChatSystemMessage 6227:9774, ChatScrollButton 6255:14244 (`app/components/Chat/`)
+- [ ] AgentMessage : en default la bulle n'a pas de fond mais porte `Shadows/elevation1` (invisible dans Figma). Au survol
+      elle prend un fond, perd l'ombre, passe en hug et ses rayons changent (9999/900/900/9999). Le code : pas d'ombre,
+      pilule blanche + `INPUT/Hover` au survol.
+- [ ] AgentMessage : largeur min 400, max 640 (700 pour code et tool call), écart texte → contenu 12 (code) ou 8 (tool call).
+      Le code laisse la largeur au parent et met 12.
+- [ ] UserMessage Style 1 hover : la variante perd la largeur fill (212 au lieu de 322). Sans effet visuel, non reproduit.
+- [ ] ChatMessageMetadata : les actions (copier, réessayer, pouces) n'ont aucun état. Le code n'a que le focus clavier.
+- [ ] ChatMetadataRead : « Sending » utilise le style `Gradient/Shimmer` statique. Le code le garde statique (pas d'animation définie).
+- [ ] Chat status dot : la ligne est fixe (14) pour Gray, fill pour les autres ; les alignements changent selon la variante.
+      Le code garde une structure, la ligne grandit sauf en Gray.
+- [ ] ChatSystemMessage : Checkpoint « Restore checkpoint » sans état. Le code en fait un bouton avec focus clavier si `onRestore`.
+- [ ] ChatScrollButton : Mode=Dark non implémenté (pas de thème sombre en CSS). Le bouton primary est surchargé en rond
+      avec `Shadows/elevation2`, reproduit.
+- [ ] `icons / Time` (179:15826) nommé en minuscules hors convention `Icons / `.
+
 ## 2. Valeurs sans variable (non tokenisées dans Figma)
 
 ### Badge
@@ -294,6 +311,15 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Variables supprimées encore liées : `21:22` (CodeInline, CopyButton, Simple), `Transparent 4%` (124:3050, collection
       TRANSPARENCY), probablement dans l'effet `Components/Focus`.
 
+### Chat messages
+- [ ] Largeurs max 400 (UserMessage) et 720 (ChatSystemMessage), séparateurs Date 2 max 128 sans variable
+      (px dans le CSS, `--space-128` pour le séparateur).
+- [ ] Point de statut 7px, ligne 1px, point de séparateur 2px, écart 4 du reçu sans variable.
+- [ ] Vague du checkpoint 33×5, trait 1px sans variable (asset `public/assets/chat/checkpoint-wave.svg`).
+- [ ] ChatScrollButton : flou d'arrière-plan 2 sans style ; dégradés `Gradient/Scrollfade` en styles de remplissage,
+      avec `TRANSPARENT/white/0`, `TRANSPARENT/black/0`, `TRANSPARENT/black/100`, `NEUTRAL/Neutral 800` sans code syntax.
+- [ ] Variables de bibliothèque externe : `PADDING/md` (8), `ICONS/2xs` (14). Le code utilise `--space-8`, `--icon-14`.
+
 ## 3. Tokens
 
 - [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
@@ -304,7 +330,7 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Modes SHARP et ROUNDED de BORDER RADIUS : non gérés en code.
 - [x] Code syntax WEB à écrire pour les 12 variables BADGE/bg et BADGE/label ajoutées avec Badge.
 - [ ] Sans code syntax WEB et utilisées par des composants : `BORDER RADIUS/none`.
-- [ ] Tokens CSS ajoutés avec Code block, code syntax WEB à écrire : `PADDING/64` → `--space-64`,
+- [x] Tokens CSS ajoutés avec Code block, code syntax WEB écrite : `PADDING/64` → `--space-64`,
       `BACKGROUND/Secondary On Elevated` → `--color-bg-secondary-on-elevated`, `BORDER/Accent` → `--color-border-accent`.
 - [x] Tokens CSS ajoutés avec Table, code syntax WEB écrite : `STROKE/md` → `--stroke-md` (1.5px),
       `STROKE/lg` → `--stroke-lg` (2px), `INPUT/Pressed` → `--color-input-pressed` (noir 8 %).
@@ -328,6 +354,9 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [x] `arrows-vertical.svg` : absent du repo. Exporté par le script (`Icons / Arrows--vertical`, 179:14549).
 
 - [x] `menu-collapsed.svg` : absent du repo. Ajouté depuis `Icons/ Menu --collapsed` (230:694).
+
+- [x] Icônes ajoutées par le script : `warning-filled`, `reset`, `thumbs-up`, `thumbs-down`, `checkmark-2`, `user`,
+      plus `time` (179:15826) et `arrow-down` (179:14031).
 
 ## 5. Détection des changements Figma (à construire)
 

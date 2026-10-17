@@ -146,14 +146,18 @@ button.copy:focus-visible {
 /* Advanced: 16/128/16/16, radius 12, 160px high (5 lines), 480px expanded (18 lines), no variable.
    Long lines wrap; the text is truncated with an ellipsis like the Figma text box. */
 .advanced {
+  height: 160px;
   padding: var(--space-16) var(--space-128) var(--space-16) var(--space-16);
   border-radius: var(--radius-md);
   overflow: hidden;
 }
 
+.advanced[data-expanded='true'] {
+  height: 480px;
+}
+
 .advanced .code {
   display: -webkit-box;
-  height: calc(160px - 2 * var(--space-16));
   overflow: hidden;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
@@ -163,7 +167,6 @@ button.copy:focus-visible {
 }
 
 .advanced[data-expanded='true'] .code {
-  height: calc(480px - 2 * var(--space-16));
   -webkit-line-clamp: 18;
   line-clamp: 18;
 }

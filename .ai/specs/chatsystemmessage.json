@@ -1,0 +1,251 @@
+{
+ "id": "6227:9774",
+ "name": "ChatSystemMessage",
+ "props": {
+  "Show label": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Label": {
+   "type": "TEXT",
+   "default": "March 15, 2026"
+  },
+  "Label 2": {
+   "type": "TEXT",
+   "default": "Today"
+  },
+  "Label 3": {
+   "type": "TEXT",
+   "default": "Conversation marked as resolved"
+  },
+  "Label 4": {
+   "type": "TEXT",
+   "default": "Restore checkpoint"
+  },
+  "Icon": {
+   "type": "INSTANCE_SWAP",
+   "default": "179:16730"
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "Date 2",
+   "options": [
+    "Date",
+    "Date 2",
+    "Message w/ icon",
+    "Message (System)",
+    "Checkpoint"
+   ]
+  }
+ },
+ "variants": {
+  "Type=Date 2": {
+   "(root)": {
+    "size": "720×18",
+    "sizing": "fill/hug",
+    "maxWidth": "720",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "16=PADDING/16"
+   },
+   "wrapper": {
+    "size": "128×0",
+    "sizing": "fill/hug",
+    "maxWidth": "128",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "wrapper/divider": {
+    "size": "128×0",
+    "sizing": "fill/fixed",
+    "stroke": "1=default center gradient_linear(#e5e5e500 0%, BORDER/Subtle 100%) from 1,0.5 to 0,0.5"
+   },
+   "label": {
+    "size": "102×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/March 15, 2026": {
+    "size": "102×18",
+    "sizing": "hug/hug",
+    "text": "\"March 15, 2026\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "wrapper#2": {
+    "size": "128×0",
+    "sizing": "fill/hug",
+    "maxWidth": "128",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "wrapper#2/divider": {
+    "size": "128×0",
+    "sizing": "fill/fixed",
+    "stroke": "1 center gradient_linear(#e5e5e500 0%, BORDER/Subtle 100%) from 1,-1 to 0,-1"
+   }
+  },
+  "Type=Date": {
+   "(root)": {
+    "size": "720×18",
+    "sizing": "fill/hug",
+    "maxWidth": "720",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16=PADDING/16"
+   },
+   "divider": {
+    "size": "325.5×0",
+    "sizing": "fill/fixed",
+    "stroke": "1=default center gradient_linear(#e5e5e500 0%, BORDER/Subtle 100%) from 1,0.5 to 0,0.5"
+   },
+   "label": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Today": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Today\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "divider#2": {
+    "size": "325.5×0",
+    "sizing": "fill/fixed",
+    "stroke": "1=default center gradient_linear(#e5e5e500 0%, BORDER/Subtle 100%) from 1,0.5 to 0,0.5"
+   }
+  },
+  "Type=Message w/ icon": {
+   " icon": {
+    "size": "720×18",
+    "sizing": "fill/hug",
+    "maxWidth": "720",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   " icon/Icons / User": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / User"
+   },
+   " icon/Icons / User/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   " icon/label": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   " icon/label/Alex joined": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"Alex joined\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Type=Message (System)": {
+   "(root)": {
+    "size": "720×18",
+    "sizing": "fill/hug",
+    "maxWidth": "720",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16=PADDING/16"
+   },
+   "label": {
+    "size": "720×18",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "label/Conversation marked as resolved": {
+    "size": "227×18",
+    "sizing": "hug/hug",
+    "text": "\"Conversation marked as resolved\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Type=Checkpoint": {
+   "(root)": {
+    "size": "720×18",
+    "sizing": "fill/hug",
+    "maxWidth": "720",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "16=PADDING/16"
+   },
+   "wrapper": {
+    "size": "267.5×4.97",
+    "sizing": "fill/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "wrapper/pattern-left": {
+    "size": "33×4.97",
+    "sizing": "fixed/fixed",
+    "stroke": "1 center BORDER/Subtle"
+   },
+   "title": {
+    "size": "153×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "title/Icons / Reset": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Reset"
+   },
+   "title/Icons / Reset/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "title/label": {
+    "size": "132×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "title/label/Restore checkpoint": {
+    "size": "132×18",
+    "sizing": "hug/hug",
+    "text": "\"Restore checkpoint\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "wrapper#2": {
+    "size": "267.5×4.97",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "wrapper#2/pattern-right": {
+    "size": "33×4.97",
+    "sizing": "fixed/fixed",
+    "stroke": "1 center BORDER/Subtle"
+   }
+  }
+ }
+}
