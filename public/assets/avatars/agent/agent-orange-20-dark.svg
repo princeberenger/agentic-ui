@@ -1,0 +1,48 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_395_10541)">
+<path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="#000000"/>
+<mask id="stroke0_395_10541" fill="white">
+<path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"/>
+</mask>
+<path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" stroke="#562501" mask="url(#stroke0_395_10541)"/>
+<g opacity="0.3" filter="url(#filter0_f_395_10541)">
+<path d="M20 -1.5C20 2.08985 15.5228 5 10 5C4.47715 5 0 2.08985 0 -1.5C0 -5.08985 4.47715 -8 10 -8C15.5228 -8 20 -5.08985 20 -1.5Z" fill="#FF8806"/>
+</g>
+<mask id="mask0_395_10541" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+<path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="url(#paint0_linear_395_10541)"/>
+</mask>
+<g mask="url(#mask0_395_10541)">
+<mask id="mask1_395_10541" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="3" width="20" height="20">
+<g clip-path="url(#clip1_395_10541)">
+<path d="M16.25 24.375H3.75V19.3232C3.75 17.1439 5.33594 15.625 7.5 15.625H12.5C14.6562 15.625 16.25 17.1439 16.25 19.3232V24.375ZM10 13.816C7.40625 13.816 5.3125 11.6996 5.3125 9.0955C5.3125 6.48349 7.40625 4.375 10 4.375C12.5859 4.375 14.6875 6.48349 14.6875 9.0955C14.6875 11.6996 12.5859 13.816 10 13.816Z" fill="black"/>
+</g>
+</mask>
+<g mask="url(#mask1_395_10541)">
+<path d="M10 3.75H15.625V9.375H10V3.75Z" fill="#EC7303"/>
+<path opacity="0.7" d="M10.0002 13.9856H16.592V23.9191H10.0002V13.9856Z" fill="#EC7303"/>
+<path opacity="0.5" d="M4.375 3.75H10V9.375H4.375V3.75Z" fill="#EC7303"/>
+<path opacity="0.25" d="M3.40845 13.9856H10.0002V23.9191H3.40845V13.9856Z" fill="#EC7303"/>
+<path opacity="0.2" d="M4.375 9.375H10V15H4.375V9.375Z" fill="#EC7303"/>
+<path opacity="0.5" d="M10 9.375H15.625V15H10V9.375Z" fill="#EC7303"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_395_10541" x="-10" y="-18" width="40" height="33" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur_395_10541"/>
+</filter>
+<linearGradient id="paint0_linear_395_10541" x1="12.5" y1="-4.69387e-07" x2="3.5" y2="20" gradientUnits="userSpaceOnUse">
+<stop offset="0.179636" style="stop-color:black;stop-opacity:1;"/>
+<stop offset="0.49224" style="stop-color:black;stop-opacity:1;"/>
+<stop offset="1" stop-color="white" style="stop-color:white;stop-opacity:1;"/>
+</linearGradient>
+<clipPath id="clip0_395_10541">
+<path d="M0 10C0 4.47715 4.47715 0 10 0V0C15.5228 0 20 4.47715 20 10V10C20 15.5228 15.5228 20 10 20V20C4.47715 20 0 15.5228 0 10V10Z" fill="white" style="fill:white;fill-opacity:1;"/>
+</clipPath>
+<clipPath id="clip1_395_10541">
+<rect width="18.75" height="18.75" fill="white" style="fill:white;fill-opacity:1;" transform="translate(0.625 3.75)"/>
+</clipPath>
+</defs>
+</svg>

@@ -66,3 +66,16 @@
   font-size: var(--text-small);
   letter-spacing: var(--tracking-tight);
 }
+
+/* Type=agent: the light and dark exports swap with the theme */
+.agentDark {
+  display: none;
+}
+
+:global([data-theme='dark']) .agentLight {
+  display: none;
+}
+
+:global([data-theme='dark']) .agentDark {
+  display: inline-flex;
+}

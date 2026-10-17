@@ -3,7 +3,8 @@
 // Tokens: icon-16, icon-20, icon-24, icon-32, icon-40, icon-48, icon-56, icon-64, radius-full,
 //         color-bg-primary, color-border-subtle, stroke-sm, color-content-primary,
 //         font-label, weight-regular, text-button, text-small, leading-tiny, tracking-spacious, tracking-tight
-// Assets: public/assets/avatars/agent/agent-{color}-{size}.svg (figma export of every Type=agent variant)
+// Assets: public/assets/avatars/agent/agent-{color}-{size}.svg (figma export of every Type=agent variant),
+//         agent-{color}-{size}-dark.svg (same with the MODE DARK values)
 
 import styles from './Avatar.module.css';
 
@@ -51,13 +52,19 @@ export function Avatar(props: AvatarProps) {
 
   if (props.type === 'agent') {
     return (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img
-        className={classes}
-        src={`/assets/avatars/agent/agent-${props.color}-${size}.svg`}
-        alt={props.alt ?? ''}
-        aria-hidden={props.alt ? undefined : true}
-      />
+      // the export has the LIGHT colors baked in: a DARK copy (-dark.svg) swaps with the theme
+      <>
+        {(['light', 'dark'] as const).map((theme) => (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            key={theme}
+            className={`${classes} ${theme === 'light' ? styles.agentLight : styles.agentDark}`}
+            src={`/assets/avatars/agent/agent-${props.color}-${size}${theme === 'dark' ? '-dark' : ''}.svg`}
+            alt={props.alt ?? ''}
+            aria-hidden={props.alt ? undefined : true}
+          />
+        ))}
+      </>
     );
   }
 

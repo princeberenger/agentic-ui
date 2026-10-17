@@ -401,8 +401,19 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       (variable `2` référencée par KeyboardShortcut mais absente des variables locales),
       `--radius-sm` (8px), `--radius-badge` (doublon de `--radius-6`), `--space-20`, `--icon-8`.
 - [ ] `--color-focus-ring` doublonne `--color-transparent-blue-50`.
-- [ ] Mode DARK de la collection MODE : non implémenté en CSS. Seules les 3 variables épinglées en DARK par
-      Switch (Theme) Mode=Dark sont dans `[data-theme='dark']` (CONTENT/On Primary, SWITCH/knob/Active, SWITCH/bg/active).
+- [x] Mode DARK de la collection MODE : bloc `[data-theme='dark']` de globals.css généré depuis Figma (70 variables
+      avec code syntax WEB ; les 70 valeurs LIGHT de :root vérifiées identiques). Bascule : Switch (Theme) en haut à
+      droite du shell de démo, choix gardé en localStorage, préférence système par défaut.
+- [ ] MODE sans code syntax WEB (pas de token CSS) : BACKGROUND/Accent, BACKGROUND/Elevated, LINK/Default, INPUT/Focus,
+      BORDER/White, BORDER/Accent|Purple|Orange|Pink|Teal (Light), TABS/bg/active, TABS/bg/inactive. Seuls les avatars
+      agent les utilisent (exports svg).
+- [ ] Avatars agent : exports svg aux couleurs LIGHT figées. Copies `-dark.svg` générées avec les valeurs DARK
+      (BACKGROUND/Primary, BORDER/* (Light), BACKGROUND/Accent, BACKGROUND/Inverse, CONTENT/Primary) ; les primitives
+      (PURPLE/Purple 500…) ne changent pas. À réexporter depuis Figma si les avatars changent.
+- [ ] Sans variante dark dans Figma, identiques dans les deux thèmes : ombres (effect styles en noir fixe), skeleton
+      (#e8e8e8 / #c6c6c6 sans variable), contour intérieur blanc de Components/Focus et Destructive Focus (variable
+      supprimée `21:22`).
+- [ ] Couleurs en dur hors Figma : DialerCard (#1a1a1a, #333333, #bf0a0a, #a80909, #ffcaca), Fieldset (#dc2626).
 - [ ] Modes SHARP et ROUNDED de BORDER RADIUS : non gérés en code.
 - [x] Code syntax WEB à écrire pour les 12 variables BADGE/bg et BADGE/label ajoutées avec Badge.
 - [ ] Sans code syntax WEB et utilisées par des composants : `BORDER RADIUS/none`.

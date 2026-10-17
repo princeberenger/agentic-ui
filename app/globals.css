@@ -134,12 +134,102 @@
   --shadow-inset-bottom: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* Theme collection, mode DARK. Partial: only the variables a component pins to DARK
-   (Switch (Theme) Mode=Dark sets the explicit mode). Full dark mode comes later. */
+/* --------------------------------------------------------------------------
+   1b. THEME — collection MODE, mode DARK (Figma 58:1)
+   Applied on <html data-theme="dark"> (theme switch) or on any element that pins
+   the mode, like Figma's explicit variable mode (Switch (Theme) Mode=Dark).
+   Generated from the Figma values; LIGHT is the :root default above.
+   -------------------------------------------------------------------------- */
+:root {
+  color-scheme: light;
+}
+
 [data-theme='dark'] {
-  --color-content-on-primary: #000000;
-  --color-switch-knob-active: #f7f7f7;
-  --color-switch-bg-active: #616161;
+  color-scheme: dark;
+  --color-bg-primary: #000000;                       /* BACKGROUND/Primary → NEUTRAL/Neutral 900 */
+  --color-bg-secondary: #191919;                     /* BACKGROUND/Secondary → NEUTRAL/Neutral 800 */
+  --color-bg-tertiary: #363636;                      /* BACKGROUND/Tertiary → NEUTRAL/Neutral 700 */
+  --color-bg-inverse: #ffffff;                       /* BACKGROUND/Inverse → NEUTRAL/Neutral 100 */
+  --color-bg-accent-light: #002a69;                  /* BACKGROUND/Accent (Light) → BLUE/Blue 700 */
+  --color-bg-attention: #ff7070;                     /* BACKGROUND/Attention → RED/Red 400 */
+  --color-bg-attention-light: #2a0303;               /* BACKGROUND/Attention (Light) → RED/Red 800 */
+  --color-bg-success: #3cc14e;                       /* BACKGROUND/Success → GREEN/Green 500 */
+  --color-bg-success-light: #0c310d;                 /* BACKGROUND/Success (Light) → GREEN/Green 800 */
+  --color-bg-warning: #553b06;                       /* BACKGROUND/Warning → YELLOW/Yellow 700 */
+  --color-bg-disabled: #616161;                      /* BACKGROUND/Disabled → NEUTRAL/Neutral 600 */
+  --color-bg-secondary-on-elevated: #000000;         /* BACKGROUND/Secondary On Elevated → NEUTRAL/Neutral 900 */
+  --color-bg-menu: #0d0d0d;                          /* BACKGROUND/menu/background → NEUTRAL/Neutral 850 */
+  --color-content-primary: #f7f7f7;                  /* CONTENT/Primary → NEUTRAL/Neutral 200 */
+  --color-content-on-primary: #000000;               /* CONTENT/On Primary → NEUTRAL/Neutral 900 */
+  --color-content-secondary: #8f8f8f;                /* CONTENT/Secondary → NEUTRAL/Neutral 500 */
+  --color-content-disabled: #363636;                 /* CONTENT/Disabled → NEUTRAL/Neutral 700 */
+  --color-content-icon: #616161;                     /* CONTENT/Icon → NEUTRAL/Neutral 600 */
+  --color-content-accent: #84b4fb;                   /* CONTENT/Accent → BLUE/Blue 300 */
+  --color-content-attention: #ffa0a0;                /* CONTENT/Attention → RED/Red 300 */
+  --color-content-attention-light: #2a0303;          /* CONTENT/Attention (Light) → RED/Red 800 */
+  --color-content-success: #a6f0a5;                  /* CONTENT/Success → GREEN/Green 300 */
+  --color-content-success-light: #0c310d;            /* CONTENT/Success (Light) → GREEN/Green 800 */
+  --color-border-strong: #ffffff;                    /* BORDER/Strong → NEUTRAL/Neutral 100 */
+  --color-input-hover-dark: rgba(255, 255, 255, 0.08); /* INPUT/Hover (Dark) */
+  --color-input-hover-light: rgba(0, 0, 0, 0.12);    /* INPUT/Hover (Light) */
+  --color-input-pressed: rgba(255, 255, 255, 0.12);  /* INPUT/Pressed */
+  --color-input-pressed-light: rgba(0, 0, 0, 0.6);   /* INPUT/Pressed (Light) */
+  --color-input-selected: rgba(255, 255, 255, 0.16); /* INPUT/Selected */
+  --color-border-medium: #616161;                    /* BORDER/Medium → NEUTRAL/Neutral 600 */
+  --color-border-subtle: #363636;                    /* BORDER/Subtle → NEUTRAL/Neutral 700 */
+  --color-border-accent: #70a9ff;                    /* BORDER/Accent → BLUE/Blue 400 */
+  --color-border-attention: rgba(255, 92, 92, 0.6);  /* BORDER/Attention → TRANSPARENT/red/60 */
+  --color-border-success: rgba(60, 193, 78, 0.6);    /* BORDER/Success → TRANSPARENT/green/60 */
+  --color-border-warning: rgba(238, 187, 4, 0.6);    /* BORDER/Warning → TRANSPARENT/yellow/60 */
+  --color-border-disabled: #363636;                  /* BORDER/Disabled → NEUTRAL/Neutral 700 */
+  --color-overlay-bg: rgba(0, 0, 0, 0.64);           /* OVERLAY/Background */
+  --color-content-warning-text: #eebb04;             /* CONTENT/Warning (Text) → YELLOW/Yellow 500 */
+  --color-content-warning-icons: #553b06;            /* CONTENT/Warning (Icons) → YELLOW/Yellow 700 */
+  --color-button-primary: #ffffff;                   /* BUTTON/Primary → NEUTRAL/Neutral 100 */
+  --color-button-secondary: #191919;                 /* BUTTON/Secondary → NEUTRAL/Neutral 800 */
+  --color-button-secondary-filled: #191919;          /* BUTTON/Secondary Filled → NEUTRAL/Neutral 800 */
+  --color-button-disabled: #000000;                  /* BUTTON/Disabled → NEUTRAL/Neutral 900 */
+  --color-badge-bg-default: #191919;                 /* BADGE/bg/default → NEUTRAL/Neutral 800 */
+  --color-badge-bg-green: #0c310d;                   /* BADGE/bg/green → GREEN/Green 800 */
+  --color-badge-bg-red: #2a0303;                     /* BADGE/bg/red → RED/Red 800 */
+  --color-badge-bg-yellow: #312102;                  /* BADGE/bg/yellow → YELLOW/Yellow 800 */
+  --color-badge-bg-orange: #2f1604;                  /* BADGE/bg/orange → ORANGE/Orange 800 */
+  --color-badge-bg-blue: #19133a;                    /* BADGE/bg/blue → BLUE/Blue 800 */
+  --color-badge-bg-purple: #20092b;                  /* BADGE/bg/purple → PURPLE/Purple 800 */
+  --color-badge-bg-teal: #04252f;                    /* BADGE/bg/teal → TEAL/Teal 800 */
+  --color-badge-bg-pink: #360606;                    /* BADGE/bg/pink → PINK/Pink 800 */
+  --color-badge-bg-gray: #191919;                    /* BADGE/bg/gray → NEUTRAL/Neutral 800 */
+  --color-badge-label-default: #e0e0e0;              /* BADGE/label/default → NEUTRAL/Neutral 400 */
+  --color-badge-label-green: #89f598;                /* BADGE/label/green → GREEN/Green 400 */
+  --color-badge-label-red: #ff7070;                  /* BADGE/label/red → RED/Red 400 */
+  --color-badge-label-yellow: #ffbd14;               /* BADGE/label/yellow → YELLOW/Yellow 400 */
+  --color-badge-label-orange: #ff8806;               /* BADGE/label/orange → ORANGE/Orange 400 */
+  --color-badge-label-blue: #70a9ff;                 /* BADGE/label/blue → BLUE/Blue 400 */
+  --color-badge-label-purple: #ae9eff;               /* BADGE/label/purple → PURPLE/Purple 400 */
+  --color-badge-label-teal: #6cecf5;                 /* BADGE/label/teal → TEAL/Teal 400 */
+  --color-badge-label-pink: #f155a0;                 /* BADGE/label/pink → PINK/Pink 400 */
+  --color-badge-label-gray: #e0e0e0;                 /* BADGE/label/gray → NEUTRAL/Neutral 400 */
+  --color-switch-bg-active: #616161;                 /* SWITCH/bg/active → NEUTRAL/Neutral 600 */
+  --color-switch-bg-inactive: #363636;               /* SWITCH/bg/inactive → NEUTRAL/Neutral 700 */
+  --color-switch-knob-inactive: var(--color-content-primary); /* SWITCH/knob/Inactive → CONTENT/Primary */
+  --color-switch-knob-icon: #000000;                 /* SWITCH/knob/Icon → NEUTRAL/Neutral 900 */
+  --color-switch-knob-active: var(--color-content-primary); /* SWITCH/knob/Active → CONTENT/Primary */
+  --color-switch-knob-disabled: #363636;             /* SWITCH/knob/Disabled → NEUTRAL/Neutral 700 */
+  --color-badge-stroke-default: rgba(255, 255, 255, 0.1); /* BADGE/stroke/default → TRANSPARENT/white/10 */
+
+  /* derived from BACKGROUND/Primary: redeclared so a pinned subtree recomputes them */
+  --shadow-focus-ring: 0 0 0 1px var(--color-bg-primary),
+    0 0 0 2px var(--color-focus-ring);
+  --shadow-components-focus: 0 0 0 1px var(--color-bg-primary),
+    0 0 0 2px var(--color-transparent-blue-50),
+    0 1px 2px 0 var(--color-transparent-4),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px #ffffff;
+  --shadow-components-destructive-focus: 0 0 0 1px var(--color-bg-primary),
+    0 0 0 2px var(--color-transparent-red-50),
+    0 1px 2px 0 rgba(0, 0, 0, 0.05),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px #ffffff;
 }
 
 /* --------------------------------------------------------------------------

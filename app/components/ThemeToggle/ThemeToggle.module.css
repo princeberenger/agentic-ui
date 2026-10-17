@@ -1,0 +1,8 @@
+/* demo shell: top right, in the 48px band above the page navigation */
+.toggle {
+  position: fixed;
+  top: var(--space-12);
+  right: var(--space-16);
+  z-index: 20;
+  display: flex;
+}

@@ -4,6 +4,8 @@ import { Google_Sans_Flex, JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { SubNav } from "./components/SubNav";
+import { ThemeToggle } from "./components/ThemeToggle";
+import { THEME_INIT_SCRIPT } from "./components/ThemeToggle/themeScript";
 import styles from "./layout.module.css";
 
 const geist = Geist({
@@ -52,8 +54,14 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geist.variable} ${jetbrainsMono.variable} ${googleSansFlex.variable} ${departureMono.variable}`}
+      // the theme script sets data-theme before hydration
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body>
+        <ThemeToggle />
         <SubNav />
         <div className={styles.content}>{children}</div>
       </body>
