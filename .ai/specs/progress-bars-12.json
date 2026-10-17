@@ -1,0 +1,140 @@
+{
+ "id": "4096:7139",
+ "name": "Progress - Bars (12)",
+ "props": {
+  "Filled": {
+   "type": "VARIANT",
+   "default": "10%",
+   "options": [
+    "10%",
+    "20%",
+    "50%",
+    "70%",
+    "80%",
+    "100%"
+   ]
+  }
+ },
+ "variants": {
+  "Filled=10%": {
+   "(root)": {
+    "size": "46×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "2"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "10"
+   }
+  },
+  "Filled=20%": {
+   "(root)": {
+    "size": "46×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "4"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "8"
+   }
+  },
+  "Filled=50%": {
+   "(root)": {
+    "size": "46×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "6"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "6"
+   }
+  },
+  "Filled=70%": {
+   "(root)": {
+    "size": "46×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "8"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "4"
+   }
+  },
+  "Filled=80%": {
+   "(root)": {
+    "size": "46×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "10"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "2"
+   }
+  },
+  "Filled=100%": {
+   "(root)": {
+    "size": "46×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "12"
+   }
+  }
+ }
+}

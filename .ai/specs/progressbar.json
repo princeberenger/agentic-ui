@@ -1,0 +1,282 @@
+{
+ "id": "4115:7289",
+ "name": "ProgressBar",
+ "props": {
+  "Show counter": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Progress": {
+   "type": "VARIANT",
+   "default": "0",
+   "options": [
+    "0",
+    "10",
+    "50",
+    "70",
+    "90",
+    "100"
+   ]
+  }
+ },
+ "variants": {
+  "Progress=0": {
+   "(root)": {
+    "size": "207×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "progress-bar": {
+    "size": "180×12",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "1"
+   },
+   "progress-bar/[run 1]": {
+    "size": "1×11",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "1",
+    "count": "163"
+   },
+   "progress-bar/[run 1]/[run 1]": {
+    "size": "1×1",
+    "sizing": "fill/fixed",
+    "fill": "BACKGROUND/Tertiary",
+    "count": "6"
+   },
+   "progress-bar/progress-bar": {
+    "size": "0×11",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary"
+   },
+   "progress-label": {
+    "size": "15×18",
+    "sizing": "hug/hug",
+    "text": "\"0%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Progress=10": {
+   "(root)": {
+    "size": "214×18",
+    "sizing": "fixed/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "progress-bar": {
+    "size": "180×12",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "1"
+   },
+   "progress-bar/[run 1]": {
+    "size": "1×11",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "1",
+    "count": "163"
+   },
+   "progress-bar/[run 1]/[run 1]": {
+    "size": "1×1",
+    "sizing": "fill/fixed",
+    "fill": "BACKGROUND/Tertiary",
+    "count": "6"
+   },
+   "progress-bar/progress-bar": {
+    "size": "20×11",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary"
+   },
+   "progress-label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"10%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Progress=50": {
+   "(root)": {
+    "size": "214×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "progress-bar": {
+    "size": "180×12",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "1"
+   },
+   "progress-bar/[run 1]": {
+    "size": "1×11",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "1",
+    "count": "163"
+   },
+   "progress-bar/[run 1]/[run 1]": {
+    "size": "1×1",
+    "sizing": "fill/fixed",
+    "fill": "BACKGROUND/Tertiary",
+    "count": "6"
+   },
+   "progress-bar/progress-bar": {
+    "size": "90×11",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary"
+   },
+   "progress-label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"50%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Progress=70": {
+   "(root)": {
+    "size": "214×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "progress-bar": {
+    "size": "180×12",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "1"
+   },
+   "progress-bar/[run 1]": {
+    "size": "1×11",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "1",
+    "count": "163"
+   },
+   "progress-bar/[run 1]/[run 1]": {
+    "size": "1×1",
+    "sizing": "fill/fixed",
+    "fill": "BACKGROUND/Tertiary",
+    "count": "6"
+   },
+   "progress-bar/progress-bar": {
+    "size": "140×11",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary"
+   },
+   "progress-label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"70%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Progress=90": {
+   "(root)": {
+    "size": "214×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "progress-bar": {
+    "size": "180×12",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "1"
+   },
+   "progress-bar/[run 1]": {
+    "size": "1×11",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "1",
+    "count": "163"
+   },
+   "progress-bar/[run 1]/[run 1]": {
+    "size": "1×1",
+    "sizing": "fill/fixed",
+    "fill": "BACKGROUND/Tertiary",
+    "count": "6"
+   },
+   "progress-bar/progress-bar": {
+    "size": "160×11",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary"
+   },
+   "progress-label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"90%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Progress=100": {
+   "(root)": {
+    "size": "221×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "progress-bar": {
+    "size": "180×12",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "1"
+   },
+   "progress-bar/[run 1]": {
+    "size": "1×11",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "1",
+    "count": "163"
+   },
+   "progress-bar/[run 1]/[run 1]": {
+    "size": "1×1",
+    "sizing": "fill/fixed",
+    "fill": "BACKGROUND/Tertiary",
+    "count": "6"
+   },
+   "progress-bar/progress-bar": {
+    "size": "180×11",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary"
+   },
+   "progress-label": {
+    "size": "29×18",
+    "sizing": "hug/hug",
+    "text": "\"100%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  }
+ }
+}

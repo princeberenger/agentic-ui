@@ -1,0 +1,68 @@
+{
+ "id": "4072:7514",
+ "name": "Progress - Bars (48)",
+ "props": {
+  "Filled": {
+   "type": "VARIANT",
+   "default": "0",
+   "options": [
+    "0",
+    "50%",
+    "100%"
+   ]
+  }
+ },
+ "variants": {
+  "Filled=0": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "1×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "48"
+   }
+  },
+  "Filled=50%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "1×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "26"
+   },
+   "[run 2]": {
+    "size": "1×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "22"
+   }
+  },
+  "Filled=100%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "1×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "48"
+   }
+  }
+ }
+}

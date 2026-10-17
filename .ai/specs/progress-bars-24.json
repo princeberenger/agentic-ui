@@ -1,0 +1,272 @@
+{
+ "id": "4096:7708",
+ "name": "Progress - Bars (24)",
+ "props": {
+  "Filled": {
+   "type": "VARIANT",
+   "default": "10%",
+   "options": [
+    "10%",
+    "20%",
+    "30%",
+    "40%",
+    "45%",
+    "55%",
+    "60%",
+    "70%",
+    "80%",
+    "90%",
+    "100%",
+    "50%"
+   ]
+  }
+ },
+ "variants": {
+  "Filled=10%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary",
+    "count": "2"
+   },
+   "[run 2]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "BACKGROUND/Disabled",
+    "count": "22"
+   }
+  },
+  "Filled=20%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary",
+    "count": "4"
+   },
+   "[run 2]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "BACKGROUND/Disabled",
+    "count": "20"
+   }
+  },
+  "Filled=30%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary",
+    "count": "6"
+   },
+   "[run 2]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "BACKGROUND/Disabled",
+    "count": "18"
+   }
+  },
+  "Filled=40%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary",
+    "count": "8"
+   },
+   "[run 2]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "BACKGROUND/Disabled",
+    "count": "16"
+   }
+  },
+  "Filled=45%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary",
+    "count": "10"
+   },
+   "[run 2]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "BACKGROUND/Disabled",
+    "count": "14"
+   }
+  },
+  "Filled=50%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary",
+    "count": "12"
+   },
+   "[run 2]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "BACKGROUND/Disabled",
+    "count": "12"
+   }
+  },
+  "Filled=55%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary",
+    "count": "14"
+   },
+   "[run 2]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "BACKGROUND/Disabled",
+    "count": "10"
+   }
+  },
+  "Filled=60%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary",
+    "count": "16"
+   },
+   "[run 2]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "BACKGROUND/Disabled",
+    "count": "8"
+   }
+  },
+  "Filled=70%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary",
+    "count": "18"
+   },
+   "[run 2]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "BACKGROUND/Disabled",
+    "count": "6"
+   }
+  },
+  "Filled=80%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary",
+    "count": "20"
+   },
+   "[run 2]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "BACKGROUND/Disabled",
+    "count": "4"
+   }
+  },
+  "Filled=90%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary",
+    "count": "22"
+   },
+   "[run 2]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "BACKGROUND/Disabled",
+    "count": "2"
+   }
+  },
+  "Filled=100%": {
+   "(root)": {
+    "size": "142×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "4×16",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary",
+    "count": "24"
+   }
+  }
+ }
+}

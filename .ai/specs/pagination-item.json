@@ -1,0 +1,262 @@
+{
+ "id": "716:3884",
+ "name": "pagination-item",
+ "props": {
+  "Page number": {
+   "type": "TEXT",
+   "default": "1"
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "active",
+    "default",
+    "focus",
+    "hover"
+   ]
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "number",
+   "options": [
+    "number",
+    "overflow"
+   ]
+  },
+  "Open": {
+   "type": "VARIANT",
+   "default": "false",
+   "options": [
+    "false",
+    "true"
+   ]
+  },
+  "Selected": {
+   "type": "VARIANT",
+   "default": "false",
+   "options": [
+    "false",
+    "true"
+   ]
+  }
+ },
+ "variants": {
+  "State=default, Type=number, Open=false, Selected=false": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "pagination-item-wrapper": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "4=4"
+   },
+   "pagination-item-wrapper/text-1": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"1\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper align center",
+    "font.vars": "family/Labels, Links, size/Tiny, weight/Semibold, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "State=default, Type=overflow, Open=false, Selected=false": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "pagination-item-wrapper": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "4=4"
+   },
+   "pagination-item-wrapper/icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Overflow-menu--horizontal"
+   },
+   "pagination-item-wrapper/icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=hover, Type=overflow, Open=false, Selected=false": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "pagination-item-wrapper": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "radius": "4=4"
+   },
+   "pagination-item-wrapper/icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Overflow-menu--horizontal"
+   },
+   "pagination-item-wrapper/icon/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "State=focus, Type=overflow, Open=false, Selected=true": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "pagination-item-wrapper": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "4=4"
+   },
+   "pagination-item-wrapper/icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Overflow-menu--horizontal"
+   },
+   "pagination-item-wrapper/icon/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "State=active, Type=overflow, Open=true, Selected=true": {
+   "(root)": {
+    "size": "32×32",
+    "size.vars": "ICONS/32 × ICONS/32"
+   },
+   "pagination-item-wrapper": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "4=4"
+   },
+   "pagination-item-wrapper/icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Overflow-menu--horizontal"
+   },
+   "pagination-item-wrapper/icon/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Select menu overflow": {
+    "size": "32×0"
+   },
+   "Select menu overflow/_pagination-item/_Pagination select menu item/True": {
+    "size": "56×259",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_pagination-item/_Pagination select menu item/True"
+   },
+   "Select menu overflow/_pagination-item/_Pagination select menu item/True/_Select menu chrome menu/Chrome menu/_Select menu chrome menu items": {
+    "fill": "Transparent"
+   },
+   "Select menu overflow/_pagination-item/_Pagination select menu item/True/_Select menu chrome menu/Chrome menu/_Select menu chrome menu items/Text + icon/Checkmark": {
+    "fill": "Transparent"
+   }
+  },
+  "State=hover, Type=number, Open=false, Selected=false": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "pagination-item-wrapper": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "radius": "4=4"
+   },
+   "pagination-item-wrapper/text-1": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"1\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper align center",
+    "font.vars": "family/Labels, Links, size/Tiny, weight/Semibold, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "State=active, Type=number, Open=false, Selected=true": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "pagination-item-wrapper": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "4=4"
+   },
+   "pagination-item-wrapper/text-1": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"1\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper align center",
+    "font.vars": "family/Labels, Links, size/Tiny, weight/Semibold, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  }
+ }
+}

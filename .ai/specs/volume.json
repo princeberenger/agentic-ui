@@ -1,0 +1,494 @@
+{
+ "id": "4072:8082",
+ "name": "Volume",
+ "props": {
+  "Value": {
+   "type": "VARIANT",
+   "default": "0",
+   "options": [
+    "0",
+    "100",
+    "20",
+    "30",
+    "40",
+    "50",
+    "60",
+    "70",
+    "80",
+    "90"
+   ]
+  }
+ },
+ "variants": {
+  "Value=0": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "slider": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align max/center",
+    "padding": "0 16=PADDING/16 0 0=PADDING/none",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "slider/fill": {
+    "size": "8×32",
+    "sizing": "fixed/fixed",
+    "layout": "row align max/center",
+    "padding": "0 2=PADDING/2 0 0",
+    "gap": "107",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "10/0/0/10=10"
+   },
+   "slider/fill/drag-handle": {
+    "size": "2×32",
+    "sizing": "fixed/fill",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "slider/fill/drag-handle/dragHandle": {
+    "size": "0×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg center CONTENT/Icon"
+   },
+   "slider/0%": {
+    "size": "216×18",
+    "sizing": "fill/hug",
+    "text": "\"0%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Value=20": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "slider": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align max/center",
+    "padding": "0 16=PADDING/16 0 0=PADDING/none",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "slider/fill": {
+    "size": "34×32",
+    "sizing": "fill/fixed",
+    "layout": "row align max/center",
+    "padding": "0 2=PADDING/2 0 0",
+    "gap": "107",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "10/0/0/10=10"
+   },
+   "slider/fill/drag-handle": {
+    "size": "2×32",
+    "sizing": "fixed/fill",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "slider/fill/drag-handle/dragHandle": {
+    "size": "0×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg center CONTENT/Icon"
+   },
+   "slider/20%": {
+    "size": "190×18",
+    "sizing": "fixed/hug",
+    "text": "\"20%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Value=30": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "slider": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align max/center",
+    "padding": "0 16=PADDING/16 0 0=PADDING/none",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "slider/fill": {
+    "size": "52×32",
+    "sizing": "fill/fill",
+    "layout": "row align max/center",
+    "padding": "0 2=PADDING/2 0 0",
+    "gap": "107",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "10/0/0/10=10"
+   },
+   "slider/fill/drag-handle": {
+    "size": "2×32",
+    "sizing": "fixed/fill",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "slider/fill/drag-handle/dragHandle": {
+    "size": "0×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg center CONTENT/Icon"
+   },
+   "slider/30%": {
+    "size": "172×18",
+    "sizing": "fixed/hug",
+    "text": "\"30%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Value=40": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "slider": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 16=PADDING/16 0 0=PADDING/none",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "slider/fill": {
+    "size": "82×32",
+    "sizing": "fill/fill",
+    "layout": "row align max/center",
+    "padding": "0 2=PADDING/2 0 0",
+    "gap": "107",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "10/0/0/10=10"
+   },
+   "slider/fill/drag-handle": {
+    "size": "2×32",
+    "sizing": "fixed/fill",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "slider/fill/drag-handle/dragHandle": {
+    "size": "0×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg center CONTENT/Icon"
+   },
+   "slider/40%": {
+    "size": "142×18",
+    "sizing": "fixed/hug",
+    "text": "\"40%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Value=50": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "slider": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align max/center",
+    "padding": "0 16=PADDING/16 0 0=PADDING/none",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "slider/fill": {
+    "size": "112×32",
+    "sizing": "fill/fill",
+    "layout": "row align max/center",
+    "padding": "0 2=PADDING/2 0 0",
+    "gap": "107",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "10/0/0/10=10"
+   },
+   "slider/fill/drag-handle": {
+    "size": "2×32",
+    "sizing": "fixed/fill",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "slider/fill/drag-handle/dragHandle": {
+    "size": "0×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg center CONTENT/Icon"
+   },
+   "slider/50%": {
+    "size": "112×18",
+    "sizing": "fill/hug",
+    "text": "\"50%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Value=60": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "slider": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align max/center",
+    "padding": "0 16=PADDING/16 0 0=PADDING/none",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "slider/fill": {
+    "size": "142×32",
+    "sizing": "fill/fill",
+    "layout": "row align max/center",
+    "padding": "0 2=PADDING/2 0 0",
+    "gap": "107",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "10/0/0/10=10"
+   },
+   "slider/fill/drag-handle": {
+    "size": "2×32",
+    "sizing": "fixed/fill",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "slider/fill/drag-handle/dragHandle": {
+    "size": "0×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg center CONTENT/Icon"
+   },
+   "slider/60%": {
+    "size": "82×18",
+    "sizing": "fixed/hug",
+    "text": "\"60%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Value=70": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "slider": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align max/center",
+    "padding": "0 16=PADDING/16 0 0=PADDING/none",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "slider/fill": {
+    "size": "165×32",
+    "sizing": "fill/fill",
+    "layout": "row align max/center",
+    "padding": "0 2=PADDING/2 0 0",
+    "gap": "107",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "10/0/0/10=10"
+   },
+   "slider/fill/drag-handle": {
+    "size": "2×32",
+    "sizing": "fixed/fill",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "slider/fill/drag-handle/dragHandle": {
+    "size": "0×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg center CONTENT/Icon"
+   },
+   "slider/70%": {
+    "size": "59×18",
+    "sizing": "fixed/hug",
+    "text": "\"70%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Value=80": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "slider": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align max/center",
+    "padding": "0 16=PADDING/16 0 0=PADDING/none",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "slider/fill": {
+    "size": "182×32",
+    "sizing": "fill/fixed",
+    "layout": "row align max/center",
+    "padding": "0 2=PADDING/2 0 0",
+    "gap": "107",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "10/0/0/10=10"
+   },
+   "slider/fill/drag-handle": {
+    "size": "2×32",
+    "sizing": "fixed/fill",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "slider/fill/drag-handle/dragHandle": {
+    "size": "0×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg center CONTENT/Icon"
+   },
+   "slider/80%": {
+    "size": "42×18",
+    "sizing": "fixed/hug",
+    "text": "\"80%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Value=90": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "slider": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align max/center",
+    "padding": "0 16=PADDING/16 0 0=PADDING/none",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "slider/fill": {
+    "size": "224×32",
+    "sizing": "fixed/fill",
+    "layout": "row align max/center",
+    "padding": "0 2=PADDING/2 0 0",
+    "gap": "107",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "10/0/0/10=10"
+   },
+   "slider/fill/drag-handle": {
+    "size": "2×32",
+    "sizing": "fixed/fill",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "slider/fill/drag-handle/dragHandle": {
+    "size": "0×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg center CONTENT/Icon"
+   },
+   "slider/90%": {
+    "size": "22×18",
+    "sizing": "fixed/fixed",
+    "text": "\"90%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Value=100": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "column align center/max",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "slider": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align max/center",
+    "padding": "0 16=PADDING/16 0 0=PADDING/none",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "slider/20%": {
+    "size": "240×32",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "10=10"
+   },
+   "slider/dragHandle": {
+    "size": "0×16",
+    "sizing": "fixed/fixed",
+    "stroke": "2=lg center CONTENT/Icon"
+   },
+   "slider/100%": {
+    "size": "224×18",
+    "sizing": "fill/hug",
+    "text": "\"100%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  }
+ }
+}

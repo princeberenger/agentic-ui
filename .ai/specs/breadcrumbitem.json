@@ -1,0 +1,379 @@
+{
+ "id": "549:91",
+ "name": "BreadcrumbItem",
+ "props": {
+  "Icon": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "❖ Icon": {
+   "type": "INSTANCE_SWAP",
+   "default": "179:12822"
+  },
+  "↩ Text": {
+   "type": "TEXT",
+   "default": "LABEL"
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "overflow"
+   ]
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "current",
+    "default",
+    "hover",
+    "selected"
+   ]
+  }
+ },
+ "variants": {
+  "Type=default, State=default": {
+   "(root)": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "sm × sm",
+    "instance": "Icons / Folder"
+   },
+   "icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "LABEL": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"LABEL\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Type=default, State=hover": {
+   "(root)": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "sm × sm",
+    "instance": "Icons / Folder"
+   },
+   "icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "LABEL": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"LABEL\"",
+    "font": "SYSTEM/Label/md/underline · Departure Mono 400 11/18 ls 0.3 upper underline align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Regular, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Type=default, State=current": {
+   "(root)": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "sm × sm",
+    "instance": "Icons / Folder"
+   },
+   "icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "LABEL": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"LABEL\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Type=overflow, State=default": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "4=4"
+   },
+   "overflow-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "sm × sm",
+    "instance": "Icons / Overflow-menu--horizontal"
+   },
+   "overflow-icon/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=overflow, State=selected": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "4=4",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "1 outside BORDER/Strong",
+    "radius": "4=4"
+   },
+   "overflow-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "sm × sm",
+    "instance": "Icons / Overflow-menu--horizontal"
+   },
+   "overflow-icon/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Menu": {
+    "size": "128×78",
+    "sizing": "fixed/hug",
+    "minWidth": "128",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "stroke": "1=default outside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Shadows/elevation2"
+   },
+   "Menu/_Menu list item": {
+    "size": "160×27",
+    "sizing": "fill/hug",
+    "minWidth": "160=160px (10rem) (spacing-13)",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary"
+   },
+   "Menu/_Menu list item/Spacer --top": {
+    "size": "160×4",
+    "sizing": "fill/fixed"
+   },
+   "Menu/_Menu list item/Content": {
+    "size": "160×23",
+    "sizing": "fill/hug",
+    "minWidth": "160",
+    "maxWidth": "288",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8=8px (0_5rem) (spacing-03)"
+   },
+   "Menu/_Menu list item/Content/Text overflow + Menu style": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16"
+   },
+   "Menu/_Menu list item/Content/Text overflow + Menu style/Text overflow": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Menu/_Menu list item/Content/Text overflow + Menu style/Text overflow/Dashboard": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "text": "\"Dashboard\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Menu/_Menu list item#2": {
+    "size": "160×24",
+    "sizing": "fill/hug",
+    "minWidth": "160=160px (10rem) (spacing-13)",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary"
+   },
+   "Menu/_Menu list item#2/Content": {
+    "size": "160×23",
+    "sizing": "fill/hug",
+    "minWidth": "160",
+    "maxWidth": "288",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8=8px (0_5rem) (spacing-03)"
+   },
+   "Menu/_Menu list item#2/Content/Text overflow + Menu style": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16"
+   },
+   "Menu/_Menu list item#2/Content/Text overflow + Menu style/Text overflow": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Menu/_Menu list item#2/Content/Text overflow + Menu style/Text overflow/Spacer": {
+    "size": "24×14",
+    "sizing": "fixed/fixed",
+    "fill": "Transparent",
+    "hidden": "true"
+   },
+   "Menu/_Menu list item#2/Content/Text overflow + Menu style/Text overflow/Settings": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "text": "\"Settings\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Menu/_Menu list item#2/Content/Text overflow + Menu style/Keyboard shortcut": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=0px (0rem) (spacing-00)",
+    "gap": "0",
+    "hidden": "true",
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=false, Show Letter 1=true, Icon 1=Mac--command, Show Icon 2=false, Show Icon 3=false, Show Icon 1=true"
+   },
+   "Menu/_Menu list item#2/Content/Text overflow + Menu style/Keyboard shortcut/Icon/Vector": {
+    "fill": "?f99f584cf029342264de040ee9b4d2cbcba080f4/143002:256"
+   },
+   "Menu/_Menu list item#2/Content/Text overflow + Menu style/Keyboard shortcut/X": {
+    "color": "?88eec31471f1e5f49e6e418dd01e0ba5c39b3bdf/143002:263"
+   },
+   "Menu/_Menu list item#2/Content/Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Checkmark"
+   },
+   "Menu/_Menu list item#2/Content/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Menu/_Menu list item#3": {
+    "size": "160×27",
+    "sizing": "fill/hug",
+    "minWidth": "160=160px (10rem) (spacing-13)",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary"
+   },
+   "Menu/_Menu list item#3/Content": {
+    "size": "160×23",
+    "sizing": "fill/hug",
+    "minWidth": "160",
+    "maxWidth": "288",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8=8px (0_5rem) (spacing-03)"
+   },
+   "Menu/_Menu list item#3/Content/Text overflow + Menu style": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16"
+   },
+   "Menu/_Menu list item#3/Content/Text overflow + Menu style/Text overflow": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Menu/_Menu list item#3/Content/Text overflow + Menu style/Text overflow/Spacer": {
+    "size": "24×14",
+    "sizing": "fixed/fixed",
+    "fill": "Transparent",
+    "hidden": "true"
+   },
+   "Menu/_Menu list item#3/Content/Text overflow + Menu style/Text overflow/Admin": {
+    "size": "144×15",
+    "sizing": "fill/hug",
+    "text": "\"Admin\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Menu/_Menu list item#3/Content/Text overflow + Menu style/Keyboard shortcut": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=0px (0rem) (spacing-00)",
+    "gap": "0",
+    "hidden": "true",
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=false, Show Letter 1=true, Icon 1=Mac--command, Show Icon 2=false, Show Icon 3=false, Show Icon 1=true"
+   },
+   "Menu/_Menu list item#3/Content/Text overflow + Menu style/Keyboard shortcut/Icon/Vector": {
+    "fill": "?f99f584cf029342264de040ee9b4d2cbcba080f4/143002:256"
+   },
+   "Menu/_Menu list item#3/Content/Text overflow + Menu style/Keyboard shortcut/X": {
+    "color": "?88eec31471f1e5f49e6e418dd01e0ba5c39b3bdf/143002:263"
+   },
+   "Menu/_Menu list item#3/Content/Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Checkmark"
+   },
+   "Menu/_Menu list item#3/Content/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Menu/_Menu list item#3/Spacer --bottom": {
+    "size": "160×4",
+    "sizing": "fill/fixed"
+   }
+  },
+  "Type=overflow, State=hover": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "4=4",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "4=4"
+   },
+   "overflow-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "sm × sm",
+    "instance": "Icons / Overflow-menu--horizontal"
+   },
+   "overflow-icon/icon-color": {
+    "fill": "CONTENT/Secondary"
+   }
+  }
+ }
+}

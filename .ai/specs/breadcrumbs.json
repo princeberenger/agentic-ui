@@ -1,0 +1,356 @@
+{
+ "id": "549:163",
+ "name": "Breadcrumbs",
+ "props": {
+  "Items": {
+   "type": "VARIANT",
+   "default": "2",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ]
+  }
+ },
+ "variants": {
+  "Items=2": {
+   "(root)": {
+    "size": "98×20",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "BreadcrumbItem": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=default",
+    "props": "↩ Text=\"LABEL\", ❖ Icon=Icons / Folder, Icon=false"
+   },
+   "link-separator": {
+    "size": "20×20",
+    "sizing": "hug/hug",
+    "minWidth": "20",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "0=none"
+   },
+   "link-separator//": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"/\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Disabled"
+   },
+   "BreadcrumbItem#2": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=current",
+    "props": "❖ Icon=Icons / Folder, ↩ Text=\"LABEL\", Icon=false"
+   }
+  },
+  "Items=3": {
+   "(root)": {
+    "size": "168×20",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "BreadcrumbItem": {
+    "size": "40×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=default",
+    "props": "↩ Text=\"LABEL\", ❖ Icon=Icons / Folder, Icon=false"
+   },
+   "link-separator": {
+    "size": "20×20",
+    "sizing": "hug/hug",
+    "minWidth": "20",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "0=none"
+   },
+   "link-separator//": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"/\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Disabled"
+   },
+   "BreadcrumbItem#2": {
+    "size": "40×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=default",
+    "props": "↩ Text=\"LABEL\", ❖ Icon=Icons / Folder, Icon=false"
+   },
+   "link-separator#2": {
+    "size": "20×20",
+    "sizing": "hug/hug",
+    "minWidth": "20",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "0=none"
+   },
+   "link-separator#2//": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"/\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Disabled"
+   },
+   "BreadcrumbItem#3": {
+    "size": "40×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=current",
+    "props": "❖ Icon=Icons / Folder, ↩ Text=\"LABEL\", Icon=false"
+   }
+  },
+  "Items=4": {
+   "(root)": {
+    "size": "232×20",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "BreadcrumbItem": {
+    "size": "40×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=default",
+    "props": "↩ Text=\"LABEL\", ❖ Icon=Icons / Folder, Icon=false"
+   },
+   "link-separator": {
+    "size": "20×20",
+    "sizing": "hug/hug",
+    "minWidth": "20",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "0=none"
+   },
+   "link-separator//": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"/\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Disabled"
+   },
+   "BreadcrumbItem#2": {
+    "size": "40×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=default",
+    "props": "↩ Text=\"LABEL\", ❖ Icon=Icons / Folder, Icon=false"
+   },
+   "link-separator#2": {
+    "size": "20×20",
+    "sizing": "hug/hug",
+    "minWidth": "20",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "0=none"
+   },
+   "link-separator#2//": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"/\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Disabled"
+   },
+   "BreadcrumbItem#3": {
+    "size": "40×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=default",
+    "props": "↩ Text=\"LABEL\", ❖ Icon=Icons / Folder, Icon=false"
+   },
+   "link-separator#3": {
+    "size": "20×20",
+    "sizing": "hug/hug",
+    "minWidth": "20",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "0=none"
+   },
+   "link-separator#3//": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"/\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Disabled"
+   },
+   "BreadcrumbItem#4": {
+    "size": "40×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=current",
+    "props": "❖ Icon=Icons / Folder, ↩ Text=\"LABEL\", Icon=false"
+   }
+  },
+  "Items=5": {
+   "(root)": {
+    "size": "294×20",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "link-separator": {
+    "size": "20×20",
+    "sizing": "hug/hug",
+    "minWidth": "20",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "0=none"
+   },
+   "link-separator/<": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"<\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Disabled"
+   },
+   "BreadcrumbItem": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "4=4",
+    "instance": "BreadcrumbItem › Type=overflow, State=default",
+    "props": "↩ Text=\"LABEL\", ❖ Icon=Icons / Folder, Icon=true"
+   },
+   "link-separator#2": {
+    "size": "20×20",
+    "sizing": "hug/hug",
+    "minWidth": "20",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "0=none"
+   },
+   "link-separator#2//": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"/\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Disabled"
+   },
+   "BreadcrumbItem#2": {
+    "size": "40×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=default",
+    "props": "↩ Text=\"LABEL\", ❖ Icon=Icons / Folder, Icon=false"
+   },
+   "link-separator#3": {
+    "size": "20×20",
+    "sizing": "hug/hug",
+    "minWidth": "20",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "0=none"
+   },
+   "link-separator#3//": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"/\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Disabled"
+   },
+   "BreadcrumbItem#3": {
+    "size": "40×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=default",
+    "props": "↩ Text=\"LABEL\", ❖ Icon=Icons / Folder, Icon=false"
+   },
+   "link-separator#4": {
+    "size": "20×20",
+    "sizing": "hug/hug",
+    "minWidth": "20",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "0=none"
+   },
+   "link-separator#4//": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"/\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Disabled"
+   },
+   "BreadcrumbItem#4": {
+    "size": "40×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=default",
+    "props": "↩ Text=\"LABEL\", ❖ Icon=Icons / Folder, Icon=false"
+   },
+   "link-separator#5": {
+    "size": "20×20",
+    "sizing": "hug/hug",
+    "minWidth": "20",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "0=none"
+   },
+   "link-separator#5//": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"/\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Disabled"
+   },
+   "BreadcrumbItem#5": {
+    "size": "40×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8",
+    "instance": "BreadcrumbItem › Type=default, State=default",
+    "props": "↩ Text=\"LABEL\", ❖ Icon=Icons / Folder, Icon=false"
+   }
+  }
+ }
+}

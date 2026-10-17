@@ -1,0 +1,118 @@
+{
+ "id": "4096:6952",
+ "name": "Progress - Bars (10)",
+ "props": {
+  "Filled": {
+   "type": "VARIANT",
+   "default": "10%",
+   "options": [
+    "10%",
+    "20%",
+    "50%",
+    "70%",
+    "100%"
+   ]
+  }
+ },
+ "variants": {
+  "Filled=10%": {
+   "(root)": {
+    "size": "38×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "2"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "8"
+   }
+  },
+  "Filled=20%": {
+   "(root)": {
+    "size": "38×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "4"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "6"
+   }
+  },
+  "Filled=50%": {
+   "(root)": {
+    "size": "38×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "6"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "4"
+   }
+  },
+  "Filled=70%": {
+   "(root)": {
+    "size": "38×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "8"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "2"
+   }
+  },
+  "Filled=100%": {
+   "(root)": {
+    "size": "38×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "10"
+   }
+  }
+ }
+}
