@@ -35,23 +35,23 @@ export interface ModalProps {
 export function Modal({ open, onClose, title, subtitle, children, actions, closeLabel = 'Close', className }: ModalProps) {
   const titleId = useId();
   const subtitleId = useId();
-  const trap = useFocusTrap({ onEscape: onClose, autoFocus: true, returnFocus: true });
+  const { ref: trapRef, activate, deactivate } = useFocusTrap({ onEscape: onClose, autoFocus: true, returnFocus: true });
   const savedOverflow = useRef('');
 
   // trap the focus and lock the page scroll while open
   useEffect(() => {
     if (!open) {
-      trap.deactivate();
+      deactivate();
       return;
     }
     savedOverflow.current = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    const raf = requestAnimationFrame(() => trap.activate());
+    const raf = requestAnimationFrame(() => activate());
     return () => {
       cancelAnimationFrame(raf);
       document.body.style.overflow = savedOverflow.current;
     };
-  }, [open, trap]);
+  }, [open, activate, deactivate]);
 
   return (
     <AnimatePresence>
@@ -67,7 +67,7 @@ export function Modal({ open, onClose, title, subtitle, children, actions, close
           }}
         >
           <motion.div
-            ref={trap.ref}
+            ref={trapRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
