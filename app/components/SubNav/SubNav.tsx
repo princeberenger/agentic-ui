@@ -11,6 +11,7 @@ const pages = [
   { href: '/avatar', label: 'Avatar' },
   { href: '/checkbox', label: 'Checkbox' },
   { href: '/helper-text', label: 'Helper text' },
+  { href: '/radio', label: 'Radio' },
   { href: '/tabs', label: 'Tabs' },
   { href: '/table', label: 'Table' },
   { href: '/menu', label: 'Menu' },

@@ -47,6 +47,11 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       passent en centré. Le code centre sans description et aligne en haut avec description.
 - [ ] Style=has-background n'a pas de variante disabled. Le code applique les couleurs disabled de no-background.
 
+### Radio button — 124:2977, Radio button with label — 812:4430
+- [ ] Aucun état hover ni focus. Le code a seulement le focus clavier (`--shadow-components-focus`).
+- [ ] Contour 1px et point de 10px sans variable. Le code utilise `--stroke-default` et `--space-10`.
+- [ ] Pas de RadioGroup (label de groupe, helper text) contrairement à Checkbox.
+
 ### HelperText — 4066:7007
 - [ ] Pas de variante warning + sm + solid. Le code applique les couleurs de warning lg solid.
 - [ ] Error solid : texte et icône en `CONTENT/Attention (Light)` en sm, `CONTENT/On Primary` en lg.
