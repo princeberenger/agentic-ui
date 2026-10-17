@@ -1,7 +1,8 @@
 // Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=554-1360
-// Extracted: 2026-10-16
+// Extracted: 2026-10-17
 // Tokens: color-content-icon, color-bg-secondary, radius-2, icon-14, icon-16,
-//         font-label, text-small, leading-tiny, tracking-tight, text-super-tiny, leading-small
+//         font-label, text-small, leading-tiny, tracking-tight, text-super-tiny, leading-small,
+//         tracking-normal, weight-regular
 
 import { type ReactNode } from 'react';
 import { Icon } from '../Icon/Icon';
@@ -38,16 +39,13 @@ function isModifier(key: KeyboardKey): key is KeyboardModifier {
 }
 
 export function KeyboardShortcut({ context = 'shortcut', keys = [], icon, className }: KeyboardShortcutProps) {
-  const rootClass = [styles.root, className ?? ''].filter(Boolean).join(' ');
-
   if (context === 'shortcut') {
+    // Icons and letters are direct children of the frame, no per-key wrapper
     return (
-      <kbd className={rootClass}>
+      <kbd className={[styles.shortcut, className ?? ''].filter(Boolean).join(' ')}>
         {keys.map((key, i) =>
           isModifier(key) ? (
-            <kbd key={i} className={styles.key}>
-              <Icon name={MODIFIERS[key].icon} size={14} alt={MODIFIERS[key].label} />
-            </kbd>
+            <Icon key={i} name={MODIFIERS[key].icon} size={14} alt={MODIFIERS[key].label} />
           ) : (
             <kbd key={i} className={styles.letter}>{key}</kbd>
           ),
@@ -56,9 +54,11 @@ export function KeyboardShortcut({ context = 'shortcut', keys = [], icon, classN
     );
   }
 
+  const frameClass = [styles.frame, className ?? ''].filter(Boolean).join(' ');
+
   if (context === 'slash') {
     return (
-      <kbd className={rootClass}>
+      <kbd className={frameClass}>
         <kbd className={styles.slash}>/</kbd>
       </kbd>
     );
@@ -66,19 +66,15 @@ export function KeyboardShortcut({ context = 'shortcut', keys = [], icon, classN
 
   if (context === 'return') {
     return (
-      <kbd className={rootClass}>
-        <kbd className={`${styles.key} ${styles.return}`}>
-          <Icon name="return" size={16} alt="Return" />
-        </kbd>
+      <kbd className={frameClass}>
+        <Icon name="return" size={16} alt="Return" />
       </kbd>
     );
   }
 
   return (
-    <span className={rootClass} aria-hidden="true">
-      <span className={styles.key}>
-        {context === 'caret' ? <Icon name="caret-right" size={14} /> : icon}
-      </span>
+    <span className={frameClass} aria-hidden="true">
+      {context === 'caret' ? <Icon name="caret-right" size={14} /> : icon}
     </span>
   );
 }

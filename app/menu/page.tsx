@@ -23,11 +23,10 @@ export default function MenuPage() {
         </div>
         <div className={styles.headerRight}>
           <span className={styles.headerLabel}>Launch Demo</span>
-          <div className={styles.kbdGroup}>
-            <kbd className={styles.kbd}>⌥</kbd>
-            <kbd className={styles.kbd}>⌘</kbd>
-            <kbd className={styles.kbd}>↩</kbd>
-          </div>
+          <span className={styles.kbdGroup}>
+            <KeyboardShortcut keys={['option', 'command']} />
+            <KeyboardShortcut context="return" />
+          </span>
         </div>
       </header>
 

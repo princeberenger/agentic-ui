@@ -65,24 +65,7 @@
 
 .kbdGroup {
   display: flex;
-  gap: var(--space-4);
-}
-
-.kbd {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 24px;
-  min-height: 24px;
-  background: var(--color-bg-primary);
-  border: 0.5px solid var(--color-border-subtle);
-  border-radius: var(--radius-xs);
-  font-family: var(--font-body);
-  font-size: var(--text-regular);
-  font-weight: var(--weight-regular);
-  line-height: var(--leading-regular);
-  color: var(--color-content-secondary);
-  padding: var(--space-2);
 }
 
 /* --- Model Selection Menu (top center) --- */

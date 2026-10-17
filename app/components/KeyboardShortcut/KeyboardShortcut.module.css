@@ -3,33 +3,30 @@
    Contexts: shortcut, icon, caret, slash, Return
    ========================================================================== */
 
-.root {
+.shortcut,
+.frame {
   display: inline-flex;
   align-items: center;
-  justify-content: flex-end;
   gap: 0;
   flex-shrink: 0;
+  padding: 0;
   /* CONTENT/Icon; a host (e.g. Button) can override it through --keyboard-shortcut-color */
   color: var(--keyboard-shortcut-color, var(--color-content-icon));
   font: inherit;
 }
 
-.key {
-  display: inline-flex;
-  align-items: center;
+/* Context=shortcut — hugs its keys */
+.shortcut {
+  justify-content: flex-end;
+}
+
+/* Context=caret / icon / slash / Return — fixed 14px frame, icon is a direct child.
+   Icons / Return is 16px and overflows the frame equally on each side (Figma -1,-1). */
+.frame {
   justify-content: center;
   width: var(--icon-14);
   height: var(--icon-14);
-  font: inherit;
-}
-
-/* Icons / Return is 16px centered in the 14px frame (Figma -1,-1 offset) */
-.return {
   overflow: visible;
-}
-
-.return > * {
-  margin: calc((var(--icon-14) - var(--icon-16)) / 2);
 }
 
 /* letters X / Y / Z */
