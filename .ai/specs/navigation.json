@@ -1,0 +1,509 @@
+{
+ "id": "230:699",
+ "name": "Navigation",
+ "props": {
+  "Monitor": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Orchestrate": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Delegate": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Footer ": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "5 Nav links": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "classic",
+   "options": [
+    "classic",
+    "tree"
+   ]
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "open",
+   "options": [
+    "closed",
+    "open"
+   ]
+  }
+ },
+ "variants": {
+  "Type=classic, State=open": {
+   "(root)": {
+    "size": "247×700",
+    "sizing": "fixed/fixed",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "nav-logo": {
+    "size": "155×60",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "24=PADDING/24 24=PADDING/24 16=PADDING/16 24=PADDING/24",
+    "gap": "12=PADDING/12",
+    "instance": "nav-logo › State=open",
+    "props": "Sidebar icon=true, Logo symbol=true"
+   },
+   "nav-logo/nav-logo-container/icon-wrapper": {
+    "gap": "0"
+   },
+   "nav-links-container-links": {
+    "size": "247×574",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "24=PADDING/24 24=PADDING/24 0=PADDING/none 16=PADDING/16",
+    "gap": "4=PADDING/4"
+   },
+   "nav-links-container-links/nav-link": {
+    "size": "115×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "instance": "nav-link › State=default, Type=link",
+    "props": "Icon=Icons / Meter, Section Closed=false, Section Open=false, Show icon=true, Label=\"Dashboard\""
+   },
+   "nav-links-container-links/nav-link#2": {
+    "size": "90×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "instance": "nav-link › State=default, Type=link",
+    "props": "Section Closed=false, Section Open=false, Show icon=true, Label=\"Events\", Icon=icons / Event--schedule"
+   },
+   "nav-links-container-links/nav-link#2/icons / Event--schedule/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "nav-links-container-links/nav-link#3": {
+    "size": "90×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "instance": "nav-link › State=default, Type=link",
+    "props": "Section Closed=false, Section Open=false, Show icon=true, Label=\"Agents\", Icon=Icons / Code"
+   },
+   "nav-links-container-links/nav-link#3/Icons / Code/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "nav-links-container-links/nav-link#4": {
+    "size": "115×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "instance": "nav-link › State=default, Type=link",
+    "props": "Section Closed=false, Section Open=false, Show icon=true, Label=\"Playbooks\", Icon=Icons / Play"
+   },
+   "nav-links-container-links/nav-link#4/Icons / Play/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "nav-links-container-links/nav-link#5": {
+    "size": "115×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "instance": "nav-link › State=default, Type=link",
+    "props": "Section Closed=false, Section Open=false, Show icon=true, Label=\"Campaigns\", Icon=Icons / Money"
+   },
+   "nav-links-container-links/nav-link#5/Icons / Money/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "nav-links-container-links/[run 1]": {
+    "size": "104×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "hidden": "true",
+    "instance": "nav-link › State=default, Type=link",
+    "props": "Icon=Icons / Meter, Section Closed=false, Section Open=false, Show icon=true, Label=\"Link label\"",
+    "count": "9"
+   },
+   "nav-footer": {
+    "size": "247×66",
+    "sizing": "fill/hug",
+    "layout": "row align space_between/center",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0"
+   },
+   "nav-footer/nav-user-settings": {
+    "size": "203×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "nav-user-settings › Property 1=Default"
+   },
+   "nav-footer/nav-user-settings/Icons / Overflow-menu--vertical/icon-arrow": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=tree, State=open": {
+   "(root)": {
+    "size": "247×700",
+    "sizing": "fixed/fixed",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "nav-logo": {
+    "size": "155×60",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "24=PADDING/24 24=PADDING/24 16=PADDING/16 24=PADDING/24",
+    "gap": "12=PADDING/12",
+    "instance": "nav-logo › State=open",
+    "props": "Sidebar icon=true, Logo symbol=true"
+   },
+   "nav-logo/container/icon-wrapper": {
+    "gap": "0"
+   },
+   "nav-logo/container/icon-wrapper/Icons/ Menu --open/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "nav-container": {
+    "size": "247×574",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "24=PADDING/24 24=PADDING/24 0=PADDING/none 16=PADDING/16",
+    "gap": "16=PADDING/16"
+   },
+   "nav-container/nav-section": {
+    "size": "207×133",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "nav-container/nav-section/nav-link": {
+    "size": "98×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "instance": "nav-link › State=default, Type=link",
+    "props": "Icon=Icons / Meter, Section Closed=false, Section Open=false, Show icon=true, Label=\"Monitor\""
+   },
+   "nav-container/nav-section/nav-sub-links-wrapper": {
+    "size": "207×97",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 16=PADDING/16",
+    "gap": "0=PADDING/none"
+   },
+   "nav-container/nav-section/nav-sub-links-wrapper/container": {
+    "size": "191×97",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 16=PADDING/16",
+    "gap": "2=PADDING/2",
+    "stroke": "0/0/0/1 inside BORDER/Subtle"
+   },
+   "nav-container/nav-section/nav-sub-links-wrapper/container/nav-sub-link": {
+    "size": "91×31",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "nav-sub-link › State=default",
+    "props": "Sub-link Label=\"Dashboard\""
+   },
+   "nav-container/nav-section/nav-sub-links-wrapper/container/nav-sub-link#2": {
+    "size": "116×31",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "nav-sub-link › State=default",
+    "props": "Sub-link Label=\"Call history\""
+   },
+   "nav-container/nav-section/nav-sub-links-wrapper/container/nav-sub-link#2/Link label": {
+    "text": "\"Call history\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper"
+   },
+   "nav-container/nav-section/nav-sub-links-wrapper/container/nav-sub-link#3": {
+    "size": "99×31",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "nav-sub-link › State=default",
+    "props": "Sub-link Label=\"live calls\""
+   },
+   "nav-container/nav-section/nav-sub-links-wrapper/container/nav-sub-link#3/Link label": {
+    "text": "\"live calls\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper"
+   },
+   "nav-container/nav-section/nav-sub-links-wrapper/container/[run 1]": {
+    "size": "119×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "hidden": "true",
+    "instance": "nav-sub-link › State=default",
+    "props": "Sub-link Label=\"Sub-link label\"",
+    "count": "4"
+   },
+   "nav-container/nav-section#2": {
+    "size": "207×133",
+    "sizing": "fill/hug",
+    "layout": "column align max/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "nav-container/nav-section#2/nav-link": {
+    "size": "207×32",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "instance": "nav-link › State=default, Type=link",
+    "props": "Section Closed=false, Section Open=false, Show icon=true, Label=\"orchestrate\", Icon=Icons / Load-balancer--classic"
+   },
+   "nav-container/nav-section#2/nav-link/Icons / Load-balancer--classic/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "nav-container/nav-section#2/nav-link/Section label": {
+    "text": "\"orchestrate\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper"
+   },
+   "nav-container/nav-section#2/nav-links-wrapper": {
+    "size": "199×97",
+    "sizing": "fixed/hug",
+    "layout": "row align space_between/min",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 16=PADDING/16",
+    "gap": "12"
+   },
+   "nav-container/nav-section#2/nav-links-wrapper/container": {
+    "size": "183×97",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 16=PADDING/16",
+    "gap": "2=PADDING/2",
+    "stroke": "0/0/0/1 inside BORDER/Subtle"
+   },
+   "nav-container/nav-section#2/nav-links-wrapper/container/nav-sub-link": {
+    "size": "167×31",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "nav-sub-link › State=active",
+    "props": "Sub-link Label=\"Agents\""
+   },
+   "nav-container/nav-section#2/nav-links-wrapper/container/nav-sub-link#2": {
+    "size": "91×31",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "nav-sub-link › State=default",
+    "props": "Sub-link Label=\"Campaigns\""
+   },
+   "nav-container/nav-section#2/nav-links-wrapper/container/nav-sub-link#2/Link label": {
+    "text": "\"Campaigns\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper"
+   },
+   "nav-container/nav-section#2/nav-links-wrapper/container/nav-sub-link#3": {
+    "size": "91×31",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "nav-sub-link › State=default",
+    "props": "Sub-link Label=\"playbooks\""
+   },
+   "nav-container/nav-section#2/nav-links-wrapper/container/nav-sub-link#3/Link label": {
+    "text": "\"playbooks\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper"
+   },
+   "nav-container/nav-section#2/nav-links-wrapper/container/[run 1]": {
+    "size": "119×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "hidden": "true",
+    "instance": "nav-sub-link › State=default",
+    "props": "Sub-link Label=\"Sub-link label\"",
+    "count": "5"
+   },
+   "nav-container/nav-section#3": {
+    "size": "207×166",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "nav-container/nav-section#3/nav-link": {
+    "size": "107×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "instance": "nav-link › State=default, Type=link",
+    "props": "Section Closed=false, Section Open=false, Show icon=true, Label=\"Delegate\", Icon=Icons / Deploy"
+   },
+   "nav-container/nav-section#3/nav-link/Icons / Deploy/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "nav-container/nav-section#3/nav-links-wrapper": {
+    "size": "207×130",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 16=PADDING/16",
+    "gap": "8"
+   },
+   "nav-container/nav-section#3/nav-links-wrapper/container": {
+    "size": "191×130",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 16=PADDING/16",
+    "gap": "2=PADDING/2",
+    "stroke": "0/0/0/1 inside BORDER/Subtle"
+   },
+   "nav-container/nav-section#3/nav-links-wrapper/container/nav-sub-link": {
+    "size": "124×31",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "nav-sub-link › State=default",
+    "props": "Sub-link Label=\"Phone numbers\""
+   },
+   "nav-container/nav-section#3/nav-links-wrapper/container/nav-sub-link#2": {
+    "size": "124×31",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "nav-sub-link › State=default",
+    "props": "Sub-link Label=\"Voice library\""
+   },
+   "nav-container/nav-section#3/nav-links-wrapper/container/nav-sub-link#3": {
+    "size": "116×31",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "nav-sub-link › State=default",
+    "props": "Sub-link Label=\"Integrations\""
+   },
+   "nav-container/nav-section#3/nav-links-wrapper/container/nav-sub-link#4": {
+    "size": "66×31",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "nav-sub-link › State=default",
+    "props": "Sub-link Label=\"Events\""
+   },
+   "nav-container/nav-section#3/nav-links-wrapper/container/[run 1]": {
+    "size": "119×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "hidden": "true",
+    "instance": "nav-sub-link › State=default",
+    "props": "Sub-link Label=\"Sub-link label\"",
+    "count": "5"
+   },
+   "nav-footer": {
+    "size": "247×66",
+    "sizing": "fill/hug",
+    "layout": "row align space_between/center",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0"
+   },
+   "nav-footer/nav-user-settings": {
+    "size": "203×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "nav-user-settings › Property 1=Default"
+   },
+   "nav-footer/nav-user-settings/Icons / Overflow-menu--vertical/icon-arrow": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=tree, State=closed": {
+   "(root)": {
+    "size": "247×700",
+    "sizing": "fixed/fixed",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "nav-logo": {
+    "size": "247×56",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "16=PADDING/16 24=PADDING/24 16=PADDING/16 24=PADDING/24",
+    "gap": "16=PADDING/16"
+   },
+   "nav-logo/AGENTIC UI LOGO": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24",
+    "layout": "row align center/center",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "instance": "AGENTIC UI LOGO › Variant=Symbol"
+   },
+   "nav-logo/icon-wrapper": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "nav-logo/icon-wrapper/Icons/ Menu --collapsed": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons/ Menu --collapsed"
+   },
+   "nav-logo/icon-wrapper/Icons/ Menu --collapsed/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "nav-logo/icon-wrapper/Icons/ Menu --collapsed/icon/btn": {
+    "stroke": "1=default inside CONTENT/Primary",
+    "radius": "2=PADDING/2"
+   },
+   "nav-logo/icon-wrapper/Icons/ Menu --collapsed/btn": {
+    "fill": "CONTENT/Primary"
+   }
+  }
+ }
+}

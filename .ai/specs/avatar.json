@@ -1,0 +1,3372 @@
+{
+ "id": "179:17313",
+ "name": "Avatar",
+ "props": {
+  "Label (Sm)": {
+   "type": "TEXT",
+   "default": "A"
+  },
+  "Label (Med)": {
+   "type": "TEXT",
+   "default": "AG"
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "agent",
+   "options": [
+    "agent",
+    "initials",
+    "photo"
+   ]
+  },
+  "Size": {
+   "type": "VARIANT",
+   "default": "16",
+   "options": [
+    "16",
+    "20",
+    "24",
+    "32",
+    "40",
+    "48",
+    "56",
+    "64"
+   ]
+  },
+  "Color": {
+   "type": "VARIANT",
+   "default": "gray",
+   "options": [
+    "blue",
+    "gray",
+    "none",
+    "orange",
+    "pink",
+    "purple",
+    "teal"
+   ]
+  }
+ },
+ "variants": {
+  "Type=agent, Size=16, Color=gray": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "16×16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "blurred": {
+    "size": "16×11",
+    "fill": "BACKGROUND/Inverse",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.15
+   },
+   "Mask group": {
+    "size": "16×16"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "16×16",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "15×15"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "15×15"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "10×16",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "4.5×4.5",
+    "fill": "CONTENT/Primary"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "5.27×7.95",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "4.5×4.5",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "5.27×7.95",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "4.5×4.5",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "4.5×4.5",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=20, Color=gray": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "20×20",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "blurred": {
+    "size": "20×15",
+    "fill": "BACKGROUND/Inverse",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.15
+   },
+   "Mask group": {
+    "size": "20×20"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "20×20",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "18.75×18.75"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "18.75×18.75"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "12.5×20",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "5.63×5.63",
+    "fill": "CONTENT/Primary"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "6.59×9.93",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "5.63×5.63",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "6.59×9.93",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "5.63×5.63",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "5.63×5.63",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=24, Color=gray": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "24×24",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "blurred": {
+    "size": "24×17",
+    "fill": "BACKGROUND/Inverse",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.15
+   },
+   "Mask group": {
+    "size": "24×24"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "24×24",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "22.5×22.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "22.5×22.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "15×24",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "6.75×6.75",
+    "fill": "CONTENT/Primary"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "7.91×11.92",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "6.75×6.75",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "7.91×11.92",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "6.75×6.75",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "6.75×6.75",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=32, Color=gray": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "32×32",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "blurred": {
+    "size": "32×23",
+    "fill": "BACKGROUND/Inverse",
+    "effect": "layer_blur 20  (no style)",
+    "opacity": 0.15
+   },
+   "Mask group": {
+    "size": "32×32"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "32×32",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "30×30"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "30×30"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "20×32",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "9×9",
+    "fill": "CONTENT/Primary"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "10.55×15.89",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "9×9",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "10.55×15.89",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "9×9",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "9×9",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=40, Color=gray": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "40×40",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "blurred": {
+    "size": "40×20",
+    "fill": "BACKGROUND/Inverse",
+    "effect": "layer_blur 20  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "40×40"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "40×40",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "37.5×37.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "37.5×37.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "25×40",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "11.25×11.25",
+    "fill": "CONTENT/Primary"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "13.18×19.87",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "11.25×11.25",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "13.18×19.87",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "11.25×11.25",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "11.25×11.25",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=48, Color=gray": {
+   "(root)": {
+    "size": "48×48",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "48×48",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "blurred": {
+    "size": "48×20",
+    "fill": "BACKGROUND/Inverse",
+    "effect": "layer_blur 20  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "48×48"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "48×48",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "45×45"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "45×45"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "30×48",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "13.5×13.5",
+    "fill": "CONTENT/Primary"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "15.82×23.84",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "13.5×13.5",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "15.82×23.84",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "13.5×13.5",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "13.5×13.5",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=56, Color=gray": {
+   "(root)": {
+    "size": "56×56",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "56×56",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "blurred": {
+    "size": "56×20",
+    "fill": "BACKGROUND/Inverse",
+    "effect": "layer_blur 20  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "56×56"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "56×56",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "52.5×52.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "52.5×52.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "35×56",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "15.75×15.75",
+    "fill": "CONTENT/Primary"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "18.46×27.81",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "15.75×15.75",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "18.46×27.81",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "15.75×15.75",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "15.75×15.75",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=64, Color=gray": {
+   "(root)": {
+    "size": "64×64",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "shape": {
+    "size": "64×64",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "blurred": {
+    "size": "64×20",
+    "fill": "BACKGROUND/Inverse",
+    "effect": "layer_blur 20  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "64×64"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "64×64",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "60×60"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "60×60"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "40×64",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "18×18",
+    "fill": "CONTENT/Primary"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "21.09×31.79",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "18×18",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "21.09×31.79",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "18×18",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "18×18",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=16, Color=blue": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "16×16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Accent (Light)"
+   },
+   "blurred": {
+    "size": "16×11",
+    "fill": "BACKGROUND/Accent",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "16×16"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "16×16",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "15×15"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "15×15"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "10×16",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "4.5×4.5",
+    "fill": "BACKGROUND/Accent"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "5.27×7.95",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "4.5×4.5",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "5.27×7.95",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "4.5×4.5",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "4.5×4.5",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=20, Color=blue": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "20×20",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Accent (Light)"
+   },
+   "blurred": {
+    "size": "20×13",
+    "fill": "BACKGROUND/Accent",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "20×20"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "20×20",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "18.75×18.75"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "18.75×18.75"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "12.5×20",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "5.63×5.63",
+    "fill": "BACKGROUND/Accent"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "6.59×9.93",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "5.63×5.63",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "6.59×9.93",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "5.63×5.63",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "5.63×5.63",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=24, Color=blue": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "24×24",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Accent (Light)"
+   },
+   "blurred": {
+    "size": "24×13",
+    "fill": "BACKGROUND/Accent",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "24×24"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "24×24",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "22.5×22.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "22.5×22.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "15×24",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "6.75×6.75",
+    "fill": "BACKGROUND/Accent"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "7.91×11.92",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "6.75×6.75",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "7.91×11.92",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "6.75×6.75",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "6.75×6.75",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=32, Color=blue": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "32×32",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Accent (Light)"
+   },
+   "blurred": {
+    "size": "32×19",
+    "fill": "BACKGROUND/Accent",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "32×32"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "32×32",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "30×30"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "30×30"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "20×32",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "9×9",
+    "fill": "BACKGROUND/Accent"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "10.55×15.89",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "9×9",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "10.55×15.89",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "9×9",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "9×9",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=40, Color=blue": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "40×40",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Accent (Light)"
+   },
+   "blurred": {
+    "size": "40×13",
+    "fill": "BACKGROUND/Accent",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "40×40"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "40×40",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "37.5×37.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "37.5×37.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "25×40",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "11.25×11.25",
+    "fill": "BACKGROUND/Accent"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "13.18×19.87",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "11.25×11.25",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "13.18×19.87",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "11.25×11.25",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "11.25×11.25",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=48, Color=blue": {
+   "(root)": {
+    "size": "48×48",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "48×48",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Accent (Light)"
+   },
+   "blurred": {
+    "size": "48×13",
+    "fill": "BACKGROUND/Accent",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "48×48"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "48×48",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "45×45"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "45×45"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "30×48",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "13.5×13.5",
+    "fill": "BACKGROUND/Accent"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "15.82×23.84",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "13.5×13.5",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "15.82×23.84",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "13.5×13.5",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "13.5×13.5",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=56, Color=blue": {
+   "(root)": {
+    "size": "56×56",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "56×56",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Accent (Light)"
+   },
+   "blurred": {
+    "size": "56×13",
+    "fill": "BACKGROUND/Accent",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "56×56"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "56×56",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "52.5×52.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "52.5×52.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "35×56",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "15.75×15.75",
+    "fill": "BACKGROUND/Accent"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "18.46×27.81",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "15.75×15.75",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "18.46×27.81",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "15.75×15.75",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "15.75×15.75",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=64, Color=blue": {
+   "(root)": {
+    "size": "64×64",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "64×64",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Accent (Light)"
+   },
+   "blurred": {
+    "size": "64×20",
+    "fill": "BACKGROUND/Accent",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "64×64"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "64×64",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "60×60"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "60×60"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "40×64",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "18×18",
+    "fill": "BACKGROUND/Accent"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "21.09×31.79",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "18×18",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "21.09×31.79",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "18×18",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "18×18",
+    "fill": "BACKGROUND/Accent",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=16, Color=purple": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "16×16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Purple (Light)"
+   },
+   "blurred": {
+    "size": "16×13",
+    "fill": "PURPLE/Purple 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "16×16"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "16×16",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "15×15"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "15×15"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "10×16",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "4.5×4.5",
+    "fill": "PURPLE/Purple 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "5.27×7.95",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "4.5×4.5",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "5.27×7.95",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "4.5×4.5",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "4.5×4.5",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=20, Color=purple": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "20×20",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Purple (Light)"
+   },
+   "blurred": {
+    "size": "20×13",
+    "fill": "PURPLE/Purple 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "20×20"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "20×20",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "18.75×18.75"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "18.75×18.75"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "12.5×20",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "5.63×5.63",
+    "fill": "PURPLE/Purple 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "6.59×9.93",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "5.63×5.63",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "6.59×9.93",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "5.63×5.63",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "5.63×5.63",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=24, Color=purple": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "24×24",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Purple (Light)"
+   },
+   "blurred": {
+    "size": "24×13",
+    "fill": "PURPLE/Purple 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "24×24"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "24×24",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "22.5×22.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "22.5×22.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "15×24",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "6.75×6.75",
+    "fill": "PURPLE/Purple 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "7.91×11.92",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "6.75×6.75",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "7.91×11.92",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "6.75×6.75",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "6.75×6.75",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=32, Color=purple": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "32×32",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Purple (Light)"
+   },
+   "blurred": {
+    "size": "32×13",
+    "fill": "PURPLE/Purple 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "32×32"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "32×32",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "30×30"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "30×30"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "20×32",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "9×9",
+    "fill": "PURPLE/Purple 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "10.55×15.89",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "9×9",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "10.55×15.89",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "9×9",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "9×9",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=40, Color=purple": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "40×40",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Purple (Light)"
+   },
+   "blurred": {
+    "size": "40×13",
+    "fill": "PURPLE/Purple 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "40×40"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "40×40",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "37.5×37.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "37.5×37.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "25×40",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "11.25×11.25",
+    "fill": "PURPLE/Purple 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "13.18×19.87",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "11.25×11.25",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "13.18×19.87",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "11.25×11.25",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "11.25×11.25",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=48, Color=purple": {
+   "(root)": {
+    "size": "48×48",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "48×48",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Purple (Light)"
+   },
+   "blurred": {
+    "size": "48×13",
+    "fill": "PURPLE/Purple 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "48×48"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "48×48",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "45×45"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "45×45"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "30×48",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "13.5×13.5",
+    "fill": "PURPLE/Purple 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "15.82×23.84",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "13.5×13.5",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "15.82×23.84",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "13.5×13.5",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "13.5×13.5",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=56, Color=purple": {
+   "(root)": {
+    "size": "56×56",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "56×56",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Purple (Light)"
+   },
+   "blurred": {
+    "size": "56×13",
+    "fill": "PURPLE/Purple 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "56×56"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "56×56",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "52.5×52.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "52.5×52.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "35×56",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "15.75×15.75",
+    "fill": "PURPLE/Purple 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "18.46×27.81",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "15.75×15.75",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "18.46×27.81",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "15.75×15.75",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "15.75×15.75",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=64, Color=purple": {
+   "(root)": {
+    "size": "64×64",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "64×64",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Purple (Light)"
+   },
+   "blurred": {
+    "size": "64×20",
+    "fill": "PURPLE/Purple 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "64×64"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "64×64",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "60×60"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "60×60"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "40×64",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "18×18",
+    "fill": "PURPLE/Purple 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "21.09×31.79",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "18×18",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "21.09×31.79",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "18×18",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "18×18",
+    "fill": "PURPLE/Purple 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=16, Color=orange": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "16×16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Orange (Light)"
+   },
+   "blurred": {
+    "size": "16×13",
+    "fill": "ORANGE/Orange 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "16×16"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "16×16",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "15×15"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "15×15"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "10×16",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "4.5×4.5",
+    "fill": "ORANGE/Orange 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "5.27×7.95",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "4.5×4.5",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "5.27×7.95",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "4.5×4.5",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "4.5×4.5",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=20, Color=orange": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "20×20",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Orange (Light)"
+   },
+   "blurred": {
+    "size": "20×13",
+    "fill": "ORANGE/Orange 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "20×20"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "20×20",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "18.75×18.75"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "18.75×18.75"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "12.5×20",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "5.63×5.63",
+    "fill": "ORANGE/Orange 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "6.59×9.93",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "5.63×5.63",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "6.59×9.93",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "5.63×5.63",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "5.63×5.63",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=24, Color=orange": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "24×24",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Orange (Light)"
+   },
+   "blurred": {
+    "size": "24×13",
+    "fill": "ORANGE/Orange 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "24×24"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "24×24",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "22.5×22.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "22.5×22.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "15×24",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "6.75×6.75",
+    "fill": "ORANGE/Orange 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "7.91×11.92",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "6.75×6.75",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "7.91×11.92",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "6.75×6.75",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "6.75×6.75",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=32, Color=orange": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "32×32",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Orange (Light)"
+   },
+   "blurred": {
+    "size": "32×13",
+    "fill": "ORANGE/Orange 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "32×32"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "32×32",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "30×30"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "30×30"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "20×32",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "9×9",
+    "fill": "ORANGE/Orange 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "10.55×15.89",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "9×9",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "10.55×15.89",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "9×9",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "9×9",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=40, Color=orange": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "40×40",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Orange (Light)"
+   },
+   "blurred": {
+    "size": "40×13",
+    "fill": "ORANGE/Orange 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "40×40"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "40×40",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "37.5×37.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "37.5×37.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "25×40",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "11.25×11.25",
+    "fill": "ORANGE/Orange 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "13.18×19.87",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "11.25×11.25",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "13.18×19.87",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "11.25×11.25",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "11.25×11.25",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=48, Color=orange": {
+   "(root)": {
+    "size": "48×48",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "48×48",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Orange (Light)"
+   },
+   "blurred": {
+    "size": "48×13",
+    "fill": "ORANGE/Orange 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "48×48"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "48×48",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "45×45"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "45×45"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "30×48",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "13.5×13.5",
+    "fill": "ORANGE/Orange 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "15.82×23.84",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "13.5×13.5",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "15.82×23.84",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "13.5×13.5",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "13.5×13.5",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=56, Color=orange": {
+   "(root)": {
+    "size": "56×56",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "56×56",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Orange (Light)"
+   },
+   "blurred": {
+    "size": "56×13",
+    "fill": "ORANGE/Orange 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "56×56"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "56×56",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "52.5×52.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "52.5×52.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "35×56",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "15.75×15.75",
+    "fill": "ORANGE/Orange 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "18.46×27.81",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "15.75×15.75",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "18.46×27.81",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "15.75×15.75",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "15.75×15.75",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=64, Color=orange": {
+   "(root)": {
+    "size": "64×64",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "64×64",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Orange (Light)"
+   },
+   "blurred": {
+    "size": "64×20",
+    "fill": "ORANGE/Orange 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.3
+   },
+   "Mask group": {
+    "size": "64×64"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "64×64",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "60×60"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "60×60"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "40×64",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "18×18",
+    "fill": "ORANGE/Orange 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "21.09×31.79",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "18×18",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "21.09×31.79",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "18×18",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "18×18",
+    "fill": "ORANGE/Orange 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=16, Color=teal": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "16×16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Teal (Light)"
+   },
+   "blurred": {
+    "size": "16×15",
+    "fill": "TEAL/Teal 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "16×16"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "16×16",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "15×15"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "15×15"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "10×16",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "4.5×4.5",
+    "fill": "TEAL/Teal 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "5.27×7.95",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "4.5×4.5",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "5.27×7.95",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "4.5×4.5",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "4.5×4.5",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=20, Color=teal": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "20×20",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Teal (Light)"
+   },
+   "blurred": {
+    "size": "20×20",
+    "fill": "TEAL/Teal 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "20×20"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "20×20",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "18.75×18.75"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "18.75×18.75"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "12.5×20",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "5.63×5.63",
+    "fill": "TEAL/Teal 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "6.59×9.93",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "5.63×5.63",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "6.59×9.93",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "5.63×5.63",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "5.63×5.63",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=24, Color=teal": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "24×24",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Teal (Light)"
+   },
+   "blurred": {
+    "size": "24×20",
+    "fill": "TEAL/Teal 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "24×24"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "24×24",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "22.5×22.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "22.5×22.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "15×24",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "6.75×6.75",
+    "fill": "TEAL/Teal 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "7.91×11.92",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "6.75×6.75",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "7.91×11.92",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "6.75×6.75",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "6.75×6.75",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=32, Color=teal": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "32×32",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Teal (Light)"
+   },
+   "blurred": {
+    "size": "32×20",
+    "fill": "TEAL/Teal 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "32×32"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "32×32",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "30×30"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "30×30"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "20×32",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "9×9",
+    "fill": "TEAL/Teal 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "10.55×15.89",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "9×9",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "10.55×15.89",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "9×9",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "9×9",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=40, Color=teal": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "40×40",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Teal (Light)"
+   },
+   "blurred": {
+    "size": "40×20",
+    "fill": "TEAL/Teal 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "40×40"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "40×40",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "37.5×37.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "37.5×37.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "25×40",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "11.25×11.25",
+    "fill": "TEAL/Teal 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "13.18×19.87",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "11.25×11.25",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "13.18×19.87",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "11.25×11.25",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "11.25×11.25",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=48, Color=teal": {
+   "(root)": {
+    "size": "48×48",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "48×48",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Teal (Light)"
+   },
+   "blurred": {
+    "size": "46×20",
+    "fill": "TEAL/Teal 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "48×48"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "48×48",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "45×45"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "45×45"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "30×48",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "13.5×13.5",
+    "fill": "TEAL/Teal 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "15.82×23.84",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "13.5×13.5",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "15.82×23.84",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "13.5×13.5",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "13.5×13.5",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=56, Color=teal": {
+   "(root)": {
+    "size": "56×56",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "56×56",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Teal (Light)"
+   },
+   "blurred": {
+    "size": "56×20",
+    "fill": "TEAL/Teal 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "56×56"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "56×56",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "52.5×52.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "52.5×52.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "35×56",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "15.75×15.75",
+    "fill": "TEAL/Teal 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "18.46×27.81",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "15.75×15.75",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "18.46×27.81",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "15.75×15.75",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "15.75×15.75",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=64, Color=teal": {
+   "(root)": {
+    "size": "64×64",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "64×64",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Teal (Light)"
+   },
+   "blurred": {
+    "size": "64×20",
+    "fill": "TEAL/Teal 400",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "64×64"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "64×64",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "60×60"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "60×60"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "40×64",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "18×18",
+    "fill": "TEAL/Teal 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "21.09×31.79",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "18×18",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "21.09×31.79",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "18×18",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "18×18",
+    "fill": "TEAL/Teal 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=16, Color=pink": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "16×16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Pink (Light)"
+   },
+   "blurred": {
+    "size": "16×13",
+    "fill": "PINK/Pink 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "16×16"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "16×16",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "15×15"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "15×15"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "10×16",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "4.5×4.5",
+    "fill": "PINK/Pink 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "5.27×7.95",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "4.5×4.5",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "5.27×7.95",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "4.5×4.5",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "4.5×4.5",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=20, Color=pink": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "20×20",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Pink (Light)"
+   },
+   "blurred": {
+    "size": "19×13",
+    "fill": "PINK/Pink 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "20×20"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "20×20",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "18.75×18.75"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "18.75×18.75"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "12.5×20",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "5.63×5.63",
+    "fill": "PINK/Pink 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "6.59×9.93",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "5.63×5.63",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "6.59×9.93",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "5.63×5.63",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "5.63×5.63",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=24, Color=pink": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "24×24",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Pink (Light)"
+   },
+   "blurred": {
+    "size": "24×13",
+    "fill": "PINK/Pink 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "24×24"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "24×24",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "22.5×22.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "22.5×22.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "15×24",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "6.75×6.75",
+    "fill": "PINK/Pink 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "7.91×11.92",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "6.75×6.75",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "7.91×11.92",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "6.75×6.75",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "6.75×6.75",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=32, Color=pink": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "32×32",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Pink (Light)"
+   },
+   "blurred": {
+    "size": "32×16",
+    "fill": "PINK/Pink 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "32×32"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "32×32",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "30×30"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "30×30"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "20×32",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "9×9",
+    "fill": "PINK/Pink 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "10.55×15.89",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "9×9",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "10.55×15.89",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "9×9",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "9×9",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=40, Color=pink": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "40×40",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Pink (Light)"
+   },
+   "blurred": {
+    "size": "40×16",
+    "fill": "PINK/Pink 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "40×40"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "40×40",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "37.5×37.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "37.5×37.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "25×40",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "11.25×11.25",
+    "fill": "PINK/Pink 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "13.18×19.87",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "11.25×11.25",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "13.18×19.87",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "11.25×11.25",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "11.25×11.25",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=48, Color=pink": {
+   "(root)": {
+    "size": "48×48",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "48×48",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Pink (Light)"
+   },
+   "blurred": {
+    "size": "48×15",
+    "fill": "PINK/Pink 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "48×48"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "48×48",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "45×45"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "45×45"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "30×48",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "13.5×13.5",
+    "fill": "PINK/Pink 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "15.82×23.84",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "13.5×13.5",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "15.82×23.84",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "13.5×13.5",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "13.5×13.5",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=56, Color=pink": {
+   "(root)": {
+    "size": "56×56",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "56×56",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Pink (Light)"
+   },
+   "blurred": {
+    "size": "56×17",
+    "fill": "PINK/Pink 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "56×56"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "56×56",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "52.5×52.5"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "52.5×52.5"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "35×56",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "15.75×15.75",
+    "fill": "PINK/Pink 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "18.46×27.81",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "15.75×15.75",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "18.46×27.81",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "15.75×15.75",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "15.75×15.75",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=agent, Size=64, Color=pink": {
+   "(root)": {
+    "size": "64×64",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "Ellipse 325": {
+    "size": "64×64",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Pink (Light)"
+   },
+   "blurred": {
+    "size": "64×20",
+    "fill": "PINK/Pink 500",
+    "effect": "layer_blur 10  (no style)",
+    "opacity": 0.2
+   },
+   "Mask group": {
+    "size": "64×64"
+   },
+   "Mask group/Ellipse 326": {
+    "size": "64×64",
+    "fill": "gradient_linear(#000000 18%, #000000 49%, #ffffff 100%) from 0.62,0 to 0.17,1"
+   },
+   "Mask group/Mask group": {
+    "size": "60×60"
+   },
+   "Mask group/Mask group/user-3-fill 1": {
+    "size": "60×60"
+   },
+   "Mask group/Mask group/user-3-fill 1/Vector": {
+    "size": "40×64",
+    "fill": "#000000 (no variable)"
+   },
+   "Mask group/Mask group/Rectangle 2955": {
+    "size": "18×18",
+    "fill": "PINK/Pink 500"
+   },
+   "Mask group/Mask group/Rectangle 2959": {
+    "size": "21.09×31.79",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.7
+   },
+   "Mask group/Mask group/Rectangle 2956": {
+    "size": "18×18",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   },
+   "Mask group/Mask group/Rectangle 2960": {
+    "size": "21.09×31.79",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.25
+   },
+   "Mask group/Mask group/Rectangle 2957": {
+    "size": "18×18",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.2
+   },
+   "Mask group/Mask group/Rectangle 2958": {
+    "size": "18×18",
+    "fill": "PINK/Pink 500",
+    "opacity": 0.5
+   }
+  },
+  "Type=photo, Size=16, Color=none": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "16×16",
+    "fill": "image",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   }
+  },
+  "Type=photo, Size=20, Color=none": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "20×20",
+    "fill": "image",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   }
+  },
+  "Type=photo, Size=24, Color=none": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "24×24",
+    "fill": "image",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   }
+  },
+  "Type=photo, Size=32, Color=none": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "32×32",
+    "fill": "image",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   }
+  },
+  "Type=photo, Size=40, Color=none": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "40×40",
+    "fill": "image",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   }
+  },
+  "Type=photo, Size=48, Color=none": {
+   "(root)": {
+    "size": "48×48",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "48×48",
+    "fill": "image",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   }
+  },
+  "Type=photo, Size=56, Color=none": {
+   "(root)": {
+    "size": "56×56",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "56×56",
+    "fill": "image",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   }
+  },
+  "Type=photo, Size=64, Color=none": {
+   "(root)": {
+    "size": "64×64",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "64×64",
+    "fill": "image",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   }
+  },
+  "Type=initials, Size=16, Color=none": {
+   "(root)": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "16×16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "A": {
+    "size": "14×14",
+    "text": "\"A\"",
+    "font": "Departure Mono 400 11/15 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Regular, line-height/Tiny Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Type=initials, Size=20, Color=none": {
+   "(root)": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "20×20",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "A": {
+    "size": "18×18",
+    "text": "\"A\"",
+    "font": "Departure Mono 400 11/15 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Regular, line-height/Tiny Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Type=initials, Size=24, Color=none": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "24×24",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "AG": {
+    "size": "21.6×21.6",
+    "text": "\"AG\"",
+    "font": "Departure Mono 400 11/15 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Regular, line-height/Tiny Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Type=initials, Size=32, Color=none": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "32×32",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "AG": {
+    "size": "28.8×28.8",
+    "text": "\"AG\"",
+    "font": "Departure Mono 400 11/15 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Regular, line-height/Tiny Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Type=initials, Size=40, Color=none": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "40×40",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "AG": {
+    "size": "36×36",
+    "text": "\"AG\"",
+    "font": "Departure Mono 400 11/15 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Regular, line-height/Tiny Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Type=initials, Size=48, Color=none": {
+   "(root)": {
+    "size": "48×48",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "48×48",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "AG": {
+    "size": "43.2×43.2",
+    "text": "\"AG\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Type=initials, Size=56, Color=none": {
+   "(root)": {
+    "size": "56×56",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "56×56",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "AG": {
+    "size": "50.4×50.4",
+    "text": "\"AG\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Type=initials, Size=64, Color=none": {
+   "(root)": {
+    "size": "64×64",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full"
+   },
+   "image-placeholder": {
+    "size": "64×64",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle"
+   },
+   "AG": {
+    "size": "57.6×57.6",
+    "text": "\"AG\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Primary"
+   }
+  }
+ }
+}

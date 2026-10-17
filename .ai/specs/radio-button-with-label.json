@@ -1,0 +1,196 @@
+{
+ "id": "812:4430",
+ "name": "Radio button with label",
+ "props": {
+  "Label": {
+   "type": "TEXT",
+   "default": "Label"
+  },
+  "Description": {
+   "type": "TEXT",
+   "default": "Description"
+  },
+  "Show description": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "disabled"
+   ]
+  },
+  "Selected": {
+   "type": "VARIANT",
+   "default": "false",
+   "options": [
+    "false",
+    "true"
+   ]
+  }
+ },
+ "variants": {
+  "State=default, Selected=false": {
+   "(root)": {
+    "size": "106×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Radio button": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0",
+    "instance": "Radio button › State=default, Selected=false"
+   },
+   "label": {
+    "size": "74×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "label/Description": {
+    "size": "74×18",
+    "sizing": "hug/hug",
+    "text": "\"Description\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=disabled, Selected=false": {
+   "(root)": {
+    "size": "106×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Radio button": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0",
+    "instance": "Radio button › State=disabled, Selected=false"
+   },
+   "label": {
+    "size": "74×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "label/Description": {
+    "size": "74×18",
+    "sizing": "hug/hug",
+    "text": "\"Description\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "State=default, Selected=true": {
+   "(root)": {
+    "size": "106×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Radio button": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0",
+    "instance": "Radio button › State=default, Selected=true"
+   },
+   "label": {
+    "size": "74×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/Label": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "label/Description": {
+    "size": "74×18",
+    "sizing": "hug/hug",
+    "text": "\"Description\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=disabled, Selected=true": {
+   "(root)": {
+    "size": "106×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Radio button": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0",
+    "instance": "Radio button › State=disabled, Selected=true"
+   },
+   "label": {
+    "size": "74×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/Label": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "label/Description": {
+    "size": "74×18",
+    "sizing": "hug/hug",
+    "text": "\"Description\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  }
+ }
+}

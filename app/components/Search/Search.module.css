@@ -1,0 +1,193 @@
+/* ==========================================================================
+   SEARCH — Figma Search 338:6162, _Search base 338:6250
+   Size: lg (40), sm (32)   State: default, hover, focus, filled, disabled, skeleton   Expanded: true, false
+   Every value below is a Figma variable (see globals.css).
+   ========================================================================== */
+
+.search {
+  --_h: var(--input-regular);
+  --_radius: var(--radius-md);
+  --_icon: var(--color-content-icon);
+  --_stroke: inset 0 0 0 var(--stroke-sm) var(--color-border-subtle);
+
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: var(--_h);
+  border-radius: var(--_radius);
+  background-color: var(--color-bg-secondary);
+  box-shadow: var(--_stroke);
+  color: var(--color-content-primary);
+  transition: var(--duration-hover) ease;
+  transition-property: background-color, box-shadow;
+}
+
+.sm {
+  --_h: var(--input-small);
+  --_radius: var(--radius-10);
+  /* Figma: sm default icon is CONTENT/Secondary, lg CONTENT/Icon */
+  --_icon: var(--color-content-secondary);
+}
+
+/* --- State: hover ---------------------------------------------------------- */
+@media (hover: hover) and (pointer: fine) {
+  .search:not(.collapsed):not(.skeleton):not(.disabled):not(:focus-within):hover {
+    --_icon: var(--color-content-primary);
+    --_stroke: inset 0 0 0 var(--stroke-default) var(--color-border-subtle);
+    background-color: var(--color-bg-primary);
+  }
+
+  .collapsed:not(:disabled):hover {
+    background-color: var(--color-input-hover-dark);
+  }
+}
+
+/* --- State: filled --------------------------------------------------------- */
+.filled {
+  --_stroke: inset 0 0 0 var(--stroke-default) var(--color-border-subtle);
+  background-color: var(--color-bg-primary);
+}
+
+/* Figma: sm filled icon is CONTENT/Primary, lg keeps CONTENT/Icon */
+.sm.filled {
+  --_icon: var(--color-content-primary);
+}
+
+/* --- State: focus: CONTENT/Primary stroke + 2px INPUT/Selected ring --------- */
+.search:focus-within:not(.collapsed) {
+  --_icon: var(--color-content-primary);
+  --_stroke: inset 0 0 0 var(--stroke-default) var(--color-content-primary), 0 0 0 2px var(--color-input-selected);
+  background-color: var(--color-bg-primary);
+}
+
+/* --- State: disabled ------------------------------------------------------- */
+.disabled {
+  --_icon: var(--color-content-disabled);
+  --_stroke: none;
+  /* Figma: lg disabled is rounded 10, like sm */
+  --_radius: var(--radius-10);
+  background-color: var(--color-bg-primary);
+  color: var(--color-content-disabled);
+}
+
+/* --- State: skeleton ------------------------------------------------------- */
+.skeleton {
+  --_stroke: none;
+}
+
+/* --- Expanded=false: icon-only button ---------------------------------------- */
+.collapsed {
+  --_stroke: none;
+  --_radius: var(--radius-10);
+  justify-content: center;
+  width: var(--_h);
+  padding: 0;
+  border: none;
+  background-color: var(--color-bg-primary);
+  color: var(--color-content-primary);
+}
+
+.collapsed:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-components-focus);
+}
+
+/* --- Slots --------------------------------------------------------------------- */
+.searchIcon,
+.clear,
+.shortcut {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+/* lg: 40px frame, 12px padding; sm: 30px frame, 8px padding */
+.searchIcon {
+  padding: var(--space-12);
+  color: var(--_icon);
+}
+
+.sm .searchIcon {
+  padding: var(--space-8);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-content-secondary);
+}
+
+.disabled .input::placeholder {
+  color: var(--color-content-disabled);
+}
+
+.input::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+/* Clear icon: lg 40px / 12px padding, sm 32px / 8px padding, CONTENT/Primary */
+.clear {
+  height: 100%;
+  padding: var(--space-12);
+  border: none;
+  border-radius: var(--_radius);
+  background: none;
+  color: var(--color-content-primary);
+}
+
+.sm .clear {
+  padding: var(--space-8);
+}
+
+.clear:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-components-focus);
+}
+
+/* Shortcut hint: lg 24px badge on BACKGROUND/Secondary, SYSTEM/Label/md/regular */
+.shortcut {
+  padding-inline: var(--space-8);
+}
+
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--icon-24);
+  height: var(--icon-24);
+  padding: var(--space-2);
+  border-radius: var(--radius-xs);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-content-secondary);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+}
+
+/* sm: 20px badge on BACKGROUND/Tertiary with a 0.5px BORDER/Subtle stroke, SYSTEM/Label/sm/regular */
+.sm .kbd {
+  min-width: var(--icon-20);
+  height: var(--icon-20);
+  background-color: var(--color-bg-tertiary);
+  box-shadow: inset 0 0 0 var(--stroke-sm) var(--color-border-subtle);
+  font-size: var(--text-super-tiny);
+}

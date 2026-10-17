@@ -1,143 +1,91 @@
-import { Icon } from '@/app/components/Icon/Icon';
+// Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM (page Chat)
+// Extracted: 2026-10-17
+// Demo page: agent thread with steps, tool calls, messages and the composer
+
+'use client';
+
+import { useState } from 'react';
+import {
+  AgentMessage,
+  ChatComposer,
+  ChatMessageMetadata,
+  ChatStep,
+  ChatSystemMessage,
+  ChatToolCall,
+  ContextUsage,
+  UserMessage,
+} from '@/app/components/Chat';
+import { FileType } from '@/app/components/FileType';
+import { DemoPageHeader } from '@/app/components/DemoPageHeader';
 import styles from './page.module.css';
 
+type Sent = { id: number; text: string };
+
 export default function ChatPage() {
+  const [sent, setSent] = useState<Sent[]>([]);
+  const [files, setFiles] = useState<string[]>([]);
+
   return (
     <div className={styles.demo}>
-      {/* Header */}
-      <header className={styles.header}>
-        <div className={styles.headerLeft}>
-          <span className={styles.logoIcon} role="img" aria-label="Agentic UI" />
-          <span className={styles.headerSeparator} aria-hidden="true" />
-          <span className={styles.headerLabel}>Chat</span>
-        </div>
-        <div className={styles.headerRight}>
-          <span className={styles.headerLabel}>Launch Demo</span>
-          <div className={styles.kbdGroup}>
-            <kbd className={styles.kbd}>⌥</kbd>
-            <kbd className={styles.kbd}>⌘</kbd>
-            <kbd className={styles.kbd}>↩</kbd>
-          </div>
-        </div>
-      </header>
+      <DemoPageHeader label="Chat" />
 
-      {/* Chat Thread */}
       <div className={styles.thread}>
         <div className={styles.threadContent}>
-          {/* Divider */}
-          <div className={styles.divider}>
-            <div className={styles.dividerLine} />
-            <span className={styles.dividerLabel}>Task Initiated</span>
-            <div className={styles.dividerLine} />
+          <ChatSystemMessage type="date">Task initiated</ChatSystemMessage>
+          <div>
+            <ChatStep label="Company analysis" icon="dna" />
+            <ChatStep label="Brand voice" icon="bullhorn" />
           </div>
-
-          {/* Agent Steps */}
-          <div className={styles.steps}>
-            {/* Step 1: Company Analysis */}
-            <div className={styles.step}>
-              <div className={styles.stepDotSmall} />
-              <div className={styles.stepLabel}>
-                <Icon name="dna" size={16} className={styles.stepIcon} />
-                <span className={styles.stepName}>Company Analysis</span>
-                <Icon name="chevron-down" size={16} className={styles.stepChevron} />
-              </div>
-            </div>
-
-            {/* Step 2: Brand Voice */}
-            <div className={styles.step}>
-              <div className={styles.stepDotSmall} />
-              <div className={styles.stepLabel}>
-                <Icon name="bullhorn" size={16} className={styles.stepIcon} />
-                <span className={styles.stepName}>Brand Voice</span>
-                <Icon name="chevron-down" size={16} className={styles.stepChevron} />
-              </div>
-            </div>
-          </div>
-
-          {/* User Message */}
-          <div className={styles.messageBubble} role="article" tabIndex={0}>
+          <UserMessage metadata={<ChatMessageMetadata receipt="read" time="9:15 AM" />}>
             Create 3-4 additional elevator pitches for my company.
+          </UserMessage>
+          <div>
+            <ChatStep label="Ideas" icon="lightning" />
+            <ChatStep
+              label="Running tasks in parallel"
+              icon="decision-tree"
+              subSteps={[{ label: 'Write version 1', complete: true }, { label: 'Write version 2', complete: true }, { label: 'Write version 3' }]}
+            />
+            <ChatStep label="Testing" icon="chemistry" state="active" status="black" />
           </div>
-
-          {/* Agent Steps — continued */}
-          <div className={styles.steps}>
-            {/* Step 3: Ideas */}
-            <div className={styles.step}>
-              <div className={styles.stepDotMedium} />
-              <div className={styles.stepLabel}>
-                <Icon name="lightning" size={16} className={styles.stepIcon} />
-                <span className={styles.stepName}>Ideas</span>
-                <Icon name="chevron-down" size={16} className={styles.stepChevron} />
-              </div>
-            </div>
-
-            {/* Step 4: Running Tasks in Parallel */}
-            <div className={styles.step}>
-              <div className={styles.stepDotMedium} />
-              <div>
-                <div className={styles.stepLabel}>
-                  <Icon name="decision-tree" size={16} className={styles.stepIcon} />
-                  <span className={styles.stepName}>Running Tasks in Parallel</span>
-                  <Icon name="chevron-down" size={16} className={styles.stepChevron} />
-                </div>
-                {/* Subtasks */}
-                <div className={styles.subtasks}>
-                  <div className={styles.subtask}>
-                    <Icon name="todo" size={16} className={styles.subtaskIcon} />
-                    <span className={styles.subtaskLabel}>Write version 1</span>
-                  </div>
-                  <div className={styles.subtask}>
-                    <Icon name="todo" size={16} className={styles.subtaskIcon} />
-                    <span className={styles.subtaskLabel}>Write version 2</span>
-                  </div>
-                  <div className={styles.subtask}>
-                    <Icon name="todo" size={16} className={styles.subtaskIcon} />
-                    <span className={styles.subtaskLabel}>Write version 3</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 5: Testing (active, with gradient) */}
-            <div className={styles.step}>
-              <div className={styles.stepDotLarge} />
-              <div className={styles.stepLabel}>
-                <Icon name="chemistry" size={16} className={styles.stepIcon} />
-                <span className={styles.stepNameActive}>Testing</span>
-                <Icon name="chevron-up" size={16} className={styles.stepChevron} />
-              </div>
-            </div>
-          </div>
-
-          {/* Response Text */}
-          <p className={styles.responseText}>
-            Agentic UI is the world-first Figma design system for building scalable agentic experiences with Ai.
-          </p>
+          <AgentMessage text="Here is what I ran:" metadata={<ChatMessageMetadata align="start" time="9:16 AM" />}>
+            <ChatToolCall
+              label="3 Tool calls"
+              summary="3 tools"
+              calls={[
+                { status: 'complete', name: 'bash', detail: 'git diff --stat', time: '340ms' },
+                { status: 'error', name: 'read', detail: 'src/utils/formatDate.ts', time: '45ms' },
+                { status: 'working', name: 'edit', detail: 'src/utils/formatDate.ts', time: '3120ms' },
+              ]}
+            />
+          </AgentMessage>
+          <AgentMessage
+            text="Agentic UI is the world-first Figma design system for building scalable agentic experiences with Ai."
+            metadata={<ChatMessageMetadata align="start" time="9:17 AM" onCopy={() => {}} onRetry={() => {}} onThumbsUp={() => {}} onThumbsDown={() => {}} />}
+          />
+          {sent.map((m) => (
+            <UserMessage key={m.id} metadata={<ChatMessageMetadata receipt="sent" time="now" />}>
+              {m.text}
+            </UserMessage>
+          ))}
         </div>
       </div>
 
-      {/* Chat Input */}
       <div className={styles.inputWrapper}>
-        <div className={styles.chatInput}>
-          <div className={styles.chatInputArea}>
-            <span className={styles.chatInputPlaceholder}>Ask anything...</span>
-          </div>
-          <div className={styles.chatInputActions}>
-            <div className={styles.actionsLeft}>
-              <button type="button" className={styles.chatButton} aria-label="Attach file">
-                <Icon name="plus" size={20} />
-              </button>
-            </div>
-            <div className={styles.actionsRight}>
-              <button type="button" className={styles.chatButton} aria-label="Voice input">
-                <Icon name="microphone" size={20} />
-              </button>
-              <button type="button" className={styles.chatButtonDisabled} aria-label="Send message" disabled>
-                <Icon name="arrow-up" size={16} />
-              </button>
-            </div>
-          </div>
+        <div className={styles.context}>
+          <ContextUsage percent={15} used="40k" limit="128k" input={{ tokens: '32k', cost: '$0.04' }} output={{ tokens: '8k', cost: '$0.08' }} totalCost="$0.12" />
         </div>
+        <ChatComposer
+          model="GPT 5.6"
+          onModelClick={() => {}}
+          onAttach={() => setFiles((f) => [...f, `image-${f.length + 1}.jpeg`])}
+          onMicrophone={() => {}}
+          onFiles={(dropped) => setFiles((f) => [...f, ...dropped.map((d) => d.name)])}
+          attachments={files.map((name) => (
+            <FileType key={name} name={name} size="small" variant="outline" onRemove={() => setFiles((f) => f.filter((x) => x !== name))} />
+          ))}
+          onSubmit={(text) => setSent((s) => [...s, { id: Date.now(), text }])}
+        />
       </div>
     </div>
   );

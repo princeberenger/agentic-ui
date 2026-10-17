@@ -1,0 +1,113 @@
+{
+ "id": "4092:2459",
+ "name": "ButtonGroup",
+ "props": {
+  "Size": {
+   "type": "VARIANT",
+   "default": "lg",
+   "options": [
+    "lg",
+    "md",
+    "sm"
+   ]
+  }
+ },
+ "variants": {
+  "Size=lg": {
+   "(root)": {
+    "size": "174×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "Button": {
+    "size": "82×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Cancel\""
+   },
+   "Button#2": {
+    "size": "82×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Primary",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=primary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Launch\""
+   }
+  },
+  "Size=sm": {
+   "(root)": {
+    "size": "112×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "Button": {
+    "size": "51×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Cancel\""
+   },
+   "Button#2": {
+    "size": "51×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Primary",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=primary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Launch\""
+   }
+  },
+  "Size=md": {
+   "(root)": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "Button": {
+    "size": "59×32",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Cancel\""
+   },
+   "Button#2": {
+    "size": "59×32",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Primary",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=primary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Launch\""
+   }
+  }
+ }
+}

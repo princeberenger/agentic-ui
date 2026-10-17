@@ -1,0 +1,197 @@
+{
+ "id": "6293:6710",
+ "name": "Chat status dot",
+ "props": {
+  "Show connection line": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "Gray",
+   "options": [
+    "Gray",
+    "Yellow",
+    "Red",
+    "Green",
+    "Black"
+   ]
+  }
+ },
+ "variants": {
+  "Type=Gray": {
+   "(root)": {
+    "size": "16×25",
+    "sizing": "fixed/hug",
+    "layout": "column align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "dot-container": {
+    "size": "16×7",
+    "sizing": "fixed/hug",
+    "size.vars": "ICONS/16",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "dot-container/dot": {
+    "size": "7×7",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Disabled"
+   },
+   "connection-line": {
+    "size": "16×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/14",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "connection-line/connection-line": {
+    "size": "1×14",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Type=Black": {
+   "(root)": {
+    "size": "16×25",
+    "sizing": "fixed/hug",
+    "layout": "column align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "dot-container": {
+    "size": "16×7",
+    "sizing": "fixed/hug",
+    "size.vars": "ICONS/16",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "dot-container/dot": {
+    "size": "7×7",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary"
+   },
+   "connection-line": {
+    "size": "16×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/14",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "connection-line/connection-line": {
+    "size": "1×14",
+    "sizing": "fixed/fill",
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Type=Yellow": {
+   "(root)": {
+    "size": "16×25",
+    "sizing": "fixed/hug",
+    "layout": "column align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "dot-container": {
+    "size": "16×7",
+    "sizing": "fixed/hug",
+    "layout": "row align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "dot-container/Ellipse 13": {
+    "size": "7×7",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Warning (Icons)"
+   },
+   "connection-line": {
+    "size": "16×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/14",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "connection-line/connection-line": {
+    "size": "1×14",
+    "sizing": "fixed/fill",
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Type=Red": {
+   "(root)": {
+    "size": "16×25",
+    "sizing": "fixed/hug",
+    "size.vars": "ICONS/16",
+    "layout": "column align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "dot-container": {
+    "size": "16×7",
+    "sizing": "fixed/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "dot-container/Ellipse 13": {
+    "size": "7×7",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Attention"
+   },
+   "connection-line": {
+    "size": "16×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/14",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "connection-line/connection-line": {
+    "size": "1×14",
+    "sizing": "fixed/fill",
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Type=Green": {
+   "(root)": {
+    "size": "16×25",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/16",
+    "layout": "column align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "dot-container": {
+    "size": "16×7",
+    "sizing": "fixed/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "dot-container/Ellipse 13": {
+    "size": "7×7",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Success"
+   },
+   "connection-line": {
+    "size": "16×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/14",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "connection-line/connection-line": {
+    "size": "1×14",
+    "sizing": "fixed/fill",
+    "fill": "CONTENT/Disabled"
+   }
+  }
+ }
+}

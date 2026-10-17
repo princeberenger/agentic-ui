@@ -1,0 +1,204 @@
+{
+ "id": "716:3790",
+ "name": "Pagination",
+ "props": {
+  "Total items": {
+   "type": "TEXT",
+   "default": "10 of 35 items"
+  },
+  "Current page": {
+   "type": "TEXT",
+   "default": "1/22"
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "simple",
+   "options": [
+    "numbered",
+    "simple"
+   ]
+  }
+ },
+ "variants": {
+  "Type=simple": {
+   "(root)": {
+    "size": "424×48",
+    "sizing": "fixed/fixed",
+    "layout": "row align space_between/center",
+    "padding": "0 16=PADDING/16 0 16=PADDING/16",
+    "gap": "24"
+   },
+   "pagination-results-label-wrapper": {
+    "size": "280×15",
+    "sizing": "fixed/hug",
+    "layout": "row align center/center",
+    "padding": "0 16=PADDING/16 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "pagination-results-label-wrapper/Showing:": {
+    "size": "67×15",
+    "sizing": "hug/hug",
+    "text": "\"Showing:\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper",
+    "font.vars": "family/Labels, Links, size/Tiny, weight/Semibold, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "pagination-results-label-wrapper/10 of 35 items": {
+    "size": "189×15",
+    "sizing": "fill/hug",
+    "text": "\"10 of 35 items\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper",
+    "font.vars": "family/Labels, Links, size/Tiny, weight/Semibold, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "button-group": {
+    "size": "106×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "button-group/Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=disabled, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Label=\"Label\", Swap icon=Icons / Chevron--left"
+   },
+   "button-group/Button/icon/icon-arrow": {
+    "fill": "CONTENT/Disabled"
+   },
+   "button-group/1/22": {
+    "size": "34×15",
+    "sizing": "hug/hug",
+    "text": "\"1/22\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper align center",
+    "font.vars": "family/Labels, Links, size/Tiny, weight/Semibold, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "button-group/Button#2": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Chevron--right"
+   },
+   "button-group/Button#2/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Type=numbered": {
+   "(root)": {
+    "size": "332×64",
+    "sizing": "hug/fixed",
+    "layout": "row align max/center",
+    "padding": "0 16=PADDING/16 0 16=PADDING/16",
+    "gap": "4=PADDING/4"
+   },
+   "Button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "CONTENT/On Primary",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=secondary, Type=icon-only, State=disabled, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Prev\", Swap icon=Icons / Chevron--left"
+   },
+   "Button/icon": {
+    "size": "20×20"
+   },
+   "Button/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "pagination-item": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "pagination-item › State=default, Type=number, Open=false, Selected=false",
+    "props": "Page number=\"1\""
+   },
+   "pagination-item#2": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "pagination-item › State=default, Type=number, Open=false, Selected=false",
+    "props": "Page number=\"2\""
+   },
+   "pagination-item#3": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "pagination-item › State=default, Type=number, Open=false, Selected=false",
+    "props": "Page number=\"3\""
+   },
+   "pagination-item#4": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "pagination-item › State=default, Type=number, Open=false, Selected=false",
+    "props": "Page number=\"4\""
+   },
+   "pagination-item#5": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "pagination-item › State=default, Type=overflow, Open=false, Selected=false",
+    "props": "Page number=\"1\""
+   },
+   "pagination-item#6": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "pagination-item › State=default, Type=number, Open=false, Selected=false",
+    "props": "Page number=\"10\""
+   },
+   "Button#2": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Prev\", Swap icon=Icons / Chevron--right"
+   },
+   "Button#2/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

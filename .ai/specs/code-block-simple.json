@@ -1,0 +1,189 @@
+{
+ "id": "4126:5641",
+ "name": "Code block (Simple)",
+ "props": {
+  "Code text": {
+   "type": "TEXT",
+   "default": "$ npm install --agentic-ui"
+  },
+  "Show \"Copy\" button": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "disabled",
+    "focus",
+    "hover",
+    "loading"
+   ]
+  }
+ },
+ "variants": {
+  "State=default": {
+   "(root)": {
+    "size": "400×48",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "12=PADDING/12 64=PADDING/64 12=PADDING/12 16=PADDING/16",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "code-wrapper": {
+    "size": "320×24",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "code-wrapper/$ npm install --agentic-ui": {
+    "size": "320×24",
+    "sizing": "fill/hug",
+    "text": "\"$ npm install --agentic-ui\"",
+    "font": "SYSTEM/Code/lg · JetBrains Mono 400 16/24 ls 0",
+    "font.vars": "family/code, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "CopyButton": {
+    "size": "32×32",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "4=4",
+    "instance": "CopyButton › State=default, Size=lg"
+   }
+  },
+  "State=hover": {
+   "(root)": {
+    "size": "400×48",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "12=PADDING/12 64=PADDING/64 12=PADDING/12 16=PADDING/16",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "code-wrapper": {
+    "size": "320×24",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "code-wrapper/$ npm install --agentic-ui": {
+    "size": "320×24",
+    "sizing": "fill/hug",
+    "text": "\"$ npm install --agentic-ui\"",
+    "font": "SYSTEM/Code/lg · JetBrains Mono 400 16/24 ls 0",
+    "font.vars": "family/code, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "CopyButton": {
+    "size": "32×32",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "CopyButton › State=hover, Size=lg"
+   }
+  },
+  "State=focus": {
+   "(root)": {
+    "size": "400×48",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "12=PADDING/12 64=PADDING/64 12=PADDING/12 16=PADDING/16",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "code-wrapper": {
+    "size": "320×24",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "code-wrapper/$ npm install --agentic-ui": {
+    "size": "320×24",
+    "sizing": "fill/hug",
+    "text": "\"$ npm install --agentic-ui\"",
+    "font": "SYSTEM/Code/lg · JetBrains Mono 400 16/24 ls 0",
+    "font.vars": "family/code, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "CopyButton": {
+    "size": "32×32",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "4=4",
+    "instance": "CopyButton › State=default, Size=lg"
+   }
+  },
+  "State=disabled": {
+   "(root)": {
+    "size": "400×48",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "12=PADDING/12 64=PADDING/64 12=PADDING/12 16=PADDING/16",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "code-wrapper": {
+    "size": "320×24",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "code-wrapper/$ npm install --agentic-ui": {
+    "size": "320×24",
+    "sizing": "fill/hug",
+    "text": "\"$ npm install --agentic-ui\"",
+    "font": "SYSTEM/Code/lg · JetBrains Mono 400 16/24 ls 0",
+    "font.vars": "family/code, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "CopyButton": {
+    "size": "32×32",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "4=4",
+    "instance": "CopyButton › State=default, Size=lg"
+   },
+   "CopyButton/Button/icon/Vector (Stroke)": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "State=loading": {
+   "(root)": {
+    "size": "400×36",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "12=PADDING/12 64=PADDING/64 12=PADDING/12 16=PADDING/16",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Skeleton loading animation": {
+    "size": "320×12",
+    "sizing": "fill/fixed",
+    "instance": "Skeleton loading animation › Phase=1"
+   }
+  }
+ }
+}

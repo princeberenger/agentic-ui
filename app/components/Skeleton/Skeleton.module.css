@@ -1,0 +1,62 @@
+/* ==========================================================================
+   SKELETON — Figma Skeleton loading animation 761:23192
+   Prototype: Phase 1→2 600ms, hold 200ms, 2→3 600ms, hold 200ms, 3→4 600ms,
+   hold 200ms, 4→5 400ms, 5→1 600ms (no change). Smart animate, ease in and out.
+   Highlight x: -100% (opacity .5) → 0 → 100% → 0 → -100% (opacity .5).
+   ========================================================================== */
+
+.skeleton {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: var(--space-16);
+  overflow: hidden;
+  background-color: var(--color-skeleton-bg);
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-skeleton-highlight);
+  animation: sweep 3.4s infinite;
+}
+
+/* keyframes at 0, 0.6, 0.8, 1.4, 1.6, 2.2, 2.4, 2.8, 3.4s */
+@keyframes sweep {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-100%);
+    animation-timing-function: ease-in-out;
+  }
+  17.65%,
+  23.53% {
+    opacity: 1;
+    transform: translateX(0);
+    animation-timing-function: ease-in-out;
+  }
+  41.18%,
+  47.06% {
+    opacity: 1;
+    transform: translateX(100%);
+    animation-timing-function: ease-in-out;
+  }
+  64.71%,
+  70.59% {
+    opacity: 1;
+    transform: translateX(0);
+    animation-timing-function: ease-in-out;
+  }
+  82.35%,
+  100% {
+    opacity: 0.5;
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after {
+    animation: none;
+    opacity: 0;
+  }
+}

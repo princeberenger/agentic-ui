@@ -1,0 +1,192 @@
+{
+ "id": "771:1501",
+ "name": "cell-type-dropdown",
+ "props": {
+  "Main Text": {
+   "type": "TEXT",
+   "default": "$120.00"
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default",
+    "Selected",
+    "Focus",
+    "Disabled",
+    "Loading"
+   ]
+  }
+ },
+ "variants": {
+  "State=Default": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Price Container": {
+    "size": "81×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=Core/100 8=Core/100 8=Core/100 0=Core/0",
+    "gap": "4=Core/50",
+    "radius": "8=radius/formInput"
+   },
+   "Price Container/Price": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "text": "\"$120.00\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Price Container/Dropdown Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--down"
+   },
+   "Price Container/Dropdown Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=Disabled": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Price Container": {
+    "size": "81×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=Core/100 8=Core/100 8=Core/100 0=Core/0",
+    "gap": "4=Core/50",
+    "radius": "8=radius/formInput"
+   },
+   "Price Container/Price": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "text": "\"$120.00\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "Price Container/Dropdown Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--down"
+   },
+   "Price Container/Dropdown Icon/icon-color": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "State=Loading": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "table-skeleton-loading": {
+    "size": "133×24",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "2=2"
+   }
+  },
+  "State=Selected": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Price Container": {
+    "size": "97×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary + INPUT/Pressed@0.08",
+    "radius": "10=10"
+   },
+   "Price Container/Price": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "text": "\"$120.00\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Price Container/Dropdown Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--down"
+   },
+   "Price Container/Dropdown Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=Focus": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Price Container": {
+    "size": "97×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=Core/100 8=Core/100 8=Core/100 16=Core/200",
+    "gap": "4=Core/50",
+    "stroke": "1.5=md inside BORDER/Strong",
+    "radius": "10=10"
+   },
+   "Price Container/Price": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "text": "\"$120.00\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Price Container/Dropdown Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--up"
+   },
+   "Price Container/Dropdown Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

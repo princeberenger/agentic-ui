@@ -1,0 +1,10 @@
+{
+  "codeConnect": {
+    "include": [
+      "app/components/**/*.figma.ts",
+      "app/components/**/*.figma.batch.json"
+    ],
+    "label": "React",
+    "documentUrlSubstitutions": {}
+  }
+}

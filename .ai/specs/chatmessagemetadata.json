@@ -1,0 +1,175 @@
+{
+ "id": "6270:1160",
+ "name": "ChatMessageMetadata",
+ "props": {
+  "Show Error": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show Time": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show Read receipt": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Divider 1": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Divider 2": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show actions": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Divider 3": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show Duplicate": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show Reset": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show Thumbs up": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show Thumbs down": {
+   "type": "BOOLEAN",
+   "default": true
+  }
+ },
+ "variants": {
+  "ChatMessageMetadata": {
+   "(root)": {
+    "size": "307×23",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "8=PADDING/8 12=PADDING/12 0 12=PADDING/12",
+    "gap": "6=PADDING/6"
+   },
+   "ChatMetadataRead": {
+    "size": "49×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4",
+    "instance": "ChatMetadataRead › Type=Read",
+    "props": "Label 1=\"Sending\", Label 2=\"Sent\", Label 3=\"Delivered\", Label 5=\"Failed\", Label 4=\"Read\""
+   },
+   "divider": {
+    "size": "2×15",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "divider/dot": {
+    "size": "2×2",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Secondary"
+   },
+   "time": {
+    "size": "49×15",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "time/9:15 AM": {
+    "size": "49×15",
+    "sizing": "hug/hug",
+    "text": "\"9:15 AM\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "divider#2": {
+    "size": "2×15",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "divider#2/dot": {
+    "size": "2×2",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Secondary"
+   },
+   "error": {
+    "size": "51×15",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "error/Not sent": {
+    "size": "51×15",
+    "sizing": "hug/hug",
+    "text": "\"Not sent\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/red"
+   },
+   "divider#3": {
+    "size": "2×15",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "divider#3/dot": {
+    "size": "2×2",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Secondary"
+   },
+   "actions": {
+    "size": "92×14",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0=PADDING/none",
+    "gap": "12=PADDING/12"
+   },
+   "actions/Icons / Copy": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Copy"
+   },
+   "actions/Icons / Copy/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions/Icons / Reset": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Reset"
+   },
+   "actions/Icons / Reset/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions/Icons / Thumbs-up": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Thumbs-up"
+   },
+   "actions/Icons / Thumbs-up/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions/Icons / Thumbs-down": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Thumbs-down"
+   },
+   "actions/Icons / Thumbs-down/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

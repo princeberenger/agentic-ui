@@ -1,0 +1,304 @@
+{
+ "id": "8017:11604",
+ "name": "CONTEXT",
+ "props": {
+  "Property 1": {
+   "type": "VARIANT",
+   "default": "0%",
+   "options": [
+    "0%",
+    "15%",
+    "50%",
+    "75%",
+    "100%"
+   ]
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default",
+    "Hover"
+   ]
+  }
+ },
+ "variants": {
+  "Property 1=0%, State=Default": {
+   "(root)": {
+    "size": "49×30",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "6=PADDING/6 6=PADDING/6 6=PADDING/6 6=PADDING/6",
+    "gap": "6=PADDING/6",
+    "radius": "9999=full"
+   },
+   "0%": {
+    "size": "15×18",
+    "sizing": "hug/hug",
+    "text": "\"0%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "progress › Property 1=0%"
+   }
+  },
+  "Property 1=0%, State=Hover": {
+   "(root)": {
+    "size": "49×30",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "6=PADDING/6 6=PADDING/6 6=PADDING/6 6=PADDING/6",
+    "gap": "6=PADDING/6",
+    "fill": "INPUT/Hover (Dark)@0.04",
+    "radius": "9999=full"
+   },
+   "0%": {
+    "size": "15×18",
+    "sizing": "hug/hug",
+    "text": "\"0%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "progress › Property 1=0%"
+   }
+  },
+  "Property 1=15%, State=Default": {
+   "(root)": {
+    "size": "56×30",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "6=PADDING/6 6=PADDING/6 6=PADDING/6 6=PADDING/6",
+    "gap": "6=PADDING/6",
+    "radius": "9999=full"
+   },
+   "15%": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"15%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "progress › Property 1=15%"
+   }
+  },
+  "Property 1=15%, State=Hover": {
+   "(root)": {
+    "size": "56×30",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "6=PADDING/6 6=PADDING/6 6=PADDING/6 6=PADDING/6",
+    "gap": "6=PADDING/6",
+    "fill": "INPUT/Hover (Dark)@0.04",
+    "radius": "9999=full"
+   },
+   "15%": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"15%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "progress › Property 1=15%"
+   }
+  },
+  "Property 1=50%, State=Default": {
+   "(root)": {
+    "size": "56×30",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "6=PADDING/6 6=PADDING/6 6=PADDING/6 6=PADDING/6",
+    "gap": "6=PADDING/6",
+    "radius": "9999=full"
+   },
+   "50%": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"50%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "progress › Property 1=50%"
+   }
+  },
+  "Property 1=50%, State=Hover": {
+   "(root)": {
+    "size": "56×30",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "6=PADDING/6 6=PADDING/6 6=PADDING/6 6=PADDING/6",
+    "gap": "6=PADDING/6",
+    "fill": "INPUT/Hover (Dark)@0.04",
+    "radius": "9999=full"
+   },
+   "50%": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"50%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "progress › Property 1=50%"
+   }
+  },
+  "Property 1=75%, State=Default": {
+   "(root)": {
+    "size": "56×30",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "6=PADDING/6 6=PADDING/6 6=PADDING/6 6=PADDING/6",
+    "gap": "6=PADDING/6",
+    "radius": "9999=full"
+   },
+   "75%": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"75%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Warning (Text)"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "progress › Property 1=75%"
+   },
+   "progress/progress": {
+    "stroke": "2=lg inside BORDER/Warning"
+   }
+  },
+  "Property 1=75%, State=Hover": {
+   "(root)": {
+    "size": "56×30",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "6=PADDING/6 6=PADDING/6 6=PADDING/6 6=PADDING/6",
+    "gap": "6=PADDING/6",
+    "fill": "INPUT/Hover (Dark)@0.04",
+    "radius": "9999=full"
+   },
+   "75%": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"75%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Warning (Text)"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "progress › Property 1=75%"
+   },
+   "progress/progress": {
+    "stroke": "2=lg inside BORDER/Warning"
+   }
+  },
+  "Property 1=100%, State=Default": {
+   "(root)": {
+    "size": "63×30",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "6=PADDING/6 6=PADDING/6 6=PADDING/6 6=PADDING/6",
+    "gap": "6=PADDING/6",
+    "radius": "9999=full"
+   },
+   "100%": {
+    "size": "29×18",
+    "sizing": "hug/hug",
+    "text": "\"100%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "BADGE/label/red"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "progress › Property 1=100%"
+   },
+   "progress/progress": {
+    "stroke": "2=lg inside BORDER/Attention"
+   }
+  },
+  "Property 1=100%, State=Hover": {
+   "(root)": {
+    "size": "63×30",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "6=PADDING/6 6=PADDING/6 6=PADDING/6 6=PADDING/6",
+    "gap": "6=PADDING/6",
+    "fill": "INPUT/Hover (Dark)@0.04",
+    "radius": "9999=full"
+   },
+   "100%": {
+    "size": "29×18",
+    "sizing": "hug/hug",
+    "text": "\"100%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align right",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "BADGE/label/red"
+   },
+   "progress": {
+    "size": "16×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "progress › Property 1=100%"
+   },
+   "progress/progress": {
+    "stroke": "2=lg inside BORDER/Attention"
+   }
+  }
+ }
+}

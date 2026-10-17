@@ -1,0 +1,17 @@
+{
+ "id": "226:1269",
+ "name": "Icons/ Menu --open",
+ "props": {},
+ "variants": {
+  "Icons/ Menu --open": {
+   " Menu --open": {
+    "size": "16×16",
+    "sizing": "fixed/fixed"
+   },
+   " Menu --open/icon": {
+    "size": "12×12",
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

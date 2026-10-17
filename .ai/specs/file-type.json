@@ -1,0 +1,3484 @@
+{
+ "id": "6111:11622",
+ "name": "File type",
+ "props": {
+  "Show button": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show icon": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Instance": {
+   "type": "INSTANCE_SWAP",
+   "default": "179:12910"
+  },
+  "Show size": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show close icon": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Style": {
+   "type": "VARIANT",
+   "default": "Filled",
+   "options": [
+    "Filled",
+    "Outline"
+   ]
+  },
+  "Size": {
+   "type": "VARIANT",
+   "default": "Large",
+   "options": [
+    "Large",
+    "Medium",
+    "Small"
+   ]
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "Document",
+   "options": [
+    "Document",
+    "Code",
+    "Video",
+    "Image",
+    "Audio"
+   ]
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default",
+    "Hover"
+   ]
+  }
+ },
+ "variants": {
+  "Style=Filled, Size=Medium, Type=Document, State=Default": {
+   "(root)": {
+    "size": "184×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "112×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "88×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Document.pdf\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"2.0 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Medium, Type=Code, State=Default": {
+   "(root)": {
+    "size": "177×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "105×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "81×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"config.json\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"256 b\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Medium, Type=Video, State=Default": {
+   "(root)": {
+    "size": "191×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "119×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "95×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "text": "\"promo-jul.mp4\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "51×18",
+    "sizing": "hug/hug",
+    "text": "\"14.5 mb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Medium, Type=Image, State=Default": {
+   "(root)": {
+    "size": "169×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "97×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "73×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "text": "\"image.jpeg\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"958 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Medium, Type=Document, State=Default": {
+   "(root)": {
+    "size": "184×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "112×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "88×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Document.pdf\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"2.0 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Small, Type=Code, State=Default": {
+   "(root)": {
+    "size": "129×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "105×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"config.json\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Small, Type=Video, State=Default": {
+   "(root)": {
+    "size": "143×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "119×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "text": "\"promo-jul.mp4\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Small, Type=Code, State=Default": {
+   "(root)": {
+    "size": "129×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "105×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"config.json\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Small, Type=Video, State=Default": {
+   "(root)": {
+    "size": "143×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "119×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "text": "\"promo-jul.mp4\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Medium, Type=Audio, State=Default": {
+   "(root)": {
+    "size": "162×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "90×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "66×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "text": "\"track.mp3\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"1.1 mb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Medium, Type=Video, State=Default": {
+   "(root)": {
+    "size": "191×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "119×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "95×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "text": "\"promo-jul.mp4\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "51×18",
+    "sizing": "hug/hug",
+    "text": "\"14.5 mb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Medium, Type=Code, State=Default": {
+   "(root)": {
+    "size": "177×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "105×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "81×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"config.json\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"256 b\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Medium, Type=Image, State=Default": {
+   "(root)": {
+    "size": "169×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "97×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "73×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "text": "\"image.jpeg\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"958 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Medium, Type=Audio, State=Default": {
+   "(root)": {
+    "size": "162×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "90×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "66×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "text": "\"track.mp3\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"1.1 mb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Small, Type=Document, State=Default": {
+   "(root)": {
+    "size": "136×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "112×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Document.pdf\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Small, Type=Audio, State=Default": {
+   "(root)": {
+    "size": "114×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "90×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "text": "\"track.mp3\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Small, Type=Document, State=Default": {
+   "(root)": {
+    "size": "136×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "112×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Document.pdf\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Small, Type=Image, State=Default": {
+   "(root)": {
+    "size": "121×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "97×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "text": "\"image.jpeg\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Small, Type=Image, State=Default": {
+   "(root)": {
+    "size": "121×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "97×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "text": "\"image.jpeg\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Small, Type=Audio, State=Default": {
+   "(root)": {
+    "size": "114×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "90×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "text": "\"track.mp3\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Large, Type=Document, State=Default": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Document": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Document.pdf\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"2.0 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Filled, Size=Large, Type=Code, State=Default": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Document": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"config.json\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"256 b\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Filled, Size=Large, Type=Video, State=Default": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Document": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "text": "\"promo-jul.mp4\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "51×18",
+    "sizing": "hug/hug",
+    "text": "\"14.5 mb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Filled, Size=Large, Type=Image, State=Default": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Document": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "text": "\"image.jpeg\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"958 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Filled, Size=Large, Type=Audio, State=Default": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Document": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "text": "\"track.mp3\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"958 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Outline, Size=Large, Type=Document, State=Default": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Document": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Document.pdf\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"2.0 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Outline, Size=Large, Type=Code, State=Default": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Document": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"config.json\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"256 b\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Outline, Size=Large, Type=Video, State=Default": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Document": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "text": "\"promo-jul.mp4\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "51×18",
+    "sizing": "hug/hug",
+    "text": "\"14.5 mb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Outline, Size=Large, Type=Image, State=Default": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Document": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "text": "\"image.jpeg\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"958 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Outline, Size=Large, Type=Audio, State=Default": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Document": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "text": "\"track.mp3\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"958 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Outline, Size=Large, Type=Document, State=Hover": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Download": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Document.pdf\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"2.0 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Outline, Size=Large, Type=Code, State=Hover": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Download": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"config.json\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"256 b\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Outline, Size=Large, Type=Video, State=Hover": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Download": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "text": "\"promo-jul.mp4\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "51×18",
+    "sizing": "hug/hug",
+    "text": "\"14.5 mb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Outline, Size=Large, Type=Image, State=Hover": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Download": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "text": "\"image.jpeg\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"958 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Outline, Size=Large, Type=Audio, State=Hover": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Download": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "text": "\"track.mp3\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"958 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Filled, Size=Small, Type=Document, State=Hover": {
+   "(root)": {
+    "size": "136×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "112×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Download": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Document.pdf\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Small, Type=Image, State=Hover": {
+   "(root)": {
+    "size": "121×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "97×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Download": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "text": "\"image.jpeg\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Small, Type=Code, State=Hover": {
+   "(root)": {
+    "size": "129×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "105×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Download": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"config.json\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Small, Type=Video, State=Hover": {
+   "(root)": {
+    "size": "143×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "119×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Download": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "text": "\"promo-jul.mp4\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Filled, Size=Small, Type=Audio, State=Hover": {
+   "(root)": {
+    "size": "114×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "90×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Download": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "text": "\"track.mp3\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Small, Type=Document, State=Hover": {
+   "(root)": {
+    "size": "136×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "112×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Download": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Document.pdf\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Small, Type=Image, State=Hover": {
+   "(root)": {
+    "size": "121×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "97×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Download": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "text": "\"image.jpeg\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Small, Type=Code, State=Hover": {
+   "(root)": {
+    "size": "129×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "105×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Download": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"config.json\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Small, Type=Video, State=Hover": {
+   "(root)": {
+    "size": "143×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "119×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Download": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "text": "\"promo-jul.mp4\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Small, Type=Audio, State=Hover": {
+   "(root)": {
+    "size": "114×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "90×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Download": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "text": "\"track.mp3\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Button › Size=xs, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon": {
+    "size": "13×13"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Style=Outline, Size=Medium, Type=Document, State=Hover": {
+   "(root)": {
+    "size": "184×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "112×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "88×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Document.pdf\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"2.0 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Style=Outline, Size=Medium, Type=Code, State=Hover": {
+   "(root)": {
+    "size": "177×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "105×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "81×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"config.json\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"256 b\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Style=Outline, Size=Medium, Type=Video, State=Hover": {
+   "(root)": {
+    "size": "191×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "119×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "95×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "text": "\"promo-jul.mp4\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "51×18",
+    "sizing": "hug/hug",
+    "text": "\"14.5 mb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Style=Outline, Size=Medium, Type=Image, State=Hover": {
+   "(root)": {
+    "size": "169×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "97×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "73×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "text": "\"image.jpeg\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"958 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Style=Outline, Size=Medium, Type=Audio, State=Hover": {
+   "(root)": {
+    "size": "162×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BUTTON/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "90×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "66×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "text": "\"track.mp3\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"1.1 mb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Style=Filled, Size=Medium, Type=Document, State=Hover": {
+   "(root)": {
+    "size": "184×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "112×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "88×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Document.pdf\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"2.0 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Style=Filled, Size=Medium, Type=Code, State=Hover": {
+   "(root)": {
+    "size": "177×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "105×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "81×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"config.json\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"256 b\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Style=Filled, Size=Medium, Type=Video, State=Hover": {
+   "(root)": {
+    "size": "191×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "119×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "95×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "text": "\"promo-jul.mp4\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "51×18",
+    "sizing": "hug/hug",
+    "text": "\"14.5 mb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Style=Filled, Size=Medium, Type=Image, State=Hover": {
+   "(root)": {
+    "size": "169×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "97×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "73×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "text": "\"image.jpeg\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"958 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Style=Filled, Size=Medium, Type=Audio, State=Hover": {
+   "(root)": {
+    "size": "162×52",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "24=PADDING/24",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "Container": {
+    "size": "90×36",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Icons / Document": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Document"
+   },
+   "Container/Icons / Document/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container/wrapper": {
+    "size": "66×36",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "text": "\"track.mp3\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"1.1 mb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "radius": "6=6",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Download"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Style=Filled, Size=Large, Type=Document, State=Hover": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Download": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "88×18",
+    "sizing": "hug/hug",
+    "text": "\"Document.pdf\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"2.0 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Filled, Size=Large, Type=Code, State=Hover": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Download": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "81×18",
+    "sizing": "hug/hug",
+    "text": "\"config.json\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"256 b\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Filled, Size=Large, Type=Video, State=Hover": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Download": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "95×18",
+    "sizing": "hug/hug",
+    "text": "\"promo-jul.mp4\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "51×18",
+    "sizing": "hug/hug",
+    "text": "\"14.5 mb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Filled, Size=Large, Type=Image, State=Hover": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Download": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "73×18",
+    "sizing": "hug/hug",
+    "text": "\"image.jpeg\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"958 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Style=Filled, Size=Large, Type=Audio, State=Hover": {
+   "(root)": {
+    "size": "156×156",
+    "sizing": "fixed/hug",
+    "layout": "row align min/max",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "radius": "16=16"
+   },
+   "Container": {
+    "size": "108×108",
+    "sizing": "fill/fill",
+    "layout": "column align min/min",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "48=PADDING/48"
+   },
+   "Container/Icons / Download": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Download"
+   },
+   "Container/Icons / Download/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container/wrapper": {
+    "size": "108×36",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Container/wrapper/File name": {
+    "size": "66×18",
+    "sizing": "hug/hug",
+    "text": "\"track.mp3\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/wrapper/File name#2": {
+    "size": "44×18",
+    "sizing": "hug/hug",
+    "text": "\"958 kb\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   }
+  }
+ }
+}

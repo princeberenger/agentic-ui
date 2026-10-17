@@ -1,0 +1,407 @@
+{
+ "id": "2001:2681",
+ "name": "Tooltip",
+ "props": {
+  "Tooltip text": {
+   "type": "TEXT",
+   "default": "Tooltip text"
+  },
+  "Position": {
+   "type": "VARIANT",
+   "default": "Top",
+   "options": [
+    "Bottom",
+    "Left",
+    "Right",
+    "Top"
+   ]
+  },
+  "Caret alignment": {
+   "type": "VARIANT",
+   "default": "Center",
+   "options": [
+    "Center",
+    "End",
+    "Start"
+   ]
+  }
+ },
+ "variants": {
+  "Position=Top, Caret alignment=Center": {
+   "(root)": {
+    "size": "83×27",
+    "sizing": "hug/hug",
+    "layout": "column align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Body": {
+    "size": "83×23",
+    "sizing": "hug/hug",
+    "maxWidth": "208",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Body/Tooltip content": {
+    "size": "83×23",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Inverse",
+    "radius": "4=4"
+   },
+   "Body/Tooltip content/Tooltip text": {
+    "size": "67×15",
+    "sizing": "hug/hug",
+    "maxWidth": "128",
+    "text": "\"Tooltip text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   },
+   "Tooltip caret": {
+    "size": "40×4",
+    "sizing": "hug/hug",
+    "layout": "column align min/center",
+    "padding": "0 16=PADDING/16 0 16=PADDING/16",
+    "gap": "0"
+   },
+   "Tooltip caret/icon-arrow": {
+    "size": "8×4",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Inverse"
+   }
+  },
+  "Position=Top, Caret alignment=Start": {
+   "(root)": {
+    "size": "83×27",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Body": {
+    "size": "83×23",
+    "sizing": "hug/hug",
+    "maxWidth": "208",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Body/Tooltip content": {
+    "size": "83×23",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Inverse",
+    "radius": "4=4"
+   },
+   "Body/Tooltip content/Tooltip text": {
+    "size": "67×15",
+    "sizing": "hug/hug",
+    "maxWidth": "128",
+    "text": "\"Tooltip text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   },
+   "Tooltip caret": {
+    "size": "40×4",
+    "sizing": "hug/hug",
+    "layout": "column align min/center",
+    "padding": "0 16=PADDING/16 0 16=PADDING/16",
+    "gap": "0"
+   },
+   "Tooltip caret/icon-arrow": {
+    "size": "8×4",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Inverse"
+   }
+  },
+  "Position=Top, Caret alignment=End": {
+   "(root)": {
+    "size": "83×27",
+    "sizing": "hug/hug",
+    "layout": "column align min/max",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Body": {
+    "size": "83×23",
+    "sizing": "hug/hug",
+    "maxWidth": "208",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Body/Tooltip content": {
+    "size": "83×23",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Inverse",
+    "radius": "4=4"
+   },
+   "Body/Tooltip content/Tooltip text": {
+    "size": "67×15",
+    "sizing": "hug/hug",
+    "maxWidth": "128",
+    "text": "\"Tooltip text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   },
+   "Tooltip caret": {
+    "size": "40×4",
+    "sizing": "hug/hug",
+    "layout": "column align min/center",
+    "padding": "0 16=PADDING/16 0 16=PADDING/16",
+    "gap": "0"
+   },
+   "Tooltip caret/icon-arrow": {
+    "size": "8×4",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Inverse"
+   }
+  },
+  "Position=Bottom, Caret alignment=Center": {
+   "(root)": {
+    "size": "83×27",
+    "sizing": "hug/hug",
+    "layout": "column align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Tooltip caret": {
+    "size": "40×4",
+    "sizing": "hug/hug",
+    "layout": "column align min/center",
+    "padding": "0 16=PADDING/16 0 16=PADDING/16",
+    "gap": "0"
+   },
+   "Tooltip caret/icon-arrow": {
+    "size": "8×4",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Inverse"
+   },
+   "Body": {
+    "size": "83×23",
+    "sizing": "hug/hug",
+    "maxWidth": "208",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Body/Tooltip content": {
+    "size": "83×23",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Inverse",
+    "radius": "4=4"
+   },
+   "Body/Tooltip content/Tooltip text": {
+    "size": "67×15",
+    "sizing": "hug/hug",
+    "maxWidth": "128",
+    "text": "\"Tooltip text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   }
+  },
+  "Position=Bottom, Caret alignment=Start": {
+   "(root)": {
+    "size": "83×27",
+    "sizing": "hug/hug",
+    "layout": "column align max/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Tooltip caret": {
+    "size": "40×4",
+    "sizing": "hug/hug",
+    "layout": "column align min/center",
+    "padding": "0 16=PADDING/16 0 16=PADDING/16",
+    "gap": "0"
+   },
+   "Tooltip caret/icon-arrow": {
+    "size": "8×4",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Inverse"
+   },
+   "Body": {
+    "size": "83×23",
+    "sizing": "hug/hug",
+    "maxWidth": "208",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Body/Tooltip content": {
+    "size": "83×23",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Inverse",
+    "radius": "4=4"
+   },
+   "Body/Tooltip content/Tooltip text": {
+    "size": "67×15",
+    "sizing": "hug/hug",
+    "maxWidth": "128",
+    "text": "\"Tooltip text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   }
+  },
+  "Position=Bottom, Caret alignment=End": {
+   "(root)": {
+    "size": "83×27",
+    "sizing": "hug/hug",
+    "layout": "column align max/max",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Tooltip caret": {
+    "size": "40×4",
+    "sizing": "hug/hug",
+    "layout": "column align min/center",
+    "padding": "0 16=PADDING/16 0 16=PADDING/16",
+    "gap": "0"
+   },
+   "Tooltip caret/icon-arrow": {
+    "size": "8×4",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Inverse"
+   },
+   "Body": {
+    "size": "83×23",
+    "sizing": "hug/hug",
+    "maxWidth": "208",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Body/Tooltip content": {
+    "size": "83×23",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Inverse",
+    "radius": "4=4"
+   },
+   "Body/Tooltip content/Tooltip text": {
+    "size": "67×15",
+    "sizing": "hug/hug",
+    "maxWidth": "128",
+    "text": "\"Tooltip text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   }
+  },
+  "Position=Left, Caret alignment=Center": {
+   "(root)": {
+    "size": "87×23",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Body": {
+    "size": "83×23",
+    "sizing": "hug/hug",
+    "maxWidth": "208",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Body/Tooltip content": {
+    "size": "83×23",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Inverse",
+    "radius": "4=4"
+   },
+   "Body/Tooltip content/Tooltip text": {
+    "size": "67×15",
+    "sizing": "hug/hug",
+    "maxWidth": "128",
+    "text": "\"Tooltip text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   },
+   "Tooltip caret": {
+    "size": "4×16",
+    "sizing": "hug/hug",
+    "layout": "column align min/center",
+    "padding": "0 4=PADDING/4 0 4=PADDING/4",
+    "gap": "0"
+   },
+   "Tooltip caret/icon-arrow": {
+    "size": "4×8",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Inverse"
+   }
+  },
+  "Position=Right, Caret alignment=Center": {
+   "(root)": {
+    "size": "87×23",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Tooltip caret": {
+    "size": "4×16",
+    "sizing": "hug/hug",
+    "layout": "column align min/center",
+    "padding": "0 4=PADDING/4 0 4=PADDING/4",
+    "gap": "0"
+   },
+   "Tooltip caret/icon-arrow": {
+    "size": "4×8",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Inverse"
+   },
+   "Body": {
+    "size": "83×23",
+    "sizing": "hug/hug",
+    "maxWidth": "208",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Body/Tooltip content": {
+    "size": "83×23",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "0",
+    "fill": "BACKGROUND/Inverse",
+    "radius": "4=4"
+   },
+   "Body/Tooltip content/Tooltip text": {
+    "size": "67×15",
+    "sizing": "hug/hug",
+    "maxWidth": "128",
+    "text": "\"Tooltip text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   }
+  }
+ }
+}

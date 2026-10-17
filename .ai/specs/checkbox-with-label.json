@@ -1,0 +1,419 @@
+{
+ "id": "815:75",
+ "name": "Checkbox with label",
+ "props": {
+  "Show description": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Label": {
+   "type": "TEXT",
+   "default": "Label"
+  },
+  "Description": {
+   "type": "TEXT",
+   "default": "Description text"
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "disabled"
+   ]
+  },
+  "Selected": {
+   "type": "VARIANT",
+   "default": "false",
+   "options": [
+    "false",
+    "indeterminate",
+    "true"
+   ]
+  },
+  "Style": {
+   "type": "VARIANT",
+   "default": "no-background",
+   "options": [
+    "has-background",
+    "no-background"
+   ]
+  }
+ },
+ "variants": {
+  "State=default, Selected=false, Style=no-background": {
+   "(root)": {
+    "size": "135×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "instance": "Checkbox › Type=stroke, State=default, Selected=false"
+   },
+   "label": {
+    "size": "103×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "label/Label": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "label/Description text": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Description text\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=default, Selected=false, Style=has-background": {
+   "(root)": {
+    "size": "171×56",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 24=PADDING/24 8=PADDING/8 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Checkbox": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "instance": "Checkbox › Type=filled, State=default, Selected=false"
+   },
+   "label": {
+    "size": "103×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "label/Label": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "label/Description text": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Description text\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=disabled, Selected=false, Style=no-background": {
+   "(root)": {
+    "size": "135×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "instance": "Checkbox › Type=stroke, State=disabled, Selected=false"
+   },
+   "label": {
+    "size": "103×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "label/Label": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "label/Description text": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Description text\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "State=default, Selected=indeterminate, Style=no-background": {
+   "(root)": {
+    "size": "135×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "instance": "Checkbox › Type=stroke, State=default, Selected=indeterminate"
+   },
+   "label": {
+    "size": "103×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "label/Label": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "label/Description text": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Description text\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=default, Selected=indeterminate, Style=has-background": {
+   "(root)": {
+    "size": "171×56",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 24=PADDING/24 8=PADDING/8 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "instance": "Checkbox › Type=filled, State=default, Selected=indeterminate"
+   },
+   "label": {
+    "size": "103×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "label/Label": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "label/Description text": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Description text\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=disabled, Selected=indeterminate, Style=no-background": {
+   "(root)": {
+    "size": "135×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "instance": "Checkbox › Type=stroke, State=disabled, Selected=indeterminate"
+   },
+   "label": {
+    "size": "103×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "label/Label": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "label/Description text": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Description text\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "State=default, Selected=true, Style=no-background": {
+   "(root)": {
+    "size": "135×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "instance": "Checkbox › Type=stroke, State=default, Selected=true"
+   },
+   "label": {
+    "size": "103×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "label/Label": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "label/Description text": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Description text\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=default, Selected=true, Style=has-background": {
+   "(root)": {
+    "size": "171×56",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 24=PADDING/24 8=PADDING/8 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "instance": "Checkbox › Type=filled, State=default, Selected=true"
+   },
+   "label": {
+    "size": "103×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "label/Label": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "label/Description text": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Description text\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=disabled, Selected=true, Style=no-background": {
+   "(root)": {
+    "size": "135×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "instance": "Checkbox › Type=stroke, State=disabled, Selected=true"
+   },
+   "label": {
+    "size": "103×40",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "label/Label": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Medium, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "label/Description text": {
+    "size": "103×18",
+    "sizing": "fill/hug",
+    "text": "\"Description text\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  }
+ }
+}

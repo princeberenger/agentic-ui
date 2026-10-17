@@ -1,0 +1,36 @@
+/* ==========================================================================
+   PROGRESS BARS — Figma Progress - Bars (10, 12, 20, 24, 48)
+   16px high segments, 2px apart, filled from the left.
+   ========================================================================== */
+
+.bars {
+  --_width: var(--space-2);
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Progress - Bars (48): 1px segments, no variable (see .ai/figma-debt.md) */
+.thin {
+  --_width: var(--stroke-default);
+}
+
+/* Progress - Bars (24): 4px segments */
+.wide {
+  --_width: var(--space-4);
+}
+
+.segment {
+  flex-shrink: 0;
+  width: var(--_width);
+  height: var(--icon-16);
+  background-color: var(--color-bg-disabled);
+  transition-property: background-color;
+  transition-duration: var(--duration-enter);
+  transition-timing-function: var(--ease-out-expo);
+}
+
+.segment[data-filled] {
+  background-color: var(--color-content-primary);
+}

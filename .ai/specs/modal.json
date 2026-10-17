@@ -1,0 +1,155 @@
+{
+ "id": "4092:1641",
+ "name": "MODAL",
+ "props": {
+  "Title": {
+   "type": "TEXT",
+   "default": "Modal title"
+  },
+  "Subtitle": {
+   "type": "TEXT",
+   "default": "Subtitle label"
+  },
+  "Text area": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Body text": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Text": {
+   "type": "TEXT",
+   "default": "A16z VC Startup Advisor is a cutting-edge AI assistant designed to revolutionize the venture capital and startup ecosystem. This advanced system serves as an invaluable resource for both venture capitalists and startup founders, offering deep insights and strategic guidance throughout the investment and company-building journey.  \n\nStartup Evaluation: A16z employs sophisticated algorithms to analyze startup pitches, business models, and market potential, providing data-driven assessments to inform investment decisions. \n\nStrategic Advisory: Leveraging its vast knowledge base, A16z offers tailored advice on fundraising strategies, growth tactics, and market positioning, helping startups navigate critical stages of development. \n\nMarket Intelligence: Stay ahead of the curve with A16z's real-time insights on industry trends, emerging technologies, and competitive landscapes across various high-growth sectors. "
+  },
+  "Upload area": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show subtitle": {
+   "type": "BOOLEAN",
+   "default": true
+  }
+ },
+ "variants": {
+  "MODAL": {
+   "(root)": {
+    "size": "480×580",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24",
+    "gap": "24=PADDING/24",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "16=16",
+    "effect": "Shadows/elevation 4"
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "modal-header": {
+    "size": "432×56",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "modal-header/Modal title": {
+    "size": "432×28",
+    "sizing": "fill/hug",
+    "text": "\"Modal title\"",
+    "font": "SYSTEM/Heading/h2 · Google Sans Flex 400 24/28 ls 0",
+    "font.vars": "family/Headings, size/X-Large, weight/Regular, line-height/Large Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "modal-header/Subtitle label": {
+    "size": "432×24",
+    "sizing": "fill/hug",
+    "text": "\"Subtitle label\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Modal body text": {
+    "size": "432×342",
+    "sizing": "fixed/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "hidden": "true"
+   },
+   "Modal body text/A16z VC Startup Advisor is a cutting-edge AI assistant designed to revolutionize the venture capital and startup ecosystem. This advanced system serves as an invaluable resource for both venture capitalists and startup founders, offering deep insights and strategic guidance throughout the investment and company-building journey. Startup Evaluation: A16z employs sophisticated algorithms to analyze startup pitches, business models, and market potential, providing data-driven assessments to inform investment decisions. Strategic Advisory: Leveraging its vast knowledge base, A16z offers tailored advice on fundraising strategies, growth tactics, and market positioning, helping startups navigate critical stages of development. Market Intelligence: Stay ahead of the curve with A16z's real-time insights on industry trends, emerging technologies, and competitive landscapes across various high-growth sectors.": {
+    "size": "432×342",
+    "sizing": "fill/hug",
+    "text": "\"A16z VC Startup Advisor is a cutting-edge AI assistant designed to revolutionize the venture capital and startup ecosystem. This advanced system serves as an invaluable resource for both venture capitalists and startup founders, offering deep insights and strategic guidance throughout the investment and company-building journey.  \\n\\nStartup Evaluation: A16z employs sophisticated algorithms to analyze startup pitches, business models, and market potential, providing data-driven assessments to inform investment decisions. \\n\\nStrategic Advisory: Leveraging its vast knowledge base, A16z offers tailored advice on fundraising strategies, growth tactics, and market positioning, helping startups navigate critical stages of development. \\n\\nMarket Intelligence: Stay ahead of the curve with A16z's real-time insights on industry trends, emerging technologies, and competitive landscapes across various high-growth sectors. \"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Text area": {
+    "size": "432×200",
+    "sizing": "fill/fixed",
+    "minWidth": "64=64px (4rem) (spacing-10)",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none",
+    "instance": "Text area › State=filled",
+    "props": "Scrolfade=true, Show helper text=false, Text=\"A16z VC Startup Advisor is a cutting-edge AI assistant designed to revolutionize the venture capital and startup ecosystem. This advanced system serves as an invaluable resource for both venture capitalists and startup founders, offering deep insights and strategic guidance throughout the investment and company-building journey.  Startup Evaluation: A16z employs sophisticated algorithms to analyze startup pitches, business models, and market potential, providing data-driven assessments to inform investment decisions. \\n\\nStrategic Advisory: Leveraging its vast knowledge base, A16z offers tailored advice on fundraising strategies, growth tactics, and market positioning, helping startups navigate critical stages of development. \\n\\nMarket Intelligence: Stay ahead of the curve with A16z's real-time insights on industry trends, emerging technologies, and competitive landscapes across various high-growth sectors. \\n\\nDue Diligence Support: Streamline the investment process with A16z's assistance in comprehensive due diligence, including financial modeling and risk assessment. \\n\\nFounder Guidance: A16z acts as a virtual mentor, guiding entrepreneurs through common startup challenges, from product-market fit to scaling operations. Ethical Framework: Built with a strong ethical foundation, A16z ensures fair and impartial advice, promoting responsible innovation and sustainable business practices. Continuous Learning: A16z constantly updates its knowledge base, incorporating the latest VC trends, startup methodologies, and technological advancements to provide cutting-edge advice. Ecosystem Connector: Facilitate meaningful connections between investors and founders, fostering a collaborative environment for innovation and growth. A16z VC Startup Advisor is more than just an AI – it's your strategic partner in navigating the complex world of venture capital and startup development. Whether you're a seasoned investor looking to optimize your portfolio or a visionary founder seeking to build the next unicorn, A16z provides the insights, analysis, and guidance you need to succeed in today's competitive landscape.\", Label=\"Text area label\", Placeholder=\"Placeholder\", Show Label=false"
+   },
+   "Text area/Text input": {
+    "fill": "BACKGROUND/Primary"
+   },
+   "upload": {
+    "size": "432×164",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "16=PADDING/16"
+   },
+   "upload/Agent can access:": {
+    "size": "432×18",
+    "sizing": "fill/hug",
+    "text": "\"Agent can access:\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "upload/File upload area": {
+    "size": "432×130",
+    "sizing": "fill/hug",
+    "layout": "column align center/center",
+    "padding": "32=PADDING/32 24=PADDING/24 32=PADDING/32 24=PADDING/24",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "1=default inside BORDER/Subtle dashed 4/4",
+    "radius": "12=12",
+    "instance": "File upload area › State=default",
+    "props": "Upload icon=Icons / Upload, Show icon=false, Show hint 1=true, Show hint 2=false, Area label=\"Click to select\", Show button=false, Hint label 2=\"PDF, JPEG or PNG less than 5MB\", Hint label 1=\"No items have been selected. \\nThe entire knowledge base will be searched.\""
+   },
+   "ButtonGroup": {
+    "size": "432×40",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10",
+    "instance": "ButtonGroup › Size=lg"
+   },
+   "ButtonGroup/Button": {
+    "instance": "Button › Size=lg, Style=primary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Start Chat\""
+   }
+  }
+ }
+}

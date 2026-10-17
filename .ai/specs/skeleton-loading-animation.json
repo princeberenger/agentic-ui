@@ -1,0 +1,91 @@
+{
+ "id": "761:23192",
+ "name": "Skeleton loading animation",
+ "props": {
+  "Phase": {
+   "type": "VARIANT",
+   "default": "1",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ]
+  }
+ },
+ "variants": {
+  "Phase=1": {
+   "(root)": {
+    "size": "160×16",
+    "sizing": "fixed/fixed"
+   },
+   "Skeleton": {
+    "size": "160×16",
+    "fill": "#e8e8e8 (no variable)"
+   },
+   "Skeleton/Gradient": {
+    "size": "160×16",
+    "fill": "#c6c6c6 (no variable)",
+    "opacity": 0.5
+   }
+  },
+  "Phase=2": {
+   "(root)": {
+    "size": "160×16",
+    "sizing": "fixed/fixed"
+   },
+   "Skeleton": {
+    "size": "160×16",
+    "fill": "#e8e8e8 (no variable)"
+   },
+   "Skeleton/Gradient": {
+    "size": "160×16",
+    "fill": "#c6c6c6 (no variable)"
+   }
+  },
+  "Phase=3": {
+   "(root)": {
+    "size": "160×16",
+    "sizing": "fixed/fixed"
+   },
+   "Skeleton": {
+    "size": "160×16",
+    "fill": "#e8e8e8 (no variable)"
+   },
+   "Skeleton/Gradient": {
+    "size": "160×16",
+    "fill": "#c6c6c6 (no variable)"
+   }
+  },
+  "Phase=4": {
+   "(root)": {
+    "size": "160×16",
+    "sizing": "fixed/fixed"
+   },
+   "Skeleton": {
+    "size": "160×16",
+    "fill": "#e8e8e8 (no variable)"
+   },
+   "Skeleton/Gradient": {
+    "size": "160×16",
+    "fill": "#c6c6c6 (no variable)"
+   }
+  },
+  "Phase=5": {
+   "(root)": {
+    "size": "160×16",
+    "sizing": "fixed/fixed"
+   },
+   "Skeleton": {
+    "size": "160×16",
+    "fill": "#e8e8e8 (no variable)"
+   },
+   "Skeleton/Gradient": {
+    "size": "160×16",
+    "fill": "#c6c6c6 (no variable)",
+    "opacity": 0.5
+   }
+  }
+ }
+}

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   CURSOR BLINK ANIMATION — Figma 338:6698
+   Visible ↔ Invisible every 500ms, instant (prototype: after 500ms, no transition).
+   Invisible: the caret has 0 opacity over a CONTENT/On Primary fill.
+   ========================================================================== */
+
+/* 1 × 17 caret, no variable */
+.caret {
+  display: inline-block;
+  flex-shrink: 0;
+  width: var(--stroke-default);
+  height: calc(var(--icon-16) + var(--stroke-default));
+  background-color: var(--color-content-primary);
+  vertical-align: middle;
+  animation: caretBlink 1s steps(1, end) infinite;
+}
+
+@keyframes caretBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .caret {
+    animation: none;
+  }
+}

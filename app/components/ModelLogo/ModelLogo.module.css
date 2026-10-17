@@ -1,0 +1,26 @@
+/* ==========================================================================
+   MODEL LOGO — Figma Models 118:15337
+   md: 32 × 32, radius 10, 16px mark · sm (--s): 20 × 20, radius 6, 13px mark
+   ========================================================================== */
+
+.logo {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-button-secondary);
+  box-shadow: inset 0 0 0 var(--stroke-sm) var(--color-border-subtle);
+  color: var(--color-content-primary);
+}
+
+.md {
+  width: var(--icon-32);
+  height: var(--icon-32);
+  border-radius: var(--radius-10);
+}
+
+.sm {
+  width: var(--icon-20);
+  height: var(--icon-20);
+  border-radius: var(--radius-6);
+}

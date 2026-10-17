@@ -1,0 +1,520 @@
+{
+ "id": "338:6162",
+ "name": "Search",
+ "props": {
+  "Size": {
+   "type": "VARIANT",
+   "default": "lg",
+   "options": [
+    "large (from expanded)",
+    "lg",
+    "sm",
+    "small (from expanded)"
+   ]
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "disabled",
+    "filled",
+    "focus",
+    "hover",
+    "skeleton"
+   ]
+  },
+  "Expanded": {
+   "type": "VARIANT",
+   "default": "true",
+   "options": [
+    "false",
+    "true"
+   ]
+  }
+ },
+ "variants": {
+  "Size=lg, State=default, Expanded=true": {
+   "(root)": {
+    "size": "320×40",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "0.5 inside BORDER/Subtle",
+    "radius": "12=12"
+   },
+   "_Search base": {
+    "size": "320×40",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=md, Expanded=true",
+    "props": "Label=\"Search\""
+   }
+  },
+  "Size=sm, State=default, Expanded=true": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "0.5 inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "_Search base": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=sm, Expanded=true",
+    "props": "Label=\"Search\""
+   },
+   "_Search base/Search icon/Icons / Search/icon": {
+    "fill": "CONTENT/Secondary"
+   },
+   "_Search base/Hide text overflow/Text": {
+    "color": "CONTENT/Secondary"
+   },
+   "_Search base/Hide text overflow/Cursor blink animation": {
+    "hidden": "true"
+   },
+   "_Search base/shortcut/text-wrapper": {
+    "fill": "BACKGROUND/Secondary"
+   },
+   "_Search base/Clear icon": {
+    "hidden": "true"
+   }
+  },
+  "Size=lg, State=hover, Expanded=true": {
+   "(root)": {
+    "size": "320×40",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1 inside BORDER/Subtle",
+    "radius": "12=12"
+   },
+   "_Search base": {
+    "size": "320×40",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=md, Expanded=true",
+    "props": "Label=\"Search\""
+   },
+   "_Search base/Search icon/Search/Vector": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, State=hover, Expanded=true": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1 inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "_Search base": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=sm, Expanded=true",
+    "props": "Label=\"Search\""
+   },
+   "_Search base/Hide text overflow/Text": {
+    "color": "CONTENT/Secondary"
+   },
+   "_Search base/Hide text overflow/Cursor blink animation": {
+    "hidden": "true"
+   },
+   "_Search base/shortcut/text-wrapper": {
+    "fill": "BACKGROUND/Secondary"
+   },
+   "_Search base/Clear icon": {
+    "hidden": "true"
+   }
+  },
+  "Size=lg, State=focus, Expanded=true": {
+   "(root)": {
+    "size": "320×40",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1 inside CONTENT/Primary",
+    "radius": "12=12",
+    "effect": "drop_shadow 0,0 0 2 #0000001f (no style)"
+   },
+   "_Search base": {
+    "size": "320×40",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=md, Expanded=true",
+    "props": "Label=\"Typing\""
+   },
+   "_Search base/Search icon/Search/Vector": {
+    "fill": "CONTENT/Primary"
+   },
+   "_Search base/Hide text overflow/Text": {
+    "color": "CONTENT/Primary"
+   },
+   "_Search base/shortcut": {
+    "hidden": "true"
+   }
+  },
+  "Size=sm, State=focus, Expanded=true": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1 inside CONTENT/Primary",
+    "radius": "10=10",
+    "effect": "drop_shadow 0,0 0 2 #0000001f (no style)"
+   },
+   "_Search base": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=sm, Expanded=true",
+    "props": "Label=\"Typing\""
+   },
+   "_Search base/Hide text overflow/Text": {
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, State=filled, Expanded=true": {
+   "(root)": {
+    "size": "320×40",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1 inside BORDER/Subtle",
+    "radius": "12=12"
+   },
+   "_Search base": {
+    "size": "320×40",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=md, Expanded=true",
+    "props": "Label=\"Filled\""
+   },
+   "_Search base/Hide text overflow/Text": {
+    "color": "CONTENT/Primary"
+   },
+   "_Search base/shortcut": {
+    "hidden": "true"
+   }
+  },
+  "Size=sm, State=filled, Expanded=true": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1 inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "_Search base": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=sm, Expanded=true",
+    "props": "Label=\"Filled\""
+   },
+   "_Search base/Hide text overflow/Text": {
+    "color": "CONTENT/Primary"
+   },
+   "_Search base/Hide text overflow/Cursor blink animation": {
+    "hidden": "true"
+   }
+  },
+  "Size=sm, State=disabled, Expanded=true": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "radius": "10=10"
+   },
+   "_Search base": {
+    "size": "240×30",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=sm, Expanded=true",
+    "props": "Label=\"Disabled\""
+   },
+   "_Search base/Search icon/Icons / Search/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "_Search base/Hide text overflow/Text": {
+    "color": "CONTENT/Disabled"
+   },
+   "_Search base/Hide text overflow/Cursor blink animation": {
+    "hidden": "true"
+   },
+   "_Search base/Clear icon": {
+    "hidden": "true"
+   }
+  },
+  "Size=lg, State=disabled, Expanded=true": {
+   "(root)": {
+    "size": "320×40",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "radius": "10=10"
+   },
+   "_Search base": {
+    "size": "320×40",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=md, Expanded=true",
+    "props": "Label=\"Disabled\""
+   },
+   "_Search base/Search icon/Search/Vector": {
+    "fill": "CONTENT/Disabled"
+   },
+   "_Search base/Hide text overflow/Text": {
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "color": "CONTENT/Disabled"
+   },
+   "_Search base/shortcut": {
+    "hidden": "true"
+   }
+  },
+  "Size=sm, State=skeleton, Expanded=true": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "_Search base": {
+    "size": "240×30",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "hidden": "true",
+    "instance": "_Search base › Size=sm, Expanded=true",
+    "props": "Label=\"Search\""
+   },
+   "_Search base/Hide text overflow/Text": {
+    "hidden": "true"
+   },
+   "_Search base/Hide text overflow/Cursor blink animation": {
+    "hidden": "true"
+   },
+   "_Search base/Clear icon": {
+    "hidden": "true"
+   }
+  },
+  "Size=lg, State=skeleton, Expanded=true": {
+   "(root)": {
+    "size": "320×40",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "12=12"
+   },
+   "_Search base": {
+    "size": "320×40",
+    "sizing": "fixed/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "hidden": "true",
+    "instance": "_Search base › Size=md, Expanded=true",
+    "props": "Label=\"Search\""
+   },
+   "_Search base/Search icon/Search/Vector": {
+    "fill": "CONTENT/Icon"
+   },
+   "_Search base/Hide text overflow/Text": {
+    "hidden": "true"
+   },
+   "_Search base/shortcut": {
+    "hidden": "true"
+   }
+  },
+  "Size=lg, State=default, Expanded=false": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "radius": "10=10"
+   },
+   "_Search base": {
+    "size": "40×40",
+    "sizing": "hug/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=md, Expanded=false",
+    "props": "Label=\"Search\""
+   }
+  },
+  "Size=sm, State=default, Expanded=false": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "radius": "10=10"
+   },
+   "_Search base": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=sm, Expanded=false",
+    "props": "Label=\"Search\""
+   }
+  },
+  "Size=lg, State=hover, Expanded=false": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "_Search base": {
+    "size": "40×40",
+    "sizing": "hug/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=md, Expanded=false",
+    "props": "Label=\"Search\""
+   }
+  },
+  "Size=sm, State=hover, Expanded=false": {
+   "(root)": {
+    "size": "32×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "_Search base": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=sm, Expanded=false",
+    "props": "Label=\"Search\""
+   }
+  },
+  "Size=small (from expanded), State=focus, Expanded=true": {
+   "(root)": {
+    "size": "240×32",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1 inside CONTENT/Primary",
+    "radius": "10=10",
+    "effect": "drop_shadow 0,0 0 2 #0000001f (no style)"
+   },
+   "_Search base": {
+    "size": "240×32",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=sm, Expanded=true",
+    "props": "Label=\"Typing\""
+   },
+   "_Search base/Hide text overflow/Text": {
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=large (from expanded), State=focus, Expanded=true": {
+   "(root)": {
+    "size": "320×40",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1 inside CONTENT/Primary",
+    "radius": "12=12",
+    "effect": "drop_shadow 0,0 0 2 #0000001f (no style)"
+   },
+   "_Search base": {
+    "size": "320×40",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Search base › Size=md, Expanded=true",
+    "props": "Label=\"Typing\""
+   },
+   "_Search base/Search icon/Search/Vector": {
+    "fill": "CONTENT/Primary"
+   },
+   "_Search base/Hide text overflow/Text": {
+    "color": "CONTENT/Primary"
+   },
+   "_Search base/shortcut": {
+    "hidden": "true"
+   }
+  }
+ }
+}

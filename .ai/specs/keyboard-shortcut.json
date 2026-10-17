@@ -1,0 +1,219 @@
+{
+ "id": "554:1360",
+ "name": "_Keyboard shortcut",
+ "props": {
+  "Show Letter 4": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Icon": {
+   "type": "INSTANCE_SWAP",
+   "default": "179:14020"
+  },
+  "Icon 1": {
+   "type": "INSTANCE_SWAP",
+   "default": "554:1273"
+  },
+  "Icon 2": {
+   "type": "INSTANCE_SWAP",
+   "default": "554:1275"
+  },
+  "Icon 3": {
+   "type": "INSTANCE_SWAP",
+   "default": "554:1277"
+  },
+  "Show Icon 1": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show Icon 2": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Show Icon 3": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Show Icon 4 (Any)": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Show Letter 1": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show Letter 2": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Show Letter 3": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Icon 4 (Any)": {
+   "type": "INSTANCE_SWAP",
+   "default": "554:1279"
+  },
+  "Context": {
+   "type": "VARIANT",
+   "default": "caret",
+   "options": [
+    "caret",
+    "icon",
+    "shortcut",
+    "slash",
+    "Return"
+   ]
+  }
+ },
+ "variants": {
+  "Context=caret": {
+   "(root)": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0=PADDING/none"
+   },
+   "Icon": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Caret--right"
+   },
+   "Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Context=Return": {
+   "(root)": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0=PADDING/none"
+   },
+   "Icons / Return": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Return"
+   },
+   "Icons / Return/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Context=icon": {
+   "(root)": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0=PADDING/none"
+   },
+   "Icon": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Arrow--up-right"
+   },
+   "Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Context=slash": {
+   "(root)": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0=PADDING/none"
+   },
+   "Icon": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/14",
+    "layout": "column align center/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "2=2"
+   },
+   "Icon//": {
+    "size": "6×18",
+    "sizing": "hug/hug",
+    "text": "\"/\"",
+    "font": "SYSTEM/Label/sm/regular · Departure Mono 400 9/18 ls 0 upper",
+    "font.vars": "family/Labels, Links, size/Super Tiny, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Icon"
+   }
+  },
+  "Context=shortcut": {
+   "(root)": {
+    "size": "23×15",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0"
+   },
+   "Icon": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Mac--command"
+   },
+   "Icon/Vector": {
+    "fill": "CONTENT/Icon"
+   },
+   "Icon#2": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Mac--option"
+   },
+   "Icon#2/Vector": {
+    "fill": "CONTENT/Icon"
+   },
+   "Icon#3": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Mac--shift"
+   },
+   "Icon#3/Vector": {
+    "fill": "CONTENT/Icon"
+   },
+   "Icon#4": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Delete"
+   },
+   "Icon#4/Vector": {
+    "fill": "CONTENT/Icon"
+   },
+   "X": {
+    "size": "9×15",
+    "sizing": "hug/hug",
+    "text": "\"X\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Icon"
+   },
+   "Y": {
+    "size": "9×15",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "text": "\"Y\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Icon"
+   },
+   "Z": {
+    "size": "9×15",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "text": "\"Z\"",
+    "font": "Departure Mono 400 14/15 ls -0.3 upper",
+    "font.vars": "family/Labels, Links, size/Small, weight/Regular, line-height/Tiny Text, letter-spacing/tight",
+    "color": "CONTENT/Icon"
+   }
+  }
+ }
+}

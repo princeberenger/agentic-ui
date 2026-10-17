@@ -1,0 +1,283 @@
+{
+ "id": "771:1082",
+ "name": "cell-type-text",
+ "props": {
+  "Description": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Description Text": {
+   "type": "TEXT",
+   "default": "Description Text"
+  },
+  "Main Text": {
+   "type": "TEXT",
+   "default": "Table text goes here"
+  },
+  "Icon": {
+   "type": "INSTANCE_SWAP",
+   "default": "179:13389"
+  },
+  "Show icon": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default",
+    "Hover",
+    "Focus",
+    "Disabled",
+    "Loading"
+   ]
+  }
+ },
+ "variants": {
+  "State=Default": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Container": {
+    "size": "315×35",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "12=Core/150"
+   },
+   "Container/Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "hidden": "true",
+    "instance": "Checkbox › Type=stroke, State=default, Selected=false"
+   },
+   "Container/Text Container": {
+    "size": "315×35",
+    "sizing": "fill/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "315×18",
+    "sizing": "fill/hug",
+    "text": "\"Table text goes here\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Container/Text Container/Description Text": {
+    "size": "315×15",
+    "sizing": "fill/hug",
+    "text": "\"Description Text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=Disabled": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Container": {
+    "size": "315×35",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=Core/150"
+   },
+   "Container/Text Container": {
+    "size": "315×35",
+    "sizing": "fill/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "315×18",
+    "sizing": "fill/hug",
+    "text": "\"Table text goes here\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "Container/Text Container/Description Text": {
+    "size": "315×15",
+    "sizing": "fill/hug",
+    "text": "\"Description Text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "State=Loading": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Container": {
+    "size": "347×24",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=Core/150"
+   },
+   "Container/table-skeleton-loading": {
+    "size": "220×24",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "2=2"
+   }
+  },
+  "State=Hover": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Container": {
+    "size": "315×35",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=Core/150"
+   },
+   "Container/Text Container": {
+    "size": "315×35",
+    "sizing": "fill/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "315×18",
+    "sizing": "fill/hug",
+    "text": "\"Table text goes here\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Container/Text Container/Description Text": {
+    "size": "315×15",
+    "sizing": "fill/hug",
+    "text": "\"Description Text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=Focus": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "Container": {
+    "size": "315×35",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=Core/150"
+   },
+   "Container/Text Container": {
+    "size": "315×35",
+    "sizing": "fill/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "315×18",
+    "sizing": "fill/hug",
+    "text": "\"Table text goes here\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Container/Text Container/Description Text": {
+    "size": "315×15",
+    "sizing": "fill/hug",
+    "text": "\"Description Text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

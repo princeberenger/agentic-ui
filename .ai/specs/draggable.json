@@ -1,0 +1,98 @@
+{
+ "id": "4072:8067",
+ "name": "draggable",
+ "props": {
+  "State": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default"
+   ]
+  }
+ },
+ "variants": {
+  "State=Default": {
+   "(root)": {
+    "size": "240×74",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "values": {
+    "size": "240×18",
+    "sizing": "fill/hug",
+    "layout": "row align space_between/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "values/0": {
+    "size": "24×18",
+    "sizing": "fixed/hug",
+    "text": "\"0\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "values/50": {
+    "size": "24×18",
+    "sizing": "fixed/hug",
+    "text": "\"50\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "values/100": {
+    "size": "24×18",
+    "sizing": "fixed/hug",
+    "text": "\"100\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "slider": {
+    "size": "240×48",
+    "sizing": "fill/hug",
+    "layout": "row align space_between/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "slider/Line 1": {
+    "size": "0×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32",
+    "stroke": "1 center BORDER/Subtle"
+   },
+   "slider/20%": {
+    "size": "40×48",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Tertiary",
+    "radius": "10=10"
+   },
+   "slider/50%": {
+    "size": "121×48",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "radius": "10=10",
+    "hidden": "true"
+   },
+   "slider/75%": {
+    "size": "180×48",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "radius": "10=10",
+    "hidden": "true"
+   },
+   "slider/100%": {
+    "size": "240×48",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "radius": "10=10",
+    "hidden": "true"
+   }
+  }
+ }
+}

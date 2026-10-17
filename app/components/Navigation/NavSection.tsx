@@ -1,53 +1,26 @@
+// Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=230-699 (Navigation Type=tree, nav-section)
+// Extracted: 2026-10-17
+// Tokens: color-border-subtle, stroke-default, space-2, space-4, space-16
+
 import { type ReactNode } from 'react';
-import { Icon } from '../Icon/Icon';
+import { NavLink } from './NavLink';
 import styles from './Navigation.module.css';
 
-interface NavSectionProps {
-  /** Section children — NavLink or NavSubLink components */
-  children: ReactNode;
-  /** Optional section header label text */
-  label?: string;
-  /** Optional section header icon (renders tree-style header when combined with label) */
+export interface NavSectionProps {
+  /** Section title, a nav-link with icon (e.g. Monitor). */
+  label: string;
   icon?: string;
-  /** Add top padding to visually separate from the section above */
-  divider?: boolean;
+  /** NavSubLink items, indented on a BORDER/Subtle rail. */
+  children: ReactNode;
 }
 
-export function NavSection({
-  children,
-  label,
-  icon,
-  divider,
-}: NavSectionProps) {
-  const isTreeSection = Boolean(label && icon);
-
+export function NavSection({ label, icon, children }: NavSectionProps) {
   return (
-    <div className={`${styles.section} ${divider ? styles.sectionDivider : ''}`}>
-      {/* Section label (classic variant — text only, no icon) */}
-      {label && !icon && (
-        <div className={styles.navLinkLabel}>
-          <span>{label}</span>
-        </div>
-      )}
-
-      {/* Tree section header (icon + label) */}
-      {isTreeSection && (
-        <div className={styles.navLink}>
-          <Icon name={icon!} size={16} />
-          <span>{label}</span>
-        </div>
-      )}
-
-      {/* Tree sections wrap children in an indented, border-left container */}
-      {isTreeSection ? (
-        <div className={styles.subLinksWrapper}>
-          <div className={styles.subLinksContainer}>
-            {children}
-          </div>
-        </div>
-      ) : (
-        children
-      )}
+    <div className={styles.section} role="group" aria-label={label}>
+      <NavLink label={label} icon={icon} />
+      <div className={styles.subLinks}>
+        <div className={styles.subLinksRail}>{children}</div>
+      </div>
     </div>
   );
 }

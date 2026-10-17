@@ -1,0 +1,534 @@
+{
+ "id": "4008:623",
+ "name": "Toast",
+ "props": {
+  "Title": {
+   "type": "TEXT",
+   "default": "Toast label"
+  },
+  "Toast text": {
+   "type": "TEXT",
+   "default": "Snackbar text"
+  },
+  "Close button": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Title icon": {
+   "type": "INSTANCE_SWAP",
+   "default": "179:17184"
+  },
+  "Show text input": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Action buttons": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Action button 2": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Action button 1": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "info",
+   "options": [
+    "destructive",
+    "info",
+    "success",
+    "warning"
+   ]
+  }
+ },
+ "variants": {
+  "Type=info": {
+   "(root)": {
+    "size": "320×135",
+    "sizing": "fixed/hug",
+    "maxWidth": "320",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "12=12",
+    "effect": "Shadows/elevation 3"
+   },
+   "toast-header": {
+    "size": "320×56",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "16=PADDING/16 16=PADDING/16 16=PADDING/16 16=PADDING/16",
+    "gap": "8=PADDING/8"
+   },
+   "toast-header/Frame 15": {
+    "size": "140×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "4=4"
+   },
+   "toast-header/Frame 15/Frame 13": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8",
+    "fill": "CONTENT/Accent"
+   },
+   "toast-header/Frame 15/Frame 13/Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Checkmark"
+   },
+   "toast-header/Frame 15/Frame 13/Icons / Checkmark/icon-color": {
+    "fill": "BACKGROUND/Accent (Light)"
+   },
+   "toast-header/Frame 15/Frame 14": {
+    "size": "116×24",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 12=PADDING/12 4=PADDING/4 12=PADDING/12",
+    "gap": "8",
+    "fill": "BACKGROUND/Accent (Light)"
+   },
+   "toast-header/Frame 15/Frame 14/Toast label": {
+    "size": "92×15",
+    "sizing": "hug/hug",
+    "text": "\"Toast label\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper align center",
+    "font.vars": "family/Labels, Links, size/Tiny, weight/Semibold, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Accent"
+   },
+   "toast-header/Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "toast-header/Button/icon/icon": {
+    "fill": "CONTENT/Secondary"
+   },
+   "toast-content": {
+    "size": "320×31",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0=PADDING/none 32=PADDING/32 16=PADDING/16 16=PADDING/16",
+    "gap": "10"
+   },
+   "toast-content/Snackbar text": {
+    "size": "272×15",
+    "sizing": "fill/hug",
+    "text": "\"Snackbar text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "toast-footer": {
+    "size": "320×48",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0=PADDING/none 16=PADDING/16 16=PADDING/16 16=PADDING/16",
+    "gap": "8=PADDING/8"
+   },
+   "toast-footer/Button": {
+    "size": "140×32",
+    "sizing": "fill/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=Icons / Close, Label=\"Action 2\""
+   },
+   "toast-footer/Button#2": {
+    "size": "140×32",
+    "sizing": "fill/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Primary",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=primary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=Icons / Close, Label=\"Action 1\""
+   }
+  },
+  "Type=success": {
+   "(root)": {
+    "size": "320×135",
+    "sizing": "fixed/hug",
+    "maxWidth": "320",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "12=12",
+    "effect": "Shadows/elevation 3"
+   },
+   "toast-header": {
+    "size": "320×56",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "16=PADDING/16 16=PADDING/16 16=PADDING/16 16=PADDING/16",
+    "gap": "8=PADDING/8"
+   },
+   "toast-header/Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full",
+    "hidden": "true",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "toast-header/Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "toast-header/Frame 15": {
+    "size": "140×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "toast-header/Frame 15/Frame 13": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8",
+    "fill": "CONTENT/Success"
+   },
+   "toast-header/Frame 15/Frame 13/Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Checkmark"
+   },
+   "toast-header/Frame 15/Frame 13/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/On Primary"
+   },
+   "toast-header/Frame 15/Frame 14": {
+    "size": "116×24",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 12=PADDING/12 4=PADDING/4 12=PADDING/12",
+    "gap": "8",
+    "fill": "BACKGROUND/Success (Light)"
+   },
+   "toast-header/Frame 15/Frame 14/Toast label": {
+    "size": "92×15",
+    "sizing": "hug/hug",
+    "text": "\"Toast label\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper align center",
+    "font.vars": "family/Labels, Links, size/Tiny, weight/Semibold, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Success"
+   },
+   "toast-content": {
+    "size": "320×31",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0=PADDING/none 32=PADDING/32 16=PADDING/16 16=PADDING/16",
+    "gap": "10"
+   },
+   "toast-content/Snackbar text": {
+    "size": "272×15",
+    "sizing": "fill/hug",
+    "text": "\"Snackbar text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "toast-footer": {
+    "size": "320×48",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0=PADDING/none 16=PADDING/16 16=PADDING/16 16=PADDING/16",
+    "gap": "8=PADDING/8"
+   },
+   "toast-footer/Button": {
+    "size": "140×32",
+    "sizing": "fill/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=Icons / Close, Label=\"Action 2\""
+   },
+   "toast-footer/Button#2": {
+    "size": "140×32",
+    "sizing": "fill/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Primary",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=primary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=Icons / Close, Label=\"Action 1\""
+   }
+  },
+  "Type=destructive": {
+   "(root)": {
+    "size": "320×179",
+    "sizing": "fixed/hug",
+    "maxWidth": "320",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "12=12",
+    "effect": "Shadows/elevation 3"
+   },
+   "toast-header": {
+    "size": "320×56",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "16=PADDING/16 16=PADDING/16 16=PADDING/16 16=PADDING/16",
+    "gap": "0"
+   },
+   "toast-header/Frame 15": {
+    "size": "140×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "toast-header/Frame 15/Frame 13": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8",
+    "fill": "BACKGROUND/Attention"
+   },
+   "toast-header/Frame 15/Frame 13/Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Checkmark"
+   },
+   "toast-header/Frame 15/Frame 13/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/On Primary"
+   },
+   "toast-header/Frame 15/Frame 14": {
+    "size": "116×24",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 12=PADDING/12 4=PADDING/4 12=PADDING/12",
+    "gap": "8",
+    "fill": "BACKGROUND/Attention (Light)"
+   },
+   "toast-header/Frame 15/Frame 14/Toast label": {
+    "size": "92×15",
+    "sizing": "hug/hug",
+    "text": "\"Toast label\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper align center",
+    "font.vars": "family/Labels, Links, size/Tiny, weight/Semibold, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Attention"
+   },
+   "toast-content": {
+    "size": "320×75",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0=PADDING/none 16=PADDING/16 16=PADDING/16 16=PADDING/16",
+    "gap": "12=PADDING/12"
+   },
+   "toast-content/Snackbar text": {
+    "size": "288×15",
+    "sizing": "fill/hug",
+    "text": "\"Snackbar text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "toast-content/Text input": {
+    "size": "288×32",
+    "sizing": "fill/hug",
+    "minWidth": "64=64px (4rem) (spacing-10)",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "Text input › Size=sm, State=default, Text filled=false",
+    "props": "Input text=\"Text\", Show helper=false, Label text=\"Label\", Placeholder text=\"\", Show label=false"
+   },
+   "toast-footer": {
+    "size": "320×48",
+    "sizing": "fill/hug",
+    "layout": "row align space_between/center",
+    "padding": "0=PADDING/none 16=PADDING/16 16=PADDING/16 16=PADDING/16",
+    "gap": "10"
+   },
+   "toast-footer/Button": {
+    "size": "288×32",
+    "sizing": "fill/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Attention",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=destructive, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Swap icon=Icons / Close, Keyboard shortcuts=true, Label=\"Delete\""
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Type=warning": {
+   "(root)": {
+    "size": "320×135",
+    "sizing": "fixed/hug",
+    "maxWidth": "320",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "12=12",
+    "effect": "Shadows/elevation 3"
+   },
+   "toast-header": {
+    "size": "320×56",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "16=PADDING/16 16=PADDING/16 16=PADDING/16 16=PADDING/16",
+    "gap": "0"
+   },
+   "toast-header/Frame 15": {
+    "size": "140×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "toast-header/Frame 15/Frame 13": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8",
+    "fill": "CONTENT/Warning (Text)"
+   },
+   "toast-header/Frame 15/Frame 13/Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Checkmark"
+   },
+   "toast-header/Frame 15/Frame 13/Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Warning (Icons)"
+   },
+   "toast-header/Frame 15/Frame 14": {
+    "size": "116×24",
+    "sizing": "hug/fill",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 12=PADDING/12 4=PADDING/4 12=PADDING/12",
+    "gap": "8",
+    "fill": "BACKGROUND/Warning"
+   },
+   "toast-header/Frame 15/Frame 14/Toast label": {
+    "size": "92×15",
+    "sizing": "hug/hug",
+    "text": "\"Toast label\"",
+    "font": "BUTTON/Label/md/regular · Departure Mono 400 13/15 ls 0 upper align center",
+    "font.vars": "family/Labels, Links, size/Tiny, weight/Semibold, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Warning (Text)"
+   },
+   "toast-content": {
+    "size": "320×31",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0=PADDING/none 32=PADDING/32 16=PADDING/16 16=PADDING/16",
+    "gap": "0=PADDING/none"
+   },
+   "toast-content/Snackbar text": {
+    "size": "272×15",
+    "sizing": "fill/hug",
+    "text": "\"Snackbar text\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "toast-footer": {
+    "size": "320×48",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0=PADDING/none 16=PADDING/16 16=PADDING/16 16=PADDING/16",
+    "gap": "8=PADDING/8"
+   },
+   "toast-footer/Button": {
+    "size": "140×32",
+    "sizing": "fill/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Action 2\""
+   },
+   "toast-footer/Button#2": {
+    "size": "140×32",
+    "sizing": "fill/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Primary",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=primary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Action 1\""
+   },
+   "Button": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full",
+    "instance": "Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Label=\"Label\", Badge label=\"1\", Swap icon=Icons / Close"
+   },
+   "Button/icon/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  }
+ }
+}

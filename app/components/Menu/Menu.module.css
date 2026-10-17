@@ -1,20 +1,25 @@
 /* ==========================================================================
-   MENU COMPONENT
-   Source: Figma AGENTIC-DESIGN-SYSTEM v1.2 — node 591:3836
+   MENU — Figma Menu 558:659, _Menu list item 554:1372, Menu model selection 638:6554
+   Item states: default, hover, selected, focus (:focus-visible), disabled
    ========================================================================== */
 
-/* --- Menu Container --- */
+/* --- Menu: BACKGROUND/menu/background washed white from the top (`blur` layer),
+       0.5px BORDER/Medium outside, 1px BACKGROUND/Primary inside, Shadows/elevation2 */
 .menu {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  border: 0.5px solid var(--color-border-subtle);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-elevation-2);
-  overflow: hidden;
-  background: var(--color-bg-primary);
+  padding: var(--space-4);
+  border-radius: var(--radius-10);
+  background-color: var(--color-bg-menu);
+  background-image: linear-gradient(var(--color-content-on-primary), transparent);
+  box-shadow:
+    0 0 0 var(--stroke-sm) var(--color-border-medium),
+    inset 0 0 0 var(--stroke-default) var(--color-bg-primary),
+    var(--shadow-elevation-2);
 }
 
+/* Figma: 160 (regular) and 128 (sm) wide, no variable */
 .menuRegular {
   composes: menu;
   min-width: 160px;
@@ -25,182 +30,166 @@
   min-width: 128px;
 }
 
-.menuWide {
-  composes: menu;
-  min-width: 160px;
-}
-
-/* ==========================================================================
-   MENU ITEM
-   States: default | hover | focus | focus+hover | disabled
-   ========================================================================== */
+/* --- _Menu list item ------------------------------------------------------ */
 .item {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--space-12);
   width: 100%;
-  background: var(--color-bg-primary);
   border: none;
-  cursor: pointer;
-  text-align: left;
-  position: relative;
-  transition: background 0.15s ease;
-  font-family: var(--font-body);
+  border-radius: var(--radius-6);
+  background: none;
   color: var(--color-content-primary);
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  letter-spacing: var(--tracking-normal);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition-property: background-color, box-shadow;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
 }
 
-.item:hover {
-  background: var(--color-hover-overlay);
+/* regular: 36px, 8/12, SYSTEM/Body/sm/regular */
+.itemRegular {
+  min-height: calc(var(--icon-32) + var(--space-4));
+  padding: var(--space-8) var(--space-12);
+  font-size: var(--text-small);
+  line-height: var(--leading-small);
+}
+
+/* sm: 28px, 4/8, SYSTEM/Body/xs/regular */
+.itemSm {
+  gap: var(--space-8);
+  min-height: calc(var(--icon-24) + var(--space-4));
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-tiny);
+  line-height: var(--leading-tiny);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .item:not([aria-disabled='true']):hover {
+    background-color: var(--color-input-hover-dark);
+  }
+}
+
+/* selected: BUTTON/Secondary, SYSTEM/Body/sm/bold, checkmark */
+.item[data-selected] {
+  background-color: var(--color-button-secondary);
 }
 
 .item:focus-visible {
-  outline: 2px solid var(--color-border-strong);
-  outline-offset: -2px;
-  z-index: 1;
+  outline: none;
+  background-color: var(--color-bg-secondary);
+  box-shadow: inset 0 0 0 var(--stroke-default) var(--color-content-primary);
 }
 
-.item:focus-visible:hover {
-  background: var(--color-hover-overlay);
-}
-
-.itemDisabled {
-  composes: item;
-  opacity: 0.4;
-  pointer-events: none;
+.item[aria-disabled='true'] {
+  background-color: var(--color-bg-primary);
+  color: var(--color-content-disabled);
   cursor: default;
 }
 
-/* --- Item Sizes --- */
-.itemRegular {
-  padding: var(--space-8) var(--space-12);
-  min-height: 40px;
-  font-size: var(--text-small);
-  line-height: var(--leading-small);
-}
-
-.itemSm {
-  padding: var(--space-4) var(--space-8);
-  min-height: 24px;
-  font-size: var(--text-tiny);
-  line-height: var(--leading-tiny);
-}
-
-/* --- Selected state (bold text) --- */
-.itemSelected {
-  font-weight: var(--weight-medium);
-}
-
-/* --- Item content layout --- */
+/* Text overflow + Menu style: model, label, shortcut */
 .itemContent {
   display: flex;
+  flex: 1;
   align-items: center;
   gap: var(--space-12);
-  flex: 1;
   min-width: 0;
-  overflow: hidden;
 }
 
-.itemContentSm {
-  composes: itemContent;
-  gap: var(--space-8);
+.itemSm .itemContent {
+  gap: var(--space-16);
 }
 
-/* --- Label --- */
+/* Indented: 20px spacer (24 in sm) */
+.spacer {
+  flex-shrink: 0;
+  width: var(--icon-20);
+}
+
+.itemSm .spacer {
+  width: var(--icon-24);
+}
+
+.labelGroup {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
 .label {
-  flex: 1;
-  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-weight: var(--weight-regular);
 }
 
-.labelSelected {
-  composes: label;
+.item[data-selected] .label {
   font-weight: var(--weight-medium);
 }
 
-/* --- Helper text (description line below label) --- */
-.labelGroup {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  flex: 1;
-  min-width: 0;
-}
-
+/* SYSTEM/Body/xs/regular, CONTENT/Secondary */
 .helperText {
-  font-family: var(--font-body);
-  font-size: var(--text-tiny);
-  font-weight: var(--weight-regular);
-  line-height: var(--leading-tiny);
   color: var(--color-content-secondary);
+  font-size: var(--text-tiny);
+  line-height: var(--leading-tiny);
   white-space: pre-wrap;
 }
 
-/* --- Trailing elements --- */
+.item[aria-disabled='true'] .helperText {
+  color: var(--color-content-disabled);
+}
+
 .trailing {
   display: flex;
-  align-items: center;
   flex-shrink: 0;
-  color: var(--color-content-icon);
+  align-items: center;
+  color: var(--color-content-primary);
 }
 
-/* --- Keyboard shortcut --- */
+.item[aria-disabled='true'] .trailing {
+  color: var(--color-content-disabled);
+}
+
+.leading {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+/* Models inside an item: 1px BORDER/Subtle stroke override */
+.leading > [class*='logo'] {
+  box-shadow: inset 0 0 0 var(--stroke-default) var(--color-border-subtle);
+}
+
 .shortcut {
   display: flex;
-  align-items: center;
-  gap: 0;
-  font-family: var(--font-label);
-  font-size: var(--text-small);
-  font-weight: var(--weight-regular);
-  line-height: var(--leading-tiny);
-  letter-spacing: var(--tracking-tight);
-  color: var(--color-content-secondary);
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.shortcutIcon {
-  width: var(--icon-14);
-  height: var(--icon-14);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-shrink: 0;
-  color: var(--color-content-secondary);
-}
-
-/* --- Model icon badge --- */
-.modelIcon {
-  width: var(--icon-24);
-  height: var(--icon-24);
-  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-xs);
-  background: var(--color-bg-primary);
 }
 
-/* --- Divider --- */
+/* --- Divider: 1px BORDER/Subtle, 1px / 8px around ------------------------------ */
 .divider {
-  height: 1px;
-  background: var(--color-border-subtle);
-  margin: 0;
+  height: var(--stroke-default);
+  margin: var(--stroke-default) var(--space-8);
   border: none;
+  background-color: var(--color-border-subtle);
 }
 
-/* --- Section header (e.g. "Anthropic") --- */
+/* --- Section header ---------------------------------------------------------- */
 .sectionHeader {
+  display: flex;
+  align-items: center;
+  min-height: calc(var(--icon-32) + var(--space-4));
   padding: var(--space-8) var(--space-12);
+  color: var(--color-content-secondary);
   font-family: var(--font-body);
   font-size: var(--text-small);
   font-weight: var(--weight-regular);
   line-height: var(--leading-small);
-  color: var(--color-content-secondary);
-  min-height: 40px;
-  display: flex;
-  align-items: center;
 }

@@ -1,0 +1,57 @@
+/* ==========================================================================
+   VALIDATION TEXT — Figma Validation Text (Password) 6133:1245, validation-text-line 6133:2334
+   Type: default, success, error. Not interactive.
+   ========================================================================== */
+
+/* # of Rules: 2 to 5 lines, 2px apart, 8px above */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  margin: 0;
+  padding: var(--space-8) 0 0;
+  list-style: none;
+}
+
+/* validation-text-line: SYSTEM/Body/xs/regular */
+.line {
+  --_bg: var(--color-bg-secondary);
+  --_icon: var(--color-content-icon);
+  --_fg: var(--color-content-secondary);
+
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-10);
+  background-color: var(--_bg);
+  color: var(--_fg);
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-normal);
+}
+
+.icon {
+  flex-shrink: 0;
+  color: var(--_icon);
+}
+
+.label {
+  flex: 1;
+  min-width: 0;
+}
+
+.success {
+  --_bg: var(--color-bg-success-light);
+  --_icon: var(--color-content-success);
+  --_fg: var(--color-content-success);
+}
+
+.error {
+  --_bg: var(--color-bg-attention-light);
+  --_icon: var(--color-content-attention);
+  --_fg: var(--color-content-attention);
+}

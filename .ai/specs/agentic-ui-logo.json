@@ -1,0 +1,56 @@
+{
+ "id": "146:1787",
+ "name": "AGENTIC UI LOGO",
+ "props": {
+  "Variant": {
+   "type": "VARIANT",
+   "default": "Symbol",
+   "options": [
+    "Symbol",
+    "Logo"
+   ]
+  }
+ },
+ "variants": {
+  "Variant=Symbol": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24",
+    "layout": "row align center/center",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0"
+   },
+   "container": {
+    "size": "20×20",
+    "sizing": "fill/fill",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "container/Union": {
+    "size": "20×20",
+    "sizing": "fill/fill",
+    "fill": "CONTENT/Primary"
+   },
+   "container/Union/logo-icon": {
+    "size": "20×20",
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Variant=Logo": {
+   "(root)": {
+    "size": "75×20",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "logo-wordmark": {
+    "size": "75×20",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary"
+   }
+  }
+ }
+}

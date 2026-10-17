@@ -6,10 +6,11 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Icon } from '@/app/components/Icon/Icon';
-import { ProgressBar } from '@/app/components/ProgressBar';
+import { ProgressBars } from '@/app/components/ProgressBars';
 import { Slider } from '@/app/components/Slider';
 import { SlidingText } from '@/app/components/SlidingText';
 import { EASE_OUT_EXPO, DURATION_ENTER } from '@/app/components/motion';
+import { DemoPageHeader } from '@/app/components/DemoPageHeader';
 import styles from './page.module.css';
 
 const CARD_STAGGER = 0.12;
@@ -42,22 +43,7 @@ export default function ProgressPage() {
 
   return (
     <div className={styles.demo}>
-      {/* Header */}
-      <header className={styles.header}>
-        <div className={styles.headerLeft}>
-          <span className={styles.logoIcon} role="img" aria-label="Agentic UI" />
-          <span className={styles.headerSeparator} aria-hidden="true" />
-          <span className={styles.headerLabel}>Progress</span>
-        </div>
-        <div className={styles.headerRight}>
-          <span className={styles.headerLabel}>Launch Demo</span>
-          <div className={styles.kbdGroup}>
-            <kbd className={styles.kbd}>⌥</kbd>
-            <kbd className={styles.kbd}>⌘</kbd>
-            <kbd className={styles.kbd}>↩</kbd>
-          </div>
-        </div>
-      </header>
+      <DemoPageHeader label="Progress" />
 
       {/* Centered content */}
       <div className={styles.content}>
@@ -77,13 +63,7 @@ export default function ProgressPage() {
               </div>
               <span className={styles.badgeGreen}>Cliff passed</span>
             </div>
-            <ProgressBar
-              total={24}
-              filled={12}
-              height={24}
-              animated
-              animationDelay={0.4}
-            />
+            <ProgressBars total={24} filled={12} aria-label="Vesting progress" />
             <div className={styles.cardMeta}>
               <span className={styles.metaPrimary}>12 of 24 months</span>
               <span className={styles.metaSecondary}>2.5% RSA</span>
@@ -108,9 +88,9 @@ export default function ProgressPage() {
               defaultValue={60}
               onChange={setVolume}
               size="sm"
-              showLabel
               animated
               animationDelay={0.55}
+              aria-label="Volume"
             />
           </motion.div>
 
@@ -139,6 +119,7 @@ export default function ProgressPage() {
               scaleLabels={['0', '0.5', '1']}
               animated
               animationDelay={0.7}
+              aria-label="Agent temperature"
             />
             <p className={styles.helperText}>
               controls how random vs. deterministic agent&apos;s outputs are during sampling.

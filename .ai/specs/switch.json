@@ -1,0 +1,524 @@
+{
+ "id": "814:110",
+ "name": "Switch",
+ "props": {
+  "Selected": {
+   "type": "VARIANT",
+   "default": "false",
+   "options": [
+    "false",
+    "true"
+   ]
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "disabled",
+    "focus",
+    "hover"
+   ]
+  },
+  "Size": {
+   "type": "VARIANT",
+   "default": "sm",
+   "options": [
+    "lg",
+    "sm"
+   ]
+  }
+ },
+ "variants": {
+  "Selected=false, State=default, Size=sm": {
+   "(root)": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/inactive",
+    "radius": "9999=full",
+    "effect": "inner_shadow 0,1 2 #0000001f (no style)"
+   },
+   "Mask": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "SWITCH/knob/Inactive",
+    "stroke": "1=default inside SWITCH/knob/Inactive",
+    "radius": "100",
+    "effect": "Swtich/Toggle"
+   }
+  },
+  "Selected=false, State=default, Size=lg": {
+   "(root)": {
+    "size": "43.2×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/inactive",
+    "radius": "9999=full",
+    "effect": "inner_shadow 0,1 2 #0000001f (no style)"
+   },
+   "Mask": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/20",
+    "fill": "SWITCH/knob/Inactive",
+    "stroke": "1=default inside SWITCH/knob/Inactive",
+    "radius": "100",
+    "effect": "Swtich/Toggle"
+   }
+  },
+  "Selected=false, State=hover, Size=sm": {
+   "(root)": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/inactive + INPUT/Hover (Dark)@0.04",
+    "radius": "9999=full",
+    "effect": "inner_shadow 0,1 2 #0000001f (no style)"
+   },
+   "Mask": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "SWITCH/knob/Inactive",
+    "stroke": "1=default inside BUTTON/Secondary",
+    "radius": "100"
+   }
+  },
+  "Selected=false, State=hover, Size=lg": {
+   "(root)": {
+    "size": "43.2×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/inactive + INPUT/Hover (Dark)@0.04",
+    "radius": "9999=full",
+    "effect": "inner_shadow 0,1 2 #0000001f (no style)"
+   },
+   "Mask": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/20",
+    "fill": "SWITCH/knob/Inactive",
+    "stroke": "1=default inside BUTTON/Secondary",
+    "radius": "100"
+   }
+  },
+  "Selected=false, State=focus, Size=sm": {
+   "(root)": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/inactive",
+    "radius": "9999=full",
+    "effect": "Components/Focus"
+   },
+   "Mask": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "SWITCH/knob/Inactive",
+    "stroke": "1=default inside BUTTON/Secondary",
+    "radius": "100",
+    "effect": "Swtich/Toggle"
+   }
+  },
+  "Selected=false, State=focus, Size=lg": {
+   "(root)": {
+    "size": "43.2×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/inactive",
+    "radius": "9999=full",
+    "effect": "Components/Focus"
+   },
+   "Mask": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/20",
+    "fill": "SWITCH/knob/Inactive",
+    "stroke": "1=default inside BUTTON/Secondary",
+    "radius": "100",
+    "effect": "Swtich/Toggle"
+   }
+  },
+  "Selected=false, State=disabled, Size=sm": {
+   "(root)": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "stroke": "1 inside BORDER/Disabled",
+    "radius": "9999=full"
+   },
+   "Mask": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "SWITCH/knob/Disabled",
+    "radius": "100"
+   }
+  },
+  "Selected=false, State=disabled, Size=lg": {
+   "(root)": {
+    "size": "43.2×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "stroke": "1 inside BORDER/Disabled",
+    "radius": "9999=full"
+   },
+   "Mask": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/20",
+    "fill": "SWITCH/knob/Disabled",
+    "radius": "100"
+   }
+  },
+  "Selected=true, State=default, Size=sm": {
+   "(root)": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/active",
+    "radius": "9999=full"
+   },
+   "Mask": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "SWITCH/knob/Active",
+    "stroke": "1=default inside SWITCH/knob/Active",
+    "radius": "100",
+    "effect": "Swtich/Toggle"
+   },
+   "Mask/Checkmark": {
+    "size": "12×12",
+    "sizing": "fixed/fixed"
+   },
+   "Mask/Checkmark/Vector": {
+    "size": "7.32×5.65",
+    "fill": "SWITCH/knob/Icon"
+   }
+  },
+  "Selected=true, State=default, Size=lg": {
+   "(root)": {
+    "size": "43.2×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/active",
+    "radius": "9999=full"
+   },
+   "Mask": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/20",
+    "fill": "SWITCH/knob/Active",
+    "stroke": "1=default inside SWITCH/knob/Active",
+    "radius": "100",
+    "effect": "Swtich/Toggle"
+   },
+   "Mask/Checkmark": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "Mask/Checkmark/Vector": {
+    "size": "10×8",
+    "fill": "SWITCH/knob/Icon"
+   }
+  },
+  "Selected=true, State=hover, Size=sm": {
+   "(root)": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/active",
+    "radius": "9999=full"
+   },
+   "Mask": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13 × ICONS/13",
+    "fill": "SWITCH/knob/Active",
+    "stroke": "1=default inside SWITCH/knob/Active",
+    "radius": "100",
+    "effect": "inner_shadow 0,1 2 #0000001f (no style)"
+   },
+   "Mask/Checkmark": {
+    "size": "12×12",
+    "sizing": "fixed/fixed"
+   },
+   "Mask/Checkmark/Vector": {
+    "size": "7.32×5.65",
+    "fill": "SWITCH/knob/Icon"
+   }
+  },
+  "Selected=true, State=hover, Size=lg": {
+   "(root)": {
+    "size": "43.2×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/active",
+    "radius": "9999=full"
+   },
+   "Mask": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/20",
+    "fill": "SWITCH/knob/Active",
+    "stroke": "1=default inside SWITCH/knob/Active",
+    "radius": "100",
+    "effect": "inner_shadow 0,1 2 #0000001f (no style)"
+   },
+   "Mask/Checkmark": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "Mask/Checkmark/Vector": {
+    "size": "10×8",
+    "fill": "SWITCH/knob/Icon"
+   }
+  },
+  "Selected=true, State=focus, Size=sm": {
+   "(root)": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/active",
+    "radius": "9999=full",
+    "effect": "Components/Focus"
+   },
+   "Mask": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "SWITCH/knob/Active",
+    "radius": "100"
+   },
+   "Mask/Checkmark": {
+    "size": "12×12",
+    "sizing": "fixed/fixed"
+   },
+   "Mask/Checkmark/Vector": {
+    "size": "7.32×5.65",
+    "fill": "SWITCH/knob/Icon"
+   }
+  },
+  "Selected=true, State=focus, Size=lg": {
+   "(root)": {
+    "size": "43.2×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/active",
+    "radius": "9999=full",
+    "effect": "Components/Focus"
+   },
+   "Mask": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/20",
+    "fill": "SWITCH/knob/Active",
+    "radius": "100"
+   },
+   "Mask/Checkmark": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "Mask/Checkmark/Vector": {
+    "size": "10×8",
+    "fill": "SWITCH/knob/Icon"
+   }
+  },
+  "Selected=true, State=disabled, Size=sm": {
+   "(root)": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "stroke": "1 inside BORDER/Subtle",
+    "radius": "9999=full"
+   },
+   "Mask": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "SWITCH/knob/Disabled",
+    "radius": "100"
+   },
+   "Mask/Checkmark": {
+    "size": "12×12",
+    "sizing": "fixed/fixed"
+   },
+   "Mask/Checkmark/Vector": {
+    "size": "7.32×5.65",
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Selected=true, State=disabled, Size=lg": {
+   "(root)": {
+    "size": "43.2×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "stroke": "1 inside BORDER/Subtle",
+    "radius": "9999=full"
+   },
+   "Mask": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/20",
+    "fill": "SWITCH/knob/Disabled",
+    "radius": "100"
+   },
+   "Mask/Checkmark": {
+    "size": "20×20",
+    "sizing": "fixed/fixed"
+   },
+   "Mask/Checkmark/Vector": {
+    "size": "10×8",
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

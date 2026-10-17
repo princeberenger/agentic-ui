@@ -1,0 +1,386 @@
+{
+ "id": "816:3579",
+ "name": "Switch with label",
+ "props": {
+  "Show Label": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show Description": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Label": {
+   "type": "TEXT",
+   "default": "Label"
+  },
+  "Description": {
+   "type": "TEXT",
+   "default": "Description text goes here"
+  },
+  "Selected": {
+   "type": "VARIANT",
+   "default": "false",
+   "options": [
+    "false",
+    "true"
+   ]
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "disabled"
+   ]
+  },
+  "Position": {
+   "type": "VARIANT",
+   "default": "left",
+   "options": [
+    "left",
+    "right"
+   ]
+  }
+ },
+ "variants": {
+  "Selected=false, State=default, Position=left": {
+   "(root)": {
+    "size": "217×37",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Switch": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/inactive",
+    "radius": "9999=full",
+    "effect": "inner_shadow 0,1 2 #0000001f (no style)",
+    "instance": "Switch › Selected=false, State=default, Size=sm"
+   },
+   "label": {
+    "size": "157×37",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/Label": {
+    "size": "157×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "label/Description text goes here": {
+    "size": "157×15",
+    "sizing": "hug/hug",
+    "text": "\"Description text goes here\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Selected=false, State=default, Position=right": {
+   "(root)": {
+    "size": "217×37",
+    "sizing": "fixed/hug",
+    "layout": "row align space_between/min",
+    "padding": "0 0 0 0",
+    "gap": "12"
+   },
+   "label": {
+    "size": "157×37",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/Label": {
+    "size": "157×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "label/Description text goes here": {
+    "size": "157×15",
+    "sizing": "hug/hug",
+    "text": "\"Description text goes here\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Switch": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/inactive",
+    "radius": "9999=full",
+    "effect": "inner_shadow 0,1 2 #0000001f (no style)",
+    "instance": "Switch › Selected=false, State=default, Size=sm"
+   }
+  },
+  "Selected=true, State=default, Position=left": {
+   "(root)": {
+    "size": "217×37",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Switch": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/active",
+    "radius": "9999=full",
+    "instance": "Switch › Selected=true, State=default, Size=sm"
+   },
+   "label": {
+    "size": "157×37",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/Label": {
+    "size": "157×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "label/Description text goes here": {
+    "size": "157×15",
+    "sizing": "hug/hug",
+    "text": "\"Description text goes here\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Selected=true, State=default, Position=right": {
+   "(root)": {
+    "size": "217×37",
+    "sizing": "fixed/hug",
+    "layout": "row align space_between/min",
+    "padding": "0 0 0 0",
+    "gap": "12"
+   },
+   "label": {
+    "size": "157×37",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/Label": {
+    "size": "157×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "label/Description text goes here": {
+    "size": "157×15",
+    "sizing": "hug/hug",
+    "text": "\"Description text goes here\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Switch": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/active",
+    "radius": "9999=full",
+    "instance": "Switch › Selected=true, State=default, Size=sm"
+   }
+  },
+  "Selected=true, State=disabled, Position=left": {
+   "(root)": {
+    "size": "217×37",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Switch": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "stroke": "1 inside BORDER/Subtle",
+    "radius": "9999=full",
+    "instance": "Switch › Selected=true, State=disabled, Size=sm"
+   },
+   "label": {
+    "size": "157×37",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/Label": {
+    "size": "157×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "label/Description text goes here": {
+    "size": "157×15",
+    "sizing": "hug/hug",
+    "text": "\"Description text goes here\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Selected=true, State=disabled, Position=right": {
+   "(root)": {
+    "size": "217×37",
+    "sizing": "fixed/hug",
+    "layout": "row align space_between/min",
+    "padding": "0 0 0 0",
+    "gap": "12"
+   },
+   "label": {
+    "size": "157×37",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/Label": {
+    "size": "157×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "label/Description text goes here": {
+    "size": "157×15",
+    "sizing": "hug/hug",
+    "text": "\"Description text goes here\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Switch": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "stroke": "1 inside BORDER/Subtle",
+    "radius": "9999=full",
+    "instance": "Switch › Selected=true, State=disabled, Size=sm"
+   }
+  },
+  "Selected=false, State=disabled, Position=left": {
+   "(root)": {
+    "size": "217×37",
+    "sizing": "fixed/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Switch": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "stroke": "1 inside BORDER/Disabled",
+    "radius": "9999=full",
+    "instance": "Switch › Selected=false, State=disabled, Size=sm"
+   },
+   "label": {
+    "size": "157×37",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/Label": {
+    "size": "157×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "label/Description text goes here": {
+    "size": "157×15",
+    "sizing": "hug/hug",
+    "text": "\"Description text goes here\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Selected=false, State=disabled, Position=right": {
+   "(root)": {
+    "size": "217×37",
+    "sizing": "fixed/hug",
+    "layout": "row align space_between/min",
+    "padding": "0 0 0 0",
+    "gap": "12"
+   },
+   "label": {
+    "size": "157×37",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "label/Label": {
+    "size": "157×18",
+    "sizing": "fill/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "label/Description text goes here": {
+    "size": "157×15",
+    "sizing": "hug/hug",
+    "text": "\"Description text goes here\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Switch": {
+    "size": "29×16",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "stroke": "1 inside BORDER/Disabled",
+    "radius": "9999=full",
+    "instance": "Switch › Selected=false, State=disabled, Size=sm"
+   }
+  }
+ }
+}

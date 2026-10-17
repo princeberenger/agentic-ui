@@ -1,0 +1,262 @@
+{
+ "id": "2003:4190",
+ "name": "Screen",
+ "props": {
+  "Breakpoint": {
+   "type": "VARIANT",
+   "default": "monitor (large)",
+   "options": [
+    "laptop (large)",
+    "laptop (small)",
+    "mobile",
+    "monitor (large)",
+    "tablet (landscape)",
+    "tablet (portrait)"
+   ]
+  }
+ },
+ "variants": {
+  "Breakpoint=monitor (large)": {
+   "(root)": {
+    "size": "1920×1080",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary"
+   },
+   "Screen label (Hide it)": {
+    "size": "186×56",
+    "text": "\"Monitor (Large)\\n1920 x 1080\"",
+    "font": "Departure Mono 400 20/28 ls -0.4 align center",
+    "font.vars": "family/Labels, Links, weight/Regular",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Breakpoint=laptop (large)": {
+   "(root)": {
+    "size": "1440×900",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "422 658 422 658",
+    "gap": "10",
+    "fill": "BACKGROUND/Secondary"
+   },
+   "Screen label (Hide it)": {
+    "size": "174×56",
+    "sizing": "hug/hug",
+    "text": "\"Laptop (Large)\\n1440 x 900\"",
+    "font": "Departure Mono 400 20/28 ls -0.4 align center",
+    "font.vars": "family/Labels, Links, weight/Regular",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Breakpoint=laptop (small)": {
+   "(root)": {
+    "size": "1280×800",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "372 577 372 577",
+    "gap": "10",
+    "fill": "BACKGROUND/Secondary"
+   },
+   "Screen label (Hide it)": {
+    "size": "174×56",
+    "sizing": "hug/hug",
+    "text": "\"Laptop (Small)\\n1280 x 800\"",
+    "font": "Departure Mono 400 20/28 ls -0.4 align center",
+    "font.vars": "family/Labels, Links, weight/Regular",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Breakpoint=tablet (landscape)": {
+   "(root)": {
+    "size": "1210×834",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary"
+   },
+   "Home Indicator": {
+    "size": "1210×20",
+    "instance": "Home Indicator › Device=iPad, Orientation=Landscape",
+    "props": "Show Home Indicator=true"
+   },
+   "Home Indicator/Home Indicator": {
+    "fill": "CONTENT/Primary"
+   },
+   "Status Bar": {
+    "size": "1210×32",
+    "sizing": "fixed/hug",
+    "layout": "row align min/center",
+    "padding": "4 26 4 26",
+    "gap": "966",
+    "instance": "Status bar and Menu bar- iPad › Type=Status bar only",
+    "props": "Date=\"Mon Jun 9\", Time=\"9:41\""
+   },
+   "Status Bar/Left/Time": {
+    "color": "CONTENT/Primary"
+   },
+   "Status Bar/Left/Date": {
+    "color": "CONTENT/Primary"
+   },
+   "Status Bar/Right/Combined Shape": {
+    "fill": "CONTENT/Primary"
+   },
+   "Status Bar/Right/100%": {
+    "color": "CONTENT/Primary"
+   },
+   "Status Bar/Right/Battery Icon/Combined Shape": {
+    "stroke": "1 inside CONTENT/Primary"
+   },
+   "Status Bar/Right/Battery Icon/Capacity": {
+    "fill": "CONTENT/Primary"
+   },
+   "Screen label (Hide it)": {
+    "size": "223×56",
+    "text": "\"Tablet (Landscape)\\n1210 x 834\"",
+    "font": "Departure Mono 400 20/28 ls -0.4 align center",
+    "font.vars": "family/Labels, Links, weight/Regular",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Breakpoint=tablet (portrait)": {
+   "(root)": {
+    "size": "834×1194",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary"
+   },
+   "Home Indicator": {
+    "size": "834×20",
+    "instance": "Home Indicator › Device=iPad, Orientation=Portrait",
+    "props": "Show Home Indicator=true"
+   },
+   "Home Indicator/Home Indicator": {
+    "fill": "CONTENT/Primary"
+   },
+   "Status Bar": {
+    "size": "834×32",
+    "sizing": "fixed/hug",
+    "layout": "row align space_between/center",
+    "padding": "4 26 4 26",
+    "gap": "966",
+    "instance": "Status bar and Menu bar- iPad › Type=Status bar only",
+    "props": "Date=\"Mon Jun 9\", Time=\"9:41\""
+   },
+   "Status Bar/Left/Time": {
+    "color": "CONTENT/Primary"
+   },
+   "Status Bar/Left/Date": {
+    "color": "CONTENT/Primary"
+   },
+   "Status Bar/Right/Combined Shape": {
+    "fill": "CONTENT/Primary"
+   },
+   "Status Bar/Right/100%": {
+    "color": "CONTENT/Primary"
+   },
+   "Status Bar/Right/Battery Icon/Combined Shape": {
+    "stroke": "1 inside CONTENT/Primary"
+   },
+   "Status Bar/Right/Battery Icon/Capacity": {
+    "fill": "CONTENT/Primary"
+   },
+   "Screen label (Hide it)": {
+    "size": "211×56",
+    "text": "\"Tablet (Portrait)\\n834 x 1194\"",
+    "font": "Departure Mono 400 20/28 ls -0.4 align center",
+    "font.vars": "family/Labels, Links, weight/Regular",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Breakpoint=mobile": {
+   "(root)": {
+    "size": "375×812",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary"
+   },
+   "Home Indicator": {
+    "size": "375×34"
+   },
+   "Home Indicator/Home Indicator": {
+    "size": "144×5",
+    "fill": "CONTENT/Primary",
+    "radius": "100"
+   },
+   "Status Bar - iPhone": {
+    "size": "375×44",
+    "sizing": "fixed/fixed",
+    "layout": "column align min/min",
+    "padding": "21 0 0 0",
+    "gap": "0"
+   },
+   "Status Bar - iPhone/Frame": {
+    "size": "375×22",
+    "sizing": "fill/hug",
+    "layout": "row align space_between/center",
+    "padding": "0 0 0 0",
+    "gap": "134"
+   },
+   "Status Bar - iPhone/Frame/Time": {
+    "size": "125.5×22",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 6 0 16",
+    "gap": "10"
+   },
+   "Status Bar - iPhone/Frame/Time/Time": {
+    "size": "37×22",
+    "sizing": "hug/hug",
+    "text": "\"9:41\"",
+    "font": "SF Pro 590 17/22 ls 0 align center",
+    "color": "CONTENT/Primary"
+   },
+   "Status Bar - iPhone/Frame/Dynamic Island spacer": {
+    "size": "124×10",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Status Bar - iPhone/Frame/Levels": {
+    "size": "125.5×13",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 16 0 6",
+    "gap": "7"
+   },
+   "Status Bar - iPhone/Frame/Levels/Cellular Connection": {
+    "size": "19.2×12.23",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary"
+   },
+   "Status Bar - iPhone/Frame/Levels/Wifi": {
+    "size": "17.14×12.33",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary"
+   },
+   "Status Bar - iPhone/Frame/Levels/Battery": {
+    "size": "27.33×13",
+    "sizing": "fixed/fixed"
+   },
+   "Status Bar - iPhone/Frame/Levels/Battery/Border": {
+    "size": "25×13",
+    "stroke": "1 inside CONTENT/Primary",
+    "radius": "4.300000190734863",
+    "opacity": 0.35
+   },
+   "Status Bar - iPhone/Frame/Levels/Battery/Cap": {
+    "size": "1.33×4.08",
+    "fill": "CONTENT/Primary",
+    "opacity": 0.4
+   },
+   "Status Bar - iPhone/Frame/Levels/Battery/Capacity": {
+    "size": "21×9",
+    "fill": "CONTENT/Primary",
+    "radius": "2.5"
+   },
+   "Screen label (Hide it)": {
+    "size": "112×56",
+    "text": "\"Mobile\\n375 x 812\"",
+    "font": "Departure Mono 400 20/28 ls -0.4 align center",
+    "font.vars": "family/Labels, Links, weight/Regular",
+    "color": "CONTENT/Secondary"
+   }
+  }
+ }
+}

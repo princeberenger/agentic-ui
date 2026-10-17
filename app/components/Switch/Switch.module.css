@@ -1,0 +1,168 @@
+/* ==========================================================================
+   SWITCH — Figma Switch 814:110, Switch with label 816:3579
+   Selected: false, true   State: default, hover, focus (:focus-visible), disabled   Size: sm, lg
+   Every value below is a Figma variable or effect (see globals.css).
+   ========================================================================== */
+
+/* --- Track ---------------------------------------------------------------- */
+.track {
+  /* sm: 29 x 16 track, 13px knob; the width has no figma variable */
+  --_h: var(--icon-16);
+  --_w: calc(var(--icon-16) + var(--icon-13));
+  --_knob: var(--icon-13);
+
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  width: var(--_w);
+  height: var(--_h);
+  border-radius: var(--radius-full);
+  background-color: var(--color-switch-bg-inactive);
+  box-shadow: var(--shadow-switch-track);
+  transition: var(--duration-hover) ease;
+  transition-property: background-color, box-shadow;
+}
+
+/* lg: 43 x 24 track, 20px knob */
+.lg {
+  --_h: var(--icon-24);
+  --_w: calc(var(--icon-24) + var(--icon-20) - var(--stroke-default));
+  --_knob: var(--icon-20);
+}
+
+.on {
+  background-color: var(--color-switch-bg-active);
+  box-shadow: none;
+}
+
+/* the native input covers the track: it takes the clicks and the keyboard focus */
+.input {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+}
+
+/* --- Knob: a height-sized frame that slides to the end ------------------- */
+.mask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--_h);
+  height: var(--_h);
+  transition: transform var(--duration-hover) var(--ease-in-out-quart);
+}
+
+.on .mask {
+  transform: translateX(calc(var(--_w) - var(--_h)));
+}
+
+.knob {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--_knob);
+  height: var(--_knob);
+  border-radius: var(--radius-full);
+  background-color: var(--color-switch-knob-inactive);
+  box-shadow: var(--shadow-switch-toggle);
+  transition: box-shadow var(--duration-hover) ease;
+}
+
+.on .knob {
+  background-color: var(--color-switch-knob-active);
+}
+
+.check {
+  flex-shrink: 0;
+  color: var(--color-switch-knob-icon);
+  opacity: 0;
+  transition: opacity var(--duration-hover) ease;
+}
+
+.on .check {
+  opacity: 1;
+}
+
+/* --- State: hover (knob loses its toggle shadow, the selected knob gets the inner one) */
+@media (hover: hover) and (pointer: fine) {
+  .track:not(.disabled):hover .knob {
+    box-shadow: none;
+  }
+
+  .track.on:not(.disabled):hover .knob {
+    box-shadow: var(--shadow-switch-track);
+  }
+}
+
+/* --- State: focus --------------------------------------------------------- */
+.track:has(.input:focus-visible) {
+  box-shadow: var(--shadow-components-focus);
+}
+
+.track.on:has(.input:focus-visible) .knob {
+  box-shadow: none;
+}
+
+/* --- State: disabled ------------------------------------------------------ */
+.track.disabled {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 var(--stroke-default) var(--color-border-disabled);
+}
+
+.track.disabled.on {
+  box-shadow: inset 0 0 0 var(--stroke-default) var(--color-border-subtle);
+}
+
+.disabled .knob {
+  background-color: var(--color-switch-knob-disabled);
+  box-shadow: none;
+}
+
+.disabled .check {
+  color: var(--color-content-icon);
+}
+
+/* --- Switch with label ---------------------------------------------------- */
+.field {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+}
+
+/* Position=right: label first, switch pushed to the end */
+.right {
+  justify-content: space-between;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.label {
+  color: var(--color-content-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-normal);
+}
+
+.description {
+  color: var(--color-content-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-normal);
+}
+
+/* Figma: disabled label is CONTENT/Secondary */
+.fieldDisabled .label {
+  color: var(--color-content-secondary);
+}

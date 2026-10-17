@@ -1,76 +1,66 @@
+// Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=230-699 (Navigation)
+// Extracted: 2026-10-17
+// Tokens: space-4, space-16, space-24
+
 'use client';
 
-import { type ReactNode, forwardRef } from 'react';
-import { Icon } from '../Icon/Icon';
+import { forwardRef, useState, type ReactNode } from 'react';
+import { NavLogo } from './NavLogo';
+import { NavUserSettings } from './NavUserSettings';
 import styles from './Navigation.module.css';
 
-interface NavigationProps {
-  /** Navigation body content — NavLink, NavSection, etc. */
+export interface NavigationProps {
+  /** NavLink items (classic) or NavSection groups (tree). */
   children: ReactNode;
-  /** User display name shown in the footer greeting */
-  userName?: string;
-  /** Layout variant: classic (flat or sectioned) vs tree (hierarchical) */
+  /** Figma `Type`. */
   variant?: 'classic' | 'tree';
-  /** Additional CSS class for the outer nav element */
-  className?: string;
-  /** Callback when the sidebar toggle button is clicked */
-  onToggle?: () => void;
-  /** Callback when the user overflow menu is clicked */
+  /** Figma `State=closed` (controlled): only the logo row stays. */
+  collapsed?: boolean;
+  /** Initial state when uncontrolled. */
+  defaultCollapsed?: boolean;
+  onCollapsedChange?: (collapsed: boolean) => void;
+  /** Footer greeting (Figma `Footer`). Omit to hide the footer. */
+  userName?: string;
   onUserMenu?: () => void;
+  'aria-label'?: string;
+  className?: string;
 }
 
-export const Navigation = forwardRef<HTMLElement, NavigationProps>(
-  function Navigation({
+export const Navigation = forwardRef<HTMLElement, NavigationProps>(function Navigation(
+  {
     children,
-    userName = 'Alex',
     variant = 'classic',
-    className,
-    onToggle,
+    collapsed: controlled,
+    defaultCollapsed = false,
+    onCollapsedChange,
+    userName,
     onUserMenu,
-  }, ref) {
-    return (
-      <nav ref={ref} className={`${styles.navigation} ${className ?? ''}`}>
-        {/* Logo header */}
-        <div className={styles.logo}>
-          <div className={styles.logoContainer}>
-            <span
-              className={styles.logoWordmark}
-              role="img"
-              aria-label="Agentic UI"
-            />
-            <button
-              className={styles.menuToggle}
-              onClick={onToggle}
-              aria-label="Toggle navigation"
-              type="button"
-            >
-              <Icon name="menu-open" size={16} />
-            </button>
-          </div>
-        </div>
+    'aria-label': ariaLabel = 'Main',
+    className,
+  },
+  ref,
+) {
+  const [internal, setInternal] = useState(defaultCollapsed);
+  const collapsed = controlled ?? internal;
 
-        {/* Scrollable nav body */}
-        <div
-          className={`${styles.body} ${variant === 'tree' ? styles.bodyTree : ''}`}
-        >
-          {children}
-        </div>
+  const toggle = () => {
+    if (controlled === undefined) setInternal(!collapsed);
+    onCollapsedChange?.(!collapsed);
+  };
 
-        {/* User footer */}
-        <div className={styles.footer}>
-          <div className={styles.userSettings}>
-            <span className={styles.userName}>Hi, {userName}</span>
-            <button
-              className={styles.overflowButton}
-              onClick={onUserMenu}
-              aria-label="User menu"
-              type="button"
-            >
-              <Icon name="overflow-menu-vertical" size={16} />
-            </button>
-          </div>
-        </div>
-      </nav>
-    );
-  }
-);
+  return (
+    <nav ref={ref} aria-label={ariaLabel} className={`${styles.navigation} ${className ?? ''}`}>
+      <NavLogo collapsed={collapsed} onToggle={toggle} inNav />
+      {!collapsed && (
+        <>
+          <div className={`${styles.body} ${variant === 'tree' ? styles.tree : ''}`}>{children}</div>
+          {userName && (
+            <div className={styles.footer}>
+              <NavUserSettings userName={userName} onMenu={onUserMenu} inNav />
+            </div>
+          )}
+        </>
+      )}
+    </nav>
+  );
+});

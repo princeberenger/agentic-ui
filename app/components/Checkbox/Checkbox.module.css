@@ -1,0 +1,123 @@
+/* ==========================================================================
+   CHECKBOX — Figma Checkbox 124:2639, Checkbox with label 815:75
+   Type: stroke, filled      Selected: false, true, indeterminate      State: default, disabled
+   Style (with label): no-background (stroke box), has-background (filled box on a card)
+   Every value below is a Figma variable (see globals.css).
+   ========================================================================== */
+
+/* --- Box: 24px frame, 2px padding, 20px glyph ------------------------------ */
+.box {
+  --_glyph: var(--color-content-icon);
+
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  width: var(--icon-24);
+  height: var(--icon-24);
+  padding: var(--space-2);
+  border-radius: var(--radius-xs);
+}
+
+.on {
+  --_glyph: var(--color-content-primary);
+}
+
+.box.disabled {
+  --_glyph: var(--color-content-disabled);
+}
+
+/* the native input covers the box: it takes the clicks and the keyboard focus */
+.input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+}
+
+.glyph {
+  color: var(--_glyph);
+}
+
+/* the drawing sits above the input: let clicks through */
+.glyph,
+.square {
+  pointer-events: none;
+}
+
+/* filled + unselected: 16px rounded square, BACKGROUND/Tertiary at 50 % */
+.square {
+  width: var(--icon-16);
+  height: var(--icon-16);
+  margin: var(--space-2);
+  border-radius: var(--radius-xs);
+  background-color: var(--color-bg-tertiary);
+  opacity: 0.5;
+}
+
+/* filled + unselected + disabled: BACKGROUND/Disabled, the whole checkbox at 50 % */
+.filled.disabled:not(.on) {
+  opacity: 0.5;
+}
+
+.filled.disabled .square {
+  background-color: var(--color-bg-disabled);
+  opacity: 1;
+}
+
+/* Figma defines no focus state: the design-system focus ring */
+.box:has(.input:focus-visible) {
+  box-shadow: var(--shadow-components-focus);
+}
+
+/* --- Checkbox with label ------------------------------------------------- */
+.field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+/* with a description the box stays at the top (Figma Checkbox with label) */
+.withDescription {
+  align-items: flex-start;
+}
+
+.card {
+  padding: var(--space-8) var(--space-24) var(--space-8) var(--space-12);
+  border-radius: var(--radius-10);
+  background-color: var(--color-bg-secondary);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.label,
+.description {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-normal);
+}
+
+.label {
+  color: var(--color-content-primary);
+}
+
+/* Selected=true: SYSTEM/Body/sm/bold */
+.selected .label {
+  font-weight: var(--weight-medium);
+}
+
+.description {
+  color: var(--color-content-secondary);
+}
+
+.field.disabled .label,
+.field.disabled .description {
+  color: var(--color-content-disabled);
+}

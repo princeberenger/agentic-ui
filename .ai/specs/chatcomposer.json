@@ -1,0 +1,1364 @@
+{
+ "id": "4133:11200",
+ "name": "ChatComposer",
+ "props": {
+  "Show ScrollButton": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show model": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show microphone": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show upload": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "drag-drop",
+   "options": [
+    "active",
+    "default",
+    "disabled",
+    "drag-drop",
+    "filled",
+    "hover",
+    "condensed",
+    "attachment",
+    "attachment (collapsed)",
+    "error",
+    "warning"
+   ]
+  }
+ },
+ "variants": {
+  "State=drag-drop": {
+   "(root)": {
+    "size": "716×128",
+    "sizing": "fill/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "1=default inside BORDER/Medium dashed 4/4",
+    "radius": "20=20"
+   },
+   "text-input-area": {
+    "size": "700×112",
+    "sizing": "fill/fill",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "0"
+   },
+   "text-input-area/Drag & drop your images here": {
+    "size": "684×96",
+    "sizing": "fill/fill",
+    "text": "\"Drag & drop your images here\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0 align center",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "State=disabled": {
+   "(root)": {
+    "size": "716×128",
+    "sizing": "fill/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "20=20"
+   },
+   "text-input-area": {
+    "size": "692×72",
+    "sizing": "fill/fill",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "0"
+   },
+   "text-input-area/Ask anything...": {
+    "size": "676×24",
+    "sizing": "fill/fixed",
+    "text": "\"Ask anything...\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "actions-wrapper": {
+    "size": "692×40",
+    "sizing": "fill/hug",
+    "layout": "row align space_between/center",
+    "padding": "0 0 0 0",
+    "gap": "2"
+   },
+   "actions-wrapper/actions-left": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "actions-wrapper/actions-left/Button": {
+    "size": "114×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=text-icon, State=disabled, Icon position=right",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=Icons / Chevron--down, Label=\"GPT 5.6\""
+   },
+   "actions-wrapper/actions-left/Button/icon/icon-arrow": {
+    "fill": "CONTENT/Disabled"
+   },
+   "actions-wrapper/actions-right": {
+    "size": "124×40",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "actions-wrapper/actions-right/Button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Add"
+   },
+   "actions-wrapper/actions-right/Button/icon/icon-wrapper/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "actions-wrapper/actions-right/Button#2": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=disabled, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Microphone"
+   },
+   "actions-wrapper/actions-right/Button#2/icon/icon-arrow": {
+    "fill": "CONTENT/Disabled"
+   },
+   "actions-wrapper/actions-right/Button#3": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=primary, Type=icon-only, State=disabled, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Label=\"Label\", Swap icon=Icons / Arrow--up"
+   },
+   "actions-wrapper/actions-right/Button#3/icon/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "State=default": {
+   "(root)": {
+    "size": "716×176",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0=PADDING/none"
+   },
+   "ChatScrollButton": {
+    "size": "716×48",
+    "sizing": "fill/hug",
+    "layout": "row align center/max",
+    "padding": "0=PADDING/none 0=PADDING/none 8=PADDING/8 0=PADDING/none",
+    "gap": "0",
+    "fill": "gradient_linear(#f7f7f700 0%, BACKGROUND/Secondary 100%) from 0.5,0 to 0.5,1 + gradient_linear(#f7f7f700 0%, BACKGROUND/Secondary 100%) from 0.5,0 to 0.5,1",
+    "effect": "background_blur 2  (no style)",
+    "instance": "ChatScrollButton › Mode=Light, Type=Icon, Background=On secondary"
+   },
+   "input-container": {
+    "size": "716×128",
+    "sizing": "fill/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "0.5=sm outside BORDER/Subtle",
+    "radius": "20=20",
+    "effect": "Shadows/elevation2"
+   },
+   "input-container/blur": {
+    "size": "715×80",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "input-container/text-input-area": {
+    "size": "692×112",
+    "sizing": "fill/fill",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "0"
+   },
+   "input-container/text-input-area/Ask anything...": {
+    "size": "676×24",
+    "sizing": "fill/fixed",
+    "text": "\"Ask anything...\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "input-container/actions-wrapper": {
+    "size": "692×40",
+    "sizing": "fixed/hug",
+    "layout": "row align space_between/center",
+    "padding": "0 0 0 0",
+    "gap": "2"
+   },
+   "input-container/actions-wrapper/actions-left": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "input-container/actions-wrapper/actions-left/Button": {
+    "size": "114×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=text-icon, State=default, Icon position=right",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Swap icon=Icons / Chevron--down, Label=\"GPT 5.6\""
+   },
+   "input-container/actions-wrapper/actions-left/Button/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "input-container/actions-wrapper/actions-right": {
+    "size": "578×40",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "input-container/actions-wrapper/actions-right/Button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Add"
+   },
+   "input-container/actions-wrapper/actions-right/Button/icon/icon-wrapper/icon": {
+    "fill": "CONTENT/Icon"
+   },
+   "input-container/actions-wrapper/actions-right/Button#2": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Microphone"
+   },
+   "input-container/actions-wrapper/actions-right/Button#2/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "input-container/actions-wrapper/actions-right/Button#3": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=primary, Type=icon-only, State=disabled, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Label=\"Label\", Swap icon=Icons / Arrow--up"
+   },
+   "input-container/actions-wrapper/actions-right/Button#3/icon/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "input-container/internal-border": {
+    "size": "716×128",
+    "sizing": "fixed/fixed",
+    "stroke": "1=default inside BACKGROUND/Primary",
+    "radius": "20=20"
+   }
+  },
+  "State=hover": {
+   "(root)": {
+    "size": "716×128",
+    "sizing": "fill/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "0.5=sm outside BORDER/Strong",
+    "radius": "20=20",
+    "effect": "Shadows/elevation2"
+   },
+   "blur": {
+    "size": "715×80",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "text-input-area": {
+    "size": "692×72",
+    "sizing": "fill/fill",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "0"
+   },
+   "text-input-area/Ask anything...": {
+    "size": "676×24",
+    "sizing": "fill/fixed",
+    "text": "\"Ask anything...\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "actions-wrapper": {
+    "size": "692×40",
+    "sizing": "fill/hug",
+    "layout": "row align space_between/center",
+    "padding": "0 0 0 0",
+    "gap": "2"
+   },
+   "actions-wrapper/actions-left": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "actions-wrapper/actions-left/Button": {
+    "size": "114×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=text-icon, State=default, Icon position=right",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Swap icon=Icons / Chevron--down, Label=\"GPT 5.6\""
+   },
+   "actions-wrapper/actions-left/Button/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions-wrapper/actions-right": {
+    "size": "578×40",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "actions-wrapper/actions-right/Button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Add"
+   },
+   "actions-wrapper/actions-right/Button/icon/icon-wrapper/icon": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions-wrapper/actions-right/Button#2": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Microphone"
+   },
+   "actions-wrapper/actions-right/Button#2/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions-wrapper/actions-right/Button#3": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=primary, Type=icon-only, State=disabled, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Label=\"Label\", Swap icon=Icons / Arrow--up"
+   },
+   "actions-wrapper/actions-right/Button#3/icon/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "internal-border": {
+    "size": "716×128",
+    "sizing": "fixed/fixed",
+    "stroke": "1=default inside BACKGROUND/Primary",
+    "radius": "20=20"
+   }
+  },
+  "State=active": {
+   "(root)": {
+    "size": "716×128",
+    "sizing": "fill/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "1=default outside BORDER/Strong",
+    "radius": "20=20",
+    "effect": "Shadows/elevation2"
+   },
+   "blur": {
+    "size": "715×80",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "text-input-area": {
+    "size": "692×72",
+    "sizing": "fill/fill",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "0"
+   },
+   "text-input-area/Cursor blink animation": {
+    "size": "1×17",
+    "sizing": "fixed/fixed",
+    "minWidth": "1",
+    "maxWidth": "1",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10",
+    "instance": "Cursor blink animation › State=Visible"
+   },
+   "actions-wrapper": {
+    "size": "692×40",
+    "sizing": "fill/hug",
+    "layout": "row align space_between/center",
+    "padding": "0 0 0 0",
+    "gap": "2"
+   },
+   "actions-wrapper/actions-left": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "actions-wrapper/actions-left/Button": {
+    "size": "114×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=text-icon, State=default, Icon position=right",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Swap icon=Icons / Chevron--down, Label=\"GPT 5.6\""
+   },
+   "actions-wrapper/actions-left/Button/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions-wrapper/actions-right": {
+    "size": "578×40",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "actions-wrapper/actions-right/Button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Add"
+   },
+   "actions-wrapper/actions-right/Button/icon/icon-wrapper/icon": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions-wrapper/actions-right/Button#2": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Microphone"
+   },
+   "actions-wrapper/actions-right/Button#2/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions-wrapper/actions-right/Button#3": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=primary, Type=icon-only, State=disabled, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Label=\"Label\", Swap icon=Icons / Arrow--up"
+   },
+   "actions-wrapper/actions-right/Button#3/icon/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "internal-border": {
+    "size": "716×128",
+    "sizing": "fixed/fixed",
+    "stroke": "1=default inside BACKGROUND/Primary",
+    "radius": "20=20"
+   }
+  },
+  "State=filled": {
+   "(root)": {
+    "size": "716×128",
+    "sizing": "fill/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "0.5=sm outside BORDER/Medium",
+    "radius": "20=20",
+    "effect": "Shadows/elevation2"
+   },
+   "blur": {
+    "size": "715×80",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "text-input-area": {
+    "size": "692×72",
+    "sizing": "fill/fill",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "0"
+   },
+   "text-input-area/Show me the revenue since the beginning of the year.": {
+    "size": "676×24",
+    "sizing": "fill/fixed",
+    "text": "\"Show me the revenue since the beginning of the year.\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "actions-wrapper": {
+    "size": "692×40",
+    "sizing": "fill/hug",
+    "layout": "row align space_between/center",
+    "padding": "0 0 0 0",
+    "gap": "2"
+   },
+   "actions-wrapper/actions-left": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "actions-wrapper/actions-left/Button": {
+    "size": "114×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=text-icon, State=default, Icon position=right",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Swap icon=Icons / Chevron--down, Label=\"GPT 5.6\""
+   },
+   "actions-wrapper/actions-left/Button/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions-wrapper/actions-right": {
+    "size": "578×40",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "actions-wrapper/actions-right/Button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Add"
+   },
+   "actions-wrapper/actions-right/Button/icon/icon-wrapper/icon": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions-wrapper/actions-right/Button#2": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Microphone"
+   },
+   "actions-wrapper/actions-right/Button#2/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions-wrapper/actions-right/Button#3": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Primary",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=primary, Type=icon-only, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Label=\"Label\", Swap icon=Icons / Arrow--up"
+   },
+   "actions-wrapper/actions-right/Button#3/icon": {
+    "size": "16×16"
+   },
+   "actions-wrapper/actions-right/Button#3/icon/icon": {
+    "fill": "CONTENT/On Primary"
+   },
+   "internal-border": {
+    "size": "716×128",
+    "sizing": "fixed/fixed",
+    "stroke": "1=default inside BACKGROUND/Primary",
+    "radius": "20=20"
+   }
+  },
+  "State=error": {
+   "(root)": {
+    "size": "716×182",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none",
+    "radius": "20=20"
+   },
+   "error-message-container": {
+    "size": "716×54",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "12=PADDING/12 12=PADDING/12 12=PADDING/12 12=PADDING/12",
+    "gap": "4=PADDING/4"
+   },
+   "error-message-container/HelperText": {
+    "size": "325×30",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=error, Size=lg, Style=light",
+    "props": "show Icon=true, Label=\"Couldn’t send a message. Please try again.\""
+   },
+   "error-message-container/HelperText/helper-text-bg": {
+    "fill": "BACKGROUND/Attention"
+   },
+   "error-message-container/HelperText/helper-text-bg/Icon/Status notification/icon": {
+    "fill": "BACKGROUND/Attention (Light)"
+   },
+   "error-message-container/HelperText/helper-text-bg/Helper text": {
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0",
+    "color": "CONTENT/On Primary"
+   },
+   "text-input-container": {
+    "size": "716×128",
+    "sizing": "fixed/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "1=default outside BORDER/Attention",
+    "radius": "20=20",
+    "effect": "Shadows/elevation2"
+   },
+   "text-input-container/blur": {
+    "size": "715×80",
+    "sizing": "fixed/fixed",
+    "fill": "BADGE/bg/red",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "text-input-container/text-input-area": {
+    "size": "692×72",
+    "sizing": "fill/fill",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "0"
+   },
+   "text-input-container/text-input-area/Show me the revenue since the beginning of the year.": {
+    "size": "676×24",
+    "sizing": "fill/fixed",
+    "text": "\"Show me the revenue since the beginning of the year.\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "text-input-container/actions-wrapper": {
+    "size": "692×40",
+    "sizing": "fixed/hug",
+    "layout": "row align space_between/center",
+    "padding": "0 0 0 0",
+    "gap": "2"
+   },
+   "text-input-container/actions-wrapper/actions-left": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "text-input-container/actions-wrapper/actions-left/Button": {
+    "size": "114×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=text-icon, State=default, Icon position=right",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Swap icon=Icons / Chevron--down, Label=\"GPT 5.6\""
+   },
+   "text-input-container/actions-wrapper/actions-left/Button/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container/actions-wrapper/actions-right": {
+    "size": "578×40",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Add"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button/icon/icon-wrapper/icon": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#2": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Microphone"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#2/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#3": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Attention",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=destructive, Type=icon-only, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Label=\"Label\", Swap icon=Icons / Arrow--up"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#3/Icons / Arrow--up/icon": {
+    "fill": "CONTENT/On Primary"
+   }
+  },
+  "State=warning": {
+   "(root)": {
+    "size": "716×182",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none",
+    "radius": "20=20"
+   },
+   "error-message-container": {
+    "size": "716×54",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "12=PADDING/12 12=PADDING/12 12=PADDING/12 12=PADDING/12",
+    "gap": "4=PADDING/4"
+   },
+   "error-message-container/HelperText": {
+    "size": "227×30",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=warning, Size=lg, Style=light",
+    "props": "show Icon=true, Label=\"Context window is 90% full.\""
+   },
+   "error-message-container/HelperText/helper-text-bg/Helper text": {
+    "font": "SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0"
+   },
+   "text-input-container": {
+    "size": "716×128",
+    "sizing": "fixed/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "0.5=sm outside BORDER/Warning",
+    "radius": "20=20",
+    "effect": "Shadows/elevation2"
+   },
+   "text-input-container/blur": {
+    "size": "715×80",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "text-input-container/text-input-area": {
+    "size": "692×72",
+    "sizing": "fill/fill",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "0"
+   },
+   "text-input-container/text-input-area/Show me the revenue since the beginning of the year.": {
+    "size": "676×24",
+    "sizing": "fill/fixed",
+    "text": "\"Show me the revenue since the beginning of the year.\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "text-input-container/actions-wrapper": {
+    "size": "692×40",
+    "sizing": "fixed/hug",
+    "layout": "row align space_between/center",
+    "padding": "0 0 0 0",
+    "gap": "2"
+   },
+   "text-input-container/actions-wrapper/actions-left": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "text-input-container/actions-wrapper/actions-left/Button": {
+    "size": "114×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=text-icon, State=default, Icon position=right",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Swap icon=Icons / Chevron--down, Label=\"GPT 5.6\""
+   },
+   "text-input-container/actions-wrapper/actions-left/Button/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container/actions-wrapper/actions-right": {
+    "size": "578×40",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Add"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button/icon/icon-wrapper/icon": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#2": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Microphone"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#2/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#3": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Primary",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=primary, Type=icon-only, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Label=\"Label\", Swap icon=Icons / Arrow--up"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#3/icon": {
+    "size": "16×16"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#3/icon/icon": {
+    "fill": "CONTENT/On Primary"
+   }
+  },
+  "State=attachment": {
+   "(root)": {
+    "size": "716×198",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0=PADDING/none",
+    "radius": "20=20"
+   },
+   "attachment-container": {
+    "size": "716×70",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "24=PADDING/24 12=PADDING/12 12=PADDING/12 12=PADDING/12",
+    "gap": "4=PADDING/4"
+   },
+   "attachment-container/File type": {
+    "size": "164×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "File type › Style=Outline, Size=Small, Type=Document, State=Default",
+    "props": "Show button=true, Show size=true, Show close icon=true, Instance=Icons / Document, Show icon=true"
+   },
+   "attachment-container/[run 1]": {
+    "size": "149×34",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "12=PADDING/12",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "File type › Style=Outline, Size=Small, Type=Image, State=Default",
+    "props": "Show size=true, Instance=Icons / Document, Show button=true, Show close icon=true, Show icon=true",
+    "count": "2"
+   },
+   "attachment-container/handle": {
+    "size": "20×4",
+    "sizing": "fixed/fixed",
+    "fill": "TRANSPARENT/black/20@0.2",
+    "radius": "9999=full"
+   },
+   "text-input-container": {
+    "size": "716×128",
+    "sizing": "fill/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "0.5=sm outside BORDER/Subtle",
+    "radius": "20=20",
+    "effect": "Shadows/elevation2"
+   },
+   "text-input-container/blur": {
+    "size": "715×80",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "text-input-container/text-input-area": {
+    "size": "692×72",
+    "sizing": "fill/fill",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "0"
+   },
+   "text-input-container/text-input-area/Ask anything...": {
+    "size": "676×24",
+    "sizing": "fill/fixed",
+    "text": "\"Ask anything...\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "text-input-container/actions-wrapper": {
+    "size": "692×40",
+    "sizing": "fill/hug",
+    "layout": "row align space_between/center",
+    "padding": "0 0 0 0",
+    "gap": "2"
+   },
+   "text-input-container/actions-wrapper/actions-left": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "text-input-container/actions-wrapper/actions-left/Button": {
+    "size": "114×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=text-icon, State=default, Icon position=right",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Swap icon=Icons / Chevron--down, Label=\"GPT 5.6\""
+   },
+   "text-input-container/actions-wrapper/actions-left/Button/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container/actions-wrapper/actions-right": {
+    "size": "578×40",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Add"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button/icon/icon-wrapper/icon": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#2": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Microphone"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#2/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#3": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=primary, Type=icon-only, State=disabled, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Label=\"Label\", Swap icon=Icons / Arrow--up"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#3/icon/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "text-input-container/internal-border": {
+    "size": "716×128",
+    "sizing": "fixed/fixed",
+    "stroke": "1=default inside BACKGROUND/Primary",
+    "radius": "20=20"
+   }
+  },
+  "State=attachment (collapsed)": {
+   "(root)": {
+    "size": "716×172",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "0=PADDING/none",
+    "radius": "20=20"
+   },
+   "attachment-container": {
+    "size": "716×44",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 12=PADDING/12 12=PADDING/12 12=PADDING/12",
+    "gap": "6=PADDING/6"
+   },
+   "attachment-container/Badge": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/20 × ICONS/20",
+    "layout": "row align center/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/gray",
+    "radius": "9999=full",
+    "instance": "Badge › Type=pill, Size=sm, Color=neutral, Border=false, iconLeft=false, iconRight=false",
+    "props": "Icon=Icons / Add, Label=\"3\", hasCloseIcon=false"
+   },
+   "attachment-container/Items": {
+    "size": "34×15",
+    "sizing": "hug/hug",
+    "text": "\"Items\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "BADGE/label/gray"
+   },
+   "attachment-container/Icons / Chevron--up": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--up"
+   },
+   "attachment-container/Icons / Chevron--up/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container": {
+    "size": "716×128",
+    "sizing": "fill/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "0.5=sm outside BORDER/Subtle",
+    "radius": "20=20",
+    "effect": "Shadows/elevation2"
+   },
+   "text-input-container/blur": {
+    "size": "715×80",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "text-input-container/text-input-area": {
+    "size": "692×72",
+    "sizing": "fill/fill",
+    "layout": "row align min/min",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "0"
+   },
+   "text-input-container/text-input-area/Ask anything...": {
+    "size": "676×24",
+    "sizing": "fill/fixed",
+    "text": "\"Ask anything...\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "text-input-container/actions-wrapper": {
+    "size": "692×40",
+    "sizing": "fill/hug",
+    "layout": "row align space_between/center",
+    "padding": "0 0 0 0",
+    "gap": "2"
+   },
+   "text-input-container/actions-wrapper/actions-left": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "text-input-container/actions-wrapper/actions-left/Button": {
+    "size": "114×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=text-icon, State=default, Icon position=right",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Swap icon=Icons / Chevron--down, Label=\"GPT 5.6\""
+   },
+   "text-input-container/actions-wrapper/actions-left/Button/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container/actions-wrapper/actions-right": {
+    "size": "578×40",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Add"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button/icon/icon-wrapper/icon": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#2": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Microphone"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#2/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#3": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=primary, Type=icon-only, State=disabled, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Label=\"Label\", Swap icon=Icons / Arrow--up"
+   },
+   "text-input-container/actions-wrapper/actions-right/Button#3/icon/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "text-input-container/internal-border": {
+    "size": "716×128",
+    "sizing": "fixed/fixed",
+    "stroke": "1=default inside BACKGROUND/Primary",
+    "radius": "20=20"
+   }
+  },
+  "State=condensed": {
+   "(root)": {
+    "size": "716×56",
+    "sizing": "fill/fixed",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "0.5=sm outside BORDER/Subtle",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation2"
+   },
+   "blur": {
+    "size": "715×32",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "text-input-area": {
+    "size": "494×40",
+    "sizing": "fill/fill",
+    "layout": "row align min/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "0"
+   },
+   "text-input-area/Ask anything...": {
+    "size": "470×24",
+    "sizing": "fill/fixed",
+    "text": "\"Ask anything...\"",
+    "font": "SYSTEM/Body/md/regular · Geist 400 16/24 ls 0",
+    "font.vars": "family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "actions-wrapper": {
+    "size": "198×40",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "2"
+   },
+   "actions-wrapper/Button": {
+    "size": "114×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=text-icon, State=default, Icon position=right",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Swap icon=Icons / Chevron--down, Label=\"GPT 5.6\""
+   },
+   "actions-wrapper/Button/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions-wrapper/actions-left": {
+    "size": "40×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "actions-wrapper/actions-left/Button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Add"
+   },
+   "actions-wrapper/actions-left/Button/icon/icon-wrapper/icon": {
+    "fill": "CONTENT/Icon"
+   },
+   "actions-wrapper/actions-right": {
+    "size": "40×40",
+    "sizing": "hug/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "actions-wrapper/actions-right/Button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "9999=full",
+    "instance": "Button › Size=lg, Style=ghost, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Label\", Swap icon=Icons / Microphone"
+   },
+   "actions-wrapper/actions-right/Button/icon/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

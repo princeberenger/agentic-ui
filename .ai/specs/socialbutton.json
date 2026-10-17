@@ -1,0 +1,4494 @@
+{
+ "id": "675:3982",
+ "name": "SocialButton",
+ "props": {
+  "Label": {
+   "type": "TEXT",
+   "default": "Label"
+  },
+  "Size": {
+   "type": "VARIANT",
+   "default": "lg",
+   "options": [
+    "lg",
+    "sm"
+   ]
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "primary",
+   "options": [
+    "primary",
+    "secondary"
+   ]
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "disabled",
+    "focus",
+    "hover"
+   ]
+  },
+  "Style": {
+   "type": "VARIANT",
+   "default": "icon-label",
+   "options": [
+    "icon",
+    "icon-label"
+   ]
+  },
+  "Brand": {
+   "type": "VARIANT",
+   "default": "apple",
+   "options": [
+    "apple",
+    "discord",
+    "github",
+    "google",
+    "linkedin",
+    "x"
+   ]
+  }
+ },
+ "variants": {
+  "Size=lg, Type=primary, State=default, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/Primary",
+    "stroke": "0.5=sm inside BORDER/Strong",
+    "radius": "10=10"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/On Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   }
+  },
+  "Size=lg, Type=primary, State=default, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "NEUTRAL/Neutral 900",
+    "radius": "10=10"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=default, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "SOCIALS/discord",
+    "radius": "10=10"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=default, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "SOCIALS/linkedin",
+    "radius": "10=10"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=default, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=primary, State=default, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900",
+    "radius": "10=10"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=default, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900",
+    "radius": "10=10"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=default, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/discord",
+    "radius": "10=10"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=default, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/linkedin",
+    "radius": "10=10"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=default, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=primary, State=hover, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/Primary + INPUT/Hover (Light)@0.08",
+    "stroke": "0.5=sm inside BORDER/Strong",
+    "radius": "10=10"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/On Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   }
+  },
+  "Size=lg, Type=primary, State=hover, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "NEUTRAL/Neutral 900 + INPUT/Hover (Light)@0.08",
+    "radius": "10=10"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=hover, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "SOCIALS/discord + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=hover, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "SOCIALS/linkedin + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=hover, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Light)@0.08",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=primary, State=hover, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900 + INPUT/Hover (Light)@0.08",
+    "radius": "10=10"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=hover, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900 + INPUT/Hover (Light)@0.08",
+    "radius": "10=10"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=hover, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/discord + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=hover, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/linkedin + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=hover, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Light)@0.08",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=primary, State=disabled, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BUTTON/Disabled",
+    "radius": "10=10"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=primary, State=disabled, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BUTTON/Disabled",
+    "radius": "10=10"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "fill": "BUTTON/Disabled",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=primary, State=disabled, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BUTTON/Disabled",
+    "radius": "10=10"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "fill": "BUTTON/Disabled",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=primary, State=disabled, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BUTTON/Disabled",
+    "radius": "10=10"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "fill": "BUTTON/Disabled",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=primary, State=disabled, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BUTTON/Disabled",
+    "radius": "10=10"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "fill": "BUTTON/Disabled",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=primary, State=disabled, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "10=10"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=primary, State=disabled, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "10=10"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "fill": "BUTTON/Disabled",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=primary, State=disabled, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "10=10"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "fill": "BUTTON/Disabled",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=primary, State=disabled, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "10=10"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "fill": "BUTTON/Disabled",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=primary, State=disabled, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "10=10"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "fill": "BUTTON/Disabled",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=primary, State=focus, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "CONTENT/Primary",
+    "stroke": "0.5=sm inside BORDER/Strong",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/On Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   }
+  },
+  "Size=lg, Type=primary, State=focus, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "NEUTRAL/Neutral 900",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=focus, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "SOCIALS/discord",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=focus, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "SOCIALS/linkedin",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=focus, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=primary, State=focus, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=focus, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=focus, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/discord",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=focus, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/linkedin",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=lg, Type=primary, State=focus, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=primary, State=default, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "CONTENT/Primary",
+    "radius": "4=4"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/On Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   }
+  },
+  "Size=sm, Type=primary, State=default, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900",
+    "radius": "4=4"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=default, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/discord",
+    "radius": "4=4"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=default, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/linkedin",
+    "radius": "4=4"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=default, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=primary, State=default, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900",
+    "radius": "4=4"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=default, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900",
+    "radius": "4=4"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=default, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/discord",
+    "radius": "4=4"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=default, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/linkedin",
+    "radius": "4=4"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=default, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=primary, State=hover, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "CONTENT/Primary + INPUT/Hover (Light)@0.08",
+    "radius": "4=4"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/On Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   }
+  },
+  "Size=sm, Type=primary, State=hover, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900 + INPUT/Hover (Light)@0.08",
+    "radius": "4=4"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=hover, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/discord + INPUT/Hover (Dark)@0.04",
+    "radius": "4=4"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=hover, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/linkedin + INPUT/Hover (Dark)@0.04",
+    "radius": "4=4"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=hover, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Light)@0.08",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=primary, State=hover, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900 + INPUT/Hover (Light)@0.08",
+    "radius": "4=4"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=hover, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900 + INPUT/Hover (Light)@0.08",
+    "radius": "4=4"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=hover, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/discord + INPUT/Hover (Dark)@0.04",
+    "radius": "4=4"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=hover, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/linkedin + INPUT/Hover (Dark)@0.04",
+    "radius": "4=4"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=hover, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Light)@0.08",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=primary, State=focus, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "CONTENT/Primary",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/On Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/On Primary"
+   }
+  },
+  "Size=sm, Type=primary, State=focus, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=focus, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/discord",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=focus, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/linkedin",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=focus, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=primary, State=focus, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=focus, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "NEUTRAL/Neutral 900",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=focus, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/discord",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=focus, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "SOCIALS/linkedin",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "NEUTRAL/Neutral 100"
+   }
+  },
+  "Size=sm, Type=primary, State=focus, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=primary, State=disabled, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "4=4"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=primary, State=disabled, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "4=4"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "BUTTON/Disabled",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=primary, State=disabled, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "4=4"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "BUTTON/Disabled",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=primary, State=disabled, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "4=4"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "BUTTON/Disabled",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=primary, State=disabled, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "66×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "4=4"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "BUTTON/Disabled",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=primary, State=disabled, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "4=4"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "BUTTON/Disabled",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=primary, State=disabled, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "4=4"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "BUTTON/Disabled",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=primary, State=disabled, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "4=4"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "BUTTON/Disabled",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=primary, State=disabled, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "4=4"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "BUTTON/Disabled",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=primary, State=disabled, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "4=4"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "fill": "BUTTON/Disabled",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=default, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=default, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=default, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=default, Style=icon-label, Brand=google": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "Icons / Google": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Google"
+   },
+   "Icons / Google/icon-color": {
+    "fill": "#34a853 (no variable)"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=default, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=default, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=default, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=default, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=default, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=default, Style=icon, Brand=google": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "Icons / Google": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Google"
+   },
+   "Icons / Google/icon-color": {
+    "fill": "#34a853 (no variable)"
+   }
+  },
+  "Size=sm, Type=secondary, State=default, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=default, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=disabled, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=disabled, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=disabled, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=disabled, Style=icon-label, Brand=google": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "google": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "google"
+   },
+   "google/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=disabled, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=disabled, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=disabled, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=disabled, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=disabled, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=disabled, Style=icon, Brand=google": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "google": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "google"
+   },
+   "google/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=disabled, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=disabled, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=sm, Type=secondary, State=focus, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=focus, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=focus, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=focus, Style=icon-label, Brand=google": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "Icons / Google": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Google"
+   },
+   "Icons / Google/icon-color": {
+    "fill": "#34a853 (no variable)"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=focus, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=focus, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=focus, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=focus, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=focus, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=focus, Style=icon, Brand=google": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "Icons / Google": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Google"
+   },
+   "Icons / Google/icon-color": {
+    "fill": "#34a853 (no variable)"
+   }
+  },
+  "Size=sm, Type=secondary, State=focus, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=focus, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4",
+    "effect": "Components/Focus"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=hover, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=hover, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=hover, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=hover, Style=icon-label, Brand=google": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "Icons / Google": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Google"
+   },
+   "Icons / Google/icon-color": {
+    "fill": "#34a853 (no variable)"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=hover, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=hover, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "64×24",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "33×15",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=hover, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "apple": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=hover, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "twitter-x": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=hover, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "discord": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=hover, Style=icon, Brand=google": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "Icons / Google": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "Icons / Google"
+   },
+   "Icons / Google/icon-color": {
+    "fill": "#34a853 (no variable)"
+   }
+  },
+  "Size=sm, Type=secondary, State=hover, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "linkedin": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=sm, Type=secondary, State=hover, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8",
+    "gap": "2=PADDING/2",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "4=4"
+   },
+   "github-fill": {
+    "size": "13×13",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/13",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=default, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=default, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=default, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=default, Style=icon-label, Brand=google": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Icons / Google": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Google"
+   },
+   "Icons / Google/icon-color": {
+    "fill": "#34a853 (no variable)"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=default, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=default, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=default, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=default, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=default, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=default, Style=icon, Brand=google": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Icons / Google": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Google"
+   },
+   "Icons / Google/icon-color": {
+    "fill": "#34a853 (no variable)"
+   }
+  },
+  "Size=lg, Type=secondary, State=default, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=default, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=disabled, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=secondary, State=disabled, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=secondary, State=disabled, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=secondary, State=disabled, Style=icon-label, Brand=google": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "google": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "google"
+   },
+   "google/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=secondary, State=disabled, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=secondary, State=disabled, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=secondary, State=disabled, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=secondary, State=disabled, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=secondary, State=disabled, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=secondary, State=disabled, Style=icon, Brand=google": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "google": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "google"
+   },
+   "google/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=secondary, State=disabled, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=secondary, State=disabled, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Size=lg, Type=secondary, State=focus, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=focus, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=focus, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=focus, Style=icon-label, Brand=google": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "Icons / Google": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Google"
+   },
+   "Icons / Google/icon-color": {
+    "fill": "#34a853 (no variable)"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=focus, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=focus, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=focus, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=focus, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=focus, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=focus, Style=icon, Brand=google": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "Icons / Google": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Google"
+   },
+   "Icons / Google/icon-color": {
+    "fill": "#34a853 (no variable)"
+   }
+  },
+  "Size=lg, Type=secondary, State=focus, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=focus, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=hover, Style=icon-label, Brand=apple": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=hover, Style=icon-label, Brand=x": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=hover, Style=icon-label, Brand=discord": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=hover, Style=icon-label, Brand=google": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Icons / Google": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Google"
+   },
+   "Icons / Google/icon-color": {
+    "fill": "#34a853 (no variable)"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=hover, Style=icon-label, Brand=linkedin": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=hover, Style=icon-label, Brand=github": {
+   "(root)": {
+    "size": "92×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   },
+   "Label": {
+    "size": "36×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=hover, Style=icon, Brand=apple": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "apple": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "apple"
+   },
+   "apple/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=hover, Style=icon, Brand=x": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "twitter-x": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "twitter-x"
+   },
+   "twitter-x/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=hover, Style=icon, Brand=discord": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "discord": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "discord"
+   },
+   "discord/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=hover, Style=icon, Brand=google": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Icons / Google": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "Icons / Google"
+   },
+   "Icons / Google/icon-color": {
+    "fill": "#34a853 (no variable)"
+   }
+  },
+  "Size=lg, Type=secondary, State=hover, Style=icon, Brand=linkedin": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "linkedin": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "linkedin"
+   },
+   "linkedin/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Size=lg, Type=secondary, State=hover, Style=icon, Brand=github": {
+   "(root)": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "github-fill": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16",
+    "instance": "github-fill"
+   },
+   "github-fill/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  }
+ }
+}

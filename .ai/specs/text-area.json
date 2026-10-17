@@ -1,0 +1,410 @@
+{
+ "id": "2003:3900",
+ "name": "Text area",
+ "props": {
+  "Show Label": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Label": {
+   "type": "TEXT",
+   "default": "Text area label"
+  },
+  "Text": {
+   "type": "TEXT",
+   "default": "To optimize agentic workflows: 1. Define clear objectives and metrics. 2. Automate repetitive tasks with Maestro. 3. Implement regular performance evaluations."
+  },
+  "Show helper text": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Placeholder": {
+   "type": "TEXT",
+   "default": "Placeholder"
+  },
+  "Scrolfade": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "disabled",
+    "error",
+    "filled",
+    "readonly",
+    "selected"
+   ]
+  }
+ },
+ "variants": {
+  "State=default": {
+   "(root)": {
+    "size": "288×157",
+    "sizing": "fixed/hug",
+    "minWidth": "64=64px (4rem) (spacing-10)",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Input label": {
+    "size": "288×26",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Input label/Label margin": {
+    "size": "288×26",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 8 0",
+    "gap": "8"
+   },
+   "Input label/Label margin/Label text": {
+    "size": "110×18",
+    "sizing": "hug/hug",
+    "text": "\"Text area label\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Text input": {
+    "size": "288×100",
+    "sizing": "fill/fixed",
+    "layout": "row align min/min",
+    "padding": "12=PADDING/12 12=PADDING/12 12=PADDING/12 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Text input/Placeholder": {
+    "size": "264×76",
+    "sizing": "fill/fill",
+    "text": "\"Placeholder\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "HelperText": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=default, Size=sm, Style=light",
+    "props": "show Icon=true, Label=\"Helper text\""
+   }
+  },
+  "State=selected": {
+   "(root)": {
+    "size": "288×157",
+    "sizing": "fixed/hug",
+    "minWidth": "64=64px (4rem) (spacing-10)",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Input label": {
+    "size": "288×26",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Input label/Label margin": {
+    "size": "288×26",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 8 0",
+    "gap": "8"
+   },
+   "Input label/Label margin/Label text": {
+    "size": "110×18",
+    "sizing": "hug/hug",
+    "text": "\"Text area label\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Text input": {
+    "size": "288×100",
+    "sizing": "fill/fixed",
+    "layout": "row align min/min",
+    "padding": "12=PADDING/12 12=PADDING/12 12=PADDING/12 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "10=10"
+   },
+   "Text input/To optimize agentic workflows: 1. Define clear objectives and metrics. 2. Automate repetitive tasks with Maestro. 3. Implement regular performance evaluations.": {
+    "size": "264×76",
+    "sizing": "fill/fill",
+    "text": "\"To optimize agentic workflows: 1. Define clear objectives and metrics. 2. Automate repetitive tasks with Maestro. 3. Implement regular performance evaluations.\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "HelperText": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=default, Size=sm, Style=light",
+    "props": "show Icon=true, Label=\"Helper text\""
+   }
+  },
+  "State=filled": {
+   "(root)": {
+    "size": "288×157",
+    "sizing": "fixed/hug",
+    "minWidth": "64=64px (4rem) (spacing-10)",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Input label": {
+    "size": "288×26",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Input label/Label margin": {
+    "size": "288×26",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 8 0",
+    "gap": "8"
+   },
+   "Input label/Label margin/Label text": {
+    "size": "110×18",
+    "sizing": "hug/hug",
+    "text": "\"Text area label\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Text input": {
+    "size": "288×100",
+    "sizing": "fill/fixed",
+    "layout": "row align min/min",
+    "padding": "12=PADDING/12 12=PADDING/12 12=PADDING/12 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Text input/SCROLL FADE": {
+    "size": "288×48",
+    "sizing": "fixed/hug",
+    "layout": "row align space_between/max",
+    "padding": "0=PADDING/none 0=PADDING/none 8=PADDING/8 0=PADDING/none",
+    "gap": "0",
+    "fill": "gradient_linear(TRANSPARENT/white/0 0%, BACKGROUND/Primary 100%) from 0.5,0 to 0.5,1 + gradient_linear(TRANSPARENT/white/0 0%, BACKGROUND/Primary 100%) from 0.5,0 to 0.5,1",
+    "effect": "background_blur 2  (no style)",
+    "instance": "SCROLL FADE › Mode=Light"
+   },
+   "Text input/To optimize agentic workflows: 1. Define clear objectives and metrics. 2. Automate repetitive tasks with Maestro. 3. Implement regular performance evaluations.": {
+    "size": "264×76",
+    "sizing": "fill/fill",
+    "text": "\"To optimize agentic workflows: 1. Define clear objectives and metrics. 2. Automate repetitive tasks with Maestro. 3. Implement regular performance evaluations.\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "HelperText": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=default, Size=sm, Style=light",
+    "props": "show Icon=true, Label=\"Helper text\""
+   }
+  },
+  "State=readonly": {
+   "(root)": {
+    "size": "288×157",
+    "sizing": "fixed/hug",
+    "minWidth": "64=64px (4rem) (spacing-10)",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Input label": {
+    "size": "288×26",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Input label/Label margin": {
+    "size": "288×26",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 8 0",
+    "gap": "8"
+   },
+   "Input label/Label margin/Label text": {
+    "size": "110×18",
+    "sizing": "hug/hug",
+    "text": "\"Text area label\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Text input": {
+    "size": "288×100",
+    "sizing": "fill/fixed",
+    "layout": "row align min/min",
+    "padding": "12=PADDING/12 12=PADDING/12 12=PADDING/12 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Text input/To optimize agentic workflows: 1. Define clear objectives and metrics. 2. Automate repetitive tasks with Maestro. 3. Implement regular performance evaluations.": {
+    "size": "264×76",
+    "sizing": "fill/fill",
+    "text": "\"To optimize agentic workflows: 1. Define clear objectives and metrics. 2. Automate repetitive tasks with Maestro. 3. Implement regular performance evaluations.\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "HelperText": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=default, Size=sm, Style=light",
+    "props": "show Icon=true, Label=\"Helper text\""
+   }
+  },
+  "State=error": {
+   "(root)": {
+    "size": "288×157",
+    "sizing": "fixed/hug",
+    "minWidth": "64=64px (4rem) (spacing-10)",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Input label": {
+    "size": "288×26",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Input label/Label margin": {
+    "size": "288×26",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 8 0",
+    "gap": "8"
+   },
+   "Input label/Label margin/Label text": {
+    "size": "110×18",
+    "sizing": "hug/hug",
+    "text": "\"Text area label\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Text input": {
+    "size": "288×100",
+    "sizing": "fill/fixed",
+    "layout": "row align min/min",
+    "padding": "12=PADDING/12 12=PADDING/12 12=PADDING/12 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "stroke": "1=default inside BORDER/Attention",
+    "radius": "10=10"
+   },
+   "Text input/To optimize agentic workflows: 1. Define clear objectives and metrics. 2. Automate repetitive tasks with Maestro. 3. Implement regular performance evaluations.": {
+    "size": "264×76",
+    "sizing": "fill/fill",
+    "text": "\"To optimize agentic workflows: 1. Define clear objectives and metrics. 2. Automate repetitive tasks with Maestro. 3. Implement regular performance evaluations.\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "HelperText": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=error, Size=sm, Style=light",
+    "props": "show Icon=true, Label=\"Helper text\""
+   },
+   "HelperText/helper-text-bg/icon/Status notification/icon": {
+    "fill": "CONTENT/Attention"
+   }
+  },
+  "State=disabled": {
+   "(root)": {
+    "size": "288×157",
+    "sizing": "fixed/hug",
+    "minWidth": "64=64px (4rem) (spacing-10)",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Input label": {
+    "size": "288×26",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "Input label/Label margin": {
+    "size": "288×26",
+    "sizing": "fill/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 8 0",
+    "gap": "8"
+   },
+   "Input label/Label margin/Label text": {
+    "size": "110×18",
+    "sizing": "hug/hug",
+    "text": "\"Text area label\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Disabled"
+   },
+   "Text input": {
+    "size": "288×100",
+    "sizing": "fill/fixed",
+    "layout": "row align min/min",
+    "padding": "12=PADDING/12 12=PADDING/12 12=PADDING/12 12=PADDING/12",
+    "gap": "0=PADDING/none",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "1=default inside BORDER/Subtle",
+    "radius": "10=10"
+   },
+   "Text input/To optimize agentic workflows: 1. Define clear objectives and metrics. 2. Automate repetitive tasks with Maestro. 3. Implement regular performance evaluations.": {
+    "size": "264×76",
+    "sizing": "fill/fill",
+    "text": "\"To optimize agentic workflows: 1. Define clear objectives and metrics. 2. Automate repetitive tasks with Maestro. 3. Implement regular performance evaluations.\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "HelperText": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=default, Size=sm, Style=light",
+    "props": "show Icon=true, Label=\"Helper text\""
+   }
+  }
+ }
+}

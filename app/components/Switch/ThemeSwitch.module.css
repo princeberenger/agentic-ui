@@ -1,0 +1,97 @@
+/* ==========================================================================
+   THEME SWITCH — Figma Switch (Theme) 6114:855
+   Mode: light, dark   State: focus (:focus-visible). Figma defines no hover or disabled.
+   Mode=Dark pins the Theme collection to DARK: [data-theme='dark'] on the track.
+   ========================================================================== */
+
+/* 43 × 24 track (Figma 43.2, no variable), 20px knob in a 24px frame */
+.track {
+  --_w: calc(var(--icon-24) + var(--icon-20) - var(--stroke-default));
+
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  width: var(--_w);
+  height: var(--icon-24);
+  border-radius: var(--radius-full);
+  background-color: var(--color-switch-bg-inactive);
+  box-shadow: var(--shadow-switch-track);
+  transition-property: background-color, box-shadow;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
+}
+
+.dark {
+  background-color: var(--color-switch-bg-active);
+  box-shadow: none;
+}
+
+/* the native input covers the track: it takes the clicks and the keyboard focus */
+.input {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+}
+
+.track:has(.input:focus-visible) {
+  box-shadow: var(--shadow-components-focus);
+}
+
+.mask {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-24);
+  height: var(--icon-24);
+  transition: transform var(--duration-hover) var(--ease-in-out-quart);
+}
+
+.dark .mask {
+  transform: translateX(calc(var(--_w) - var(--icon-24)));
+}
+
+/* Knob: 1px inside stroke in the knob color, Swtich/Toggle effect in light only */
+.knob {
+  position: absolute;
+  width: var(--icon-20);
+  height: var(--icon-20);
+  border-radius: var(--radius-full);
+  background-color: var(--color-switch-knob-inactive);
+  box-shadow: inset 0 0 0 var(--stroke-default) var(--color-switch-knob-inactive), var(--shadow-switch-toggle);
+  transition-property: background-color, box-shadow;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
+}
+
+.dark .knob {
+  background-color: var(--color-switch-knob-active);
+  box-shadow: inset 0 0 0 var(--stroke-default) var(--color-switch-knob-active);
+}
+
+/* Icons / Sun (CONTENT/Primary) and Icons / Moon --filled (CONTENT/On Primary) cross-fade */
+.icon {
+  position: absolute;
+  transition: opacity var(--duration-hover) ease;
+}
+
+.sun {
+  color: var(--color-content-primary);
+}
+
+.moon {
+  color: var(--color-content-on-primary);
+  opacity: 0;
+}
+
+.dark .sun {
+  opacity: 0;
+}
+
+.dark .moon {
+  opacity: 1;
+}

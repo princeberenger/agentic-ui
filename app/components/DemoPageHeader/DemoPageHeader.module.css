@@ -1,0 +1,67 @@
+/* ==========================================================================
+   DEMO PAGE HEADER — Figma 587:3511
+   Not interactive itself: the shortcut keys are Buttons (secondary, sm, shortcut).
+   ========================================================================== */
+
+/* Figma: 1280 fixed (no variable), the code fills its container */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-24);
+  width: 100%;
+  padding: var(--space-32) var(--space-32) 0;
+  border-radius: var(--radius-md);
+}
+
+/* LEFT, RIGHT: gap 12 without variable */
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+/* AGENTIC UI LOGO, Union override CONTENT/Secondary */
+.logo {
+  color: var(--color-content-secondary);
+}
+
+/* 9 × 20 diagonal line, 1px (no variable) BORDER/Subtle */
+.divider {
+  flex-shrink: 0;
+  width: calc(var(--space-8) + var(--stroke-default));
+  height: var(--icon-20);
+  background-image: linear-gradient(
+    to bottom right,
+    transparent calc(50% - var(--stroke-default) / 2),
+    var(--color-border-subtle) calc(50% - var(--stroke-default) / 2),
+    var(--color-border-subtle) calc(50% + var(--stroke-default) / 2),
+    transparent calc(50% + var(--stroke-default) / 2)
+  );
+}
+
+/* SYSTEM/Label/md/regular */
+.label {
+  margin: 0;
+  color: var(--color-content-secondary);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.keys {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* the header fixes each key Button to 24 wide (no variable) */
+.key {
+  --_padding-x: var(--space-none);
+  width: var(--icon-24);
+}

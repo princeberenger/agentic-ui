@@ -1,0 +1,266 @@
+{
+ "id": "4066:5501",
+ "name": "CheckboxGroup",
+ "props": {
+  "Show label": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Label text": {
+   "type": "TEXT",
+   "default": "Label"
+  },
+  "Show helper text": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "vertical",
+   "options": [
+    "horizontal",
+    "vertical"
+   ]
+  },
+  "Items": {
+   "type": "VARIANT",
+   "default": "3",
+   "options": [
+    "3",
+    "4",
+    "5"
+   ]
+  }
+ },
+ "variants": {
+  "Type=vertical, Items=4": {
+   "(root)": {
+    "size": "128×189",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "label-container": {
+    "size": "128×22",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 4=PADDING/4 0",
+    "gap": "0"
+   },
+   "label-container/Label": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "[run 1]": {
+    "size": "68×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8",
+    "instance": "Checkbox with label › State=default, Selected=false, Style=no-background",
+    "props": "Description=\"Description text\", Label=\"Label\", Show description=false",
+    "count": "4"
+   },
+   "HelperText": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=default, Size=sm, Style=light",
+    "props": "show Icon=true, Label=\"Helper text\""
+   }
+  },
+  "Type=vertical, Items=3": {
+   "(root)": {
+    "size": "128×157",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "label-container": {
+    "size": "128×22",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 4=PADDING/4 0",
+    "gap": "0"
+   },
+   "label-container/Label": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "[run 1]": {
+    "size": "68×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8",
+    "instance": "Checkbox with label › State=default, Selected=false, Style=no-background",
+    "props": "Description=\"Description text\", Label=\"Label\", Show description=false",
+    "count": "3"
+   },
+   "HelperText": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=default, Size=sm, Style=light",
+    "props": "show Icon=true, Label=\"Helper text\""
+   }
+  },
+  "Type=horizontal, Items=3": {
+   "(root)": {
+    "size": "252×93",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "label-container": {
+    "size": "252×22",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 4=PADDING/4 0",
+    "gap": "0"
+   },
+   "label-container/Label": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Frame 1": {
+    "size": "252×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "24=PADDING/24"
+   },
+   "Frame 1/[run 1]": {
+    "size": "68×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8",
+    "instance": "Checkbox with label › State=default, Selected=false, Style=no-background",
+    "props": "Description=\"Description text\", Label=\"Label\", Show description=false",
+    "count": "3"
+   },
+   "HelperText": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=default, Size=sm, Style=light",
+    "props": "show Icon=true, Label=\"Helper text\""
+   }
+  },
+  "Type=horizontal, Items=4": {
+   "(root)": {
+    "size": "344×93",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "label-container": {
+    "size": "344×22",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 4=PADDING/4 0",
+    "gap": "0"
+   },
+   "label-container/Label": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Frame 1": {
+    "size": "344×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "24=PADDING/24"
+   },
+   "Frame 1/[run 1]": {
+    "size": "68×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8",
+    "instance": "Checkbox with label › State=default, Selected=false, Style=no-background",
+    "props": "Description=\"Description text\", Label=\"Label\", Show description=false",
+    "count": "4"
+   },
+   "HelperText": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=default, Size=sm, Style=light",
+    "props": "show Icon=true, Label=\"Helper text\""
+   }
+  },
+  "Type=vertical, Items=5": {
+   "(root)": {
+    "size": "128×221",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "label-container": {
+    "size": "128×22",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 4=PADDING/4 0",
+    "gap": "0"
+   },
+   "label-container/Label": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Label\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "[run 1]": {
+    "size": "68×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8",
+    "instance": "Checkbox with label › State=default, Selected=false, Style=no-background",
+    "props": "Description=\"Description text\", Label=\"Label\", Show description=false",
+    "count": "5"
+   },
+   "HelperText": {
+    "size": "106×31",
+    "sizing": "hug/fixed",
+    "layout": "column align min/min",
+    "padding": "8=PADDING/8 0 0 0",
+    "gap": "0",
+    "instance": "HelperText › Type=default, Size=sm, Style=light",
+    "props": "show Icon=true, Label=\"Helper text\""
+   }
+  }
+ }
+}

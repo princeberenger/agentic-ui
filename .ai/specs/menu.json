@@ -1,0 +1,438 @@
+{
+ "id": "558:659",
+ "name": "Menu",
+ "props": {
+  "Size": {
+   "type": "VARIANT",
+   "default": "regular",
+   "options": [
+    "regular",
+    "sm"
+   ]
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "account",
+   "options": [
+    "account",
+    "shortcuts",
+    "simple"
+   ]
+  }
+ },
+ "variants": {
+  "Size=regular, Type=account": {
+   "(root)": {
+    "size": "160×188",
+    "sizing": "fixed/hug",
+    "minWidth": "132",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0",
+    "fill": "BACKGROUND/menu/background",
+    "stroke": "0.5=sm outside BORDER/Medium",
+    "radius": "10=10",
+    "effect": "Shadows/elevation2"
+   },
+   "blur": {
+    "size": "158×128",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "_Menu list item": {
+    "size": "152×36",
+    "sizing": "fill/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Account\", Divider=false"
+   },
+   "_Menu list item#2": {
+    "size": "152×36",
+    "sizing": "fill/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Preferences\", Divider=false"
+   },
+   "_Menu list item#3": {
+    "size": "152×36",
+    "sizing": "fill/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Upgrade\", Divider=false"
+   },
+   "_Menu list item#4": {
+    "size": "152×36",
+    "sizing": "fill/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Support\", Divider=false"
+   },
+   "_Menu list item#5": {
+    "size": "152×36",
+    "sizing": "fill/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Sign out\", Divider=true"
+   },
+   "_Menu list item#5/Content/Text overflow + Menu style/Keyboard shortcut": {
+    "instance": "_Keyboard shortcut › Context=icon",
+    "props": "Show Letter 3=false, Show Letter 2=false, Show Letter 1=true, Show Icon 2=false, Show Icon 4 (Any)=false, Show Icon 3=false, Show Letter 4=true, Icon 1=179:14493, Icon 3=179:14465, Icon 2=179:14487, Icon 4 (Any)=179:14494, Show Icon 1=true, Icon=Icons / Logout"
+   },
+   "_Menu list item#5/Content/Text overflow + Menu style/Keyboard shortcut/Icon/icon": {
+    "fill": "CONTENT/Icon"
+   },
+   "internal-border": {
+    "size": "160×188",
+    "sizing": "fixed/fixed",
+    "stroke": "1=default inside BACKGROUND/Primary",
+    "radius": "10=10"
+   }
+  },
+  "Size=regular, Type=simple": {
+   "(root)": {
+    "size": "160×260",
+    "sizing": "fixed/hug",
+    "minWidth": "140",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0",
+    "fill": "BACKGROUND/menu/background",
+    "stroke": "0.5=sm outside BORDER/Medium",
+    "radius": "10=10",
+    "effect": "Shadows/elevation2"
+   },
+   "blur": {
+    "size": "158×128",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "_Menu list item": {
+    "size": "152×36",
+    "sizing": "fill/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Today\", Divider=false"
+   },
+   "_Menu list item#2": {
+    "size": "152×36",
+    "sizing": "fill/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=selected",
+    "props": "Selected=true, Shortcuts / Icon=true, Option text=\"Last 7 days\", Indented=false, Divider=false, Model=false"
+   },
+   "_Menu list item#3": {
+    "size": "152×36",
+    "sizing": "fill/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Last 14 days\", Divider=false"
+   },
+   "_Menu list item#4": {
+    "size": "152×36",
+    "sizing": "fill/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Last 30 days\", Divider=false"
+   },
+   "_Menu list item#5": {
+    "size": "152×36",
+    "sizing": "fill/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Last 3 months\", Divider=false"
+   },
+   "_Menu list item#6": {
+    "size": "152×36",
+    "sizing": "fill/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Last 6 months\", Divider=false"
+   },
+   "_Menu list item#7": {
+    "size": "152×36",
+    "sizing": "fill/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Year to date\", Divider=false"
+   },
+   "_Menu list item#8": {
+    "size": "152×36",
+    "sizing": "fixed/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Menu item\", Divider=false"
+   },
+   "[run 1]": {
+    "size": "160×36",
+    "sizing": "fixed/fixed",
+    "minWidth": "132",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "_Menu list item › Size=regular, State=default",
+    "props": "Indented=false, Shortcuts / Icon=true, Model=false, Selected=false, Option text=\"Menu item\", Divider=false",
+    "count": "2"
+   },
+   "internal-border": {
+    "size": "160×260",
+    "sizing": "fixed/fixed",
+    "stroke": "1=default inside BACKGROUND/Primary",
+    "radius": "10=10"
+   }
+  },
+  "Size=sm, Type=simple": {
+   "(root)": {
+    "size": "128×120",
+    "sizing": "fixed/hug",
+    "minWidth": "128",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0",
+    "fill": "BACKGROUND/menu/background",
+    "stroke": "0.5=sm outside BORDER/Medium",
+    "radius": "10=10",
+    "effect": "Shadows/elevation2"
+   },
+   "blur": {
+    "size": "128×48",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "_Menu list item": {
+    "size": "120×28",
+    "sizing": "fill/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "radius": "6=6",
+    "instance": "_Menu list item › Size=sm, State=hover",
+    "props": "Model=false, Shortcuts / Icon=true, Selected=false, Option text=\"Create invoice\", Indented=false, Divider=false"
+   },
+   "_Menu list item#2": {
+    "size": "120×28",
+    "sizing": "fill/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Menu list item › Size=sm, State=default",
+    "props": "Model=false, Indented=false, Selected=false, Shortcuts / Icon=true, Option text=\"Send receipt\", Divider=false"
+   },
+   "_Menu list item#3": {
+    "size": "120×28",
+    "sizing": "fill/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Menu list item › Size=sm, State=default",
+    "props": "Model=false, Indented=false, Selected=false, Shortcuts / Icon=true, Option text=\"Refund\", Divider=false"
+   },
+   "_Menu list item#4": {
+    "size": "120×28",
+    "sizing": "fill/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Menu list item › Size=sm, State=default",
+    "props": "Model=false, Indented=false, Selected=false, Shortcuts / Icon=true, Option text=\"Archive\", Divider=false"
+   },
+   "[run 1]": {
+    "size": "160×24",
+    "sizing": "fixed/hug",
+    "minWidth": "160=160px (10rem) (spacing-13)",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "?976143227da568d64d2f8a8d947204036a82c73b/142671:0",
+    "hidden": "true",
+    "instance": "_Menu list item › Size=Extra small, State=Enabled",
+    "props": "Indented=false, Bottom spacer=false, Top spacer=false, Option text=\"Menu item\", Shortcuts or Trigger =false, Selected=false, Divider=false",
+    "count": "5"
+   },
+   "[run 2]": {
+    "size": "160×24",
+    "sizing": "fixed/hug",
+    "minWidth": "160=160px (10rem) (spacing-13)",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "?976143227da568d64d2f8a8d947204036a82c73b/142671:0",
+    "hidden": "true",
+    "instance": "_Menu list item › Size=Extra small, State=Enabled",
+    "props": "Indented=false, Bottom spacer=false, Top spacer=false, Option text=\"Menu item\", Shortcuts or Trigger =false, Selected=false, Divider=false",
+    "count": "3"
+   },
+   "internal-border": {
+    "size": "128×119",
+    "sizing": "fixed/fixed",
+    "stroke": "1=default inside BACKGROUND/Primary",
+    "radius": "10=10"
+   }
+  },
+  "Size=regular, Type=shortcuts": {
+   "(root)": {
+    "size": "220×154",
+    "sizing": "fixed/hug",
+    "minWidth": "160",
+    "layout": "column align min/min",
+    "padding": "4=PADDING/4 4=PADDING/4 4=PADDING/4 4=PADDING/4",
+    "gap": "0",
+    "fill": "BACKGROUND/menu/background",
+    "stroke": "0.5=sm outside BORDER/Medium",
+    "radius": "10=10",
+    "effect": "Shadows/elevation2"
+   },
+   "blur": {
+    "size": "220×96",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/On Primary",
+    "effect": "layer_blur 0  (no style)"
+   },
+   "_Menu list item": {
+    "size": "212×28",
+    "sizing": "fill/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Menu list item › Size=sm, State=default",
+    "props": "Model=false, Indented=false, Selected=false, Shortcuts / Icon=true, Option text=\"Paste here\", Divider=false"
+   },
+   "_Menu list item#2": {
+    "size": "212×31",
+    "sizing": "fill/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Menu list item › Size=sm, State=default",
+    "props": "Model=false, Indented=false, Selected=false, Shortcuts / Icon=true, Option text=\"Show/Hide UI\", Divider=true"
+   },
+   "_Menu list item#3": {
+    "size": "212×28",
+    "sizing": "fill/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Menu list item › Size=sm, State=default",
+    "props": "Model=false, Indented=false, Selected=false, Shortcuts / Icon=true, Option text=\"Show/Hide Comments\", Divider=false"
+   },
+   "_Menu list item#3/Content/Text overflow + Menu style/_Keyboard shortcut": {
+    "instance": "_Keyboard shortcut › Context=shortcut",
+    "props": "Icon 3=Mac--shift, Icon 2=Mac--option, Show Letter 4=true, Show Letter 3=false, Icon=179:14020, Icon 4 (Any)=Delete, Show Icon 4 (Any)=false, Show Letter 2=true, Show Letter 1=false, Icon 1=Mac--command, Show Icon 2=true, Show Icon 3=false, Show Icon 1=false"
+   },
+   "_Menu list item#4": {
+    "size": "212×31",
+    "sizing": "fill/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Menu list item › Size=sm, State=default",
+    "props": "Model=false, Indented=false, Selected=false, Shortcuts / Icon=true, Option text=\"Menu item\", Divider=true"
+   },
+   "_Menu list item#5": {
+    "size": "212×28",
+    "sizing": "fill/hug",
+    "minWidth": "120",
+    "maxWidth": "288",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "_Menu list item › Size=sm, State=default",
+    "props": "Model=false, Indented=false, Selected=false, Shortcuts / Icon=true, Option text=\"Menu item\", Divider=false"
+   },
+   "internal-border": {
+    "size": "220×154",
+    "sizing": "fixed/fixed",
+    "stroke": "1=default inside BACKGROUND/Primary",
+    "radius": "10=10"
+   }
+  }
+ }
+}

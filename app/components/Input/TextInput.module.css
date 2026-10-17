@@ -1,0 +1,32 @@
+/* ==========================================================================
+   TEXT INPUT — Figma Text input 761:20738 (label + field + helper text)
+   Every value below is a Figma variable (see globals.css).
+   ========================================================================== */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* SYSTEM/Label/md/regular, 8px above the field (Label margin) */
+.label {
+  padding-bottom: var(--space-8);
+  color: var(--color-content-secondary);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+}
+
+/* focus, error, success, warning: CONTENT/Primary */
+.field:focus-within .label,
+.hasStatus .label {
+  color: var(--color-content-primary);
+}
+
+.disabled .label {
+  color: var(--color-content-disabled);
+}

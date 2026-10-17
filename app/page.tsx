@@ -101,7 +101,7 @@ export default function StyleGuide() {
         <h2 className={styles.sectionTitle}>Font Families</h2>
         <div className={styles.fontShowcase}>
           <div className={styles.fontCard}>
-            <span className={styles.fontName}>Headings — New York Large</span>
+            <span className={styles.fontName}>Headings — Google Sans Flex</span>
             <span
               className={styles.fontSample}
               style={{ fontFamily: "var(--font-heading)" }}
@@ -157,7 +157,7 @@ export default function StyleGuide() {
           <span className={styles.colorGroupLabel}>Font Size Scale</span>
           <div className={styles.scaleGrid}>
             {[
-              { name: "--text-super-tiny", size: "10px", rem: "0.625rem" },
+              { name: "--text-super-tiny", size: "9px", rem: "0.5625rem" },
               { name: "--text-button", size: "12px", rem: "0.75rem" },
               { name: "--text-tiny", size: "13px", rem: "0.8125rem" },
               { name: "--text-small", size: "14px", rem: "0.875rem" },
@@ -184,7 +184,7 @@ export default function StyleGuide() {
           <span className={styles.colorGroupLabel}>Line Height Scale</span>
           <div className={styles.scaleGrid}>
             {[
-              { name: "--leading-buttons", value: "11px", rem: "0.6875rem" },
+              { name: "--leading-buttons", value: "10px", rem: "0.625rem" },
               { name: "--leading-tiny", value: "15px", rem: "0.9375rem" },
               { name: "--leading-small", value: "18px", rem: "1.125rem" },
               { name: "--leading-regular", value: "24px", rem: "1.5rem" },
@@ -261,7 +261,7 @@ export default function StyleGuide() {
           <span className={styles.typeLabel}>Heading / H1</span>
           <span className="heading-h1">Contacts</span>
           <span className={styles.typeMeta}>
-            New York Large &middot; 32/40 &middot; Regular &middot; tracking:
+            Google Sans Flex &middot; 32/40 &middot; Regular &middot; tracking:
             -0.3px
           </span>
         </div>
@@ -270,7 +270,7 @@ export default function StyleGuide() {
           <span className={styles.typeLabel}>Heading / H2</span>
           <span className="heading-h2">Enable Alerts</span>
           <span className={styles.typeMeta}>
-            New York Large &middot; 20/24 &middot; Medium &middot; tracking: 0
+            Google Sans Flex &middot; 20/24 &middot; Medium &middot; tracking: 0
           </span>
         </div>
 
@@ -278,7 +278,7 @@ export default function StyleGuide() {
           <span className={styles.typeLabel}>Heading / H3</span>
           <span className="heading-h3">Parse Result Summary</span>
           <span className={styles.typeMeta}>
-            New York Large &middot; 18/24 &middot; Medium &middot; tracking: 0
+            Google Sans Flex &middot; 18/24 &middot; Medium &middot; tracking: 0
           </span>
         </div>
 

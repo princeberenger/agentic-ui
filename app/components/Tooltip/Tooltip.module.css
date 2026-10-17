@@ -1,0 +1,134 @@
+/* ==========================================================================
+   TOOLTIP — Figma Tooltip 2001:2681
+   Position: top, bottom, left, right      Caret alignment: start, center, end
+   Every value below is a Figma variable (see globals.css).
+   ========================================================================== */
+
+.anchor {
+  position: relative;
+  display: inline-flex;
+}
+
+/* --- Tooltip: content + caret, placed against the trigger (no gap in Figma) */
+.tooltip {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--duration-enter) var(--ease-out-expo);
+  transition-property: opacity, visibility;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Tooltip content: BACKGROUND/Inverse, 4px radius, 4/8 padding, SYSTEM/Body/xs/regular */
+.content {
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-xs);
+  background-color: var(--color-bg-inverse);
+  color: var(--color-content-on-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-normal);
+  white-space: nowrap;
+}
+
+/* Tooltip caret: 8 x 4 arrow, 16px from the edge when aligned start / end */
+.caret {
+  display: flex;
+  padding-inline: var(--space-16);
+}
+
+.arrow {
+  width: var(--space-8);
+  height: var(--space-4);
+  background-color: var(--color-bg-inverse);
+  mask: url('/assets/icons/tooltip-caret.svg') no-repeat center / contain;
+  -webkit-mask: url('/assets/icons/tooltip-caret.svg') no-repeat center / contain;
+}
+
+/* --- Position ------------------------------------------------------------ */
+.top,
+.bottom {
+  flex-direction: column;
+}
+
+.top {
+  bottom: 100%;
+}
+
+.bottom {
+  top: 100%;
+  flex-direction: column-reverse;
+}
+
+.bottom .arrow {
+  transform: rotate(180deg);
+}
+
+.left,
+.right {
+  top: 50%;
+  align-items: center;
+  transform: translateY(-50%);
+}
+
+.left {
+  right: 100%;
+}
+
+.right {
+  left: 100%;
+  flex-direction: row-reverse;
+}
+
+/* the side caret is the same arrow turned, in a 4 x 16 frame (4px padding) */
+.left .caret,
+.right .caret {
+  padding: 0;
+  width: var(--space-4);
+  height: var(--space-16);
+  align-items: center;
+  justify-content: center;
+}
+
+.left .arrow {
+  transform: rotate(-90deg);
+}
+
+.right .arrow {
+  transform: rotate(90deg);
+}
+
+/* --- Caret alignment (top / bottom): the arrow tip sits on the trigger center */
+.top.center,
+.bottom.center {
+  left: 50%;
+  align-items: center;
+  transform: translateX(-50%);
+}
+
+.top.start,
+.bottom.start {
+  left: calc(50% - var(--space-16) - var(--space-4));
+  align-items: flex-start;
+}
+
+.top.end,
+.bottom.end {
+  right: calc(50% - var(--space-16) - var(--space-4));
+  align-items: flex-end;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tooltip {
+    transition: none;
+  }
+}

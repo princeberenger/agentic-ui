@@ -1,0 +1,1475 @@
+{
+ "id": "4052:890",
+ "name": "tab",
+ "props": {
+  "Label": {
+   "type": "TEXT",
+   "default": "Tab"
+  },
+  "Lead icon": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Tail icon": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "↪ Lead icon": {
+   "type": "INSTANCE_SWAP",
+   "default": "179:14029"
+  },
+  "↪ Tail icon ": {
+   "type": "INSTANCE_SWAP",
+   "default": "179:14027"
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "active",
+    "default",
+    "focus",
+    "hover"
+   ]
+  },
+  "Shape": {
+   "type": "VARIANT",
+   "default": "pill",
+   "options": [
+    "pill",
+    "pill-segmented",
+    "rounded",
+    "sharp",
+    "underline"
+   ]
+  },
+  "Size": {
+   "type": "VARIANT",
+   "default": "sm",
+   "options": [
+    "lg",
+    "sm"
+   ]
+  }
+ },
+ "variants": {
+  "State=default, Shape=pill, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=default, Shape=pill-segmented, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=default, Shape=pill, Size=lg": {
+   "(root)": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=default, Shape=pill-segmented, Size=lg": {
+   "(root)": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "radius": "9999=full"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=default, Shape=rounded, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "radius": "10=10"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=default, Shape=rounded, Size=lg": {
+   "(root)": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "radius": "10=10"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=default, Shape=sharp, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=default, Shape=underline, Size=lg": {
+   "(root)": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=hover, Shape=pill, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "radius": "9999=full"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=hover, Shape=pill-segmented, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "radius": "9999=full"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=hover, Shape=pill, Size=lg": {
+   "(root)": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "radius": "9999=full"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=hover, Shape=pill-segmented, Size=lg": {
+   "(root)": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "radius": "9999=full"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=hover, Shape=rounded, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=hover, Shape=rounded, Size=lg": {
+   "(root)": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "radius": "10=10"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=hover, Shape=sharp, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Strong"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=hover, Shape=underline, Size=lg": {
+   "(root)": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Strong"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=active, Shape=pill, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "9999=full"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=active, Shape=pill-segmented, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation1"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=active, Shape=pill, Size=lg": {
+   "(root)": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong",
+    "radius": "9999=full"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=active, Shape=pill-segmented, Size=lg": {
+   "(root)": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "radius": "9999=full",
+    "effect": "Shadows/elevation1"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=active, Shape=rounded, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "radius": "10=10",
+    "effect": "Shadows/elevation1"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=active, Shape=rounded, Size=lg": {
+   "(root)": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "radius": "10=10",
+    "effect": "Shadows/elevation1"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=active, Shape=sharp, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Strong"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=active, Shape=underline, Size=lg": {
+   "(root)": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Strong"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=focus, Shape=pill, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "9999=full",
+    "effect": "Components/Focus"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=focus, Shape=pill-segmented, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "9999=full",
+    "effect": "Components/Focus"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=focus, Shape=pill, Size=lg": {
+   "(root)": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "9999=full",
+    "effect": "Components/Focus"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=focus, Shape=pill-segmented, Size=lg": {
+   "(root)": {
+    "size": "54×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "9999=full",
+    "effect": "Components/Focus"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=focus, Shape=rounded, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=focus, Shape=rounded, Size=lg": {
+   "(root)": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Components/Focus"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=focus, Shape=sharp, Size=sm": {
+   "(root)": {
+    "size": "46×30",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "6=PADDING/6 12=PADDING/12 6=PADDING/6 12=PADDING/12",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "effect": "Components/Focus"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=focus, Shape=underline, Size=lg": {
+   "(root)": {
+    "size": "70×40",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "effect": "Components/Focus"
+   },
+   "lead-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Add"
+   },
+   "lead-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "label": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "label/Tab": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"Tab\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "tail-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "hidden": "true",
+    "instance": "Icons / Close--filled"
+   },
+   "tail-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

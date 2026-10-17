@@ -1,0 +1,259 @@
+{
+ "id": "4028:6848",
+ "name": "File upload area",
+ "props": {
+  "Hint label 1": {
+   "type": "TEXT",
+   "default": "Up to 10 files"
+  },
+  "Hint label 2": {
+   "type": "TEXT",
+   "default": "PDF, JPEG or PNG less than 5MB"
+  },
+  "Area label": {
+   "type": "TEXT",
+   "default": "Drag and drop your files here"
+  },
+  "Upload icon": {
+   "type": "INSTANCE_SWAP",
+   "default": "179:12744"
+  },
+  "Show hint 1": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show hint 2": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show button": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Show icon": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "default",
+   "options": [
+    "default",
+    "disabled",
+    "hover"
+   ]
+  }
+ },
+ "variants": {
+  "State=default": {
+   "(root)": {
+    "size": "320×226",
+    "sizing": "fixed/hug",
+    "layout": "column align center/center",
+    "padding": "32=PADDING/32 24=PADDING/24 32=PADDING/32 24=PADDING/24",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "1=default inside BORDER/Subtle dashed 4/4",
+    "radius": "12=12"
+   },
+   "Icons / Upload": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Upload"
+   },
+   "Icons / Upload/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "Container": {
+    "size": "272×18",
+    "sizing": "fill/hug",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "12=PADDING/12"
+   },
+   "Container/File name": {
+    "size": "272×18",
+    "sizing": "fill/hug",
+    "text": "\"Drag and drop your files here\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "105×32",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Or select file\""
+   },
+   "Frame 1": {
+    "size": "272×32",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "Frame 1/Up to 10 files": {
+    "size": "272×15",
+    "sizing": "fill/hug",
+    "text": "\"Up to 10 files\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Frame 1/PDF, JPEG or PNG less than 5MB": {
+    "size": "272×15",
+    "sizing": "fill/hug",
+    "text": "\"PDF, JPEG or PNG less than 5MB\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=hover": {
+   "(root)": {
+    "size": "320×226",
+    "sizing": "fixed/hug",
+    "layout": "column align center/center",
+    "padding": "32=PADDING/32 24=PADDING/24 32=PADDING/32 24=PADDING/24",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04",
+    "stroke": "1=default inside BORDER/Medium dashed 4/4",
+    "radius": "12=12"
+   },
+   "Icons / Upload": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Upload"
+   },
+   "Icons / Upload/icon-color": {
+    "fill": "CONTENT/Primary"
+   },
+   "Container": {
+    "size": "272×18",
+    "sizing": "fill/hug",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "12=PADDING/12"
+   },
+   "Container/File name": {
+    "size": "272×18",
+    "sizing": "fill/hug",
+    "text": "\"Drag and drop your files here\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Button": {
+    "size": "105×32",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "effect": "Shadows/elevation1",
+    "instance": "Button › Size=md, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Or select file\""
+   },
+   "Frame 1": {
+    "size": "272×32",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "Frame 1/Up to 10 files": {
+    "size": "272×15",
+    "sizing": "fill/hug",
+    "text": "\"Up to 10 files\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   },
+   "Frame 1/PDF, JPEG or PNG less than 5MB": {
+    "size": "272×15",
+    "sizing": "fill/hug",
+    "text": "\"PDF, JPEG or PNG less than 5MB\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "State=disabled": {
+   "(root)": {
+    "size": "320×226",
+    "sizing": "fixed/hug",
+    "layout": "column align center/center",
+    "padding": "32=PADDING/32 24=PADDING/24 32=PADDING/32 24=PADDING/24",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Disabled dashed 4/4",
+    "radius": "12=12"
+   },
+   "Icons / Upload": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Upload"
+   },
+   "Icons / Upload/icon-color": {
+    "fill": "CONTENT/Disabled"
+   },
+   "Container": {
+    "size": "272×18",
+    "sizing": "fill/hug",
+    "layout": "column align center/center",
+    "padding": "0=none 0=none 0=none 0=none",
+    "gap": "12=PADDING/12"
+   },
+   "Container/File name": {
+    "size": "272×18",
+    "sizing": "fill/hug",
+    "text": "\"Drag and drop your files here\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "Button": {
+    "size": "105×32",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Disabled",
+    "radius": "10=10",
+    "instance": "Button › Size=md, Style=primary, Type=text, State=disabled, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Or select file\""
+   },
+   "Frame 1": {
+    "size": "272×32",
+    "sizing": "fill/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "Frame 1/Up to 10 files": {
+    "size": "272×15",
+    "sizing": "fill/hug",
+    "text": "\"Up to 10 files\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "Frame 1/PDF, JPEG or PNG less than 5MB": {
+    "size": "272×15",
+    "sizing": "fill/hug",
+    "text": "\"PDF, JPEG or PNG less than 5MB\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 align center",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   }
+  }
+ }
+}

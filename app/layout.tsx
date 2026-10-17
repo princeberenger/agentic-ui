@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import { JetBrains_Mono } from "next/font/google";
+import { Google_Sans_Flex, JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { SubNav } from "./components/SubNav";
+import { ThemeToggle } from "./components/ThemeToggle";
+import { THEME_INIT_SCRIPT } from "./components/ThemeToggle/themeScript";
 import styles from "./layout.module.css";
 
 const geist = Geist({
@@ -18,26 +20,12 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const newYorkLarge = localFont({
-  src: [
-    {
-      path: "./fonts/NewYorkLarge-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/NewYorkLarge-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./fonts/NewYorkLarge-Bold.otf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-new-york-large",
+const googleSansFlex = Google_Sans_Flex({
+  variable: "--font-google-sans-flex",
+  subsets: ["latin"],
   display: "swap",
+  // next/font has no fallback metrics for this family
+  adjustFontFallback: false,
 });
 
 const departureMono = localFont({
@@ -65,9 +53,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geist.variable} ${jetbrainsMono.variable} ${newYorkLarge.variable} ${departureMono.variable}`}
+      className={`${geist.variable} ${jetbrainsMono.variable} ${googleSansFlex.variable} ${departureMono.variable}`}
+      // the theme script sets data-theme before hydration
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body>
+        <ThemeToggle />
         <SubNav />
         <div className={styles.content}>{children}</div>
       </body>

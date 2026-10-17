@@ -1,0 +1,586 @@
+{
+  "templateFile": "./Icon.figma.batch.ts",
+  "components": [
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14029",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "add",
+      "figmaName": "Icons / Add"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4122-6216",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "anthropic",
+      "figmaName": "Icons / Anthropic"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14031",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "arrow-down",
+      "figmaName": "Icons / Arrow--down"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14022",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "arrow-up",
+      "figmaName": "Icons / Arrow--up"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14020",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "arrow-up-right",
+      "figmaName": "Icons / Arrow--up-right"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14549",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "arrows-vertical",
+      "figmaName": "Icons / Arrows--vertical"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4115-15549",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "brain",
+      "figmaName": "Icons / Brain"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13884",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "bullhorn",
+      "figmaName": "Icons / Bullhorn"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-15837",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "calendar",
+      "figmaName": "icons / Calendar"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14018",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "caret-right",
+      "figmaName": "Icons / Caret--right"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14504",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "chat",
+      "figmaName": "Icons / Chat"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17184",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "checkmark",
+      "figmaName": "Icons / Checkmark"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6246-10374",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "checkmark-2",
+      "figmaName": "Icons / Checkmark-2"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17185",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "checkmark-filled",
+      "figmaName": "Icons / Checkmark--filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17188",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "checkmark-outline",
+      "figmaName": "Icons / Checkmark--outline"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13773",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "chemistry",
+      "figmaName": "Icons / Chemistry"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14036",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "chevron-down",
+      "figmaName": "Icons / Chevron--down"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14016",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "chevron-left",
+      "figmaName": "Icons / Chevron--left"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14015",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "chevron-right",
+      "figmaName": "Icons / Chevron--right"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14521",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "chevron-sort",
+      "figmaName": "Icons / Chevron--sort"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14030",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "chevron-up",
+      "figmaName": "Icons / Chevron--up"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14014",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "close",
+      "figmaName": "Icons / Close"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14027",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "close-filled",
+      "figmaName": "Icons / Close--filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-15732",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "code",
+      "figmaName": "Icons / Code"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12878",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "copy",
+      "figmaName": "Icons / Copy"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13404",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "cut",
+      "figmaName": "Icons / Cut"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12137",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "decision-tree",
+      "figmaName": "Icons / Decision-tree"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14492",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "deploy",
+      "figmaName": "Icons / Deploy"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=226-1287",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "deploy",
+      "figmaName": "Icons / Deploy"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-16503",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "direction-loop-left",
+      "figmaName": "Icons / Direction--loop-left"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13803",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "dna",
+      "figmaName": "Icons / Dna"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12910",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "document",
+      "figmaName": "Icons / Document"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14013",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "down-to-bottom",
+      "figmaName": "Icons / Down-to-bottom"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12860",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "download",
+      "figmaName": "Icons / Download"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13389",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "edit",
+      "figmaName": "Icons / Edit"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-15760",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "email",
+      "figmaName": "Icons / Email"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17199",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "error-filled",
+      "figmaName": "Icons / Error--filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-15828",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "event-schedule",
+      "figmaName": "icons / Event--schedule"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14478",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "filter",
+      "figmaName": "Icons / Filter"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12822",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "folder",
+      "figmaName": "Icons / Folder"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12843",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "gem",
+      "figmaName": "Icons / Gem"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4122-6215",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "gemini",
+      "figmaName": "Icons / Gemini"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6122-8113",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "google",
+      "figmaName": "Icons / Google"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17238",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "information",
+      "figmaName": "Icons / Information"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17125",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "lightning",
+      "figmaName": "Icons / Lightning"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-15242",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "load-balancer-classic",
+      "figmaName": "Icons / Load-balancer--classic"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14495",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "logout",
+      "figmaName": "Icons / Logout"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13367",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "magic-wand-filled",
+      "figmaName": "Icons / Magic-wand--filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=230-694",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "menu-collapsed",
+      "figmaName": "Icons/ Menu --collapsed"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=226-1269",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "menu-open",
+      "figmaName": "Icons/ Menu --open"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13879",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "meter",
+      "figmaName": "Icons / Meter"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-16030",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "microphone",
+      "figmaName": "Icons / Microphone"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-16024",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "microphone-off",
+      "figmaName": "Icons / Microphone--off"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6182-2395",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "mistral",
+      "figmaName": "Icons / Mistral"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12107",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "model-builder",
+      "figmaName": "Icons / Model-builder"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-11261",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "money",
+      "figmaName": "Icons / Money"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6114-852",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "moon-filled",
+      "figmaName": "Icons / Moon --filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4122-6214",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "openai",
+      "figmaName": "Icons / Openai"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14008",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "overflow-menu-horizontal",
+      "figmaName": "Icons / Overflow-menu--horizontal"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14007",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "overflow-menu-vertical",
+      "figmaName": "Icons / Overflow-menu--vertical"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-11559",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "pause",
+      "figmaName": "Icons / Pause"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-16011",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "phone-filled",
+      "figmaName": "Icons / Phone--filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-11548",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "play",
+      "figmaName": "Icons / Play"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14432",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "reset",
+      "figmaName": "Icons / Reset"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14428",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "return",
+      "figmaName": "Icons / Return"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14419",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "search",
+      "figmaName": "Icons / Search"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14415",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "send",
+      "figmaName": "Icons / Send"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14414",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "send-alt",
+      "figmaName": "Icons / Send--alt"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17087",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "sun",
+      "figmaName": "Icons / Sun"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17085",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "temperature",
+      "figmaName": "Icons / Temperature"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-16012",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "thumbs-down",
+      "figmaName": "Icons / Thumbs-down"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-16021",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "thumbs-up",
+      "figmaName": "Icons / Thumbs-up"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-15826",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "time",
+      "figmaName": "icons / Time"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4045-82",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "todo",
+      "figmaName": "Icons / todo"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13867",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "tools",
+      "figmaName": "Icons / Tools"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13293",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "trash-can",
+      "figmaName": "Icons / Trash-can"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-12744",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "upload",
+      "figmaName": "Icons / Upload"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-16730",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "user",
+      "figmaName": "Icons / User"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-16759",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "voice-activate",
+      "figmaName": "Icons / Voice-activate"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-11477",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "volume-up-filled",
+      "figmaName": "Icons / Volume--up--filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17216",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "warning-alt-filled",
+      "figmaName": "Icons / Warning--alt--filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17240",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "warning-filled",
+      "figmaName": "Icons / Warning--filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6182-2368",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "xai",
+      "figmaName": "Icons / xAI"
+    }
+  ]
+}

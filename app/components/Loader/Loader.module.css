@@ -1,0 +1,107 @@
+/* ==========================================================================
+   LOADER (small) — Figma LOADER SMALL (LIGHT) 713:2805 / (DARK) 714:2955
+   3×3 grid of 4px squares. The Figma prototype steps through 8 frames with
+   a 200ms LINEAR smart-animate; each square's opacity per frame (10/40/100%)
+   is reproduced below, cells in reading order.
+   linear is intentional: this is a constant-speed looping timer
+   (exception listed in .ai/motion-rules.md).
+   ========================================================================== */
+
+.loader {
+  --loader-frame: 200ms;
+  display: inline-grid;
+  grid-template-columns: repeat(3, var(--space-4));
+  grid-template-rows: repeat(3, var(--space-4));
+  width: var(--icon-12);
+  height: var(--icon-12);
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+/* LOADER (20px): same 12px grid inset by 4px */
+.default {
+  box-sizing: content-box;
+  padding: var(--space-4);
+}
+
+.light {
+  color: var(--color-bg-primary);
+}
+
+.dark {
+  color: var(--color-content-primary);
+}
+
+.square {
+  background-color: currentColor;
+  animation-duration: calc(var(--loader-frame) * 8);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.square:nth-child(1) { animation-name: loaderCell1; }
+.square:nth-child(2) { animation-name: loaderCell2; }
+.square:nth-child(3) { animation-name: loaderCell3; }
+.square:nth-child(4) { animation-name: loaderCell4; }
+.square:nth-child(5) { animation-name: loaderCell5; }
+.square:nth-child(6) { animation-name: loaderCell6; }
+.square:nth-child(7) { animation-name: loaderCell7; }
+.square:nth-child(8) { animation-name: loaderCell8; }
+.square:nth-child(9) { animation-name: loaderCell9; }
+
+/* row 1 */
+@keyframes loaderCell1 {
+  0%, 25%, 50%, 100% { opacity: 0.1; }
+  12.5%, 37.5%, 62.5%, 87.5% { opacity: 0.4; }
+  75% { opacity: 1; }
+}
+
+@keyframes loaderCell2 {
+  0%, 25%, 50%, 75%, 100% { opacity: 0.4; }
+  12.5%, 37.5%, 62.5% { opacity: 0.1; }
+  87.5% { opacity: 1; }
+}
+
+@keyframes loaderCell3 {
+  0%, 100% { opacity: 1; }
+  12.5%, 37.5%, 62.5%, 87.5% { opacity: 0.4; }
+  25%, 50%, 75% { opacity: 0.1; }
+}
+
+/* row 2 */
+@keyframes loaderCell4 {
+  0%, 25%, 50%, 75%, 100% { opacity: 0.4; }
+  12.5%, 37.5%, 87.5% { opacity: 0.1; }
+  62.5% { opacity: 1; }
+}
+
+@keyframes loaderCell5 {
+  0%, 25%, 50%, 75%, 100% { opacity: 0.1; }
+  12.5% { opacity: 0.5; }
+  37.5%, 62.5%, 87.5% { opacity: 0.4; }
+}
+
+@keyframes loaderCell6 {
+  0%, 25%, 50%, 75%, 100% { opacity: 0.4; }
+  12.5% { opacity: 1; }
+  37.5%, 62.5%, 87.5% { opacity: 0.1; }
+}
+
+/* row 3 */
+@keyframes loaderCell7 {
+  0%, 25%, 75%, 100% { opacity: 0.1; }
+  12.5%, 37.5%, 62.5%, 87.5% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes loaderCell8 {
+  0%, 25%, 50%, 75%, 100% { opacity: 0.4; }
+  12.5%, 62.5%, 87.5% { opacity: 0.1; }
+  37.5% { opacity: 1; }
+}
+
+@keyframes loaderCell9 {
+  0%, 50%, 75%, 100% { opacity: 0.1; }
+  12.5%, 37.5%, 62.5%, 87.5% { opacity: 0.4; }
+  25% { opacity: 1; }
+}

@@ -1,0 +1,126 @@
+{
+ "id": "484:13150",
+ "name": "nav-logo",
+ "props": {
+  "Logo symbol": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Sidebar icon": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "open",
+   "options": [
+    "collapsed",
+    "open"
+   ]
+  }
+ },
+ "variants": {
+  "State=open": {
+   "(root)": {
+    "size": "155×60",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "24=PADDING/24 24=PADDING/24 16=PADDING/16 24=PADDING/24",
+    "gap": "12=PADDING/12"
+   },
+   "container": {
+    "size": "107×20",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16=PADDING/16"
+   },
+   "container/logo-wrapper": {
+    "size": "75×20",
+    "sizing": "hug/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "container/logo-wrapper/symbol": {
+    "size": "75×20",
+    "sizing": "fixed/hug",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "10",
+    "instance": "AGENTIC UI LOGO › Variant=Logo"
+   },
+   "container/icon-wrapper": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "container/icon-wrapper/Icons/ Menu --open": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons/ Menu --open"
+   },
+   "container/icon-wrapper/Icons/ Menu --open/icon": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "State=collapsed": {
+   "(root)": {
+    "size": "104×56",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "16=PADDING/16 24=PADDING/24 16=PADDING/16 24=PADDING/24",
+    "gap": "12=PADDING/12"
+   },
+   "container": {
+    "size": "56×24",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "16=PADDING/16"
+   },
+   "container/logo-wrapper": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "column align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "container/logo-wrapper/AGENTIC UI LOGO": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/24",
+    "layout": "row align center/center",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "instance": "AGENTIC UI LOGO › Variant=Symbol"
+   },
+   "container/icon-wrapper": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "container/icon-wrapper/Icons/ Menu --collapsed": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons/ Menu --collapsed"
+   },
+   "container/icon-wrapper/Icons/ Menu --collapsed/icon": {
+    "fill": "CONTENT/Icon"
+   },
+   "container/icon-wrapper/Icons/ Menu --collapsed/icon/btn": {
+    "stroke": "1=default inside CONTENT/Primary"
+   },
+   "container/icon-wrapper/Icons/ Menu --collapsed/btn": {
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

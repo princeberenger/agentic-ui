@@ -1,0 +1,227 @@
+{
+ "id": "771:1556",
+ "name": "cell-type-action",
+ "props": {
+  "State": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default",
+    "Hover",
+    "Focus",
+    "Disabled",
+    "Loading"
+   ]
+  }
+ },
+ "variants": {
+  "State=Default": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Button Group": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=Core/100"
+   },
+   "Button Group/Primary button": {
+    "size": "66×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Edit\""
+   },
+   "Button Group/Secondary button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Edit\", Swap icon=Icons / Overflow-menu--vertical"
+   }
+  },
+  "State=Disabled": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Button Group": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=Core/100"
+   },
+   "Button Group/Primary button": {
+    "size": "66×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "CONTENT/On Primary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=secondary, Type=text, State=disabled, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Edit\""
+   },
+   "Button Group/Secondary button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "CONTENT/On Primary",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=secondary, Type=icon-only, State=disabled, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Edit\", Swap icon=Icons / Overflow-menu--vertical"
+   },
+   "Button Group/Secondary button/icon/icon-arrow": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "State=Loading": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Button Group": {
+    "size": "32×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0=PADDING/none"
+   },
+   "Button Group/table-skeleton-loading": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "layout": "row align center/center",
+    "padding": "12=Core/150 12=Core/150 12=Core/150 12=Core/150",
+    "gap": "8=Core/100",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "2=2"
+   }
+  },
+  "State=Focus": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=Core/200 12=PADDING/12 16=Core/200",
+    "gap": "16=Core/200",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "Button Group": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=Core/100"
+   },
+   "Button Group/Primary button": {
+    "size": "66×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Edit\""
+   },
+   "Button Group/Secondary button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Edit\", Swap icon=Icons / Overflow-menu--vertical"
+   }
+  },
+  "State=Hover": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Button Group": {
+    "size": "114×40",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=Core/100"
+   },
+   "Button Group/Primary button": {
+    "size": "66×40",
+    "sizing": "hug/fixed",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "fill": "BUTTON/Secondary",
+    "stroke": "0.5=sm inside BORDER/Subtle",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=secondary, Type=text, State=default, Icon position=none",
+    "props": "Badge label=\"1\", Keyboard shortcuts=true, Swap icon=179:14029, Label=\"Edit\""
+   },
+   "Button Group/Secondary button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Edit\", Swap icon=Icons / Overflow-menu--vertical"
+   }
+  }
+ }
+}

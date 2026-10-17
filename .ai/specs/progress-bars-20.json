@@ -1,0 +1,228 @@
+{
+ "id": "4096:7377",
+ "name": "Progress - Bars (20)",
+ "props": {
+  "Filled": {
+   "type": "VARIANT",
+   "default": "10%",
+   "options": [
+    "10%",
+    "20%",
+    "30%",
+    "40%",
+    "50%",
+    "60%",
+    "70%",
+    "80%",
+    "90%",
+    "100%"
+   ]
+  }
+ },
+ "variants": {
+  "Filled=10%": {
+   "(root)": {
+    "size": "78×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "2"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "18"
+   }
+  },
+  "Filled=20%": {
+   "(root)": {
+    "size": "78×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "4"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "16"
+   }
+  },
+  "Filled=30%": {
+   "(root)": {
+    "size": "78×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "6"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "14"
+   }
+  },
+  "Filled=40%": {
+   "(root)": {
+    "size": "78×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "8"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "12"
+   }
+  },
+  "Filled=50%": {
+   "(root)": {
+    "size": "78×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "10"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "10"
+   }
+  },
+  "Filled=60%": {
+   "(root)": {
+    "size": "78×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "12"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "8"
+   }
+  },
+  "Filled=70%": {
+   "(root)": {
+    "size": "78×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "14"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "6"
+   }
+  },
+  "Filled=80%": {
+   "(root)": {
+    "size": "78×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "16"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "4"
+   }
+  },
+  "Filled=90%": {
+   "(root)": {
+    "size": "78×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "18"
+   },
+   "[run 2]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Disabled",
+    "count": "2"
+   }
+  },
+  "Filled=100%": {
+   "(root)": {
+    "size": "78×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2"
+   },
+   "[run 1]": {
+    "size": "2×16",
+    "sizing": "fixed/fixed",
+    "fill": "CONTENT/Primary",
+    "count": "20"
+   }
+  }
+ }
+}

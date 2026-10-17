@@ -1,68 +1,37 @@
-// Source: https://www.figma.com/design/FLribGjjakpYvdwuBTGTvD/AGENTIC-DESIGN-SYSTEM--v1.2-?node-id=4072-7707
-// Extracted: 2026-04-05
-// Tokens: color-bg-success, color-bg-disabled, space-2
+// Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4115-7289
+// Extracted: 2026-10-17
+// Tokens: color-bg-tertiary, color-content-primary, color-content-secondary, stroke-default, space-12,
+//         font-label, text-button, leading-small, tracking-spacious, weight-medium, duration-enter, ease-out-expo
 
-'use client';
-
-import { motion } from 'motion/react';
-import { EASE_OUT_EXPO } from '@/app/components/motion';
 import styles from './ProgressBar.module.css';
 
 export interface ProgressBarProps {
-  /** Total number of segments */
-  total: number;
-  /** Number of filled (completed) segments */
-  filled: number;
-  /** Height of the bar in pixels */
-  height?: number;
-  /** Animate segments filling in on mount */
-  animated?: boolean;
-  /** Delay before animation starts (seconds) */
-  animationDelay?: number;
+  /** Progress from 0 to 100 (Figma `Progress`). */
+  value: number;
+  /** Shows the percentage after the bar (Figma `Show counter`). */
+  showCounter?: boolean;
+  /** Accessible name. */
+  'aria-label'?: string;
   className?: string;
 }
 
-export function ProgressBar({
-  total,
-  filled,
-  height = 24,
-  animated = false,
-  animationDelay = 0,
-  className,
-}: ProgressBarProps) {
-  const segments = Array.from({ length: total }, (_, i) => i < filled);
+/** Dotted track filled from the left, with an optional percentage counter. */
+export function ProgressBar({ value, showCounter = true, 'aria-label': ariaLabel, className }: ProgressBarProps) {
+  const clamped = Math.max(0, Math.min(100, Math.round(value)));
 
   return (
     <div
-      className={`${styles.bar} ${className ?? ''}`}
-      style={{ height }}
+      className={`${styles.progress} ${className ?? ''}`}
       role="progressbar"
-      aria-valuenow={filled}
       aria-valuemin={0}
-      aria-valuemax={total}
-      aria-label={`${filled} of ${total}`}
+      aria-valuemax={100}
+      aria-valuenow={clamped}
+      aria-label={ariaLabel}
     >
-      {segments.map((isFilled, i) =>
-        animated && isFilled ? (
-          <motion.div
-            key={i}
-            className={styles.segmentFilled}
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{
-              delay: animationDelay + i * 0.04,
-              duration: 0.25,
-              ease: EASE_OUT_EXPO,
-            }}
-            style={{ transformOrigin: 'left' }}
-          />
-        ) : (
-          <div
-            key={i}
-            className={isFilled ? styles.segmentFilled : styles.segmentEmpty}
-          />
-        )
-      )}
+      <span className={styles.track}>
+        <span className={styles.fill} style={{ transform: `scaleX(${clamped / 100})` }} />
+      </span>
+      {showCounter && <span className={styles.counter}>{clamped}%</span>}
     </div>
   );
 }

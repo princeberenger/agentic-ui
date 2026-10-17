@@ -1,0 +1,194 @@
+{
+ "id": "6231:10080",
+ "name": "Chat Tool Call",
+ "props": {
+  "State": {
+   "type": "VARIANT",
+   "default": "V1 Expanded",
+   "options": [
+    "V1 Expanded",
+    "V1 Collapsed",
+    "V2 Expanded",
+    "V2 Collapsed"
+   ]
+  }
+ },
+ "variants": {
+  "State=V1 Expanded": {
+   "(root)": {
+    "size": "250×84",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Agent step": {
+    "size": "109×16",
+    "sizing": "fixed/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8",
+    "instance": "Agent step › State=default, Type=Step, Sub-step=Complete",
+    "props": "Label=\"3 Tool calls\", Icon=Icons / Tools, Expandable=true"
+   },
+   "Agent step/label/Icons / Chevron--up/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "wrapper": {
+    "size": "250×56",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "wrapper/toolcall-base": {
+    "size": "250×16",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10=PADDING/10",
+    "instance": "toolcall-base › State=Complete",
+    "props": "Label secondary item=\"git diff --stat\", Label primary item=\"bash\", Label third item=\"340ms\", Show time=true, Show icon=true, Show secondary item=true"
+   },
+   "wrapper/toolcall-base#2": {
+    "size": "250×16",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10=PADDING/10",
+    "instance": "toolcall-base › State=Error",
+    "props": "Label third item=\"45ms\", Label secondary item=\"src/utils/formatDate.ts\", Label primary item=\"read\", Show time=true, Show icon=true, Show secondary item=true"
+   },
+   "wrapper/toolcall-base#3": {
+    "size": "250×16",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10=PADDING/10",
+    "instance": "toolcall-base › State=Working",
+    "props": "Label third item=\"3120ms\", Label primary item=\"edit\", Label secondary item=\"src/utils/formatDate.ts\", Show time=true, Show icon=true, Show secondary item=true"
+   }
+  },
+  "State=V1 Collapsed": {
+   "(root)": {
+    "size": "283×16",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "container": {
+    "size": "262×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "container/toolcall-base": {
+    "size": "244×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10=PADDING/10",
+    "instance": "toolcall-base › State=Complete",
+    "props": "Label secondary item=\"src/utils/formatDate.ts\", Label primary item=\"edit\", Label third item=\"3 tools\", Show time=true, Show icon=true, Show secondary item=true"
+   },
+   "container/Icons / Chevron--down": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--down"
+   },
+   "container/Icons / Chevron--down/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=V2 Expanded": {
+   "(root)": {
+    "size": "244×84",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Agent step": {
+    "size": "98×16",
+    "sizing": "fixed/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8",
+    "instance": "Agent step › State=default, Type=Step, Sub-step=Complete",
+    "props": "Label=\"3 Actions\", Icon=Icons / Tools, Expandable=true"
+   },
+   "Agent step/label/Icons / Chevron--up/icon-arrow": {
+    "fill": "CONTENT/Icon"
+   },
+   "container": {
+    "size": "244×56",
+    "sizing": "hug/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "container/toolcall-base": {
+    "size": "244×16",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10=PADDING/10",
+    "instance": "toolcall-base › State=Complete",
+    "props": "Label secondary item=\"git diff --stat\", Label primary item=\"Reviewing upload flow\", Label third item=\"40ms\", Show time=true, Show icon=true, Show secondary item=false"
+   },
+   "container/toolcall-base#2": {
+    "size": "244×16",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10=PADDING/10",
+    "instance": "toolcall-base › State=Complete",
+    "props": "Label secondary item=\"git diff --stat\", Label primary item=\"Checking form validation\", Label third item=\"1.1s\", Show time=true, Show icon=true, Show secondary item=false"
+   },
+   "container/toolcall-base#3": {
+    "size": "244×16",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10=PADDING/10",
+    "instance": "toolcall-base › State=Complete",
+    "props": "Label secondary item=\"git diff --stat\", Label primary item=\"Updated error message copy\", Label third item=\"88ms\", Show time=true, Show icon=true, Show secondary item=false"
+   }
+  },
+  "State=V2 Collapsed": {
+   "(root)": {
+    "size": "283×16",
+    "sizing": "fill/hug",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "container": {
+    "size": "283×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/min",
+    "padding": "0 0 0 0",
+    "gap": "4=PADDING/4"
+   },
+   "container/toolcall-base": {
+    "size": "265×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10=PADDING/10",
+    "instance": "toolcall-base › State=Complete",
+    "props": "Label secondary item=\"src/utils/formatDate.ts\", Label primary item=\"Updated error message copy\", Label third item=\"3 actions\", Show time=true, Show icon=true, Show secondary item=false"
+   },
+   "container/Icons / Chevron--down": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Chevron--down"
+   },
+   "container/Icons / Chevron--down/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

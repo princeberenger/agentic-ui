@@ -1,0 +1,372 @@
+/* ==========================================================================
+   CHAT MESSAGES — Figma UserMessage 4119:17618, AgentMessage 6246:10120,
+   ChatMessageMetadata 6270:1160, ChatMetadataRead 6279:11285, Chat status dot 6293:6710,
+   ChatSystemMessage 6227:9774, ChatScrollButton 6255:14244
+   ========================================================================== */
+
+/* SYSTEM/Body/md/regular */
+.messageText {
+  color: var(--color-content-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-regular);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-regular);
+  letter-spacing: var(--tracking-normal);
+  overflow-wrap: anywhere;
+}
+
+/* --- UserMessage ------------------------------------------------------------ */
+.userMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* Figma: max 400, no variable (see .ai/figma-debt.md) */
+  max-width: 400px;
+  margin-left: auto;
+}
+
+.userBubble {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-xs) var(--radius-lg);
+  background-color: var(--color-bg-secondary);
+  transition-property: background-color;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
+}
+
+/* Style 2: white, 0.5px BORDER/Subtle, Shadows/elevation1 */
+.userBubble[data-variant='outlined'] {
+  background-color: var(--color-bg-primary);
+  box-shadow: inset 0 0 0 var(--stroke-sm) var(--color-border-subtle), var(--shadow-elevation-1);
+}
+
+/* @mention: 8px left padding before the badge */
+.userBubble[data-mention] {
+  padding-left: var(--space-8);
+}
+
+/* --- AgentMessage ----------------------------------------------------------- */
+.agentMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* no fill by default (the Figma elevation 1 has no fill to cast from); hover: white pill + INPUT/Hover */
+.agentBubble {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-8) var(--space-12);
+  border-radius: var(--radius-full);
+  transition-property: background-color;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .userBubble:hover,
+  .agentBubble:not([data-error]):hover {
+    background-image: linear-gradient(var(--color-input-hover-dark), var(--color-input-hover-dark));
+  }
+
+  .agentBubble:not([data-error]):hover {
+    background-color: var(--color-bg-primary);
+  }
+}
+
+.agentError {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+}
+
+.agentBubble[data-error] {
+  background-color: var(--color-bg-attention-light);
+}
+
+.errorIcon {
+  display: flex;
+  color: var(--color-bg-attention);
+}
+
+/* Type=code / tool call: text, then the block, 12/12/0/12 */
+.agentRich {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: var(--space-8) var(--space-12) 0;
+}
+
+.agentAction {
+  padding: 0 0 var(--space-8) var(--space-8);
+}
+
+/* --- ChatMessageMetadata ---------------------------------------------------- */
+.metadata {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-6);
+  padding: var(--space-8) var(--space-12) 0;
+}
+
+.metadata[data-align='start'] {
+  justify-content: flex-start;
+}
+
+/* SYSTEM/Body/xs/regular */
+.metaText,
+.metaError,
+.receiptLabel {
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-normal);
+  white-space: nowrap;
+}
+
+.metaText {
+  color: var(--color-content-secondary);
+}
+
+.metaError {
+  color: var(--color-badge-label-red);
+}
+
+/* 2px CONTENT/Secondary dot */
+.metaDivider {
+  flex-shrink: 0;
+  width: var(--space-2);
+  height: var(--space-2);
+  border-radius: var(--radius-full);
+  background-color: var(--color-content-secondary);
+}
+
+.metaActions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.metaAction,
+.checkpointButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-xs);
+  background: none;
+  color: var(--color-content-icon);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition-property: box-shadow;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
+}
+
+/* no hover in Figma: keyboard focus only */
+.metaAction:focus-visible,
+.checkpointButton:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-components-focus);
+}
+
+/* --- ChatMetadataRead ------------------------------------------------------ */
+.receipt {
+  display: inline-flex;
+  align-items: center;
+  /* gap 4 without variable */
+  gap: var(--space-4);
+}
+
+.receiptIcon {
+  display: flex;
+  color: var(--color-content-icon);
+}
+
+.receipt[data-status='delivered'] .receiptIcon {
+  color: var(--color-content-disabled);
+}
+
+.receipt[data-status='read'] .receiptIcon {
+  color: var(--color-content-primary);
+}
+
+.receiptLabel {
+  color: var(--color-content-secondary);
+}
+
+/* Sending: Gradient/Shimmer text, CONTENT/Primary 19% → CONTENT/Disabled */
+.receipt[data-status='sending'] .receiptLabel {
+  background-image: linear-gradient(to right, var(--color-content-primary) 19%, var(--color-content-disabled));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.receipt[data-status='failed'] .receiptLabel {
+  color: var(--color-bg-attention);
+}
+
+/* --- Chat status dot --------------------------------------------------------- */
+.statusDot {
+  --_dot: var(--color-content-disabled);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  width: var(--icon-16);
+  align-self: stretch;
+}
+
+.statusDot[data-status='black'] {
+  --_dot: var(--color-content-primary);
+}
+
+.statusDot[data-status='yellow'] {
+  --_dot: var(--color-content-warning-icons);
+}
+
+.statusDot[data-status='red'] {
+  --_dot: var(--color-bg-attention);
+}
+
+.statusDot[data-status='green'] {
+  --_dot: var(--color-bg-success);
+}
+
+.dotBox {
+  display: flex;
+  justify-content: center;
+  width: var(--icon-16);
+}
+
+/* 7px dot, no variable */
+.dot {
+  width: calc(var(--space-6) + var(--stroke-default));
+  height: calc(var(--space-6) + var(--stroke-default));
+  border-radius: var(--radius-full);
+  background-color: var(--_dot);
+}
+
+/* 1px CONTENT/Disabled line: 14px for Gray, fills the parent for the other types */
+.line {
+  flex: 1;
+  width: var(--stroke-default);
+  min-height: var(--icon-14);
+  background-color: var(--color-content-disabled);
+}
+
+.statusDot[data-status='gray'] .line {
+  flex: none;
+  height: var(--icon-14);
+}
+
+/* --- ChatSystemMessage ------------------------------------------------------- */
+.system {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-16);
+  width: 100%;
+  /* Figma: max 720, no variable */
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.system[data-type='event'] {
+  gap: var(--space-8);
+}
+
+/* SYSTEM/Label/md/regular */
+.systemLabel {
+  color: var(--color-content-secondary);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.systemIcon {
+  display: flex;
+  color: var(--color-content-icon);
+}
+
+/* 1px line fading out away from the label: BORDER/Subtle → transparent */
+.divider {
+  flex: 1;
+  height: var(--stroke-default);
+}
+
+.divider[data-side='left'] {
+  background-image: linear-gradient(to right, transparent, var(--color-border-subtle));
+}
+
+.divider[data-side='right'] {
+  background-image: linear-gradient(to left, transparent, var(--color-border-subtle));
+}
+
+/* Date 2: dividers capped at 128 (no variable) */
+.system[data-type='date'] .divider {
+  max-width: var(--space-128);
+}
+
+.waveSide {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.waveSide[data-side='right'] {
+  justify-content: flex-start;
+}
+
+/* pattern-left / pattern-right: 33 × 5 wave, 1px BORDER/Subtle */
+.wave {
+  width: calc(var(--space-32) + var(--stroke-default));
+  height: calc(var(--space-4) + var(--stroke-default));
+  background-color: var(--color-border-subtle);
+  mask: url('/assets/chat/checkpoint-wave.svg') center / 100% 100% no-repeat;
+  -webkit-mask: url('/assets/chat/checkpoint-wave.svg') center / 100% 100% no-repeat;
+}
+
+.checkpointTitle,
+.checkpointButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+/* --- ChatScrollButton --------------------------------------------------------- */
+.scroll {
+  --_fade: var(--color-bg-primary);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: var(--icon-48);
+  padding-bottom: var(--space-8);
+  /* two stacked Gradient/Scrollfade fills */
+  background-image: linear-gradient(transparent, var(--_fade)), linear-gradient(transparent, var(--_fade));
+  /* background blur 2, no effect style */
+  backdrop-filter: blur(2px);
+}
+
+.scroll[data-background='secondary'] {
+  --_fade: var(--color-bg-secondary);
+}
+
+/* Figma overrides the primary Button: round, Shadows/elevation2 */
+.scroll .scrollButton {
+  --_radius: var(--radius-full);
+}
+
+.scroll .scrollButton:not(:focus-visible) {
+  --_border: var(--shadow-elevation-2);
+}

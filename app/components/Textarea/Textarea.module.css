@@ -1,64 +1,99 @@
 /* ==========================================================================
-   TEXTAREA COMPONENT
-   States: hover, focus, invalid, disabled
+   TEXT AREA — Figma Text area 2003:3900, SCROLL FADE (Mode=Light)
+   State: default, selected (:focus), filled, readonly, error, disabled
+   Every value below is a Figma variable (see globals.css), except the
+   100px field height, which Figma does not bind to a variable.
    ========================================================================== */
 
-/* --- Wrapper --- */
-.wrapper {
-  display: inline-flex;
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* SYSTEM/Label/md/regular, CONTENT/Primary in every state but disabled */
+.label {
+  padding-bottom: var(--space-8);
+  color: var(--color-content-primary);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+}
+
+.disabled .label {
+  color: var(--color-content-disabled);
+}
+
+.control {
+  position: relative;
+  display: flex;
   width: 100%;
 }
 
-/* --- Base --- */
 .textarea {
   display: block;
   width: 100%;
-  min-height: 80px;
-  padding: var(--space-8) var(--space-12);
+  height: 100px;
+  padding: var(--space-12);
+  border: var(--stroke-default) solid var(--color-border-subtle);
+  border-radius: var(--radius-10);
+  background-color: var(--color-bg-primary);
+  color: var(--color-content-primary);
   font-family: var(--font-body);
   font-size: var(--text-small);
+  font-weight: var(--weight-regular);
   line-height: var(--leading-small);
-  color: var(--color-content-primary);
-  background-color: var(--color-bg-primary);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-md);
-  resize: vertical;
-  transition-property: border-color, box-shadow;
-  transition-duration: var(--duration-hover);
-  transition-timing-function: ease;
+  resize: none;
+  transition: border-color var(--duration-hover) ease;
 }
 
 .textarea::placeholder {
-  color: var(--color-content-icon);
+  color: var(--color-content-secondary);
 }
 
-/* --- Hover --- */
-@media (hover: hover) and (pointer: fine) {
-  .textarea:hover:not(:disabled):not(.invalid) {
-    border-color: var(--color-border-medium);
-  }
-}
-
-/* --- Focus --- */
+/* State=selected */
 .textarea:focus {
   outline: none;
-  border-color: var(--color-focus-ring);
-  box-shadow: var(--shadow-focus-ring);
+  border-color: var(--color-border-strong);
 }
 
-/* --- Invalid --- */
-.invalid {
-  border-color: #dc2626;
+/* State=error: no fill, BORDER/Attention */
+.error {
+  border-color: var(--color-border-attention);
+  background-color: transparent;
 }
 
-.invalid:focus {
-  border-color: #dc2626;
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
-}
-
-/* --- Disabled --- */
-.textarea:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+/* State=readonly */
+.textarea:read-only {
   background-color: var(--color-bg-secondary);
+  color: var(--color-content-secondary);
+}
+
+/* State=disabled */
+.textarea:disabled {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-content-disabled);
+}
+
+/* --- SCROLL FADE: 48px gradient to BACKGROUND/Primary (its 2px background blur is not visible in Figma) */
+.fade {
+  position: absolute;
+  right: var(--stroke-default);
+  bottom: var(--stroke-default);
+  left: var(--stroke-default);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: var(--space-48);
+  padding-bottom: var(--space-8);
+  border-radius: 0 0 var(--radius-10) var(--radius-10);
+  background: linear-gradient(to bottom, transparent, var(--color-bg-primary));
+  pointer-events: none;
+}
+
+.fadeIcon {
+  color: var(--color-content-primary);
 }

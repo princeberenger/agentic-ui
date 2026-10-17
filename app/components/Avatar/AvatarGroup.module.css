@@ -1,0 +1,40 @@
+/* ==========================================================================
+   AVATAR GROUP — Figma AvatarGroup 783:773
+   Type: photos, initials (-8px overlap), compact (-6px), initials-label (8px gap + name)
+   The overlaps have no Figma variable: they reuse the PADDING/8 and PADDING/6 values.
+   CSS gap cannot be negative, so the overlap is a negative margin on each next item.
+   ========================================================================== */
+
+.group {
+  --_overlap: var(--space-8);
+
+  display: inline-flex;
+  align-items: center;
+}
+
+.group > * + * {
+  margin-left: calc(-1 * var(--_overlap));
+}
+
+.compact {
+  --_overlap: var(--space-6);
+}
+
+.labelled {
+  gap: var(--space-8);
+}
+
+.labelled > * + * {
+  margin-left: 0;
+}
+
+.label {
+  color: var(--color-content-primary);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  white-space: nowrap;
+}

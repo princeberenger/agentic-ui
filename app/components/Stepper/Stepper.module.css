@@ -147,17 +147,7 @@
 }
 
 /* ==========================================================================
-   SUBSTEPS WRAPPER
-   ========================================================================== */
-.substepsWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: var(--space-8) 0 var(--space-8) var(--space-16);
-}
-
-/* ==========================================================================
-   SUBSTEP
+   SUBSTEP — Figma stepper-substep 4004:82
    States: completed | active | disabled
    ========================================================================== */
 .substep {
@@ -167,35 +157,35 @@
   padding: var(--space-4) 0;
 }
 
-/* --- Substep Dot Container --- */
+/* --- dot-wrapper: 16px box --- */
 .substepDot {
-  width: var(--icon-16);
-  height: var(--icon-16);
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  width: var(--icon-16);
+  height: var(--icon-16);
 }
 
-/* Disabled: small gray circle outline */
-.substepDotDisabled {
-  composes: substepDot;
-  position: relative;
+/* completed: Icons / Checkmark--filled, CONTENT/Success */
+.substepCheck {
+  color: var(--color-content-success);
 }
 
-.substepDotDisabled::before {
+/* disabled: 7.09px circle (no variable), 1px BORDER/Medium stroke */
+.substepDot[data-state='disabled']::before {
   content: '';
-  width: 6px;
-  height: 6px;
-  border: 1.5px solid var(--color-content-secondary);
+  width: calc(var(--space-6) + var(--stroke-default));
+  height: calc(var(--space-6) + var(--stroke-default));
   border-radius: var(--radius-full);
+  box-shadow: inset 0 0 0 var(--stroke-default) var(--color-border-medium);
 }
 
-/* --- Substep Label --- */
+/* --- Substep Label: SYSTEM/Label/md/regular --- */
 .substepLabel {
   font-family: var(--font-label);
   font-size: var(--text-button);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-medium);
   line-height: var(--leading-small);
   letter-spacing: var(--tracking-spacious);
   text-transform: uppercase;
@@ -207,6 +197,7 @@
   color: var(--color-content-success);
 }
 
+/* Gradient/Shimmer */
 .substepLabelActive {
   composes: substepLabel;
   background: linear-gradient(to right, var(--color-content-primary) 19.231%, var(--color-content-disabled));
@@ -220,87 +211,93 @@
   color: var(--color-content-secondary);
 }
 
-/* --- Connector (vertical line between completed and active) --- */
-.connector {
+/* ==========================================================================
+   SUBSTEPS WRAPPER — Figma stepper-substeps-wrapper 4004:466
+   ========================================================================== */
+.substepsWrapper {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-none);
+  padding: var(--space-8) 0 var(--space-8) var(--space-16);
+}
+
+/* Connector: a 16px row with a 25px vertical line (1px, no variable) centered on the dots,
+   BORDER/Medium fading to transparent, overflowing 4.5px into the substep paddings */
+.connector {
+  position: relative;
+  flex-shrink: 0;
+  width: var(--icon-16);
+  height: var(--icon-16);
+}
+
+.connector::before {
+  content: '';
+  position: absolute;
+  top: calc(var(--space-4) * -1.125);
+  left: calc(50% - var(--stroke-default) / 2);
+  width: var(--stroke-default);
+  height: calc(var(--icon-24) + var(--stroke-default));
+  background-image: linear-gradient(var(--color-border-medium), transparent);
+}
+
+/* ==========================================================================
+   PULSATING-DOT — Figma 4004:93
+   Low: dot-3 8px 20%, dot-2 6px 40%, dot-1 8px. High: dot-3 16px, dot-2 12px.
+   Prototype: Low ↔ High, 900ms LINEAR smart animate after 1ms (reproduced as is,
+   see .ai/figma-debt.md: linear is banned outside timers).
+   ========================================================================== */
+.pulsatingDot {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   width: var(--icon-16);
   height: var(--icon-16);
 }
 
-.connectorLine {
-  width: 1.5px;
-  height: 100%;
-  background: var(--color-content-primary);
-  border-radius: 1px;
-}
-
-/* ==========================================================================
-   PULSATING DOT
-   ========================================================================== */
-.pulsatingDot {
-  position: relative;
-  width: var(--icon-16);
-  height: var(--icon-16);
-  flex-shrink: 0;
-}
-
-.dotCore {
+.pulsatingDot > span {
   position: absolute;
-  width: 6px;
-  height: 6px;
-  background: var(--color-content-primary);
   border-radius: var(--radius-full);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-color: var(--color-content-primary);
 }
 
-.dotRingOuter {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border: 1px solid var(--color-content-primary);
-  border-radius: var(--radius-full);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  animation: pulseOuter 2s ease-in-out infinite;
+.dot3 {
+  width: var(--space-8);
+  height: var(--space-8);
+  opacity: 0.2;
+  animation: dot3Pulse 900ms linear infinite alternate;
 }
 
-.dotRingInner {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  border: 1px solid var(--color-content-primary);
-  border-radius: var(--radius-full);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  animation: pulseInner 2s ease-in-out 0.3s infinite;
+.dot2 {
+  width: var(--space-6);
+  height: var(--space-6);
+  opacity: 0.4;
+  animation: dot2Pulse 900ms linear infinite alternate;
 }
 
-@keyframes pulseOuter {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(2.2);
-    opacity: 0;
+.dot1 {
+  width: var(--space-8);
+  height: var(--space-8);
+}
+
+/* 8 → 16 and 6 → 12: both double */
+@keyframes dot3Pulse {
+  to {
+    transform: scale(2);
   }
 }
 
-@keyframes pulseInner {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.3;
+@keyframes dot2Pulse {
+  to {
+    transform: scale(2);
   }
-  100% {
-    transform: translate(-50%, -50%) scale(2);
-    opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot3,
+  .dot2 {
+    animation: none;
   }
 }
