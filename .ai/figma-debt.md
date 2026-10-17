@@ -41,6 +41,28 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       Departure Mono n'a que le 400, la différence ne se voit pas.
 - [ ] Aucun état focus. Le code a seulement le focus clavier (`--shadow-components-focus`).
 
+### Progress - Bars (10, 12, 20, 24, 48) — 4096:6952, 4096:7139, 4096:7377, 4096:7708, 4072:7514 (`app/components/ProgressBars/`)
+- [ ] Le nom des variantes `Filled` ne correspond pas au nombre de barres remplies : (10) 10% → 2, 50% → 6, 70% → 8 ;
+      (24) 45% → 10, 55% → 14 ; (48) 50% → 26. Le code prend un nombre de barres (`filled`) et Code Connect
+      reprend le nombre dessiné dans chaque variante.
+- [ ] (24) a une largeur fixe de 142 avec des barres en fill, les autres sont en hug avec des barres fixes.
+
+### ProgressBar — 4115:7289 (`app/components/ProgressBar/`)
+- [ ] Le remplissage ne suit pas le pourcentage affiché : 10 % → 20/180 (11 %), 70 % → 140 (78 %), 90 % → 160 (89 %).
+      Le code remplit au pourcentage exact.
+- [ ] Progress=0 est en hug avec une barre fixe de 180, les autres en largeur fixe 214 avec une barre en fill.
+      Le code laisse la barre prendre la place disponible.
+
+### Volume — 4072:8082, draggable — 4072:8067 (`app/components/Slider/`)
+- [ ] Aucun état (hover, focus, drag, disabled). Le code applique `.ai/motion-rules.md` 4.1 et 4.2 (poignée qui s'épaissit,
+      contour fort pendant le drag, points d'arrêt), le focus `--shadow-components-focus` et l'opacité 0,5 en disabled.
+- [ ] Volume : la structure change selon `Value` (alignements, texte fixe ou fill, Value=100 remplace le remplissage
+      par un rectangle et sort la poignée). Le code garde une seule structure.
+- [ ] draggable : pas de poignée, un trait au milieu, un remplissage visible de 40px (`20%`, soit 16,7 %) et trois
+      rectangles masqués `50%`, `75%`, `100%` en `CONTENT/Primary` (noir) alors que le visible est en `BACKGROUND/Tertiary`.
+      Le code reprend le trait, le remplissage aux coins arrondis et le comportement de Volume.
+- [ ] draggable : `100` est centré dans sa boîte de 24px comme `50`, seul `0` est aligné à gauche. Reproduit.
+
 ## 2. Valeurs sans variable (non tokenisées dans Figma)
 
 ### Badge
@@ -192,6 +214,18 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] `link-separator` : cadre 20x20 sans variable. Le code utilise `--icon-20`.
 - [ ] Séparateur `/` et `<` : texte sans style de texte (variables liées une à une).
 
+### Progress - Bars, ProgressBar
+- [ ] Largeur des barres 1px (48), 2px (10, 12, 20), 4px (24) sans variable. Le code utilise `--stroke-default`,
+      `--space-2`, `--space-4`.
+- [ ] ProgressBar : points de 1px espacés de 1px, barre 180×12 et remplissage de 11px de haut sans variable.
+      Le code dessine les points en CSS sur une grille `--stroke-default`.
+
+### Volume, draggable
+- [ ] Largeur 240 et hauteur du slider (32, 48) sans variable. Le code utilise `--icon-32` et `--icon-48`.
+- [ ] Volume : remplissage minimal de 8px et poignée de 2px sans variable (`--space-8`, `--space-2`).
+      Le trait de la poignée est lié à `STROKE/lg`, qui n'a pas de code syntax WEB.
+- [ ] draggable : trait du milieu 1px et boîtes de 24px des valeurs sans variable (`--stroke-default`, `--icon-24`).
+
 ## 3. Tokens
 
 - [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
@@ -201,6 +235,7 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Mode DARK de la collection MODE : non implémenté en CSS.
 - [ ] Modes SHARP et ROUNDED de BORDER RADIUS : non gérés en code.
 - [x] Code syntax WEB à écrire pour les 12 variables BADGE/bg et BADGE/label ajoutées avec Badge.
+- [ ] Sans code syntax WEB et utilisées par des composants : `STROKE/lg`, `BORDER RADIUS/none`.
 
 ## 4. Assets du repo différents de Figma
 

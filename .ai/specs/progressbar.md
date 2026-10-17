@@ -2,7 +2,7 @@
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4115-7289
 - Extracted: 2026-10-17
-- Code Connect: no
+- Code Connect: yes (app/components/ProgressBar/ProgressBar.figma.ts)
 
 ## Props
 

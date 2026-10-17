@@ -2,7 +2,7 @@
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4072-8082
 - Extracted: 2026-10-17
-- Code Connect: no
+- Code Connect: yes (app/components/Slider/Slider.figma.ts)
 
 ## Props
 

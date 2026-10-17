@@ -28,6 +28,7 @@ const pages = [
   { href: '/navigation', label: 'Navigation' },
   { href: '/stepper', label: 'Stepper' },
   { href: '/progress', label: 'Progress' },
+  { href: '/progress-components', label: 'Progress bars' },
   { href: '/dialer', label: 'Dialer' },
   { href: '/chat', label: 'Chat' },
   { href: '/tester-1', label: 'Tester 1' },

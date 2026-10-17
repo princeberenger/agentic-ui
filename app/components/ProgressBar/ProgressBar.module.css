@@ -1,23 +1,51 @@
 /* ==========================================================================
-   PROGRESS BAR — Segmented
-   Source: Figma AGENTIC-DESIGN-SYSTEM v1.2 — node 4072:7707
+   PROGRESS BAR — Figma ProgressBar 4115:7289
+   Dotted track (1px dots, 1px apart, BACKGROUND/Tertiary), CONTENT/Primary fill,
+   counter in SYSTEM/Label/md/regular.
    ========================================================================== */
 
-.bar {
+.progress {
+  /* 1px dot + 1px gap: `pattern` columns and rects have no variable (see .ai/figma-debt.md) */
+  --_dot: var(--stroke-default);
   display: flex;
-  gap: var(--space-2);
   align-items: center;
-  width: 100%;
+  gap: var(--space-12);
 }
 
-.segmentFilled {
+/* progress-bar: 12px frame, 11px of dots (6 rows) */
+.track {
+  position: relative;
   flex: 1;
-  height: 100%;
-  background: var(--color-bg-success);
+  min-width: 0;
+  height: calc(var(--_dot) * 11);
+  overflow: hidden;
+  /* one dot in the top-left corner of each 2px tile */
+  background-image: conic-gradient(
+    from 270deg at var(--_dot) var(--_dot),
+    var(--color-bg-tertiary) 25%,
+    transparent 0
+  );
+  background-size: calc(var(--_dot) * 2) calc(var(--_dot) * 2);
 }
 
-.segmentEmpty {
-  flex: 1;
-  height: 100%;
-  background: var(--color-bg-disabled);
+.fill {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-content-primary);
+  transform-origin: left center;
+  transition-property: transform;
+  transition-duration: var(--duration-enter);
+  transition-timing-function: var(--ease-out-expo);
+}
+
+.counter {
+  flex-shrink: 0;
+  color: var(--color-content-secondary);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
 }
