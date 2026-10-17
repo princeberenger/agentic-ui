@@ -91,6 +91,12 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] State=warning garde le contour `BORDER/Subtle` (error et success colorent le contour).
 - [ ] Pas de variante disabled + rempli. Le code met le texte en `CONTENT/Disabled`.
 
+### Password input — 6133:736
+- [ ] Texte masqué en `SYSTEM/Body/md/regular`, sauf la variante md error (`SYSTEM/Body/sm/regular`). Le code utilise md partout.
+- [ ] State=error-2 (message unique) n'est pas un état visuel distinct : le code le rend avec `status="error"` + `helperText`.
+- [ ] Les règles sont du contenu Figma (5 lignes). Le code les fournit en `PASSWORD_RULES`, évaluées sur la saisie.
+- [ ] Pas d'état focus + success / error : le focus l'emporte, comme pour Text input.
+
 ### HelperText — 4066:7007
 - [ ] Pas de variante warning + sm + solid. Le code applique les couleurs de warning lg solid.
 - [ ] Error solid : texte et icône en `CONTENT/Attention (Light)` en sm, `CONTENT/On Primary` en lg.

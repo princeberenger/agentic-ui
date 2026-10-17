@@ -1,11 +1,11 @@
 // Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=761-20738
 // Extracted: 2026-10-17
-// Demo page: Text input size / state matrix, live validation
+// Demo page: Text input size / state matrix, live validation, Password input (6133:736)
 
 'use client';
 
 import { useState } from 'react';
-import { TextInput, type InputSize, type InputStatus } from '@/app/components/Input';
+import { PASSWORD_RULES, PasswordInput, TextInput, type InputSize, type InputStatus } from '@/app/components/Input';
 import styles from './page.module.css';
 
 const SIZES: InputSize[] = ['md', 'sm'];
@@ -44,6 +44,17 @@ export default function TextInputPage() {
           </div>
         </section>
       ))}
+
+      <section className={styles.section}>
+        <h2 className={styles.title}>Password</h2>
+        <div className={styles.inputs}>
+          <PasswordInput label="Password" placeholder="••••••••" rules={PASSWORD_RULES} />
+          <PasswordInput label="Password" size="sm" placeholder="••••••••" rules={PASSWORD_RULES} defaultValue="Abcdef1!" />
+          <PasswordInput label="Password" placeholder="••••••••" rules={PASSWORD_RULES} defaultValue="abc1" />
+          <PasswordInput label="Confirm password" placeholder="••••••••" status="error" defaultValue="abc" helperText="Passwords do not match" />
+          <PasswordInput label="Password" placeholder="••••••••" disabled helperText="Helper text" />
+        </div>
+      </section>
 
       <section className={styles.section}>
         <h2 className={styles.title}>Live validation</h2>
