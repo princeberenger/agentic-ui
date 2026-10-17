@@ -1,0 +1,130 @@
+/* ==========================================================================
+   TOAST — Figma Toast 4008:623
+   Type: info, success, warning, destructive
+   Every value below is a Figma variable or effect style (see globals.css),
+   except the 320px width, which Figma does not bind to a variable.
+   ========================================================================== */
+
+.toast {
+  /* per-type values: badge square, its icon, badge label background and text */
+  --_badge: var(--color-content-accent);
+  --_badge-icon: var(--color-bg-accent-light);
+  --_badge-bg: var(--color-bg-accent-light);
+  --_badge-fg: var(--color-content-accent);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-primary);
+  /* BORDER/Subtle 0.5px inside + Shadows/elevation 3 */
+  box-shadow: inset 0 0 0 var(--stroke-sm) var(--color-border-subtle), var(--shadow-elevation-3);
+}
+
+.success {
+  --_badge: var(--color-content-success);
+  --_badge-icon: var(--color-content-on-primary);
+  --_badge-bg: var(--color-bg-success-light);
+  --_badge-fg: var(--color-content-success);
+}
+
+.warning {
+  --_badge: var(--color-content-warning-text);
+  --_badge-icon: var(--color-content-warning-icons);
+  --_badge-bg: var(--color-bg-warning);
+  --_badge-fg: var(--color-content-warning-text);
+}
+
+.destructive {
+  --_badge: var(--color-bg-attention);
+  --_badge-icon: var(--color-content-on-primary);
+  --_badge-bg: var(--color-bg-attention-light);
+  --_badge-fg: var(--color-content-attention);
+}
+
+/* --- Header: title badge -------------------------------------------------- */
+.header {
+  display: flex;
+  align-items: center;
+  padding: var(--space-16);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+}
+
+.badgeIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-24);
+  height: var(--icon-24);
+  background-color: var(--_badge);
+  color: var(--_badge-icon);
+}
+
+/* BUTTON/Label/md/regular: Departure Mono only ships Regular, as Figma renders it */
+.badgeLabel {
+  padding: var(--space-4) var(--space-12);
+  background-color: var(--_badge-bg);
+  color: var(--_badge-fg);
+  font-family: var(--font-label);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-normal);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* --- Content -------------------------------------------------------------- */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: 0 var(--space-32) var(--space-16) var(--space-16);
+}
+
+/* Figma: destructive (text + input) is padded 16px on the right */
+.destructive .content {
+  padding-right: var(--space-16);
+}
+
+.text {
+  margin: 0;
+  color: var(--color-content-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-normal);
+}
+
+/* --- Footer: buttons share the width --------------------------------------- */
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: 0 var(--space-16) var(--space-16);
+}
+
+.footer > * {
+  flex: 1 1 0;
+}
+
+/* --- Close button: 8px from the top right corner --------------------------- */
+/* Figma overrides the secondary icon-only Button here: full radius, BACKGROUND/Secondary,
+   no border. Hover and focus keep the Button states. */
+.toast .close {
+  position: absolute;
+  top: var(--space-8);
+  right: var(--space-8);
+  --_radius: var(--radius-full);
+}
+
+.toast .close:not(:hover):not(:focus-visible) {
+  --_bg: var(--color-bg-secondary);
+  --_border: none;
+}

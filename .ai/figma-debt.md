@@ -69,6 +69,20 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Left et Right n'existent qu'en Caret alignment=Center.
 - [ ] Pas de délai d'apparition ni d'animation définis. Le code fait un fondu `--duration-enter` / `--ease-out-expo`.
 
+### Toast — 4008:623
+- [ ] Largeur fixe de 320px sans variable. Le code la reprend en dur.
+- [ ] Bouton fermer : seule la variante success lie sa visibilité à `Close button`, les trois autres l'affichent toujours.
+      Le code l'affiche quand `onClose` est passé.
+- [ ] Bouton fermer : instance de Button secondary surchargée (rayon full, `BACKGROUND/Secondary`, sans contour).
+      Ce n'est pas une variante de Button.
+- [ ] Style `BUTTON/Label/md/regular` lié à `weight/Semibold`, mais Departure Mono n'a que Regular.
+      Le code utilise `--weight-regular`, comme le rendu Figma.
+- [ ] Icône de titre : Icons / Checkmark pour les 4 types, y compris warning et destructive.
+- [ ] Padding droit du texte : 32px (info, success, warning), 16px (destructive).
+- [ ] Aucune animation, durée d'affichage ni empilement définis. Le code fournit le toast seul.
+- [ ] Le champ de destructive est `Text input` sm (32px). Le composant Input du repo n'est pas encore aligné
+      sur Figma (40px) : le toast destructive fait 187px au lieu de 179px.
+
 ### HelperText — 4066:7007
 - [ ] Pas de variante warning + sm + solid. Le code applique les couleurs de warning lg solid.
 - [ ] Error solid : texte et icône en `CONTENT/Attention (Light)` en sm, `CONTENT/On Primary` en lg.

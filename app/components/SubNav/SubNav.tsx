@@ -14,6 +14,7 @@ const pages = [
   { href: '/radio', label: 'Radio' },
   { href: '/switch', label: 'Switch' },
   { href: '/tooltip', label: 'Tooltip' },
+  { href: '/toast', label: 'Toast' },
   { href: '/tabs', label: 'Tabs' },
   { href: '/table', label: 'Table' },
   { href: '/menu', label: 'Menu' },
