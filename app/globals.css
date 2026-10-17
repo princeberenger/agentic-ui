@@ -55,6 +55,20 @@
   /* Badge — Gray */
   --color-badge-bg-gray: #f7f7f7;
 
+  /* Badge — Default, Orange, Blue, Purple, Teal, Pink (Figma BADGE/bg/*, BADGE/label/*) */
+  --color-badge-bg-default: #f7f7f7;     /* NEUTRAL/Neutral 200 */
+  --color-badge-label-default: #191919;  /* NEUTRAL/Neutral 800 */
+  --color-badge-bg-orange: #ffead3;      /* ORANGE/Orange 200 */
+  --color-badge-label-orange: #562501;   /* ORANGE/Orange 700 */
+  --color-badge-bg-blue: #e0ecfe;        /* BLUE/Blue 200 */
+  --color-badge-label-blue: #002a69;     /* BLUE/Blue 700 */
+  --color-badge-bg-purple: #e2ddfd;      /* PURPLE/Purple 200 */
+  --color-badge-label-purple: #271a68;   /* PURPLE/Purple 700 */
+  --color-badge-bg-teal: #d7f4f6;        /* TEAL/Teal 200 */
+  --color-badge-label-teal: #07465a;     /* TEAL/Teal 700 */
+  --color-badge-bg-pink: #fcdcec;        /* PINK/Pink 200 */
+  --color-badge-label-pink: #4b112d;     /* PINK/Pink 700 */
+
   /* Background — Semantic */
   --color-bg-success: #288034;
   --color-bg-disabled: #e5e5e5;

@@ -1,0 +1,98 @@
+/* ==========================================================================
+   BADGE — Figma Badge 124:2898
+   Type:  rounded, pill        Size: sm (19), lg (28, pill only)
+   Color: neutral, none, green, red, yellow, orange, blue, purple, teal, pink
+   Border: BADGE/stroke/default, 1px inside
+   Every value below is a Figma variable (see globals.css).
+   ========================================================================== */
+
+.badge {
+  /* per-color values */
+  --_bg: var(--color-badge-bg-gray);
+  --_fg: var(--color-badge-label-gray);
+  /* per-type / per-size values */
+  --_padding-x: var(--space-8);
+  --_radius: var(--radius-6);
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+  padding: var(--space-2) var(--_padding-x);
+  border-radius: var(--_radius);
+  background-color: var(--_bg);
+  color: var(--_fg);
+  font-family: var(--font-body);
+  font-size: var(--text-tiny);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tiny);
+  letter-spacing: var(--tracking-normal);
+  white-space: nowrap;
+}
+
+/* --- Type ---------------------------------------------------------------- */
+.pill {
+  --_radius: var(--radius-full);
+}
+
+/* Figma: pill sm with border is padded 10px, every other variant 8px */
+.pill.sm.border {
+  --_padding-x: var(--space-10);
+}
+
+/* --- Size ---------------------------------------------------------------- */
+.lg {
+  font-size: var(--text-regular);
+  line-height: var(--leading-regular);
+}
+
+/* --- Border (stroke inside, does not change the size) --------------------- */
+.border {
+  box-shadow: inset 0 0 0 var(--stroke-default) var(--color-badge-stroke-default);
+}
+
+/* --- Color --------------------------------------------------------------- */
+/* neutral and none switch to the default label (and bg) when bordered */
+.neutral.border {
+  --_bg: var(--color-badge-bg-default);
+  --_fg: var(--color-badge-label-default);
+}
+
+.none {
+  --_bg: var(--color-bg-primary);
+}
+
+.none.border {
+  --_fg: var(--color-badge-label-default);
+}
+
+.green  { --_bg: var(--color-badge-bg-green);  --_fg: var(--color-badge-label-green); }
+.red    { --_bg: var(--color-badge-bg-red);    --_fg: var(--color-badge-label-red); }
+.yellow { --_bg: var(--color-badge-bg-yellow); --_fg: var(--color-badge-label-yellow); }
+.orange { --_bg: var(--color-badge-bg-orange); --_fg: var(--color-badge-label-orange); }
+.blue   { --_bg: var(--color-badge-bg-blue);   --_fg: var(--color-badge-label-blue); }
+.purple { --_bg: var(--color-badge-bg-purple); --_fg: var(--color-badge-label-purple); }
+.teal   { --_bg: var(--color-badge-bg-teal);   --_fg: var(--color-badge-label-teal); }
+.pink   { --_bg: var(--color-badge-bg-pink);   --_fg: var(--color-badge-label-pink); }
+
+/* --- Slots --------------------------------------------------------------- */
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+/* Icons / Close, 14px in every size; Figma defines no hover or pressed state */
+.close {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-full);
+  background: none;
+  color: inherit;
+}
+
+.close:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-components-focus);
+}

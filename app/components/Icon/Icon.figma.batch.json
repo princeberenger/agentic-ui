@@ -2,6 +2,13 @@
   "templateFile": "./Icon.figma.batch.ts",
   "components": [
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14029",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "add",
+      "figmaName": "Icons / Add"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4122-6216",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",

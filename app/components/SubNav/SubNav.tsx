@@ -7,6 +7,7 @@ import styles from './SubNav.module.css';
 const pages = [
   { href: '/', label: 'Tokens' },
   { href: '/button', label: 'Button' },
+  { href: '/badge', label: 'Badge' },
   { href: '/tabs', label: 'Tabs' },
   { href: '/table', label: 'Table' },
   { href: '/menu', label: 'Menu' },
