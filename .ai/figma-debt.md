@@ -63,6 +63,24 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       Le code reprend le trait, le remplissage aux coins arrondis et le comportement de Volume.
 - [ ] draggable : `100` est centré dans sa boîte de 24px comme `50`, seul `0` est aligné à gauche. Reproduit.
 
+### Table — cell-header 789:320, cell-type-* (`app/components/Table/`)
+- [ ] cell-header : seule la variante Default/Left a un padding horizontal de 24, toutes les autres 16.
+      **Exception** : le code met 16 partout, sinon la cellule bouge au survol.
+- [ ] cell-header : hauteur fixe 40 avec un padding vertical de 12, une checkbox de 24 n'y tient pas.
+      Le code centre le contenu sans padding vertical.
+- [ ] cell-header : Disabled et Loading passent le fond en `BACKGROUND/Primary` (Secondary sinon). Reproduit.
+- [ ] Focus : contour 2px (`STROKE/lg`) partout sauf cell-type-progress en 1px. Reproduit.
+- [ ] cell-type-progress nomme `Selected` ce qui est le survol des autres cellules. Le code le traite en hover.
+- [ ] cell-type-text : en Default le contenu est aligné en haut, centré dans les autres états. Le code centre.
+- [ ] Checkbox : calque masqué dans cell-type-text sans propriété pour l'afficher (cell-header a `Checkbox`).
+      Le code l'affiche quand `onSelectedChange` est passé.
+- [ ] cell-type-dropdown : pas d'état hover. `Selected` (fond `INPUT/Pressed`) et `Focus` (contour 1,5px, chevron vers le haut)
+      décalent le texte de 16px à gauche. Le code : `Selected` = pression, `Focus` = menu ouvert ou focus clavier.
+- [ ] cell-type-editable-field : en Focus l'icône Edit devient un bouton secondaire icône Checkmark.
+      Le code l'interprète comme le mode édition (le bouton valide, Échap annule).
+- [ ] cell-type-action : le bouton overflow perd son contour, et son fond au survol de la cellule. Reproduit.
+- [ ] Disabled : opacité 0,3 sur les barres et les avatars, 0,5 sur le badge. Reproduit.
+
 ## 2. Valeurs sans variable (non tokenisées dans Figma)
 
 ### Badge
@@ -226,6 +244,15 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       Le trait de la poignée est lié à `STROKE/lg`, qui n'a pas de code syntax WEB.
 - [ ] draggable : trait du milieu 1px et boîtes de 24px des valeurs sans variable (`--stroke-default`, `--icon-24`).
 
+### Table
+- [ ] Largeur 379 fixe, min 124 et max 400 sans variable. Le code laisse le tableau dimensionner les colonnes.
+- [ ] Trait bas de 1px sans variable. Le code utilise `--stroke-default`.
+- [ ] Squelettes de chargement : largeurs 220, 133, 81, 80, 56 sans variable (px dans le CSS),
+      rayon lié à la variable `2` (179:647) supprimée de BORDER RADIUS. Le code utilise `--radius-2`.
+- [ ] Variables d'une bibliothèque externe (Carbon) : `Core/0`, `Core/25`, `Core/50`, `Core/100`, `Core/150`, `Core/200`,
+      `radius/formInput`, `boarder/width/medium`, `64px (spacing-10)`. Le code utilise les tokens locaux de même valeur.
+- [ ] AvatarGroup et squelette multiple : chevauchement -8 sans variable (`--space-8` en négatif).
+
 ## 3. Tokens
 
 - [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
@@ -236,6 +263,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Modes SHARP et ROUNDED de BORDER RADIUS : non gérés en code.
 - [x] Code syntax WEB à écrire pour les 12 variables BADGE/bg et BADGE/label ajoutées avec Badge.
 - [ ] Sans code syntax WEB et utilisées par des composants : `STROKE/lg`, `BORDER RADIUS/none`.
+- [ ] Tokens CSS ajoutés avec Table, code syntax WEB à écrire : `STROKE/md` → `--stroke-md` (1.5px),
+      `STROKE/lg` → `--stroke-lg` (2px), `INPUT/Pressed` → `--color-input-pressed` (noir 8 %).
 
 ## 4. Assets du repo différents de Figma
 
@@ -252,6 +281,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [x] `overflow-menu-horizontal.svg` : absent du repo. Ajouté depuis `Icons / Overflow-menu--horizontal` (179:14008).
 
 - [x] `folder.svg` : absent du repo. Ajouté depuis `Icons / Folder` (179:12822).
+
+- [x] `arrows-vertical.svg` : absent du repo. Exporté par le script (`Icons / Arrows--vertical`, 179:14549).
 
 ## 5. Détection des changements Figma (à construire)
 

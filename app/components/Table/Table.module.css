@@ -1,0 +1,413 @@
+/* ==========================================================================
+   TABLE CELLS — Figma page Table (cell-header 789:320, cell-type-* 771:1082 …)
+   Cell states: default, hover, focus (:focus-visible inside the cell), disabled, loading
+   ========================================================================== */
+
+/* --- Shared cell ----------------------------------------------------------- */
+.cell {
+  --_border: inset 0 calc(-1 * var(--stroke-default)) 0 var(--color-border-subtle);
+  --_focus: inset 0 0 0 var(--stroke-lg) var(--color-border-strong);
+  height: var(--icon-64);
+  padding: var(--space-12) var(--space-16);
+  background-color: var(--color-bg-primary);
+  box-shadow: var(--_border);
+  color: var(--color-content-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-normal);
+  text-align: left;
+  vertical-align: middle;
+  transition-property: box-shadow;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
+}
+
+/* cell-type-progress: 1px focus stroke instead of 2px */
+.thinFocus {
+  --_focus: inset 0 0 0 var(--stroke-default) var(--color-border-strong);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hoverable:not([data-disabled]):not([data-loading]):hover {
+    background-image: linear-gradient(var(--color-input-hover-dark), var(--color-input-hover-dark));
+  }
+}
+
+.focusable:focus-visible,
+.focusable:has(:focus-visible) {
+  outline: none;
+  box-shadow: var(--_focus);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  min-width: 0;
+}
+
+.left .content {
+  justify-content: flex-start;
+}
+
+.center .content {
+  justify-content: center;
+}
+
+.right .content {
+  justify-content: flex-end;
+}
+
+.icon {
+  display: flex;
+  flex-shrink: 0;
+  color: var(--color-content-icon);
+}
+
+[data-disabled] .icon {
+  color: var(--color-content-disabled);
+}
+
+/* --- Loading skeleton (table-skeleton-loading) ------------------------------ */
+.skeleton {
+  flex-shrink: 0;
+  height: var(--icon-24);
+  border-radius: var(--radius-2);
+  background-color: var(--color-bg-secondary);
+}
+
+/* skeleton widths are fixed in Figma without variable (see .ai/figma-debt.md) */
+.skeleton-text {
+  width: 220px;
+}
+
+.skeleton-dropdown {
+  width: 133px;
+}
+
+.skeleton-badge {
+  width: 81px;
+}
+
+.skeleton-numeric {
+  width: 80px;
+}
+
+.skeleton-progress {
+  width: 56px;
+}
+
+.skeleton-square {
+  width: var(--icon-32);
+  height: var(--icon-32);
+}
+
+.skeleton-circle {
+  width: var(--icon-32);
+  height: var(--icon-32);
+  border-radius: var(--radius-full);
+}
+
+/* People=Multiple: four circles overlapping by 8px, 1px CONTENT/On Primary ring */
+.skeleton-circles {
+  display: flex;
+}
+
+.skeleton-circles > span {
+  width: var(--icon-32);
+  height: var(--icon-32);
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-secondary);
+  box-shadow: inset 0 0 0 var(--stroke-default) var(--color-content-on-primary);
+}
+
+.skeleton-circles > span + span {
+  margin-left: calc(-1 * var(--space-8));
+}
+
+/* --- cell-type-text ---------------------------------------------------------- */
+.textContainer {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: var(--space-12);
+  min-width: 0;
+}
+
+.texts {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.mainText {
+  overflow: hidden;
+  color: var(--color-content-primary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* SYSTEM/Body/xs/regular */
+.description {
+  overflow: hidden;
+  color: var(--color-content-secondary);
+  font-size: var(--text-tiny);
+  line-height: var(--leading-tiny);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+[data-disabled] .mainText,
+[data-disabled] .description {
+  color: var(--color-content-disabled);
+}
+
+/* --- cell-type-numeric --------------------------------------------------- */
+.numeric {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: var(--space-12);
+  min-width: 0;
+}
+
+.right .numeric {
+  justify-content: flex-end;
+}
+
+[data-disabled] .numeric {
+  color: var(--color-content-disabled);
+}
+
+/* --- cell-type-progress: SYSTEM/Label/md/regular label ------------------- */
+.progress .content {
+  gap: var(--space-12);
+}
+
+.label {
+  color: var(--color-content-primary);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+}
+
+[data-disabled] .label {
+  color: var(--color-content-disabled);
+}
+
+[data-disabled] .bars {
+  opacity: 0.3;
+}
+
+/* --- cell-type-badge / cell-type-avatar disabled ---------------------------- */
+[data-disabled] .badge {
+  opacity: 0.5;
+}
+
+[data-disabled] .avatars {
+  opacity: 0.3;
+}
+
+/* --- cell-type-action ------------------------------------------------------ */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+/* Figma overrides the icon-only secondary button: no stroke, no fill while the cell is hovered */
+.actions .more:not(:hover):not(:focus-visible) {
+  --_border: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cell:hover .actions .more:not(:hover):not(:focus-visible):not(:disabled) {
+    --_bg: transparent;
+  }
+}
+
+/* --- cell-header ------------------------------------------------------------- */
+.header {
+  /* fixed 40px: the 12px vertical padding of Figma does not fit a 24px checkbox */
+  height: var(--icon-40);
+  padding: 0 var(--space-16);
+  background-color: var(--color-bg-secondary);
+  box-shadow: none;
+  font-weight: var(--weight-regular);
+  vertical-align: middle;
+}
+
+.header[data-disabled],
+.header[data-loading] {
+  background-color: var(--color-bg-primary);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.center .headerContent {
+  justify-content: center;
+}
+
+.right .headerContent {
+  justify-content: flex-end;
+}
+
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sortButton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.header:has(.sortButton) {
+  position: relative;
+}
+
+/* SYSTEM/Label/md/regular, CONTENT/Secondary */
+.headerLabel {
+  color: var(--color-content-secondary);
+  font-family: var(--font-label);
+  font-size: var(--text-button);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-spacious);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition-property: color;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
+}
+
+.sortIcon {
+  display: flex;
+  color: var(--color-content-secondary);
+  transition-property: color;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .header:not([data-disabled]):has(.sortButton):hover .headerLabel {
+    color: var(--color-content-primary);
+  }
+
+  .header:not([data-disabled]):has(.sortButton):hover .sortIcon {
+    color: var(--color-content-icon);
+  }
+}
+
+.header:has(:focus-visible) .headerLabel {
+  color: var(--color-content-primary);
+}
+
+.header:has(:focus-visible) .sortIcon {
+  color: var(--color-content-icon);
+}
+
+.sortButton:focus-visible {
+  outline: none;
+}
+
+.sortButton:disabled {
+  cursor: default;
+}
+
+.header[data-disabled] .headerLabel,
+.header[data-disabled] .sortIcon {
+  color: var(--color-content-disabled);
+}
+
+/* --- cell-type-editable-field ------------------------------------------------- */
+.editable .content {
+  gap: var(--space-16);
+}
+
+.editable[data-editing] .content {
+  gap: var(--space-8);
+}
+
+.editable .input {
+  flex: 1;
+  min-width: var(--icon-64);
+}
+
+/* --- cell-type-dropdown ------------------------------------------------------ */
+.dropdownRoot {
+  position: relative;
+  display: inline-flex;
+}
+
+.dropdownTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--space-8) var(--space-8) 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--color-content-primary);
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition-property: background-color, box-shadow;
+  transition-duration: var(--duration-hover);
+  transition-timing-function: ease;
+}
+
+/* Selected (pressed): INPUT/Pressed fill, 16px left padding, radius 10 */
+.dropdownTrigger:active:not(:disabled) {
+  padding-left: var(--space-16);
+  border-radius: var(--radius-10);
+  background-color: var(--color-input-pressed);
+}
+
+/* Focus (open): 1.5px BORDER/Strong stroke, chevron up */
+.dropdownTrigger:focus-visible,
+.dropdownTrigger[aria-expanded='true'] {
+  padding-left: var(--space-16);
+  border-radius: var(--radius-10);
+  outline: none;
+  box-shadow: inset 0 0 0 var(--stroke-md) var(--color-border-strong);
+}
+
+.dropdownTrigger:disabled {
+  color: var(--color-content-disabled);
+  cursor: not-allowed;
+}
+
+.dropdownTrigger .icon {
+  color: var(--color-content-icon);
+}
+
+.dropdownTrigger:disabled .icon {
+  color: var(--color-content-disabled);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + var(--space-4));
+  left: 0;
+  z-index: 10;
+}

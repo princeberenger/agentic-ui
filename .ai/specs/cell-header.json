@@ -1,0 +1,674 @@
+{
+ "id": "789:320",
+ "name": "cell-header",
+ "props": {
+  "Main Text": {
+   "type": "TEXT",
+   "default": "Title"
+  },
+  "Sort icon": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Checkbox": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default",
+    "Hover",
+    "Focus",
+    "Disabled",
+    "Loading"
+   ]
+  },
+  "Alignment": {
+   "type": "VARIANT",
+   "default": "Left",
+   "options": [
+    "Left",
+    "Center",
+    "Right"
+   ]
+  }
+ },
+ "variants": {
+  "State=Default, Alignment=Left": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Secondary"
+   },
+   "Container": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "hidden": "true",
+    "instance": "Checkbox › Type=stroke, State=default, Selected=false"
+   },
+   "Container/Text Container": {
+    "size": "37×18",
+    "sizing": "hug/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Title\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Container/sort-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Arrows--vertical"
+   },
+   "Container/sort-icon/icon-color": {
+    "fill": "CONTENT/Secondary"
+   }
+  },
+  "State=Default, Alignment=Center": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Secondary"
+   },
+   "Container": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Text Container": {
+    "size": "37×18",
+    "sizing": "hug/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Title\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Container/sort-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Arrows--vertical"
+   },
+   "Container/sort-icon/icon-color": {
+    "fill": "CONTENT/Secondary"
+   }
+  },
+  "State=Default, Alignment=Right": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Secondary"
+   },
+   "Container": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Text Container": {
+    "size": "37×18",
+    "sizing": "hug/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Title\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Secondary"
+   },
+   "Container/sort-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Arrows--vertical"
+   },
+   "Container/sort-icon/icon-color": {
+    "fill": "CONTENT/Secondary"
+   }
+  },
+  "State=Disabled, Alignment=Left": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary"
+   },
+   "Container": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "hidden": "true",
+    "instance": "Checkbox › Type=stroke, State=default, Selected=false"
+   },
+   "Container/Text Container": {
+    "size": "37×18",
+    "sizing": "hug/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Title\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Disabled"
+   },
+   "Container/sort-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Arrows--vertical"
+   },
+   "Container/sort-icon/icon-color": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "State=Disabled, Alignment=Center": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary"
+   },
+   "Container": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Text Container": {
+    "size": "37×18",
+    "sizing": "hug/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Title\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Disabled"
+   },
+   "Container/sort-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Arrows--vertical"
+   },
+   "Container/sort-icon/icon-color": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "State=Disabled, Alignment=Right": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary"
+   },
+   "Container": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Text Container": {
+    "size": "37×18",
+    "sizing": "hug/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Title\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Disabled"
+   },
+   "Container/sort-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Arrows--vertical"
+   },
+   "Container/sort-icon/icon-color": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "State=Loading, Alignment=Left": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary"
+   },
+   "Container": {
+    "size": "347×24",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=Core/150"
+   },
+   "Container/table-skeleton-loading": {
+    "size": "220×24",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "2=2"
+   }
+  },
+  "State=Loading, Alignment=Center": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary"
+   },
+   "Container": {
+    "size": "347×24",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "12=Core/150"
+   },
+   "Container/table-skeleton-loading": {
+    "size": "220×24",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "2=2"
+   }
+  },
+  "State=Loading, Alignment=Right": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary"
+   },
+   "Container": {
+    "size": "347×24",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "12=Core/150"
+   },
+   "Container/table-skeleton-loading": {
+    "size": "220×24",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "2=2"
+   }
+  },
+  "State=Hover, Alignment=Left": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04"
+   },
+   "Container": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "hidden": "true",
+    "instance": "Checkbox › Type=stroke, State=default, Selected=false"
+   },
+   "Container/Text Container": {
+    "size": "37×18",
+    "sizing": "hug/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Title\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/sort-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Arrows--vertical"
+   },
+   "Container/sort-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=Hover, Alignment=Center": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04"
+   },
+   "Container": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Text Container": {
+    "size": "37×18",
+    "sizing": "hug/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Title\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/sort-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Arrows--vertical"
+   },
+   "Container/sort-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=Hover, Alignment=Right": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Secondary + INPUT/Hover (Dark)@0.04"
+   },
+   "Container": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Text Container": {
+    "size": "37×18",
+    "sizing": "hug/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Title\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/sort-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Arrows--vertical"
+   },
+   "Container/sort-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=Focus, Alignment=Left": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "Container": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Checkbox": {
+    "size": "24×24",
+    "sizing": "hug/hug",
+    "size.vars": "ICONS/24 × ICONS/24",
+    "layout": "row align min/min",
+    "padding": "2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2",
+    "gap": "0",
+    "hidden": "true",
+    "instance": "Checkbox › Type=stroke, State=default, Selected=false"
+   },
+   "Container/Text Container": {
+    "size": "37×18",
+    "sizing": "hug/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Title\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/sort-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Arrows--vertical"
+   },
+   "Container/sort-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=Focus, Alignment=Center": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "Container": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Text Container": {
+    "size": "37×18",
+    "sizing": "hug/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Title\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/sort-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Arrows--vertical"
+   },
+   "Container/sort-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=Focus, Alignment=Right": {
+   "(root)": {
+    "size": "379×40",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "Container": {
+    "size": "61×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "8=PADDING/8"
+   },
+   "Container/Text Container": {
+    "size": "37×18",
+    "sizing": "hug/fill",
+    "layout": "column align center/min",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Text Container/Main Text": {
+    "size": "37×18",
+    "sizing": "hug/hug",
+    "text": "\"Title\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   },
+   "Container/sort-icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Arrows--vertical"
+   },
+   "Container/sort-icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  }
+ }
+}

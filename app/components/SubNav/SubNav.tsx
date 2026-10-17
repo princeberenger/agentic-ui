@@ -24,6 +24,7 @@ const pages = [
   { href: '/pagination', label: 'Pagination' },
   { href: '/tabs', label: 'Tabs' },
   { href: '/table', label: 'Table' },
+  { href: '/table-cells', label: 'Table cells' },
   { href: '/menu', label: 'Menu' },
   { href: '/navigation', label: 'Navigation' },
   { href: '/stepper', label: 'Stepper' },

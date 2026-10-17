@@ -1,0 +1,861 @@
+{
+ "id": "779:314",
+ "name": "cell-type-avatar",
+ "props": {
+  "State": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default",
+    "Hover",
+    "Focus",
+    "Disabled",
+    "Loading"
+   ]
+  },
+  "Alignment": {
+   "type": "VARIANT",
+   "default": "Left",
+   "options": [
+    "Left",
+    "Right",
+    "Center"
+   ]
+  },
+  "People": {
+   "type": "VARIANT",
+   "default": "Single",
+   "options": [
+    "Single",
+    "Multiple"
+   ]
+  }
+ },
+ "variants": {
+  "State=Default, Alignment=Left, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "avatar-container/Avatar": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full",
+    "instance": "Avatar › Type=photo, Size=32, Color=none",
+    "props": "Label (Med)=\"AG\", Label (Sm)=\"A\""
+   }
+  },
+  "State=Default, Alignment=Right, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/Avatar": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full",
+    "instance": "Avatar › Type=photo, Size=32, Color=none",
+    "props": "Label (Med)=\"AG\", Label (Sm)=\"A\""
+   }
+  },
+  "State=Default, Alignment=Center, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/Avatar": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full",
+    "instance": "Avatar › Type=photo, Size=32, Color=none",
+    "props": "Label (Med)=\"AG\", Label (Sm)=\"A\""
+   }
+  },
+  "State=Hover, Alignment=Left, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/Avatar": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full",
+    "instance": "Avatar › Type=photo, Size=32, Color=none",
+    "props": "Label (Med)=\"AG\", Label (Sm)=\"A\""
+   }
+  },
+  "State=Hover, Alignment=Right, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/Avatar": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full",
+    "instance": "Avatar › Type=photo, Size=32, Color=none",
+    "props": "Label (Med)=\"AG\", Label (Sm)=\"A\""
+   }
+  },
+  "State=Hover, Alignment=Center, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/Avatar": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full",
+    "instance": "Avatar › Type=photo, Size=32, Color=none",
+    "props": "Label (Med)=\"AG\", Label (Sm)=\"A\""
+   }
+  },
+  "State=Focus, Alignment=Left, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "avatar-container/Avatar": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full",
+    "instance": "Avatar › Type=photo, Size=32, Color=none",
+    "props": "Label (Med)=\"AG\", Label (Sm)=\"A\""
+   }
+  },
+  "State=Focus, Alignment=Right, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/Avatar": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full",
+    "instance": "Avatar › Type=photo, Size=32, Color=none",
+    "props": "Label (Med)=\"AG\", Label (Sm)=\"A\""
+   }
+  },
+  "State=Focus, Alignment=Center, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/Avatar": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full",
+    "instance": "Avatar › Type=photo, Size=32, Color=none",
+    "props": "Label (Med)=\"AG\", Label (Sm)=\"A\""
+   }
+  },
+  "State=Disabled, Alignment=Left, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10",
+    "opacity": 0.3
+   },
+   "avatar-container/Avatar": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full",
+    "instance": "Avatar › Type=photo, Size=32, Color=none",
+    "props": "Label (Med)=\"AG\", Label (Sm)=\"A\""
+   }
+  },
+  "State=Disabled, Alignment=Right, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "opacity": 0.3
+   },
+   "avatar-container/Avatar": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full",
+    "instance": "Avatar › Type=photo, Size=32, Color=none",
+    "props": "Label (Med)=\"AG\", Label (Sm)=\"A\""
+   }
+  },
+  "State=Disabled, Alignment=Center, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "opacity": 0.3
+   },
+   "avatar-container/Avatar": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "radius": "9999=full",
+    "instance": "Avatar › Type=photo, Size=32, Color=none",
+    "props": "Label (Med)=\"AG\", Label (Sm)=\"A\""
+   }
+  },
+  "State=Loading, Alignment=Left, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "table-skeleton-loading": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full"
+   }
+  },
+  "State=Loading, Alignment=Left, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "container": {
+    "size": "104×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8"
+   },
+   "container/[run 1]": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "1 inside CONTENT/On Primary",
+    "radius": "9999=full",
+    "count": "4"
+   }
+  },
+  "State=Loading, Alignment=Right, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "table-skeleton-loading": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full"
+   }
+  },
+  "State=Loading, Alignment=Right, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "container": {
+    "size": "104×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8"
+   },
+   "container/[run 1]": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "1 inside CONTENT/On Primary",
+    "radius": "9999=full",
+    "count": "4"
+   }
+  },
+  "State=Loading, Alignment=Center, People=Single": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "table-skeleton-loading": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "9999=full"
+   }
+  },
+  "State=Loading, Alignment=Center, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align center/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "container": {
+    "size": "104×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8"
+   },
+   "container/[run 1]": {
+    "size": "32×32",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/32 × ICONS/32",
+    "fill": "BACKGROUND/Secondary",
+    "stroke": "1 inside CONTENT/On Primary",
+    "radius": "9999=full",
+    "count": "4"
+   }
+  },
+  "State=Default, Alignment=Left, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "avatar-container/AvatarGroup": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8",
+    "instance": "AvatarGroup › Type=photos",
+    "props": "Name label=\"Alex Gilev\", Show 2nd=true, Show counter=true, Show 1st=true, Show 3rd=true, Show 4th=true"
+   }
+  },
+  "State=Hover, Alignment=Left, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "avatar-container/AvatarGroup": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8",
+    "instance": "AvatarGroup › Type=photos",
+    "props": "Name label=\"Alex Gilev\", Show 2nd=true, Show counter=true, Show 1st=true, Show 3rd=true, Show 4th=true"
+   }
+  },
+  "State=Focus, Alignment=Left, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10"
+   },
+   "avatar-container/AvatarGroup": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8",
+    "instance": "AvatarGroup › Type=photos",
+    "props": "Name label=\"Alex Gilev\", Show 2nd=true, Show counter=true, Show 1st=true, Show 3rd=true, Show 4th=true"
+   }
+  },
+  "State=Disabled, Alignment=Left, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "10",
+    "opacity": 0.3
+   },
+   "avatar-container/AvatarGroup": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8",
+    "instance": "AvatarGroup › Type=photos",
+    "props": "Name label=\"Alex Gilev\", Show 2nd=true, Show counter=true, Show 1st=true, Show 3rd=true, Show 4th=true"
+   }
+  },
+  "State=Default, Alignment=Center, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/AvatarGroup": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8",
+    "instance": "AvatarGroup › Type=photos",
+    "props": "Name label=\"Alex Gilev\", Show 2nd=true, Show counter=true, Show 1st=true, Show 3rd=true, Show 4th=true"
+   }
+  },
+  "State=Hover, Alignment=Center, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/AvatarGroup": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8",
+    "instance": "AvatarGroup › Type=photos",
+    "props": "Name label=\"Alex Gilev\", Show 2nd=true, Show counter=true, Show 1st=true, Show 3rd=true, Show 4th=true"
+   }
+  },
+  "State=Focus, Alignment=Center, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/AvatarGroup": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8",
+    "instance": "AvatarGroup › Type=photos",
+    "props": "Name label=\"Alex Gilev\", Show 2nd=true, Show counter=true, Show 1st=true, Show 3rd=true, Show 4th=true"
+   }
+  },
+  "State=Disabled, Alignment=Center, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "opacity": 0.3
+   },
+   "avatar-container/AvatarGroup": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8",
+    "instance": "AvatarGroup › Type=photos",
+    "props": "Name label=\"Alex Gilev\", Show 2nd=true, Show counter=true, Show 1st=true, Show 3rd=true, Show 4th=true"
+   }
+  },
+  "State=Default, Alignment=Right, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/AvatarGroup": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8",
+    "instance": "AvatarGroup › Type=photos",
+    "props": "Name label=\"Alex Gilev\", Show 2nd=true, Show counter=true, Show 1st=true, Show 3rd=true, Show 4th=true"
+   }
+  },
+  "State=Hover, Alignment=Right, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/AvatarGroup": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8",
+    "instance": "AvatarGroup › Type=photos",
+    "props": "Name label=\"Alex Gilev\", Show 2nd=true, Show counter=true, Show 1st=true, Show 3rd=true, Show 4th=true"
+   }
+  },
+  "State=Focus, Alignment=Right, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0"
+   },
+   "avatar-container/AvatarGroup": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8",
+    "instance": "AvatarGroup › Type=photos",
+    "props": "Name label=\"Alex Gilev\", Show 2nd=true, Show counter=true, Show 1st=true, Show 3rd=true, Show 4th=true"
+   }
+  },
+  "State=Disabled, Alignment=Right, People=Multiple": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "avatar-container": {
+    "size": "347×32",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "opacity": 0.3
+   },
+   "avatar-container/AvatarGroup": {
+    "size": "128×32",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "-8",
+    "instance": "AvatarGroup › Type=photos",
+    "props": "Name label=\"Alex Gilev\", Show 2nd=true, Show counter=true, Show 1st=true, Show 3rd=true, Show 4th=true"
+   }
+  }
+ }
+}

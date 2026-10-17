@@ -1,0 +1,533 @@
+{
+ "id": "771:1179",
+ "name": "cell-type-numeric",
+ "props": {
+  "Icon": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "Cell text": {
+   "type": "TEXT",
+   "default": "$120.00"
+  },
+  "Badge": {
+   "type": "BOOLEAN",
+   "default": false
+  },
+  "Alignment": {
+   "type": "VARIANT",
+   "default": "Left",
+   "options": [
+    "Left",
+    "Right"
+   ]
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default",
+    "Hover",
+    "Focus",
+    "Disabled",
+    "Loading"
+   ]
+  }
+ },
+ "variants": {
+  "Alignment=Left, State=Default": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Container": {
+    "size": "315×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Container/Container": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Container/Price": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "text": "\"$120.00\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Container/Badge": {
+    "size": "49×19",
+    "sizing": "hug/fixed",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Badge › Type=rounded, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=false",
+    "props": "Icon=179:14029, Label=\"Label\", hasCloseIcon=false"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Alignment=Left, State=Disabled": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Container": {
+    "size": "315×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Container/Container": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Container/Price": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "text": "\"$120.00\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "Container/Badge": {
+    "size": "49×19",
+    "sizing": "hug/fixed",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Badge › Type=rounded, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=false",
+    "props": "Icon=179:14029, Label=\"Label\", hasCloseIcon=false"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Alignment=Right, State=Disabled": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Container": {
+    "size": "315×18",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Container/Container": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Container/Price": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "text": "\"$120.00\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Disabled"
+   },
+   "Container/Badge": {
+    "size": "49×19",
+    "sizing": "hug/fixed",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Badge › Type=rounded, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=false",
+    "props": "Icon=179:14029, Label=\"Label\", hasCloseIcon=false"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "Alignment=Right, State=Default": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Container": {
+    "size": "315×18",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Container/Container": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Container/Price": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "text": "\"$120.00\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Container/Badge": {
+    "size": "49×19",
+    "sizing": "hug/fixed",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Badge › Type=rounded, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=false",
+    "props": "Icon=179:14029, Label=\"Label\", hasCloseIcon=false"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Alignment=Left, State=Hover": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Container": {
+    "size": "315×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Container/Container": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Container/Price": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "text": "\"$120.00\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Container/Badge": {
+    "size": "49×19",
+    "sizing": "hug/fixed",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Badge › Type=rounded, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=false",
+    "props": "Icon=179:14029, Label=\"Label\", hasCloseIcon=false"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Alignment=Right, State=Hover": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Container": {
+    "size": "315×18",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Container/Container": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Container/Price": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "text": "\"$120.00\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Container/Badge": {
+    "size": "49×19",
+    "sizing": "hug/fixed",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Badge › Type=rounded, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=false",
+    "props": "Icon=179:14029, Label=\"Label\", hasCloseIcon=false"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Alignment=Left, State=Focus": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "Container": {
+    "size": "315×18",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Container/Container": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Container/Price": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "text": "\"$120.00\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Container/Badge": {
+    "size": "49×19",
+    "sizing": "hug/fixed",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Badge › Type=rounded, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=false",
+    "props": "Icon=179:14029, Label=\"Label\", hasCloseIcon=false"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Alignment=Right, State=Focus": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "2=lg inside BORDER/Strong"
+   },
+   "Container": {
+    "size": "315×18",
+    "sizing": "fill/hug",
+    "layout": "row align max/center",
+    "padding": "0 0 0 0",
+    "gap": "12=PADDING/12"
+   },
+   "Container/Container": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=Core/25"
+   },
+   "Container/Container/Price": {
+    "size": "53×18",
+    "sizing": "hug/hug",
+    "text": "\"$120.00\"",
+    "font": "SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0",
+    "font.vars": "family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal",
+    "color": "CONTENT/Primary"
+   },
+   "Container/Badge": {
+    "size": "49×19",
+    "sizing": "hug/fixed",
+    "layout": "row align min/center",
+    "padding": "2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8",
+    "gap": "4=PADDING/4",
+    "fill": "BADGE/bg/green",
+    "stroke": "1=default inside BADGE/stroke/default@0.1",
+    "radius": "6=6",
+    "hidden": "true",
+    "instance": "Badge › Type=rounded, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=false",
+    "props": "Icon=179:14029, Label=\"Label\", hasCloseIcon=false"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "Alignment=Left, State=Loading": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "table-skeleton-loading": {
+    "size": "80×24",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "2=2"
+   }
+  },
+  "Alignment=Right, State=Loading": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align max/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "table-skeleton-loading": {
+    "size": "80×24",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "2=2"
+   }
+  }
+ }
+}

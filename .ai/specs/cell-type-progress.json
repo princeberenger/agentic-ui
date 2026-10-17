@@ -1,0 +1,159 @@
+{
+ "id": "4096:6790",
+ "name": "cell-type-progress",
+ "props": {
+  "Label": {
+   "type": "TEXT",
+   "default": "10%"
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default",
+    "Selected",
+    "Focus",
+    "Disabled",
+    "Loading"
+   ]
+  }
+ },
+ "variants": {
+  "State=Default": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Progress - Bars (10)": {
+    "size": "38×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2",
+    "instance": "Progress - Bars (10) › Filled=10%"
+   },
+   "10%": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"10%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "State=Disabled": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Progress - Bars (10)": {
+    "size": "38×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2",
+    "opacity": 0.3,
+    "instance": "Progress - Bars (10) › Filled=10%"
+   },
+   "10%": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"10%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Disabled"
+   }
+  },
+  "State=Loading": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "table-skeleton-loading": {
+    "size": "56×24",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "2=2"
+   }
+  },
+  "State=Selected": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Progress - Bars (10)": {
+    "size": "38×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2",
+    "instance": "Progress - Bars (10) › Filled=10%"
+   },
+   "10%": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"10%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  },
+  "State=Focus": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "12=PADDING/12",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "1=default inside BORDER/Strong"
+   },
+   "Progress - Bars (10)": {
+    "size": "38×16",
+    "sizing": "hug/hug",
+    "layout": "row align min/center",
+    "padding": "0 0 0 0",
+    "gap": "2=PADDING/2",
+    "instance": "Progress - Bars (10) › Filled=10%"
+   },
+   "10%": {
+    "size": "22×18",
+    "sizing": "hug/hug",
+    "text": "\"10%\"",
+    "font": "SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper",
+    "font.vars": "family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious",
+    "color": "CONTENT/Primary"
+   }
+  }
+ }
+}

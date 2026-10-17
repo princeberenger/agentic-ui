@@ -107,6 +107,7 @@
   /* Input overlays (Figma MODE collection) */
   --color-input-hover-light: rgba(255, 255, 255, 0.08);  /* INPUT/Hover (Light) */
   --color-input-hover-dark: rgba(0, 0, 0, 0.04);         /* INPUT/Hover (Dark) */
+  --color-input-pressed: rgba(0, 0, 0, 0.08);      /* INPUT/Pressed */
   --color-input-pressed-light: rgba(255, 255, 255, 0.6); /* INPUT/Pressed (Light) */
   --color-input-selected: rgba(0, 0, 0, 0.12);     /* INPUT/Selected */
 
@@ -225,6 +226,8 @@
 :root {
   --stroke-sm: 0.5px;      /* sm */
   --stroke-default: 1px;   /* default */
+  --stroke-md: 1.5px;      /* md */
+  --stroke-lg: 2px;        /* lg */
 }
 
 /* --------------------------------------------------------------------------

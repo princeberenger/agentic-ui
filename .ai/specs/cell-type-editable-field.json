@@ -1,0 +1,179 @@
+{
+ "id": "771:1444",
+ "name": "cell-type-editable-field",
+ "props": {
+  "Show icon": {
+   "type": "BOOLEAN",
+   "default": true
+  },
+  "State": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default",
+    "Hover",
+    "Focus",
+    "Disabled",
+    "Loading"
+   ]
+  }
+ },
+ "variants": {
+  "State=Default": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Text input": {
+    "size": "315×40",
+    "sizing": "fill/hug",
+    "minWidth": "64=64px (4rem) (spacing-10)",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "Text input › Size=md, State=default, Text filled=true",
+    "props": "Placeholder text=\"Placeholder\", Label text=\"Label\", Input text=\"$99.00\", Show helper=false, Show label=false"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=Disabled": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Text input": {
+    "size": "315×40",
+    "sizing": "fill/hug",
+    "minWidth": "64=64px (4rem) (spacing-10)",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "Text input › Size=md, State=disabled, Text filled=false",
+    "props": "Label text=\"Label\", Placeholder text=\"$99.00\", Show helper=false, Input text=\"$99.00\", Show label=false"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/16 × ICONS/16",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Disabled"
+   }
+  },
+  "State=Loading": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "table-skeleton-loading": {
+    "size": "220×24",
+    "sizing": "fixed/fixed",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "2=2"
+   }
+  },
+  "State=Hover": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "16=PADDING/16",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Text input": {
+    "size": "315×40",
+    "sizing": "fill/hug",
+    "minWidth": "64=64px (4rem) (spacing-10)",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "Text input › Size=md, State=hover, Text filled=false",
+    "props": "Label text=\"Label\", Placeholder text=\"$99.00\", Input text=\"$99.00\", Show helper=false, Show label=false"
+   },
+   "Text input/Text input/Placeholder": {
+    "color": "CONTENT/Primary"
+   },
+   "Edit Icon": {
+    "size": "16×16",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Edit"
+   },
+   "Edit Icon/icon-color": {
+    "fill": "CONTENT/Icon"
+   }
+  },
+  "State=Focus": {
+   "(root)": {
+    "size": "379×64",
+    "sizing": "fixed/fixed",
+    "minWidth": "124",
+    "maxWidth": "400",
+    "layout": "row align min/center",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Primary",
+    "stroke": "0/0/1/0 inside BORDER/Subtle"
+   },
+   "Text input": {
+    "size": "299×40",
+    "sizing": "fill/hug",
+    "minWidth": "64=64px (4rem) (spacing-10)",
+    "layout": "column align min/min",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "instance": "Text input › Size=md, State=focus, Text filled=true",
+    "props": "Placeholder text=\"Placeholder\", Input text=\"$99.00\", Label text=\"Label\", Show helper=false, Show label=false"
+   },
+   "Text input/Text input": {
+    "stroke": "1=default inside BORDER/Strong"
+   },
+   "Secondary button": {
+    "size": "40×40",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/40 × ICONS/40",
+    "layout": "row align center/center",
+    "padding": "8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16",
+    "gap": "4=PADDING/4",
+    "radius": "10=10",
+    "instance": "Button › Size=lg, Style=secondary, Type=icon-only, State=default, Icon position=none",
+    "props": "Keyboard shortcuts=true, Badge label=\"1\", Label=\"Edit\", Swap icon=Icons / Checkmark"
+   },
+   "Secondary button/icon": {
+    "size": "16×20"
+   }
+  }
+ }
+}

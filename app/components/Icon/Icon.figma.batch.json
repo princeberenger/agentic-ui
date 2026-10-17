@@ -30,6 +30,13 @@
       "figmaName": "Icons / Arrow--up-right"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-14549",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "arrows-vertical",
+      "figmaName": "Icons / Arrows--vertical"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-13884",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
