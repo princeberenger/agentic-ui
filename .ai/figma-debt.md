@@ -40,6 +40,13 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Chevauchements -8px (photos, initials) et -6px (compact) sans variable.
       Le code réutilise `--space-8` et `--space-6` en négatif.
 
+### Checkbox — 124:2639, Checkbox with label — 815:75
+- [ ] Aucun état hover ni focus. Le code a seulement le focus clavier (`--shadow-components-focus` sur la boîte).
+- [ ] Gap de 4px entre label et description sans variable. Le code utilise `--space-4`.
+- [ ] Alignement : le composant aligne la boîte en haut, mais les instances de CheckboxGroup
+      passent en centré. Le code centre sans description et aligne en haut avec description.
+- [ ] Style=has-background n'a pas de variante disabled. Le code applique les couleurs disabled de no-background.
+
 ## 3. Tokens
 
 - [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
@@ -48,7 +55,7 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] `--color-focus-ring` doublonne `--color-transparent-blue-50`.
 - [ ] Mode DARK de la collection MODE : non implémenté en CSS.
 - [ ] Modes SHARP et ROUNDED de BORDER RADIUS : non gérés en code.
-- [ ] Code syntax WEB à écrire pour les 12 variables BADGE/bg et BADGE/label ajoutées avec Badge.
+- [x] Code syntax WEB à écrire pour les 12 variables BADGE/bg et BADGE/label ajoutées avec Badge.
 
 ## 4. Détection des changements Figma (à construire)
 

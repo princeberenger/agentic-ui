@@ -9,6 +9,7 @@ const pages = [
   { href: '/button', label: 'Button' },
   { href: '/badge', label: 'Badge' },
   { href: '/avatar', label: 'Avatar' },
+  { href: '/checkbox', label: 'Checkbox' },
   { href: '/tabs', label: 'Tabs' },
   { href: '/table', label: 'Table' },
   { href: '/menu', label: 'Menu' },
