@@ -1,0 +1,109 @@
+/* ==========================================================================
+   HELPER TEXT — Figma HelperText 4066:7007
+   Type: default, error, success, warning      Size: sm, lg      Style: light, solid
+   Every value below is a Figma variable (see globals.css).
+   ========================================================================== */
+
+/* sm carries 8px of space above the bubble (Figma PADDING/8 top) */
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.root.sm {
+  padding-top: var(--space-8);
+}
+
+.bubble {
+  --_bg: var(--color-bg-secondary);
+  --_icon: var(--color-content-icon);
+  --_fg: var(--color-content-primary);
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  background-color: var(--_bg);
+  color: var(--_fg);
+  font-family: var(--font-body);
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+}
+
+/* --- Size ---------------------------------------------------------------- */
+.sm .bubble {
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-10);
+  font-size: var(--text-tiny);
+  line-height: var(--leading-tiny);
+}
+
+.lg .bubble {
+  padding: var(--space-6) var(--space-10);
+  border-radius: var(--radius-full);
+  font-size: var(--text-small);
+  line-height: var(--leading-small);
+}
+
+/* Figma: lg solid is padded 12px, lg light 10px */
+.lg .solid {
+  padding-inline: var(--space-12);
+}
+
+.icon {
+  color: var(--_icon);
+}
+
+/* --- Type x Style -------------------------------------------------------- */
+.default.solid {
+  --_bg: var(--color-bg-tertiary);
+  --_icon: var(--color-content-secondary);
+}
+
+.warning.light {
+  --_bg: var(--color-bg-warning);
+  --_icon: var(--color-content-warning-text);
+  --_fg: var(--color-content-warning-text);
+}
+
+.warning.solid {
+  --_bg: var(--color-content-warning-text);
+  --_icon: var(--color-content-warning-icons);
+  --_fg: var(--color-content-warning-icons);
+}
+
+.success.light {
+  --_bg: var(--color-bg-success-light);
+  --_icon: var(--color-bg-success);
+  --_fg: var(--color-content-success);
+}
+
+.success.solid {
+  --_bg: var(--color-bg-success);
+  --_icon: var(--color-content-success-light);
+  --_fg: var(--color-content-success-light);
+}
+
+.error.light {
+  --_bg: var(--color-bg-attention-light);
+  --_icon: var(--color-badge-label-red);
+  --_fg: var(--color-badge-label-red);
+}
+
+.error.solid {
+  --_bg: var(--color-bg-attention);
+  --_icon: var(--color-content-attention-light);
+  --_fg: var(--color-content-attention-light);
+}
+
+/* Figma: error lg solid uses CONTENT/On Primary, error sm solid CONTENT/Attention (Light) */
+.lg .error.solid {
+  --_icon: var(--color-content-on-primary);
+  --_fg: var(--color-content-on-primary);
+}
+
+/* Figma: success and error sm solid use SYSTEM/Body/xs/regular, every other variant the bold style */
+.sm .success.solid,
+.sm .error.solid {
+  font-weight: var(--weight-regular);
+}

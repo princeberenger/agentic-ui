@@ -71,6 +71,8 @@
 
   /* Background — Semantic */
   --color-bg-success: #288034;
+  --color-bg-success-light: #e0fae0;      /* BACKGROUND/Success (Light) */
+  --color-content-success-light: #e0fae0; /* CONTENT/Success (Light) */
   --color-bg-disabled: #e5e5e5;
 
   /* Interaction overlays */
@@ -82,9 +84,12 @@
   --color-bg-attention: #d50b0b;
   --color-bg-attention-light: #fff5f5; /* BACKGROUND/Attention (Light) */
   --color-content-attention: #570303;
+  --color-content-attention-light: #fff5f5; /* CONTENT/Attention (Light) */
 
   /* Warning */
   --color-content-warning-text: #855f00;
+  --color-content-warning-icons: #ffe58a;   /* CONTENT/Warning (Icons) */
+  --color-bg-warning: #fff8d5;              /* BACKGROUND/Warning */
 
   /* Button */
   --color-button-primary: #000000;

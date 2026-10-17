@@ -184,6 +184,13 @@
       "figmaName": "Icons / Email"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17199",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "error-filled",
+      "figmaName": "Icons / Error--filled"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-15828",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
@@ -203,6 +210,13 @@
       "component": "Icon",
       "name": "gem",
       "figmaName": "Icons / Gem"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17238",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "information",
+      "figmaName": "Icons / Information"
     },
     {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17125",
@@ -364,6 +378,13 @@
       "component": "Icon",
       "name": "volume-up-filled",
       "figmaName": "Icons / Volume--up--filled"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17216",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "warning-alt-filled",
+      "figmaName": "Icons / Warning--alt--filled"
     }
   ]
 }
