@@ -1,0 +1,102 @@
+{
+ "id": "6133:2334",
+ "name": "validation-text-line",
+ "props": {
+  "Label": {
+   "type": "TEXT",
+   "default": "8 Character minimum"
+  },
+  "Type": {
+   "type": "VARIANT",
+   "default": "Default",
+   "options": [
+    "Default",
+    "Success",
+    "Error"
+   ]
+  }
+ },
+ "variants": {
+  "Type=Default": {
+   "(root)": {
+    "size": "308×23",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Secondary",
+    "radius": "10=10"
+   },
+   "Icons / Checkmark": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Checkmark"
+   },
+   "Icons / Checkmark/icon-color": {
+    "fill": "CONTENT/Icon"
+   },
+   "8 Character minimum": {
+    "size": "270×15",
+    "sizing": "fill/hug",
+    "text": "\"8 Character minimum\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Secondary"
+   }
+  },
+  "Type=Success": {
+   "(root)": {
+    "size": "308×23",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Success (Light)",
+    "radius": "10=10"
+   },
+   "Icons / Checkmark--filled": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Checkmark--filled"
+   },
+   "Icons / Checkmark--filled/icon-color": {
+    "fill": "CONTENT/Success"
+   },
+   "8 Character minimum": {
+    "size": "270×15",
+    "sizing": "fill/hug",
+    "text": "\"8 Character minimum\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Success"
+   }
+  },
+  "Type=Error": {
+   "(root)": {
+    "size": "308×23",
+    "sizing": "fill/hug",
+    "layout": "row align min/center",
+    "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
+    "gap": "8=PADDING/8",
+    "fill": "BACKGROUND/Attention (Light)",
+    "radius": "10=10"
+   },
+   "Icons / Close--filled": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Close--filled"
+   },
+   "Icons / Close--filled/icon-color": {
+    "fill": "CONTENT/Attention"
+   },
+   "8 Character minimum": {
+    "size": "270×15",
+    "sizing": "fill/hug",
+    "text": "\"8 Character minimum\"",
+    "font": "SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0",
+    "font.vars": "family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal",
+    "color": "CONTENT/Attention"
+   }
+  }
+ }
+}

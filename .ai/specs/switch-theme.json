@@ -1,0 +1,86 @@
+{
+ "id": "6114:855",
+ "name": "Switch (Theme)",
+ "props": {
+  "Mode": {
+   "type": "VARIANT",
+   "default": "Light",
+   "options": [
+    "Dark",
+    "Light"
+   ]
+  }
+ },
+ "variants": {
+  "Mode=Light": {
+   "(root)": {
+    "size": "43.2×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/inactive",
+    "radius": "9999=full",
+    "effect": "inner_shadow 0,1 2 #0000001f (no style)"
+   },
+   "Mask": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/20",
+    "fill": "SWITCH/knob/Inactive",
+    "stroke": "1=default inside SWITCH/knob/Inactive",
+    "radius": "100",
+    "effect": "Swtich/Toggle"
+   },
+   "Mask/Icons / Sun": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Sun"
+   },
+   "Mask/Icons / Sun/icon-color": {
+    "fill": "CONTENT/Primary"
+   }
+  },
+  "Mode=Dark": {
+   "(root)": {
+    "size": "43.2×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "0",
+    "fill": "SWITCH/bg/active",
+    "radius": "9999=full"
+   },
+   "Mask": {
+    "size": "24×24",
+    "sizing": "fixed/fixed",
+    "layout": "row align center/center",
+    "padding": "0 0 0 0",
+    "gap": "4"
+   },
+   "Mask/Knob": {
+    "size": "20×20",
+    "sizing": "fixed/fixed",
+    "size.vars": "ICONS/20",
+    "fill": "SWITCH/knob/Active",
+    "stroke": "1=default inside SWITCH/knob/Active",
+    "radius": "100"
+   },
+   "Mask/Icons / Moon --filled": {
+    "size": "14×14",
+    "sizing": "fixed/fixed",
+    "instance": "Icons / Moon --filled"
+   },
+   "Mask/Icons / Moon --filled/icon-color": {
+    "fill": "CONTENT/On Primary"
+   }
+  }
+ }
+}

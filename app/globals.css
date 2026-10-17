@@ -131,6 +131,14 @@
   --shadow-inset-bottom: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
+/* Theme collection, mode DARK. Partial: only the variables a component pins to DARK
+   (Switch (Theme) Mode=Dark sets the explicit mode). Full dark mode comes later. */
+[data-theme='dark'] {
+  --color-content-on-primary: #000000;
+  --color-switch-knob-active: #f7f7f7;
+  --color-switch-bg-active: #616161;
+}
+
 /* --------------------------------------------------------------------------
    2. TYPOGRAPHY PRIMITIVES
    -------------------------------------------------------------------------- */

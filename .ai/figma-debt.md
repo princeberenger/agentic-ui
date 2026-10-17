@@ -373,8 +373,14 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] ButtonGroup : écart 10 sans variable (`--space-10`). Menu : largeurs 160, 128, 531 sans variable.
 - [ ] Models : padding 11/8 et tailles des logos (16, 15×16, 13, 12×13, 14) sans variable.
 - [ ] Mistral #e10500 sans variable (logo en couleurs). Google : couleurs de marque sans variable.
-- [ ] Tokens CSS ajoutés : `--color-neutral-100`, `--color-neutral-900`, `--color-social-discord`, `--color-social-linkedin`.
-      Code syntax WEB à écrire.
+- [x] Tokens CSS ajoutés : `--color-neutral-100`, `--color-neutral-900`, `--color-social-discord`, `--color-social-linkedin`.
+      Code syntax WEB écrite.
+
+### Validation text, Switch (Theme)
+- [ ] validation-text-line : largeur fixe 308 dans Validation Text (Password). Le code prend toute la largeur.
+- [ ] Switch (Theme) : piste 43.2 de large (code 43, comme Switch lg), ombre intérieure sans effect style
+      (`--shadow-switch-track`), gap 4 du masque, rayon 100 du knob, icônes 14 sans variable.
+- [ ] Switch (Theme) : stroke 1px intérieur du knob de la même couleur que son fill (invisible), reproduit.
 
 ## 3. Tokens
 
@@ -382,7 +388,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       (variable `2` référencée par KeyboardShortcut mais absente des variables locales),
       `--radius-sm` (8px), `--radius-badge` (doublon de `--radius-6`), `--space-20`, `--icon-8`.
 - [ ] `--color-focus-ring` doublonne `--color-transparent-blue-50`.
-- [ ] Mode DARK de la collection MODE : non implémenté en CSS.
+- [ ] Mode DARK de la collection MODE : non implémenté en CSS. Seules les 3 variables épinglées en DARK par
+      Switch (Theme) Mode=Dark sont dans `[data-theme='dark']` (CONTENT/On Primary, SWITCH/knob/Active, SWITCH/bg/active).
 - [ ] Modes SHARP et ROUNDED de BORDER RADIUS : non gérés en code.
 - [x] Code syntax WEB à écrire pour les 12 variables BADGE/bg et BADGE/label ajoutées avec Badge.
 - [ ] Sans code syntax WEB et utilisées par des composants : `BORDER RADIUS/none`.
@@ -417,6 +424,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [x] Icônes ajoutées : `brain`, `checkmark-outline`, `document`, `download`, `tools`.
 
 - [x] Icônes ajoutées : `google`, `gemini`, `openai`, `mistral`, `xai` ; logos sociaux dans `public/assets/social/`.
+
+- [x] Icônes ajoutées par le script : `sun` (179:17087), `moon-filled` (6114:852).
 
 ## 5. Détection des changements Figma (à construire)
 

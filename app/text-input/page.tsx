@@ -7,6 +7,7 @@
 import { useState } from 'react';
 import { PASSWORD_RULES, PasswordInput, TextInput, type InputSize, type InputStatus } from '@/app/components/Input';
 import { Textarea } from '@/app/components/Textarea';
+import { ValidationText, ValidationTextLine } from '@/app/components/ValidationText';
 import styles from './page.module.css';
 
 const SIZES: InputSize[] = ['md', 'sm'];
@@ -56,6 +57,24 @@ export default function TextInputPage() {
           <PasswordInput label="Password" placeholder="••••••••" rules={PASSWORD_RULES} defaultValue="abc1" />
           <PasswordInput label="Confirm password" placeholder="••••••••" status="error" defaultValue="abc" helperText="Passwords do not match" />
           <PasswordInput label="Password" placeholder="••••••••" disabled helperText="Helper text" />
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.title}>Validation text</h2>
+        <div className={styles.inputs}>
+          {[5, 4, 3, 2].map((count) => (
+            <ValidationText key={count} aria-label={`${count} rules`}>
+              {PASSWORD_RULES.slice(0, count).map((rule) => (
+                <ValidationTextLine key={rule.label}>{rule.label}</ValidationTextLine>
+              ))}
+            </ValidationText>
+          ))}
+          <ValidationText aria-label="Types">
+            <ValidationTextLine>8 Character minimum</ValidationTextLine>
+            <ValidationTextLine type="success">8 Character minimum</ValidationTextLine>
+            <ValidationTextLine type="error">8 Character minimum</ValidationTextLine>
+          </ValidationText>
         </div>
       </section>
 

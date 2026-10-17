@@ -5,13 +5,14 @@
 'use client';
 
 import { useState } from 'react';
-import { Switch, type SwitchSize } from '@/app/components/Switch';
+import { Switch, ThemeSwitch, type SwitchSize, type ThemeMode } from '@/app/components/Switch';
 import styles from './page.module.css';
 
 const SIZES: SwitchSize[] = ['sm', 'lg'];
 
 export default function SwitchPage() {
   const [notifications, setNotifications] = useState(true);
+  const [theme, setTheme] = useState<ThemeMode>('light');
 
   return (
     <div className={styles.page}>
@@ -56,6 +57,16 @@ export default function SwitchPage() {
             checked={notifications}
             onChange={setNotifications}
           />
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.title}>Switch (Theme)</h2>
+        <div className={styles.row}>
+          <ThemeSwitch aria-label="Dark mode (light)" />
+          <ThemeSwitch defaultMode="dark" aria-label="Dark mode (dark)" />
+          <ThemeSwitch mode={theme} onModeChange={setTheme} />
+          <span className={styles.rowLabel}>{theme}</span>
         </div>
       </section>
     </div>

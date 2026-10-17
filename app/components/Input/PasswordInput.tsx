@@ -1,17 +1,15 @@
 // Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6133-736
-//         https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6133-2334 (validation-text-line)
 // Extracted: 2026-10-17
-// Tokens: color-content-primary, color-content-secondary, color-content-disabled, color-content-icon,
-//         color-content-success, color-content-attention, color-bg-secondary, color-bg-success-light,
-//         color-bg-attention-light, space-2, space-4, space-8, space-12, radius-10, icon-14,
-//         font-label, font-body, text-button, text-tiny, text-regular, leading-small, leading-tiny,
-//         leading-regular, tracking-spacious, weight-regular
+// Tokens: color-content-primary, color-content-secondary, color-content-disabled, color-content-success,
+//         space-12, icon-14, font-label, text-button, text-regular, leading-small, leading-regular,
+//         tracking-spacious, weight-regular (rules: see ValidationText)
 
 'use client';
 
 import { forwardRef, useId, useState, type ChangeEvent, type ReactNode } from 'react';
 import { HelperText } from '../HelperText';
 import { Icon } from '../Icon/Icon';
+import { ValidationText, ValidationTextLine, type ValidationTextType } from '../ValidationText';
 import { Input, type InputProps, type InputStatus } from './Input';
 import labelStyles from './TextInput.module.css';
 import styles from './PasswordInput.module.css';
@@ -47,14 +45,6 @@ export const PASSWORD_RULES: PasswordRule[] = [
   { label: '1 Number', test: (v) => /[0-9]/.test(v) },
 ];
 
-type RuleState = 'default' | 'success' | 'error';
-
-const RULE_ICON: Record<RuleState, string> = {
-  default: 'checkmark',
-  success: 'checkmark-filled',
-  error: 'close-filled',
-};
-
 export const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(function PasswordInput(
   { label, rules, status, helperText, id, className, disabled, value, defaultValue, onChange, ...rest },
   ref,
@@ -65,7 +55,7 @@ export const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(fu
   const inputId = id ?? autoId;
   const describedBy = `${inputId}-validation`;
 
-  const ruleStates: RuleState[] = (rules ?? []).map((r) =>
+  const ruleStates: ValidationTextType[] = (rules ?? []).map((r) =>
     current === '' ? 'default' : r.test(current) ? 'success' : 'error',
   );
   const computed: InputStatus =
@@ -114,14 +104,13 @@ export const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(fu
         </HelperText>
       ) : (
         rules && (
-          <ul id={describedBy} className={styles.rules}>
+          <ValidationText id={describedBy}>
             {rules.map((rule, i) => (
-              <li key={rule.label} className={[styles.rule, styles[ruleStates[i]] ?? ''].filter(Boolean).join(' ')}>
-                <Icon name={RULE_ICON[ruleStates[i]]} size={14} className={styles.ruleIcon} />
-                <span>{rule.label}</span>
-              </li>
+              <ValidationTextLine key={rule.label} type={ruleStates[i]}>
+                {rule.label}
+              </ValidationTextLine>
             ))}
-          </ul>
+          </ValidationText>
         )
       )}
     </div>

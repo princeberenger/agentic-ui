@@ -394,6 +394,13 @@
       "figmaName": "Icons / Money"
     },
     {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6114-852",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "moon-filled",
+      "figmaName": "Icons / Moon --filled"
+    },
+    {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4122-6214",
       "source": "app/components/Icon/Icon.tsx",
       "component": "Icon",
@@ -469,6 +476,13 @@
       "component": "Icon",
       "name": "send-alt",
       "figmaName": "Icons / Send--alt"
+    },
+    {
+      "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17087",
+      "source": "app/components/Icon/Icon.tsx",
+      "component": "Icon",
+      "name": "sun",
+      "figmaName": "Icons / Sun"
     },
     {
       "url": "https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=179-17085",
