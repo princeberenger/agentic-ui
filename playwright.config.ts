@@ -3,7 +3,9 @@ import { defineConfig, devices } from "@playwright/test";
 const PORT = 3100;
 
 // Visual regression on the demo pages: one full-page capture per page, light and dark.
-// References live in tests/visual/__screenshots__. Refresh them with `npm run test:visual:update`.
+// References live in tests/visual/__screenshots__ and are rendered on the ci runner (local font
+// rendering differs slightly): run the ci workflow by hand with update-snapshots, then commit the
+// visual-references artifact. `npm run test:visual:update` refreshes them locally for a quick check.
 export default defineConfig({
   testDir: "tests/visual",
   snapshotPathTemplate: "{testDir}/__screenshots__/{projectName}/{arg}{ext}",

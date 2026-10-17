@@ -4,6 +4,12 @@ on:
   pull_request:
   push:
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      update-snapshots:
+        description: regenerate the visual references and upload them as an artifact
+        type: boolean
+        default: false
 
 concurrency:
   group: ci-${{ github.ref }}
@@ -60,7 +66,19 @@ jobs:
       - name: install chromium
         run: npx playwright install --with-deps chromium
       - name: playwright
+        if: ${{ !inputs.update-snapshots }}
         run: npm run test:visual
+      # references must come from this runner: local font rendering differs slightly
+      - name: regenerate references
+        if: ${{ inputs.update-snapshots }}
+        run: npm run test:visual:update
+      - name: upload references
+        if: ${{ inputs.update-snapshots }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-references
+          path: tests/visual/__screenshots__/
+          retention-days: 7
       - name: upload report
         if: failure()
         uses: actions/upload-artifact@v4
