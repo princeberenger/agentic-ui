@@ -1,0 +1,90 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      update-snapshots:
+        description: regenerate the visual references and upload them as an artifact
+        type: boolean
+        default: false
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: tsc
+        run: npx tsc --noEmit
+      - name: eslint
+        run: npx eslint
+      - name: stylelint
+        run: npm run lint:css
+      - name: interactive states audit
+        run: bash scripts/audit-interactive-states.sh
+      - name: code connect typecheck
+        run: npm run figma:typecheck
+      - name: code connect parse
+        run: npm run figma:parse > /dev/null
+      - uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: next-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
+          restore-keys: next-${{ hashFiles('package-lock.json') }}-
+      - name: next build
+        run: npx next build
+
+  visual:
+    name: visual (non bloquant)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    # non-blocking while the references settle: a diff shows in the report, the pr stays green
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: install chromium
+        run: npx playwright install --with-deps chromium
+      - name: playwright
+        if: ${{ !inputs.update-snapshots }}
+        run: npm run test:visual
+      # references must come from this runner: local font rendering differs slightly
+      - name: regenerate references
+        if: ${{ inputs.update-snapshots }}
+        run: npm run test:visual:update
+      - name: upload references
+        if: ${{ inputs.update-snapshots }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-references
+          path: tests/visual/__screenshots__/
+          retention-days: 7
+      - name: upload report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7

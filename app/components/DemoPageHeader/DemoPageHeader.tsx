@@ -25,7 +25,9 @@ const KEYS: KeyboardModifier[] = ['option', 'command', 'return'];
 export function DemoPageHeader({ label, onLaunch, className }: DemoPageHeaderProps) {
   const launchId = useId();
   const launch = useRef(onLaunch);
-  launch.current = onLaunch;
+  useEffect(() => {
+    launch.current = onLaunch;
+  }, [onLaunch]);
 
   useEffect(() => {
     if (!onLaunch) return;

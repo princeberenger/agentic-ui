@@ -12,21 +12,31 @@
     "figma:publish": "figma connect publish",
     "figma:extract": "node scripts/figma/extract.mjs",
     "figma:diff": "node scripts/figma/diff.mjs",
-    "figma:diff:update": "node scripts/figma/diff.mjs --update"
+    "figma:diff:update": "node scripts/figma/diff.mjs --update",
+    "lint:css": "stylelint \"**/*.module.css\"",
+    "test:visual": "playwright test",
+    "test:visual:update": "playwright test --update-snapshots"
   },
   "dependencies": {
-    "motion": "^12.38.0",
+    "motion": "12.43.0",
     "next": "16.2.2",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@figma/code-connect": "^2.0.2",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@figma/code-connect": "2.0.2",
+    "@playwright/test": "1.56.1",
+    "@types/node": "20.19.43",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
     "eslint-config-next": "16.2.2",
-    "typescript": "^5"
+    "stylelint": "17.16.0",
+    "typescript": "5.9.3"
+  },
+  "overrides": {
+    "eslint-plugin-react-hooks": {
+      "zod-validation-error": "4.0.2"
+    }
   }
 }
