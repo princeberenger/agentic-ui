@@ -43,7 +43,9 @@ export function useFocusTrap(options: UseFocusTrapOptions = {}): FocusTrapAPI {
 
   // Store latest onEscape in a ref to avoid re-binding listeners
   const onEscapeRef = useRef(onEscape);
-  onEscapeRef.current = onEscape;
+  useEffect(() => {
+    onEscapeRef.current = onEscape;
+  }, [onEscape]);
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (!activeRef.current || !containerRef.current) return;

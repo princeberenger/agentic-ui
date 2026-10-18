@@ -2,7 +2,7 @@
 // Composable animation hooks for the design system.
 // These abstract Framer Motion API complexity behind intent-driven interfaces.
 
-import { useReducedMotion } from "motion/react";
+import { useReducedMotion, type Variants } from "motion/react";
 import { motionPresets, type MotionPresetKey } from "./motionPresets";
 import { contextAnimationMap, type AnimationContext } from "./contextAnimationMap";
 
@@ -61,21 +61,21 @@ export function useContextAnimation(context: AnimationContext) {
   }
 
   if (config.unmount) {
-    const exitPreset = motionPresets[config.unmount];
-    itemProps.exit = exitPreset.variants.hidden ?? { opacity: 0 };
+    const exitVariants: Variants = motionPresets[config.unmount].variants;
+    itemProps.exit = exitVariants.hidden ?? { opacity: 0 };
   }
 
   if (config.hover) {
-    const hoverPreset = motionPresets[config.hover];
-    const hoverVariant = hoverPreset.variants.hovered ?? hoverPreset.variants.selected;
+    const hoverVariants: Variants = motionPresets[config.hover].variants;
+    const hoverVariant = hoverVariants.hovered ?? hoverVariants.selected;
     if (hoverVariant) {
       itemProps.whileHover = hoverVariant;
     }
   }
 
   if (config.tap) {
-    const tapPreset = motionPresets[config.tap];
-    const tapVariant = tapPreset.variants.pressed;
+    const tapVariants: Variants = motionPresets[config.tap].variants;
+    const tapVariant = tapVariants.pressed;
     if (tapVariant) {
       itemProps.whileTap = tapVariant;
     }

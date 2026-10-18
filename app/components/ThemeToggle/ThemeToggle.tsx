@@ -3,21 +3,25 @@
 
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 import { ThemeSwitch, type ThemeMode } from '../Switch';
 import { THEME_STORAGE_KEY } from './themeScript';
 import styles from './ThemeToggle.module.css';
 
-export function ThemeToggle() {
-  const [mode, setMode] = useState<ThemeMode>('light');
+// the init script sets data-theme before hydration: the attribute is the source of truth
+function subscribe(onChange: () => void) {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  return () => observer.disconnect();
+}
 
-  // the init script already set the attribute: read it after hydration
-  useEffect(() => {
-    setMode(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
-  }, []);
+const readMode = (): ThemeMode => (document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
+const serverMode = (): ThemeMode => 'light';
+
+export function ThemeToggle() {
+  const mode = useSyncExternalStore(subscribe, readMode, serverMode);
 
   const change = (next: ThemeMode) => {
-    setMode(next);
     if (next === 'dark') document.documentElement.dataset.theme = 'dark';
     else delete document.documentElement.dataset.theme;
     try {
