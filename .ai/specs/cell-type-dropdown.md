@@ -1,7 +1,7 @@
 # cell-type-dropdown — 771:1501
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=771-1501
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Table/TableDropdownCell.figma.ts)
 
 ## Props
@@ -20,7 +20,7 @@
 ## Base tree — State=Default
 
 - **State=Default** `component` size 379×64 · sizing fixed/fixed · minWidth 124 · maxWidth 400 · layout row align min/center · padding 12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16 · gap 16=PADDING/16 · fill BACKGROUND/Primary · stroke 0/0/1/0 inside BORDER/Subtle
-  - **Price Container** `frame` size 81×34 · sizing hug/hug · layout row align min/center · padding 8=Core/100 8=Core/100 8=Core/100 0=Core/0 · gap 4=Core/50 · radius 8=radius/formInput
+  - **Price Container** `frame` size 81×34 · sizing hug/hug · layout row align min/center · padding 8=PADDING/8 8=PADDING/8 8=PADDING/8 0=PADDING/none · gap 4=PADDING/4 · radius 10=10
     - **Price** `text` size 53×18 · sizing hug/hug · text "$120.00" · font SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 · font.vars family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal · color CONTENT/Primary
     - **Dropdown Icon** `instance` size 16×16 · sizing fixed/fixed · instance Icons / Chevron--down
       - ↳ icon color CONTENT/Icon
@@ -38,23 +38,20 @@
 - `Price Container/Price` absent
 - `Price Container/Dropdown Icon` absent
 - `Price Container/Dropdown Icon/icon-color` absent
-- `table-skeleton-loading` only here: size 133×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=2
+- `table-skeleton-loading` only here: size 133×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=?12104:1047
 
 ### State=Selected
 
 - `(root)` gap: 16=PADDING/16 → 12=PADDING/12
 - `Price Container` size: 81×34 → 97×34
-- `Price Container` padding: 8=Core/100 8=Core/100 8=Core/100 0=Core/0 → 8=PADDING/8 8=PADDING/8 8=PADDING/8 16=PADDING/16
-- `Price Container` gap: 4=Core/50 → 4=PADDING/4
-- `Price Container` radius: 8=radius/formInput → 10=10
+- `Price Container` padding: 8=PADDING/8 8=PADDING/8 8=PADDING/8 0=PADDING/none → 8=PADDING/8 8=PADDING/8 8=PADDING/8 16=PADDING/16
 - `Price Container` fill: – → BACKGROUND/Primary + INPUT/Pressed@0.08
 
 ### State=Focus
 
 - `Price Container` size: 81×34 → 97×34
-- `Price Container` padding: 8=Core/100 8=Core/100 8=Core/100 0=Core/0 → 8=Core/100 8=Core/100 8=Core/100 16=Core/200
-- `Price Container` radius: 8=radius/formInput → 10=10
-- `Price Container` stroke: – → 1.5=md inside BORDER/Strong
+- `Price Container` padding: 8=PADDING/8 8=PADDING/8 8=PADDING/8 0=PADDING/none → 8=PADDING/8 8=PADDING/8 8=PADDING/8 16=PADDING/16
+- `Price Container` stroke: – → 2=lg inside BORDER/Strong
 - `Price Container/Dropdown Icon` instance: Icons / Chevron--down → Icons / Chevron--up
 
 
@@ -62,33 +59,29 @@
 
 | Figma variable | CSS | status |
 |---|---|---|
+| ?12104:1047 | – | unresolved id |
 | 10 | `var(--radius-10)` | ok |
-| 2 | – | no WEB code syntax |
 | BACKGROUND/Primary | `var(--color-bg-primary)` | ok |
 | BACKGROUND/Secondary | `var(--color-bg-secondary)` | ok |
 | BORDER/Strong | `var(--color-border-strong)` | ok |
 | BORDER/Subtle | `var(--color-border-subtle)` | ok |
 | CONTENT/Disabled | `var(--color-content-disabled)` | ok |
 | CONTENT/Primary | `var(--color-content-primary)` | ok |
-| Core/0 | – | external library variable |
-| Core/100 | – | external library variable |
-| Core/200 | – | external library variable |
-| Core/50 | – | external library variable |
 | default | `var(--stroke-default)` | ok |
 | family/Body | `var(--font-body)` | ok |
 | ICONS/24 | `var(--icon-24)` | ok |
 | ICONS/48 | `var(--icon-48)` | ok |
 | ICONS/64 | `var(--icon-64)` | ok |
-| INPUT/Pressed | – | no WEB code syntax |
+| INPUT/Pressed | `var(--color-input-pressed)` | ok |
 | letter-spacing/normal | `var(--tracking-normal)` | ok |
+| lg | `var(--stroke-lg)` | ok |
 | line-height/Small Text | `var(--leading-small)` | ok |
-| md | – | no WEB code syntax |
 | none | – | no WEB code syntax |
 | PADDING/12 | `var(--space-12)` | ok |
 | PADDING/16 | `var(--space-16)` | ok |
 | PADDING/4 | `var(--space-4)` | ok |
 | PADDING/8 | `var(--space-8)` | ok |
-| radius/formInput | – | external library variable |
+| PADDING/none | `var(--space-none)` | ok |
 | size/Small | `var(--text-small)` | ok |
 | weight/Regular | `var(--weight-regular)` | ok |
 

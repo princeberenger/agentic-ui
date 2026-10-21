@@ -1,7 +1,7 @@
 // Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=771-1501 (cell-type-dropdown)
-// Extracted: 2026-10-17
+// Extracted: 2026-10-21
 // Tokens: color-content-primary, color-content-icon, color-content-disabled, color-input-pressed, color-border-strong,
-//         stroke-md, radius-sm, radius-10, space-4, space-8, space-16, icon-16
+//         stroke-lg, radius-10, space-4, space-8, space-16, icon-16
 
 'use client';
 

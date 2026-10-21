@@ -1,7 +1,7 @@
 # Password input — 6133:736
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6133-736
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Input/PasswordInput.figma.ts)
 
 ## Props
@@ -40,7 +40,7 @@
 
 ## Base tree — Size=md, State=default, Text filled=false
 
-- **Size=md, State=default, Text filled=false** `component` size 288×197 · sizing fixed/hug · minWidth 64=64px (4rem) (spacing-10) · layout column align min/min · padding 0 0 0 0 · gap 0=PADDING/none
+- **Size=md, State=default, Text filled=false** `component` size 288×197 · sizing fixed/hug · layout column align min/min · padding 0 0 0 0 · gap 0=PADDING/none
   - **Input label** `frame` size 288×26 · sizing fill/hug · layout row align min/min · padding 0 0 0 0 · gap 0
     - **Label margin** `frame` size 288×26 · sizing fill/hug · layout row align min/min · padding 0 0 8 0 · gap 8
       - **Label text** `text` size 59×18 · sizing hug/hug · text "Password" · font SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper · font.vars family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious · color CONTENT/Secondary
@@ -123,7 +123,6 @@
 
 ### Size=md, State=error, Text filled=true
 
-- `(root)` minWidth: 64=64px (4rem) (spacing-10) → 96=?9fbcc4d61bf754fd864669fc908f1b371bed3d90/34590:316
 - `(root)` gap: 0=PADDING/none → 0
 - `Input label/Label margin/Label text` color: CONTENT/Secondary → CONTENT/Primary
 - `Text input` fill: BUTTON/Secondary → BACKGROUND/Primary
@@ -134,7 +133,6 @@
 ### Size=sm, State=success, Text filled=true
 
 - `(root)` size: 288×197 → 288×189
-- `(root)` minWidth: 64=64px (4rem) (spacing-10) → 96=?9fbcc4d61bf754fd864669fc908f1b371bed3d90/34590:316
 - `(root)` gap: 0=PADDING/none → 0
 - `Input label/Label margin/Label text` color: CONTENT/Secondary → CONTENT/Primary
 - `Text input` size: 288×40 → 288×32
@@ -148,7 +146,6 @@
 
 ### Size=md, State=success, Text filled=true
 
-- `(root)` minWidth: 64=64px (4rem) (spacing-10) → 96=?9fbcc4d61bf754fd864669fc908f1b371bed3d90/34590:316
 - `(root)` gap: 0=PADDING/none → 0
 - `Input label/Label margin/Label text` color: CONTENT/Secondary → CONTENT/Primary
 - `Text input` fill: BUTTON/Secondary → BACKGROUND/Primary
@@ -162,7 +159,6 @@
 ### Size=sm, State=error, Text filled=true
 
 - `(root)` size: 288×197 → 288×189
-- `(root)` minWidth: 64=64px (4rem) (spacing-10) → 96=?9fbcc4d61bf754fd864669fc908f1b371bed3d90/34590:316
 - `(root)` gap: 0=PADDING/none → 0
 - `Input label/Label margin/Label text` color: CONTENT/Secondary → CONTENT/Primary
 - `Text input` size: 288×40 → 288×32
@@ -217,7 +213,6 @@
 ### Size=md, State=error-2, Text filled=true
 
 - `(root)` size: 288×197 → 288×97
-- `(root)` minWidth: 64=64px (4rem) (spacing-10) → 96=?9fbcc4d61bf754fd864669fc908f1b371bed3d90/34590:316
 - `(root)` gap: 0=PADDING/none → 0
 - `Input label/Label margin/Label text` color: CONTENT/Secondary → CONTENT/Primary
 - `Text input` fill: BUTTON/Secondary → BACKGROUND/Primary
@@ -229,7 +224,6 @@
 ### Size=sm, State=error-2, Text filled=true
 
 - `(root)` size: 288×197 → 288×89
-- `(root)` minWidth: 64=64px (4rem) (spacing-10) → 96=?9fbcc4d61bf754fd864669fc908f1b371bed3d90/34590:316
 - `(root)` gap: 0=PADDING/none → 0
 - `Input label/Label margin/Label text` color: CONTENT/Secondary → CONTENT/Primary
 - `Text input` size: 288×40 → 288×32
@@ -247,9 +241,7 @@
 
 | Figma variable | CSS | status |
 |---|---|---|
-| ?9fbcc4d61bf754fd864669fc908f1b371bed3d90/34590:316 | – | unresolved id |
 | 10 | `var(--radius-10)` | ok |
-| 64px (4rem) (spacing-10) | `spacing-10` | external library variable |
 | BACKGROUND/Primary | `var(--color-bg-primary)` | ok |
 | BACKGROUND/Secondary | `var(--color-bg-secondary)` | ok |
 | BORDER/Attention | `var(--color-border-attention)` | ok |

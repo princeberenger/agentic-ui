@@ -48,7 +48,7 @@
     "size": "400×40",
     "sizing": "fill/hug",
     "layout": "row align min/center",
-    "padding": "8=PADDING/md (8) 12=PADDING/12 8=PADDING/md (8) 12=PADDING/12",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
     "gap": "0",
     "radius": "9999/9999/4/9999=full",
     "effect": "Shadows/elevation1"
@@ -118,7 +118,7 @@
     "size": "175×40",
     "sizing": "hug/hug",
     "layout": "row align min/center",
-    "padding": "8=PADDING/md (8) 12=PADDING/12 8=PADDING/md (8) 12=PADDING/12",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
     "gap": "0",
     "fill": "BACKGROUND/Attention (Light)",
     "radius": "9999=full"
@@ -163,7 +163,7 @@
     "size": "664×204",
     "sizing": "hug/hug",
     "layout": "column align center/min",
-    "padding": "8=PADDING/md (8) 12=PADDING/12 0=PADDING/none 12=PADDING/12",
+    "padding": "8=PADDING/8 12=PADDING/12 0=PADDING/none 12=PADDING/12",
     "gap": "12=PADDING/12",
     "radius": "9999/9999/4/9999=full"
    },
@@ -211,7 +211,7 @@
     "size": "274×140",
     "sizing": "hug/hug",
     "layout": "column align center/min",
-    "padding": "8=PADDING/md (8) 12=PADDING/12 0=PADDING/none 12=PADDING/12",
+    "padding": "8=PADDING/8 12=PADDING/12 0=PADDING/none 12=PADDING/12",
     "gap": "8=PADDING/8",
     "radius": "9999/9999/4/9999=full"
    },
@@ -263,7 +263,7 @@
     "size": "175×40",
     "sizing": "hug/hug",
     "layout": "row align min/center",
-    "padding": "8=PADDING/md (8) 12=PADDING/12 8=PADDING/md (8) 12=PADDING/12",
+    "padding": "8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12",
     "gap": "0",
     "fill": "BACKGROUND/Primary + INPUT/Hover (Dark)@0.04",
     "radius": "9999/900/900/9999=full"

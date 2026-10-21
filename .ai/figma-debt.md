@@ -171,7 +171,7 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] PULSATING-DOT : prototype Low ↔ High en LINEAR 900ms (linear est interdit hors timers par `.ai/motion-rules.md`), reproduit.
 - [ ] SCROLL FADE Mode=Dark : l'icône reste CONTENT/Primary (noir) sur le fond noir, donc invisible. Reproduit.
 - [ ] DEMO PAGE HEADER : le logo fait 24×22.59 (hauteur fill) ; le code garde le carré 24 du symbole.
-- [ ] Variable de bibliothèque externe `Default/Gray/100` (collection Colors) référencée par un ancien menu-list-item ; plus utilisée par les specs actuelles.
+- [x] Variable de bibliothèque externe `Default/Gray/100` (collection Colors) : reliée à `CONTENT/Icon` (Icons / Delete), AUI-30.
 
 ## 2. Valeurs sans variable (non tokenisées dans Figma)
 
@@ -339,10 +339,15 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 ### Table
 - [ ] Largeur 379 fixe, min 124 et max 400 sans variable. Le code laisse le tableau dimensionner les colonnes.
 - [ ] Trait bas de 1px sans variable. Le code utilise `--stroke-default`.
-- [ ] Squelettes de chargement : largeurs 220, 133, 81, 80, 56 sans variable (px dans le CSS),
-      rayon lié à la variable `2` (179:647) supprimée de BORDER RADIUS. Le code utilise `--radius-2`.
-- [ ] Variables d'une bibliothèque externe (Carbon) : `Core/0`, `Core/25`, `Core/50`, `Core/100`, `Core/150`, `Core/200`,
-      `radius/formInput`, `boarder/width/medium`, `64px (spacing-10)`. Le code utilise les tokens locaux de même valeur.
+- [ ] Squelettes de chargement : largeurs 220, 133, 81, 80, 56 sans variable (px dans le CSS).
+- [x] Rayon des squelettes relié à `BORDER RADIUS/2` (`--radius-2`), AUI-30.
+- [x] Variables Carbon (`Core/*`, `radius/formInput`, `boarder/width/medium`) reliées aux locales de même valeur, AUI-30.
+      Min width 64/96 des champs (`spacing-10`) détachée : valeur brute, plus de min width sur Text input, Text area,
+      Password input, Toast et editable field (le code n'en avait pas).
+- [x] Changements voulus par berenger pendant AUI-30, alignés dans le code : contour focus 2 (`STROKE/lg`) dans dropdown,
+      editable field et progress ; rayon du Price Container de dropdown 8 → 10 (`--radius-10`) ; cell-type-action en hug
+      (12 + 40 + 12 = 64, la cellule garde sa hauteur).
+- [ ] Price Container de dropdown : rayon 10 en valeur brute, pas lié à `BORDER RADIUS/10`.
 - [ ] AvatarGroup et squelette multiple : chevauchement -8 sans variable (`--space-8` en négatif).
 
 ### Navigation
@@ -355,8 +360,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       les hauteurs sont en px.
 - [ ] Simple : CopyButton à 5px du coin sans variable (`--space-4` + `--stroke-default`).
 - [ ] Skeleton : couleurs #e8e8e8 et #c6c6c6 sans variable. Tokens CSS ajoutés `--color-skeleton-bg`, `--color-skeleton-highlight`.
-- [ ] Variables supprimées encore liées : `21:22` (CodeInline, CopyButton, Simple), `Transparent 4%` (124:3050, collection
-      TRANSPARENCY), probablement dans l'effet `Components/Focus`.
+- [x] Variables supprimées `21:22` et `Transparent 4%` de l'effet `Components/Focus` : reliées à `NEUTRAL/Neutral 100`
+      et `TRANSPARENT/black/4` (`--color-neutral-100`, `--color-transparent-black-4`), AUI-30.
 
 ### Chat messages
 - [ ] Largeurs max 400 (UserMessage) et 720 (ChatSystemMessage), séparateurs Date 2 max 128 sans variable
@@ -365,7 +370,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Vague du checkpoint 33×5, trait 1px sans variable (asset `public/assets/chat/checkpoint-wave.svg`).
 - [ ] ChatScrollButton : flou d'arrière-plan 2 sans style ; dégradés `Gradient/Scrollfade` en styles de remplissage,
       avec `TRANSPARENT/white/0`, `TRANSPARENT/black/0`, `TRANSPARENT/black/100`, `NEUTRAL/Neutral 800` sans code syntax.
-- [ ] Variables de bibliothèque externe : `PADDING/md` (8), `ICONS/2xs` (14). Le code utilise `--space-8`, `--icon-14`.
+- [x] Variables de bibliothèque externe `PADDING/md` (8), `ICONS/2xs` (14) reliées à `PADDING/8`, `ICONS/14`, AUI-30.
+- [ ] 10 chevrons 14 en surcharge d'instance n'acceptent pas la variable : valeur brute 14, sans variable.
 
 ### Chat agent, File type
 - [ ] Icône des sous-étapes 13, chevrons 14, écart texte/durée 8 et opacité 0,5 du temps d'outil sans variable.
@@ -397,9 +403,13 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 
 ## 3. Tokens
 
-- [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--color-transparent-4`, `--radius-2`
-      (variable `2` référencée par KeyboardShortcut mais absente des variables locales),
-      `--radius-sm` (8px), `--radius-badge` (doublon de `--radius-6`), `--space-20`, `--icon-8`.
+- [ ] CSS sans variable Figma : `--color-hover-overlay` (noir 6 %), `--radius-badge` (doublon de `--radius-6`),
+      `--space-20`, `--icon-8`.
+- [x] `--color-transparent-4` renommé `--color-transparent-black-4` (TRANSPARENT/black/4) ; `--color-transparent-black-8`
+      et `-12` ajoutés ; `--radius-2` et `--radius-sm` tracent `BORDER RADIUS/2` et `/8` (AUI-30).
+      `--radius-sm` garde son nom jusqu'à AUI-49 (code syntax Figma `var(--radius-8)`).
+- [ ] Search focus : Figma `TRANSPARENT/black/12` (noir fixe), le code garde `--color-input-selected` (INPUT/Selected,
+      même valeur en light, blanc 16 % en dark).
 - [ ] `--color-focus-ring` doublonne `--color-transparent-blue-50`.
 - [x] Mode DARK de la collection MODE : bloc `[data-theme='dark']` de globals.css généré depuis Figma (70 variables
       avec code syntax WEB ; les 70 valeurs LIGHT de :root vérifiées identiques). Bascule : Switch (Theme) en haut à
@@ -411,8 +421,8 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
       (BACKGROUND/Primary, BORDER/* (Light), BACKGROUND/Accent, BACKGROUND/Inverse, CONTENT/Primary) ; les primitives
       (PURPLE/Purple 500…) ne changent pas. À réexporter depuis Figma si les avatars changent.
 - [ ] Sans variante dark dans Figma, identiques dans les deux thèmes : ombres (effect styles en noir fixe), skeleton
-      (#e8e8e8 / #c6c6c6 sans variable), contour intérieur blanc de Components/Focus et Destructive Focus (variable
-      supprimée `21:22`).
+      (#e8e8e8 / #c6c6c6 sans variable), contour intérieur blanc de Components/Focus et Destructive Focus
+      (`NEUTRAL/Neutral 100`).
 - [ ] Couleurs en dur hors Figma : DialerCard (#1a1a1a, #333333, #bf0a0a, #a80909, #ffcaca), Fieldset (#dc2626).
 - [ ] Modes SHARP et ROUNDED de BORDER RADIUS : non gérés en code.
 - [x] Code syntax WEB à écrire pour les 12 variables BADGE/bg et BADGE/label ajoutées avec Badge.

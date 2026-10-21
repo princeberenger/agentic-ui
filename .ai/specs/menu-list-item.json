@@ -183,7 +183,7 @@
     "maxWidth": "288",
     "layout": "row align min/center",
     "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
-    "gap": "8=8px (0_5rem) (spacing-03)"
+    "gap": "8=PADDING/8"
    },
    "Content/Text overflow + Menu style": {
     "size": "144×15",
@@ -202,7 +202,7 @@
    "Content/Text overflow + Menu style/Text overflow/Spacer": {
     "size": "24×14",
     "sizing": "fixed/fixed",
-    "fill": "Transparent",
+    "fill": "TRANSPARENT/white/0",
     "hidden": "true"
    },
    "Content/Text overflow + Menu style/Text overflow/Menu item": {
@@ -292,7 +292,7 @@
    "Content/Text overflow + Menu style/Text overflow/Spacer": {
     "size": "20×16",
     "sizing": "fixed/fixed",
-    "fill": "Transparent",
+    "fill": "TRANSPARENT/white/0",
     "hidden": "true"
    },
    "Content/Text overflow + Menu style/Text overflow/wrapper": {
@@ -376,7 +376,7 @@
     "maxWidth": "288",
     "layout": "row align min/center",
     "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
-    "gap": "8=8px (0_5rem) (spacing-03)"
+    "gap": "8=PADDING/8"
    },
    "Content/Text overflow + Menu style": {
     "size": "144×15",
@@ -395,7 +395,7 @@
    "Content/Text overflow + Menu style/Text overflow/Spacer": {
     "size": "24×15",
     "sizing": "fixed/fixed",
-    "fill": "Transparent",
+    "fill": "TRANSPARENT/white/0",
     "hidden": "true"
    },
    "Content/Text overflow + Menu style/Text overflow/Menu item": {
@@ -487,7 +487,7 @@
    "Content/Text overflow + Menu style/Text overflow/Spacer": {
     "size": "20×16",
     "sizing": "fixed/fixed",
-    "fill": "Transparent",
+    "fill": "TRANSPARENT/white/0",
     "hidden": "true"
    },
    "Content/Text overflow + Menu style/Text overflow/wrapper": {
@@ -565,7 +565,7 @@
     "maxWidth": "288",
     "layout": "row align min/center",
     "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
-    "gap": "8=8px (0_5rem) (spacing-03)"
+    "gap": "8=PADDING/8"
    },
    "Content/Text overflow + Menu style": {
     "size": "144×15",
@@ -584,7 +584,7 @@
    "Content/Text overflow + Menu style/Text overflow/Spacer": {
     "size": "24×14",
     "sizing": "fixed/fixed",
-    "fill": "Transparent",
+    "fill": "TRANSPARENT/white/0",
     "hidden": "true"
    },
    "Content/Text overflow + Menu style/Text overflow/Menu item": {
@@ -634,7 +634,7 @@
     "maxWidth": "288",
     "layout": "row align min/center",
     "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
-    "gap": "8=8px (0_5rem) (spacing-03)"
+    "gap": "8=PADDING/8"
    },
    "Content/Text overflow + Menu style": {
     "size": "144×15",
@@ -653,7 +653,7 @@
    "Content/Text overflow + Menu style/Text overflow/Spacer": {
     "size": "24×14",
     "sizing": "fixed/fixed",
-    "fill": "Transparent",
+    "fill": "TRANSPARENT/white/0",
     "hidden": "true"
    },
    "Content/Text overflow + Menu style/Text overflow/Menu item": {
@@ -715,7 +715,7 @@
     "maxWidth": "288",
     "layout": "row align min/center",
     "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
-    "gap": "8=8px (0_5rem) (spacing-03)"
+    "gap": "8=PADDING/8"
    },
    "Content/Text overflow + Menu style": {
     "size": "144×15",
@@ -793,7 +793,7 @@
     "sizing": "fill/fill",
     "layout": "row align min/center",
     "padding": "7 12=PADDING/12 7 12=PADDING/12",
-    "gap": "8=8px (0_5rem) (spacing-03)"
+    "gap": "8=PADDING/8"
    },
    "Content/Text overflow + Menu style": {
     "size": "136×18",

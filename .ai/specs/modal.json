@@ -101,7 +101,6 @@
    "Text area": {
     "size": "432×200",
     "sizing": "fill/fixed",
-    "minWidth": "64=64px (4rem) (spacing-10)",
     "layout": "column align min/min",
     "padding": "0 0 0 0",
     "gap": "0=PADDING/none",

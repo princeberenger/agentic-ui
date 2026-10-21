@@ -1,7 +1,7 @@
 # cell-type-progress — 4096:6790
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4096-6790
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Table/TableProgressCell.figma.ts)
 
 ## Props
@@ -35,7 +35,7 @@
 - `(root)` gap: 12=PADDING/12 → 16=PADDING/16
 - `Progress - Bars (10)` absent
 - `10%` absent
-- `table-skeleton-loading` only here: size 56×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=2
+- `table-skeleton-loading` only here: size 56×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=?12104:1047
 
 ### State=Selected
 
@@ -43,14 +43,14 @@
 
 ### State=Focus
 
-- `(root)` stroke: 0/0/1/0 inside BORDER/Subtle → 1=default inside BORDER/Strong
+- `(root)` stroke: 0/0/1/0 inside BORDER/Subtle → 2=lg inside BORDER/Strong
 
 
 ## Tokens
 
 | Figma variable | CSS | status |
 |---|---|---|
-| 2 | – | no WEB code syntax |
+| ?12104:1047 | – | unresolved id |
 | BACKGROUND/Primary | `var(--color-bg-primary)` | ok |
 | BACKGROUND/Secondary | `var(--color-bg-secondary)` | ok |
 | BORDER/Strong | `var(--color-border-strong)` | ok |
@@ -64,6 +64,7 @@
 | ICONS/64 | `var(--icon-64)` | ok |
 | INPUT/Hover (Dark) | `var(--color-input-hover-dark)` | ok |
 | letter-spacing/spacious | `var(--tracking-spacious)` | ok |
+| lg | `var(--stroke-lg)` | ok |
 | line-height/Small Text | `var(--leading-small)` | ok |
 | none | – | no WEB code syntax |
 | PADDING/12 | `var(--space-12)` | ok |

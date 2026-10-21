@@ -52,7 +52,7 @@
     "sizing": "fill/hug",
     "layout": "row align min/min",
     "padding": "0 0 0 0",
-    "gap": "12=Core/150"
+    "gap": "12=PADDING/12"
    },
    "Container/Checkbox": {
     "size": "24×24",
@@ -69,7 +69,7 @@
     "sizing": "fill/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "315×18",
@@ -114,14 +114,14 @@
     "sizing": "fill/hug",
     "layout": "row align min/center",
     "padding": "0 0 0 0",
-    "gap": "12=Core/150"
+    "gap": "12=PADDING/12"
    },
    "Container/Text Container": {
     "size": "315×35",
     "sizing": "fill/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "315×18",
@@ -166,13 +166,13 @@
     "sizing": "fill/hug",
     "layout": "row align min/center",
     "padding": "0 0 0 0",
-    "gap": "12=Core/150"
+    "gap": "12=PADDING/12"
    },
    "Container/table-skeleton-loading": {
     "size": "220×24",
     "sizing": "fixed/fixed",
     "fill": "BACKGROUND/Secondary",
-    "radius": "2=2"
+    "radius": "2=?12104:1047"
    }
   },
   "State=Hover": {
@@ -192,14 +192,14 @@
     "sizing": "fill/hug",
     "layout": "row align min/center",
     "padding": "0 0 0 0",
-    "gap": "12=Core/150"
+    "gap": "12=PADDING/12"
    },
    "Container/Text Container": {
     "size": "315×35",
     "sizing": "fill/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "315×18",
@@ -244,14 +244,14 @@
     "sizing": "fill/hug",
     "layout": "row align min/center",
     "padding": "0 0 0 0",
-    "gap": "12=Core/150"
+    "gap": "12=PADDING/12"
    },
    "Container/Text Container": {
     "size": "315×35",
     "sizing": "fill/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "315×18",

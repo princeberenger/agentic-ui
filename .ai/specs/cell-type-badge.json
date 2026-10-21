@@ -343,7 +343,7 @@
     "size": "81×24",
     "sizing": "fixed/fixed",
     "fill": "BACKGROUND/Secondary",
-    "radius": "2=2"
+    "radius": "2=?12104:1047"
    }
   },
   "State=Loading, Alignment=Center": {
@@ -362,7 +362,7 @@
     "size": "81×24",
     "sizing": "fixed/fixed",
     "fill": "BACKGROUND/Secondary",
-    "radius": "2=2"
+    "radius": "2=?12104:1047"
    }
   },
   "State=Loading, Alignment=Right": {
@@ -381,7 +381,7 @@
     "size": "81×24",
     "sizing": "fixed/fixed",
     "fill": "BACKGROUND/Secondary",
-    "radius": "2=2"
+    "radius": "2=?12104:1047"
    }
   }
  }

@@ -1,7 +1,7 @@
 # AgentMessage — 6246:10120
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6246-10120
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Chat/AgentMessage.figma.ts)
 
 ## Props
@@ -23,7 +23,7 @@
 ## Base tree — State=default, Type=text
 
 - **State=default, Type=text** `component` size 400×63 · sizing hug/hug · minWidth 400 · maxWidth 640 · layout column align center/min · padding 0 0 0 0 · gap 0
-  - **message-container** `frame` size 400×40 · sizing fill/hug · layout row align min/center · padding 8=PADDING/md (8) 12=PADDING/12 8=PADDING/md (8) 12=PADDING/12 · gap 0 · radius 9999/9999/4/9999=full · effect Shadows/elevation1
+  - **message-container** `frame` size 400×40 · sizing fill/hug · layout row align min/center · padding 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 · gap 0 · radius 9999/9999/4/9999=full · effect Shadows/elevation1
     - **Agent message text.** `text` size 376×24 · sizing fill/hug · text "Agent message text." · font SYSTEM/Body/md/regular · Geist 400 16/24 ls 0 · font.vars family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal · color CONTENT/Primary
   - **action-container** `frame` size 101×40 · sizing hug/hug · layout column align min/min · padding 0 0 8=PADDING/8 8=PADDING/8 · gap 10 · hidden true
     - **Button** `instance` size 93×32 · sizing hug/fixed · layout row align center/center · padding 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 · gap 4=PADDING/4 · fill BUTTON/Secondary Filled · stroke 0.5=sm inside BORDER/Subtle · radius 10=10 · instance Button › Size=md, Style=secondary filled, Type=text-icon, State=default, Icon position=right · props Badge label="1", Keyboard shortcuts=true, Swap icon=Icons / Arrow--up-right, Label="View copy"
@@ -44,7 +44,7 @@
 - `ChatMessageMetadata` size: 73×23 → 138×23
 - `ChatMessageMetadata` props: Show Thumbs down=true, Show Reset=true, Show Duplicate=true, Divider 3=false, Show Error=false, Divider 2=false, Divider 1=false, Show Thumbs up=true, Show actions=false, Show Read receipt=false, Show Time=true → Show Thumbs down=true, Show Reset=true, Show Duplicate=true, Divider 3=false, Show Error=true, Divider 2=true, Divider 1=false, Show Thumbs up=true, Show actions=false, Show Read receipt=false, Show Time=true
 - `wrapper` only here: size 201×40 · sizing hug/hug · layout row align min/center · padding 0 0 0 0 · gap 10=PADDING/10
-- `wrapper/message-container` only here: size 175×40 · sizing hug/hug · layout row align min/center · padding 8=PADDING/md (8) 12=PADDING/12 8=PADDING/md (8) 12=PADDING/12 · gap 0 · fill BACKGROUND/Attention (Light) · radius 9999=full
+- `wrapper/message-container` only here: size 175×40 · sizing hug/hug · layout row align min/center · padding 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 · gap 0 · fill BACKGROUND/Attention (Light) · radius 9999=full
 - `wrapper/message-container/Agent message text.` only here: size 151×24 · sizing hug/hug · maxWidth 400 · text "Agent message text." · font SYSTEM/Body/md/regular · Geist 400 16/24 ls 0 · font.vars family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal · color CONTENT/Primary
 - `wrapper/Icons / Warning--filled` only here: size 16×16 · sizing fixed/fixed · instance Icons / Warning--filled
 - `wrapper/Icons / Warning--filled/icon-color` only here: fill BACKGROUND/Attention
@@ -57,7 +57,7 @@
 - `message-container` size: 400×40 → 664×204
 - `message-container` sizing: fill/hug → hug/hug
 - `message-container` layout: row align min/center → column align center/min
-- `message-container` padding: 8=PADDING/md (8) 12=PADDING/12 8=PADDING/md (8) 12=PADDING/12 → 8=PADDING/md (8) 12=PADDING/12 0=PADDING/none 12=PADDING/12
+- `message-container` padding: 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 → 8=PADDING/8 12=PADDING/12 0=PADDING/none 12=PADDING/12
 - `message-container` gap: 0 → 12=PADDING/12
 - `message-container` effect: Shadows/elevation1 → –
 - `message-container/Agent message text.` size: 376×24 → 640×24
@@ -76,7 +76,7 @@
 - `message-container` size: 400×40 → 274×140
 - `message-container` sizing: fill/hug → hug/hug
 - `message-container` layout: row align min/center → column align center/min
-- `message-container` padding: 8=PADDING/md (8) 12=PADDING/12 8=PADDING/md (8) 12=PADDING/12 → 8=PADDING/md (8) 12=PADDING/12 0=PADDING/none 12=PADDING/12
+- `message-container` padding: 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 → 8=PADDING/8 12=PADDING/12 0=PADDING/none 12=PADDING/12
 - `message-container` gap: 0 → 8=PADDING/8
 - `message-container` effect: Shadows/elevation1 → –
 - `message-container/Agent message text.` size: 376×24 → 250×24
@@ -130,7 +130,6 @@
 | PADDING/4 | `var(--space-4)` | ok |
 | PADDING/6 | `var(--space-6)` | ok |
 | PADDING/8 | `var(--space-8)` | ok |
-| PADDING/md (8) | – | external library variable |
 | PADDING/none | `var(--space-none)` | ok |
 | size/Regular | `var(--text-regular)` | ok |
 | sm | `var(--stroke-sm)` | ok |
@@ -151,7 +150,7 @@
 - Button (147:2305) — connected: app/components/Button/Button.figma.ts
 - ChatMessageMetadata (6270:1160) — connected: app/components/Chat/ChatMessageMetadata.figma.ts
 - Code block (Advanced) (4125:6917) — connected: app/components/CodeBlock/CodeBlockAdvanced.figma.ts
-- Chat Tool Call (6231:10080) — not connected
+- Chat Tool Call (6231:10080) — connected: app/components/Chat/ChatToolCall.figma.ts
 
 ## Icons
 

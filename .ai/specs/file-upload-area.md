@@ -1,7 +1,7 @@
 # File upload area — 4028:6848
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4028-6848
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/FileUpload/FileUpload.figma.ts)
 
 ## Props
@@ -27,7 +27,7 @@
 - **State=default** `component` size 320×226 · sizing fixed/hug · layout column align center/center · padding 32=PADDING/32 24=PADDING/24 32=PADDING/32 24=PADDING/24 · gap 16=PADDING/16 · fill BACKGROUND/Secondary · stroke 1=default inside BORDER/Subtle dashed 4/4 · radius 12=12
   - **Icons / Upload** `instance` size 32×32 · sizing fixed/fixed · instance Icons / Upload
     - ↳ icon color CONTENT/Icon
-  - **Container** `frame` size 272×18 · sizing fill/hug · layout column align center/center · padding 0=none 0=none 0=none 0=none · gap 12=PADDING/12
+  - **Container** `frame` size 272×18 · sizing fill/hug · layout column align center/center · padding 0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none · gap 12=PADDING/12
     - **File name** `text` size 272×18 · sizing fill/hug · text "Drag and drop your files here" · font SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center · font.vars family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal · color CONTENT/Primary
   - **Button** `instance` size 105×32 · sizing hug/fixed · layout row align center/center · padding 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 · gap 4=PADDING/4 · fill BUTTON/Secondary · stroke 0.5=sm inside BORDER/Subtle · radius 10=10 · instance Button › Size=md, Style=secondary, Type=text, State=default, Icon position=none · props Badge label="1", Keyboard shortcuts=true, Swap icon=179:14029, Label="Or select file"
   - **Frame 1** `frame` size 272×32 · sizing fill/hug · layout column align min/min · padding 0 0 0 0 · gap 2=PADDING/2
@@ -79,7 +79,6 @@
 | letter-spacing/normal | `var(--tracking-normal)` | ok |
 | line-height/Small Text | `var(--leading-small)` | ok |
 | line-height/Tiny Text | `var(--leading-tiny)` | ok |
-| none | – | external library variable |
 | PADDING/12 | `var(--space-12)` | ok |
 | PADDING/16 | `var(--space-16)` | ok |
 | PADDING/2 | `var(--space-2)` | ok |
@@ -87,6 +86,7 @@
 | PADDING/32 | `var(--space-32)` | ok |
 | PADDING/4 | `var(--space-4)` | ok |
 | PADDING/8 | `var(--space-8)` | ok |
+| PADDING/none | `var(--space-none)` | ok |
 | size/Small | `var(--text-small)` | ok |
 | size/Tiny | `var(--text-tiny)` | ok |
 | sm | `var(--stroke-sm)` | ok |

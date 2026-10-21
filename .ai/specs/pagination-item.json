@@ -195,10 +195,10 @@
     "instance": "_pagination-item/_Pagination select menu item/True"
    },
    "Select menu overflow/_pagination-item/_Pagination select menu item/True/_Select menu chrome menu/Chrome menu/_Select menu chrome menu items": {
-    "fill": "Transparent"
+    "fill": "TRANSPARENT/white/0"
    },
    "Select menu overflow/_pagination-item/_Pagination select menu item/True/_Select menu chrome menu/Chrome menu/_Select menu chrome menu items/Text + icon/Checkmark": {
-    "fill": "Transparent"
+    "fill": "TRANSPARENT/white/0"
    }
   },
   "State=hover, Type=number, Open=false, Selected=false": {

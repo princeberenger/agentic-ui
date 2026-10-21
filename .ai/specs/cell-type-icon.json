@@ -85,10 +85,10 @@
     "sizing": "fixed/fixed",
     "size.vars": "ICONS/32 × ICONS/32",
     "layout": "row align center/center",
-    "padding": "12=Core/150 12=Core/150 12=Core/150 12=Core/150",
-    "gap": "8=Core/100",
+    "padding": "12=PADDING/12 12=PADDING/12 12=PADDING/12 12=PADDING/12",
+    "gap": "8=PADDING/8",
     "fill": "BACKGROUND/Secondary",
-    "radius": "2=2"
+    "radius": "2=?12104:1047"
    }
   },
   "State=Focus": {
@@ -98,7 +98,7 @@
     "minWidth": "124",
     "maxWidth": "400",
     "layout": "row align center/center",
-    "padding": "12=PADDING/12 16=Core/200 12=PADDING/12 16=Core/200",
+    "padding": "12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16",
     "gap": "0",
     "fill": "BACKGROUND/Primary",
     "stroke": "2=lg inside BORDER/Strong"

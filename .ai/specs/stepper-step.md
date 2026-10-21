@@ -1,7 +1,7 @@
 # stepper-step — 4001:1395
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4001-1395
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Stepper/StepperStep.figma.ts)
 
 ## Props
@@ -21,8 +21,8 @@
 
 ## Base tree — Variant=completed, State=default
 
-- **Variant=completed, State=default** `component` size 102×48 · sizing hug/hug · layout row align min/center · padding 8=PADDING/md (8) 24=?3ed398f685b81124befa2c267e3b69f1b9c7811c/388:13 8=PADDING/md (8) 8=PADDING/md (8) · gap 8=PADDING/md (8) · fill BACKGROUND/Secondary · radius 9999=?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70
-  - **icon** `frame` size 32×32 · sizing fixed/fixed · layout column align center/center · padding 0 0 0 0 · gap 0 · fill BACKGROUND/Secondary · radius 9999=?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70
+- **Variant=completed, State=default** `component` size 102×48 · sizing hug/hug · layout row align min/center · padding 8=PADDING/8 24=PADDING/24 8=PADDING/8 8=PADDING/8 · gap 8=PADDING/8 · fill BACKGROUND/Secondary · radius 9999=full
+  - **icon** `frame` size 32×32 · sizing fixed/fixed · layout column align center/center · padding 0 0 0 0 · gap 0 · fill BACKGROUND/Secondary · radius 9999=full
     - **Icons / Magic-wand--filled** `instance` size 16×16 · sizing fixed/fixed · instance Icons / Magic-wand--filled
       - ↳ icon color CONTENT/Icon
   - **Step** `text` size 30×18 · sizing hug/hug · text "Step" · font SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center · font.vars family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal · color CONTENT/Primary
@@ -39,7 +39,7 @@
 
 - `(root)` size: 102×48 → 103×48
 - `(root)` fill: BACKGROUND/Secondary → BACKGROUND/Primary
-- `(root)` stroke: – → 1=?f1a6137e95d229c9573dab4cea316f192617e230/202:131 inside BORDER/Strong
+- `(root)` stroke: – → 1=default inside BORDER/Strong
 - `icon` fill: BACKGROUND/Secondary → BACKGROUND/Primary
 - `Step` size: 30×18 → 31×18
 - `Step` font: SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 align center → SYSTEM/Body/sm/bold · Geist 500 14/18 ls 0 align center
@@ -63,10 +63,6 @@
 
 | Figma variable | CSS | status |
 |---|---|---|
-| ?0cf8c3f628b5541a7a7b456cd3a64a879f851f5d/179:70 | – | unresolved id |
-| ?3ed398f685b81124befa2c267e3b69f1b9c7811c/388:13 | – | unresolved id |
-| ?560dbf567203f0f37b98a51ff65ad4305b8f413a/388:46 | – | unresolved id |
-| ?f1a6137e95d229c9573dab4cea316f192617e230/202:131 | – | unresolved id |
 | BACKGROUND/Disabled | `var(--color-bg-disabled)` | ok |
 | BACKGROUND/Primary | `var(--color-bg-primary)` | ok |
 | BACKGROUND/Secondary | `var(--color-bg-secondary)` | ok |
@@ -75,11 +71,15 @@
 | BORDER/Subtle | `var(--color-border-subtle)` | ok |
 | CONTENT/Primary | `var(--color-content-primary)` | ok |
 | CONTENT/Secondary | `var(--color-content-secondary)` | ok |
+| default | `var(--stroke-default)` | ok |
 | family/Body | `var(--font-body)` | ok |
+| full | `var(--radius-full)` | ok |
+| ICONS/32 | `var(--icon-32)` | ok |
 | INPUT/Hover (Dark) | `var(--color-input-hover-dark)` | ok |
 | letter-spacing/normal | `var(--tracking-normal)` | ok |
 | line-height/Small Text | `var(--leading-small)` | ok |
-| PADDING/md (8) | – | external library variable |
+| PADDING/24 | `var(--space-24)` | ok |
+| PADDING/8 | `var(--space-8)` | ok |
 | size/Small | `var(--text-small)` | ok |
 | sm | `var(--stroke-sm)` | ok |
 | weight/Medium | `var(--weight-medium)` | ok |

@@ -1,7 +1,7 @@
 # File type — 6111:11622
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=6111-11622
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/FileType/FileType.figma.ts)
 
 ## Props
@@ -82,7 +82,7 @@
 ## Base tree — Style=Filled, Size=Large, Type=Document, State=Default
 
 - **Style=Filled, Size=Large, Type=Document, State=Default** `component` size 156×156 · sizing fixed/hug · layout row align min/max · padding 24=PADDING/24 24=PADDING/24 24=PADDING/24 24=PADDING/24 · gap 0=PADDING/none · fill BACKGROUND/Secondary · radius 16=16
-  - **Container** `frame` size 108×108 · sizing fill/fill · layout column align min/min · padding 0=none 0=none 0=none 0=none · gap 48=PADDING/48
+  - **Container** `frame` size 108×108 · sizing fill/fill · layout column align min/min · padding 0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none · gap 48=PADDING/48
     - **Icons / Document** `instance` size 24×24 · sizing fixed/fixed · instance Icons / Document
       - ↳ icon color CONTENT/Icon
     - **wrapper** `frame` size 108×36 · sizing fill/hug · layout column align center/min · padding 0 0 0 0 · gap 0=PADDING/none
@@ -1202,7 +1202,6 @@
 | INPUT/Hover (Dark) | `var(--color-input-hover-dark)` | ok |
 | letter-spacing/spacious | `var(--tracking-spacious)` | ok |
 | line-height/Small Text | `var(--leading-small)` | ok |
-| none | – | external library variable |
 | PADDING/12 | `var(--space-12)` | ok |
 | PADDING/24 | `var(--space-24)` | ok |
 | PADDING/4 | `var(--space-4)` | ok |

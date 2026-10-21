@@ -22,6 +22,9 @@
   --color-neutral-900: #000000;      /* NEUTRAL/Neutral 900 */
   --color-social-discord: #5865f2;   /* SOCIALS/discord */
   --color-social-linkedin: #0077b5;  /* SOCIALS/linkedin */
+  --color-transparent-black-4: rgba(0, 0, 0, 0.04); /* TRANSPARENT/black/4 */
+  --color-transparent-black-8: rgba(0, 0, 0, 0.08); /* TRANSPARENT/black/8 */
+  --color-transparent-black-12: rgba(0, 0, 0, 0.12); /* TRANSPARENT/black/12 */
   --color-transparent-black-20: rgba(0, 0, 0, 0.2); /* TRANSPARENT/black/20 */
   --color-transparent-black-0: rgba(0, 0, 0, 0);     /* TRANSPARENT/black/0 */
   --color-transparent-black-100: #000000;            /* TRANSPARENT/black/100 */
@@ -128,7 +131,6 @@
   /* Transparent (Figma COLORS collection) */
   --color-transparent-blue-50: rgba(9, 104, 246, 0.5);  /* TRANSPARENT/blue/50 */
   --color-transparent-red-50: rgba(255, 92, 92, 0.5);   /* TRANSPARENT/red/50 */
-  --color-transparent-4: rgba(0, 0, 0, 0.04);           /* Transparent 4% */
 
   /* Inset shadow for card bottom edge */
   --shadow-inset-bottom: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
@@ -222,14 +224,14 @@
     0 0 0 2px var(--color-focus-ring);
   --shadow-components-focus: 0 0 0 1px var(--color-bg-primary),
     0 0 0 2px var(--color-transparent-blue-50),
-    0 1px 2px 0 var(--color-transparent-4),
+    0 1px 2px 0 var(--color-transparent-black-4),
     inset 0 -1px 0 0 rgba(0, 0, 0, 0.1),
-    inset 0 0 0 1px #ffffff;
+    inset 0 0 0 1px var(--color-neutral-100);
   --shadow-components-destructive-focus: 0 0 0 1px var(--color-bg-primary),
     0 0 0 2px var(--color-transparent-red-50),
     0 1px 2px 0 rgba(0, 0, 0, 0.05),
     inset 0 -1px 0 0 rgba(0, 0, 0, 0.1),
-    inset 0 0 0 1px #ffffff;
+    inset 0 0 0 1px var(--color-neutral-100);
 }
 
 /* --------------------------------------------------------------------------
@@ -321,14 +323,14 @@
 :root {
   --radius-xs: 0.25rem;    /* 4px — checkbox corners */
   --radius-badge: 0.375rem; /* 6px — badges, small pills */
-  --radius-sm: 0.5rem;     /* 8px — Figma "sm" = 0.5 (in rem-like units) */
+  --radius-sm: 0.5rem;     /* 8px — BORDER RADIUS/8 (code syntax var(--radius-8), renommage AUI-49) */
   --radius-md: 0.75rem;    /* 12px — upload zones, detail blocks */
   --radius-default: 1rem;  /* 16px — Figma "default" = 1 */
   --radius-lg: 1.25rem;    /* 20px — cards, large containers */
   --radius-full: 9999px;
 
   /* Figma BORDER RADIUS collection (DEFAULT mode) */
-  --radius-2: 0.125rem;    /* 2 — keyboard shortcut slash */
+  --radius-2: 0.125rem;    /* BORDER RADIUS/2 — keyboard shortcut slash, squelettes de table */
   --radius-6: 0.375rem;    /* 6 — buttons xs, sm */
   --radius-10: 0.625rem;   /* 10 — buttons md, lg */
 }
@@ -358,14 +360,14 @@
 
   /* Shadows/elevation 3 (Figma effect style) */
   --shadow-elevation-3:
-    0 0 0 1px rgba(0, 0, 0, 0.08),
+    0 0 0 1px var(--color-transparent-black-8),
     0 12px 12px 0 rgba(0, 0, 0, 0.04),
     0 6px 6px 0 rgba(0, 0, 0, 0.04),
     0 3px 3px 0 rgba(0, 0, 0, 0.04),
     0 1px 1px -0.5px rgba(0, 0, 0, 0.04);
 
   --shadow-elevation-4:
-    0 0 0 1px rgba(0, 0, 0, 0.08),
+    0 0 0 1px var(--color-transparent-black-8),
     0 16px 16px 0 rgba(0, 0, 0, 0.04),
     0 12px 12px 0 rgba(0, 0, 0, 0.04),
     0 6px 6px 0 rgba(0, 0, 0, 0.04),
@@ -380,9 +382,9 @@
   --shadow-components-focus:
     0 0 0 1px var(--color-bg-primary),
     0 0 0 2px var(--color-transparent-blue-50),
-    0 1px 2px 0 var(--color-transparent-4),
+    0 1px 2px 0 var(--color-transparent-black-4),
     inset 0 -1px 0 0 rgba(0, 0, 0, 0.1),
-    inset 0 0 0 1px #ffffff;
+    inset 0 0 0 1px var(--color-neutral-100);
 
   /* Components/Destructive Focus (Figma effect style) */
   --shadow-components-destructive-focus:
@@ -390,7 +392,7 @@
     0 0 0 2px var(--color-transparent-red-50),
     0 1px 2px 0 rgba(0, 0, 0, 0.05),
     inset 0 -1px 0 0 rgba(0, 0, 0, 0.1),
-    inset 0 0 0 1px #ffffff;
+    inset 0 0 0 1px var(--color-neutral-100);
 
   --shadow-switch-toggle:
     0 6px 6px 0 rgba(0, 0, 0, 0.04),

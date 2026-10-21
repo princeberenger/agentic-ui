@@ -1,7 +1,7 @@
 # pagination-item — 716:3884
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=716-3884
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Pagination/PaginationItem.figma.ts)
 
 ## Props
@@ -62,8 +62,8 @@
 - `pagination-item-wrapper/icon/icon-color` only here: fill CONTENT/Primary
 - `Select menu overflow` only here: size 32×0
 - `Select menu overflow/_pagination-item/_Pagination select menu item/True` only here: size 56×259 · sizing hug/hug · layout column align min/min · padding 0 0 0 0 · gap 0 · instance _pagination-item/_Pagination select menu item/True
-- `Select menu overflow/_pagination-item/_Pagination select menu item/True/_Select menu chrome menu/Chrome menu/_Select menu chrome menu items` only here: fill Transparent
-- `Select menu overflow/_pagination-item/_Pagination select menu item/True/_Select menu chrome menu/Chrome menu/_Select menu chrome menu items/Text + icon/Checkmark` only here: fill Transparent
+- `Select menu overflow/_pagination-item/_Pagination select menu item/True/_Select menu chrome menu/Chrome menu/_Select menu chrome menu items` only here: fill TRANSPARENT/white/0
+- `Select menu overflow/_pagination-item/_Pagination select menu item/True/_Select menu chrome menu/Chrome menu/_Select menu chrome menu items/Text + icon/Checkmark` only here: fill TRANSPARENT/white/0
 
 ### State=hover, Type=number, Open=false, Selected=false
 

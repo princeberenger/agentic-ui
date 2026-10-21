@@ -1,7 +1,7 @@
 # cell-type-editable-field — 771:1444
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=771-1444
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Table/TableEditableCell.figma.ts)
 
 ## Props
@@ -20,7 +20,7 @@
 ## Base tree — State=Default
 
 - **State=Default** `component` size 379×64 · sizing fixed/fixed · minWidth 124 · maxWidth 400 · layout row align min/center · padding 12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16 · gap 16=PADDING/16 · fill BACKGROUND/Primary · stroke 0/0/1/0 inside BORDER/Subtle
-  - **Text input** `instance` size 315×40 · sizing fill/hug · minWidth 64=64px (4rem) (spacing-10) · layout column align min/min · padding 0 0 0 0 · gap 0 · instance Text input › Size=md, State=default, Text filled=true · props Placeholder text="Placeholder", Label text="Label", Input text="$99.00", Show helper=false, Show label=false
+  - **Text input** `instance` size 315×40 · sizing fill/hug · layout column align min/min · padding 0 0 0 0 · gap 0 · instance Text input › Size=md, State=default, Text filled=true · props Placeholder text="Placeholder", Label text="Label", Input text="$99.00", Show helper=false, Show label=false
   - **Edit Icon** `instance` size 16×16 · sizing fixed/fixed · instance Icons / Edit
     - ↳ icon color CONTENT/Icon
 
@@ -38,7 +38,7 @@
 - `Text input` absent
 - `Edit Icon` absent
 - `Edit Icon/icon-color` absent
-- `table-skeleton-loading` only here: size 220×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=2
+- `table-skeleton-loading` only here: size 220×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=?12104:1047
 
 ### State=Hover
 
@@ -54,7 +54,7 @@
 - `Text input` props: Placeholder text="Placeholder", Label text="Label", Input text="$99.00", Show helper=false, Show label=false → Placeholder text="Placeholder", Input text="$99.00", Label text="Label", Show helper=false, Show label=false
 - `Edit Icon` absent
 - `Edit Icon/icon-color` absent
-- `Text input/Text input` only here: stroke 1=default inside BORDER/Strong
+- `Text input/Text input` only here: stroke 2=lg inside BORDER/Strong
 - `Secondary button` only here: size 40×40 · sizing fixed/fixed · size.vars ICONS/40 × ICONS/40 · layout row align center/center · padding 8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16 · gap 4=PADDING/4 · radius 10=10 · instance Button › Size=lg, Style=secondary, Type=icon-only, State=default, Icon position=none · props Keyboard shortcuts=true, Badge label="1", Label="Edit", Swap icon=Icons / Checkmark
 - `Secondary button/icon` only here: size 16×20
 
@@ -63,9 +63,8 @@
 
 | Figma variable | CSS | status |
 |---|---|---|
+| ?12104:1047 | – | unresolved id |
 | 10 | `var(--radius-10)` | ok |
-| 2 | – | no WEB code syntax |
-| 64px (4rem) (spacing-10) | `spacing-10` | external library variable |
 | BACKGROUND/Primary | `var(--color-bg-primary)` | ok |
 | BACKGROUND/Secondary | `var(--color-bg-secondary)` | ok |
 | BORDER/Subtle | `var(--color-border-subtle)` | ok |

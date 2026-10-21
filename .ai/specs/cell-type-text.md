@@ -1,7 +1,7 @@
 # cell-type-text — 771:1082
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=771-1082
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Table/TableTextCell.figma.ts)
 
 ## Props
@@ -24,9 +24,9 @@
 ## Base tree — State=Default
 
 - **State=Default** `component` size 379×64 · sizing fixed/fixed · minWidth 124 · maxWidth 400 · layout row align min/center · padding 12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16 · gap 16=PADDING/16 · fill BACKGROUND/Primary · stroke 0/0/1/0 inside BORDER/Subtle
-  - **Container** `frame` size 315×35 · sizing fill/hug · layout row align min/min · padding 0 0 0 0 · gap 12=Core/150
+  - **Container** `frame` size 315×35 · sizing fill/hug · layout row align min/min · padding 0 0 0 0 · gap 12=PADDING/12
     - **Checkbox** `instance` size 24×24 · sizing hug/hug · size.vars ICONS/24 × ICONS/24 · layout row align min/min · padding 2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2 · gap 0 · instance Checkbox › Type=stroke, State=default, Selected=false · hidden true
-    - **Text Container** `frame` size 315×35 · sizing fill/fill · layout column align center/min · padding 0 0 0 0 · gap 2=Core/25
+    - **Text Container** `frame` size 315×35 · sizing fill/fill · layout column align center/min · padding 0 0 0 0 · gap 2=PADDING/2
       - **Main Text** `text` size 315×18 · sizing fill/hug · text "Table text goes here" · font SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 · font.vars family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal · color CONTENT/Primary
       - **Description Text** `text` size 315×15 · sizing fill/hug · text "Description Text" · font SYSTEM/Body/xs/regular · Geist 400 13/15 ls 0 · font.vars family/Body, size/Tiny, weight/Regular, line-height/Tiny Text, letter-spacing/normal · color CONTENT/Secondary
   - **Edit Icon** `instance` size 16×16 · sizing fixed/fixed · size.vars ICONS/16 × ICONS/16 · instance Icons / Edit
@@ -52,7 +52,7 @@
 - `Container/Text Container/Description Text` absent
 - `Edit Icon` absent
 - `Edit Icon/icon-color` absent
-- `Container/table-skeleton-loading` only here: size 220×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=2
+- `Container/table-skeleton-loading` only here: size 220×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=?12104:1047
 
 ### State=Hover
 
@@ -71,7 +71,7 @@
 
 | Figma variable | CSS | status |
 |---|---|---|
-| 2 | – | no WEB code syntax |
+| ?12104:1047 | – | unresolved id |
 | BACKGROUND/Primary | `var(--color-bg-primary)` | ok |
 | BACKGROUND/Secondary | `var(--color-bg-secondary)` | ok |
 | BORDER/Strong | `var(--color-border-strong)` | ok |
@@ -79,8 +79,6 @@
 | CONTENT/Disabled | `var(--color-content-disabled)` | ok |
 | CONTENT/Primary | `var(--color-content-primary)` | ok |
 | CONTENT/Secondary | `var(--color-content-secondary)` | ok |
-| Core/150 | – | external library variable |
-| Core/25 | – | external library variable |
 | default | `var(--stroke-default)` | ok |
 | family/Body | `var(--font-body)` | ok |
 | ICONS/16 | `var(--icon-16)` | ok |
@@ -88,7 +86,7 @@
 | ICONS/64 | `var(--icon-64)` | ok |
 | INPUT/Hover (Dark) | `var(--color-input-hover-dark)` | ok |
 | letter-spacing/normal | `var(--tracking-normal)` | ok |
-| lg | – | no WEB code syntax |
+| lg | `var(--stroke-lg)` | ok |
 | line-height/Small Text | `var(--leading-small)` | ok |
 | line-height/Tiny Text | `var(--leading-tiny)` | ok |
 | none | – | no WEB code syntax |

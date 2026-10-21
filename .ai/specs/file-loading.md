@@ -1,7 +1,7 @@
 # File loading — 4028:6912
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4028-6912
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/FileUpload/FileItem.figma.ts)
 
 ## Props
@@ -19,7 +19,7 @@
 ## Base tree — State=uploaded
 
 - **State=uploaded** `component` size 320×32 · sizing fixed/fixed · layout row align space_between/center · padding 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 · gap 48 · fill BACKGROUND/Secondary · radius 10=10
-  - **Container** `frame` size 88×18 · sizing hug/hug · layout column align center/center · padding 0=none 0=none 0=none 0=none · gap 12=PADDING/12
+  - **Container** `frame` size 88×18 · sizing hug/hug · layout column align center/center · padding 0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none · gap 12=PADDING/12
     - **File name** `text` size 88×18 · sizing hug/hug · text "Document.png" · font SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center · font.vars family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious · color CONTENT/Primary
   - **Button** `instance` size 24×24 · sizing fixed/fixed · size.vars ICONS/24 × ICONS/24 · layout row align center/center · padding 8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8 · gap 4=PADDING/4 · radius 6=6 · instance Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none · props Keyboard shortcuts=true, Label="Label", Badge label="1", Swap icon=Icons / Trash-can
     - ↳ icon (override) size 13×13
@@ -41,7 +41,7 @@
 - `Button/icon` absent
 - `Button/icon/icon` absent
 - `container` only here: size 320×32 · sizing fill/fixed · layout row align space_between/center · padding 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 · gap 48 · fill BACKGROUND/Primary · stroke 1=default inside BORDER/Attention · radius 10=10
-- `container/label-wrapper` only here: size 88×18 · sizing hug/hug · layout column align center/min · padding 0=none 0=none 0=none 0=none · gap 4=PADDING/4
+- `container/label-wrapper` only here: size 88×18 · sizing hug/hug · layout column align center/min · padding 0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none · gap 4=PADDING/4
 - `container/label-wrapper/File name` only here: size 88×18 · sizing hug/hug · text "Document.png" · font SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper align center · font.vars family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious · color CONTENT/Primary
 - `container/Button` only here: size 24×24 · sizing fixed/fixed · size.vars ICONS/24 × ICONS/24 · layout row align center/center · padding 8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8 · gap 4=PADDING/4 · radius 6=6 · instance Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none · props Keyboard shortcuts=true, Label="Label", Badge label="1", Swap icon=Icons / Trash-can
 - `container/Button/icon/icon` only here: fill CONTENT/Primary
@@ -93,7 +93,6 @@
 | ICONS/32 | `var(--icon-32)` | ok |
 | letter-spacing/spacious | `var(--tracking-spacious)` | ok |
 | line-height/Small Text | `var(--leading-small)` | ok |
-| none | – | external library variable |
 | PADDING/12 | `var(--space-12)` | ok |
 | PADDING/16 | `var(--space-16)` | ok |
 | PADDING/4 | `var(--space-4)` | ok |
