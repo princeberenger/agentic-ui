@@ -39,13 +39,13 @@
     "size": "61×18",
     "sizing": "hug/hug",
     "layout": "row align min/center",
-    "padding": "0=none 0=none 0=none 0=none",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
     "gap": "8=PADDING/8"
    },
    "icon": {
     "size": "16×16",
     "sizing": "fixed/fixed",
-    "size.vars": "sm × sm",
+    "size.vars": "ICONS/16 × ICONS/16",
     "instance": "Icons / Folder"
    },
    "icon/icon-color": {
@@ -65,13 +65,13 @@
     "size": "61×18",
     "sizing": "hug/hug",
     "layout": "row align min/center",
-    "padding": "0=none 0=none 0=none 0=none",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
     "gap": "8=PADDING/8"
    },
    "icon": {
     "size": "16×16",
     "sizing": "fixed/fixed",
-    "size.vars": "sm × sm",
+    "size.vars": "ICONS/16 × ICONS/16",
     "instance": "Icons / Folder"
    },
    "icon/icon-color": {
@@ -91,13 +91,13 @@
     "size": "61×18",
     "sizing": "hug/hug",
     "layout": "row align min/center",
-    "padding": "0=none 0=none 0=none 0=none",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
     "gap": "8=PADDING/8"
    },
    "icon": {
     "size": "16×16",
     "sizing": "fixed/fixed",
-    "size.vars": "sm × sm",
+    "size.vars": "ICONS/16 × ICONS/16",
     "instance": "Icons / Folder"
    },
    "icon/icon-color": {
@@ -117,13 +117,13 @@
     "size": "16×16",
     "sizing": "hug/hug",
     "layout": "row align min/center",
-    "padding": "0=none 0=none 0=none 0=none",
-    "gap": "4=4"
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "4=PADDING/4"
    },
    "overflow-icon": {
     "size": "16×16",
     "sizing": "fixed/fixed",
-    "size.vars": "sm × sm",
+    "size.vars": "ICONS/16 × ICONS/16",
     "instance": "Icons / Overflow-menu--horizontal"
    },
    "overflow-icon/icon-color": {
@@ -135,8 +135,8 @@
     "size": "16×16",
     "sizing": "hug/hug",
     "layout": "row align min/center",
-    "padding": "0=none 0=none 0=none 0=none",
-    "gap": "4=4",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "4=PADDING/4",
     "fill": "BACKGROUND/Secondary",
     "stroke": "1 outside BORDER/Strong",
     "radius": "4=4"
@@ -144,7 +144,7 @@
    "overflow-icon": {
     "size": "16×16",
     "sizing": "fixed/fixed",
-    "size.vars": "sm × sm",
+    "size.vars": "ICONS/16 × ICONS/16",
     "instance": "Icons / Overflow-menu--horizontal"
    },
    "overflow-icon/icon-color": {
@@ -164,7 +164,7 @@
    "Menu/_Menu list item": {
     "size": "160×27",
     "sizing": "fill/hug",
-    "minWidth": "160=160px (10rem) (spacing-13)",
+    "minWidth": "160",
     "maxWidth": "288",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
@@ -182,7 +182,7 @@
     "maxWidth": "288",
     "layout": "row align min/center",
     "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
-    "gap": "8=8px (0_5rem) (spacing-03)"
+    "gap": "8=PADDING/8"
    },
    "Menu/_Menu list item/Content/Text overflow + Menu style": {
     "size": "144×15",
@@ -209,7 +209,7 @@
    "Menu/_Menu list item#2": {
     "size": "160×24",
     "sizing": "fill/hug",
-    "minWidth": "160=160px (10rem) (spacing-13)",
+    "minWidth": "160",
     "maxWidth": "288",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
@@ -223,7 +223,7 @@
     "maxWidth": "288",
     "layout": "row align min/center",
     "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
-    "gap": "8=8px (0_5rem) (spacing-03)"
+    "gap": "8=PADDING/8"
    },
    "Menu/_Menu list item#2/Content/Text overflow + Menu style": {
     "size": "144×15",
@@ -242,7 +242,7 @@
    "Menu/_Menu list item#2/Content/Text overflow + Menu style/Text overflow/Spacer": {
     "size": "24×14",
     "sizing": "fixed/fixed",
-    "fill": "Transparent",
+    "fill": "TRANSPARENT/white/0",
     "hidden": "true"
    },
    "Menu/_Menu list item#2/Content/Text overflow + Menu style/Text overflow/Settings": {
@@ -257,7 +257,7 @@
     "size": "23×15",
     "sizing": "hug/hug",
     "layout": "row align max/center",
-    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=0px (0rem) (spacing-00)",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
     "gap": "0",
     "hidden": "true",
     "instance": "_Keyboard shortcut › Context=shortcut",
@@ -281,7 +281,7 @@
    "Menu/_Menu list item#3": {
     "size": "160×27",
     "sizing": "fill/hug",
-    "minWidth": "160=160px (10rem) (spacing-13)",
+    "minWidth": "160",
     "maxWidth": "288",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
@@ -295,7 +295,7 @@
     "maxWidth": "288",
     "layout": "row align min/center",
     "padding": "4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8",
-    "gap": "8=8px (0_5rem) (spacing-03)"
+    "gap": "8=PADDING/8"
    },
    "Menu/_Menu list item#3/Content/Text overflow + Menu style": {
     "size": "144×15",
@@ -314,7 +314,7 @@
    "Menu/_Menu list item#3/Content/Text overflow + Menu style/Text overflow/Spacer": {
     "size": "24×14",
     "sizing": "fixed/fixed",
-    "fill": "Transparent",
+    "fill": "TRANSPARENT/white/0",
     "hidden": "true"
    },
    "Menu/_Menu list item#3/Content/Text overflow + Menu style/Text overflow/Admin": {
@@ -329,7 +329,7 @@
     "size": "23×15",
     "sizing": "hug/hug",
     "layout": "row align max/center",
-    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=0px (0rem) (spacing-00)",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
     "gap": "0",
     "hidden": "true",
     "instance": "_Keyboard shortcut › Context=shortcut",
@@ -360,15 +360,15 @@
     "size": "16×16",
     "sizing": "hug/hug",
     "layout": "row align min/center",
-    "padding": "0=none 0=none 0=none 0=none",
-    "gap": "4=4",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
+    "gap": "4=PADDING/4",
     "fill": "BACKGROUND/Secondary",
     "radius": "4=4"
    },
    "overflow-icon": {
     "size": "16×16",
     "sizing": "fixed/fixed",
-    "size.vars": "sm × sm",
+    "size.vars": "ICONS/16 × ICONS/16",
     "instance": "Icons / Overflow-menu--horizontal"
    },
    "overflow-icon/icon-color": {

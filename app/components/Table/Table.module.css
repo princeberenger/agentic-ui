@@ -24,11 +24,6 @@
   transition-timing-function: ease;
 }
 
-/* cell-type-progress: 1px focus stroke instead of 2px */
-.thinFocus {
-  --_focus: inset 0 0 0 var(--stroke-default) var(--color-border-strong);
-}
-
 @media (hover: hover) and (pointer: fine) {
   .hoverable:not([data-disabled]):not([data-loading]):hover {
     background-image: linear-gradient(var(--color-input-hover-dark), var(--color-input-hover-dark));
@@ -350,7 +345,12 @@
 
 .editable .input {
   flex: 1;
-  min-width: var(--icon-64);
+  min-width: 0;
+}
+
+/* State=Focus: 2px BORDER/Strong stroke (STROKE/lg), 1px border + 1px inset keeps the text in place */
+.editable .input input:focus {
+  box-shadow: inset 0 0 0 calc(var(--stroke-lg) - var(--stroke-default)) var(--color-border-strong);
 }
 
 /* --- cell-type-dropdown ------------------------------------------------------ */
@@ -365,7 +365,7 @@
   gap: var(--space-4);
   padding: var(--space-8) var(--space-8) var(--space-8) 0;
   border: none;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-10);
   background: none;
   color: var(--color-content-primary);
   font: inherit;
@@ -376,20 +376,18 @@
   transition-timing-function: ease;
 }
 
-/* Selected (pressed): INPUT/Pressed fill, 16px left padding, radius 10 */
+/* Selected (pressed): INPUT/Pressed fill, 16px left padding */
 .dropdownTrigger:active:not(:disabled) {
   padding-left: var(--space-16);
-  border-radius: var(--radius-10);
   background-color: var(--color-input-pressed);
 }
 
-/* Focus (open): 1.5px BORDER/Strong stroke, chevron up */
+/* Focus (open): 2px BORDER/Strong stroke (STROKE/lg), chevron up */
 .dropdownTrigger:focus-visible,
 .dropdownTrigger[aria-expanded='true'] {
   padding-left: var(--space-16);
-  border-radius: var(--radius-10);
   outline: none;
-  box-shadow: inset 0 0 0 var(--stroke-md) var(--color-border-strong);
+  box-shadow: inset 0 0 0 var(--stroke-lg) var(--color-border-strong);
 }
 
 .dropdownTrigger:disabled {

@@ -1,7 +1,7 @@
 # UserMessage — 4119:17618
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4119-17618
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Chat/UserMessage.figma.ts)
 
 ## Props
@@ -23,7 +23,7 @@
 ## Base tree — State=default, Style=Style 2, Type=text
 
 - **State=default, Style=Style 2, Type=text** `component` size 322×63 · sizing fill/hug · maxWidth 400 · layout column align center/max · padding 0 0 0 0 · gap 0=PADDING/none
-  - **message-container** `frame` size 212×40 · sizing hug/hug · layout row align min/center · padding 8=PADDING/md (8) 16=PADDING/16 8=PADDING/md (8) 16=PADDING/16 · gap 0 · fill BACKGROUND/Primary · stroke 0.5=sm inside BORDER/Subtle · radius 20/20/4/20=20 · effect Shadows/elevation1
+  - **message-container** `frame` size 212×40 · sizing hug/hug · layout row align min/center · padding 8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16 · gap 0 · fill BACKGROUND/Primary · stroke 0.5=sm inside BORDER/Subtle · radius 20/20/4/20=20 · effect Shadows/elevation1
     - **Text message goes here.** `text` size 180×24 · sizing hug/hug · text "Text message goes here." · font SYSTEM/Body/md/regular · Geist 400 16/24 ls 0 · font.vars family/Body, size/Regular, weight/Regular, line-height/Regular Text, letter-spacing/normal · color CONTENT/Primary
   - **ChatMessageMetadata** `instance` size 322×23 · sizing fill/hug · layout row align max/center · padding 8=PADDING/8 12=PADDING/12 0 12=PADDING/12 · gap 6=PADDING/6 · instance ChatMessageMetadata · props Show Thumbs down=true, Show Reset=true, Show Duplicate=true, Divider 3=false, Show Error=false, Divider 2=false, Divider 1=true, Show Thumbs up=true, Show actions=false, Show Read receipt=true, Show Time=true
 
@@ -44,7 +44,7 @@
 
 - `message-container` size: 212×40 → 322×40
 - `message-container` sizing: hug/hug → hug/fixed
-- `message-container` padding: 8=PADDING/md (8) 16=PADDING/16 8=PADDING/md (8) 16=PADDING/16 → 8=PADDING/md (8) 16=PADDING/16 8=PADDING/md (8) 8=PADDING/8
+- `message-container` padding: 8=PADDING/8 16=PADDING/16 8=PADDING/8 16=PADDING/16 → 8=PADDING/8 16=PADDING/16 8=PADDING/8 8=PADDING/8
 - `message-container` gap: 0 → 6=PADDING/6
 - `message-container` fill: BACKGROUND/Primary → BACKGROUND/Secondary
 - `message-container` stroke: 0.5=sm inside BORDER/Subtle → –
@@ -84,7 +84,6 @@
 | PADDING/4 | `var(--space-4)` | ok |
 | PADDING/6 | `var(--space-6)` | ok |
 | PADDING/8 | `var(--space-8)` | ok |
-| PADDING/md (8) | – | external library variable |
 | PADDING/none | `var(--space-none)` | ok |
 | size/Regular | `var(--text-regular)` | ok |
 | sm | `var(--stroke-sm)` | ok |

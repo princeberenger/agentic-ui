@@ -32,7 +32,7 @@
     "size": "88×18",
     "sizing": "hug/hug",
     "layout": "column align center/center",
-    "padding": "0=none 0=none 0=none 0=none",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
     "gap": "12=PADDING/12"
    },
    "Container/File name": {
@@ -84,7 +84,7 @@
     "size": "88×18",
     "sizing": "hug/hug",
     "layout": "column align center/min",
-    "padding": "0=none 0=none 0=none 0=none",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
     "gap": "4=PADDING/4"
    },
    "container/label-wrapper/File name": {
@@ -134,7 +134,7 @@
     "size": "88×18",
     "sizing": "hug/hug",
     "layout": "column align center/center",
-    "padding": "0=none 0=none 0=none 0=none",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
     "gap": "12=PADDING/12"
    },
    "Container/File name": {
@@ -193,7 +193,7 @@
     "size": "88×18",
     "sizing": "hug/hug",
     "layout": "column align center/center",
-    "padding": "0=none 0=none 0=none 0=none",
+    "padding": "0=PADDING/none 0=PADDING/none 0=PADDING/none 0=PADDING/none",
     "gap": "12=PADDING/12"
    },
    "Container/File name": {

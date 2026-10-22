@@ -1,7 +1,7 @@
 # Toast — 4008:623
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=4008-623
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Toast/Toast.figma.ts)
 
 ## Props
@@ -79,7 +79,7 @@
 - `toast-footer/Button` instance: Button › Size=md, Style=secondary, Type=text, State=default, Icon position=none → Button › Size=md, Style=destructive, Type=text, State=default, Icon position=none
 - `toast-footer/Button` props: Badge label="1", Keyboard shortcuts=true, Swap icon=Icons / Close, Label="Action 2" → Badge label="1", Swap icon=Icons / Close, Keyboard shortcuts=true, Label="Delete"
 - `toast-footer/Button#2` absent
-- `toast-content/Text input` only here: size 288×32 · sizing fill/hug · minWidth 64=64px (4rem) (spacing-10) · layout column align min/min · padding 0 0 0 0 · gap 0 · instance Text input › Size=sm, State=default, Text filled=false · props Input text="Text", Show helper=false, Label text="Label", Placeholder text="", Show label=false
+- `toast-content/Text input` only here: size 288×32 · sizing fill/hug · layout column align min/min · padding 0 0 0 0 · gap 0 · instance Text input › Size=sm, State=default, Text filled=false · props Input text="Text", Show helper=false, Label text="Label", Placeholder text="", Show label=false
 - `Button` only here: size 24×24 · sizing fixed/fixed · size.vars ICONS/24 × ICONS/24 · layout row align center/center · padding 8=PADDING/8 8=PADDING/8 8=PADDING/8 8=PADDING/8 · gap 4=PADDING/4 · fill BACKGROUND/Secondary · radius 9999=full · instance Button › Size=sm, Style=secondary, Type=icon-only, State=default, Icon position=none · props Keyboard shortcuts=true, Label="Label", Badge label="1", Swap icon=Icons / Close
 - `Button/icon/icon` only here: fill CONTENT/Primary
 
@@ -105,11 +105,10 @@
 
 | Figma variable | CSS | status |
 |---|---|---|
-| ?124:3051 | – | unresolved id |
+| ?12112:34 | – | unresolved id |
 | 10 | `var(--radius-10)` | ok |
 | 12 | `var(--radius-md)` | ok |
 | 4 | `var(--radius-xs)` | ok |
-| 64px (4rem) (spacing-10) | `spacing-10` | external library variable |
 | BACKGROUND/Accent (Light) | `var(--color-bg-accent-light)` | ok |
 | BACKGROUND/Attention | `var(--color-bg-attention)` | ok |
 | BACKGROUND/Attention (Light) | `var(--color-bg-attention-light)` | ok |

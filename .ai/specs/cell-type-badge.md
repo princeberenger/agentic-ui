@@ -1,7 +1,7 @@
 # cell-type-badge — 771:1614
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=771-1614
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Table/TableBadgeCell.figma.ts)
 
 ## Props
@@ -87,26 +87,26 @@
 ### State=Loading, Alignment=Left
 
 - `Badge` absent
-- `table-skeleton-loading` only here: size 81×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=2
+- `table-skeleton-loading` only here: size 81×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=?12104:1047
 
 ### State=Loading, Alignment=Center
 
 - `(root)` layout: row align min/center → row align center/center
 - `Badge` absent
-- `table-skeleton-loading` only here: size 81×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=2
+- `table-skeleton-loading` only here: size 81×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=?12104:1047
 
 ### State=Loading, Alignment=Right
 
 - `(root)` layout: row align min/center → row align max/center
 - `Badge` absent
-- `table-skeleton-loading` only here: size 81×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=2
+- `table-skeleton-loading` only here: size 81×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=?12104:1047
 
 
 ## Tokens
 
 | Figma variable | CSS | status |
 |---|---|---|
-| 2 | – | no WEB code syntax |
+| ?12104:1047 | – | unresolved id |
 | 6 | `var(--radius-6)` | ok |
 | BACKGROUND/Primary | `var(--color-bg-primary)` | ok |
 | BACKGROUND/Secondary | `var(--color-bg-secondary)` | ok |
@@ -119,7 +119,7 @@
 | ICONS/48 | `var(--icon-48)` | ok |
 | ICONS/64 | `var(--icon-64)` | ok |
 | INPUT/Hover (Dark) | `var(--color-input-hover-dark)` | ok |
-| lg | – | no WEB code syntax |
+| lg | `var(--stroke-lg)` | ok |
 | none | – | no WEB code syntax |
 | PADDING/12 | `var(--space-12)` | ok |
 | PADDING/16 | `var(--space-16)` | ok |

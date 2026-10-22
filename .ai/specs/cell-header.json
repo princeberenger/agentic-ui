@@ -69,7 +69,7 @@
     "sizing": "hug/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "37×18",
@@ -112,7 +112,7 @@
     "sizing": "hug/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "37×18",
@@ -155,7 +155,7 @@
     "sizing": "hug/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "37×18",
@@ -208,7 +208,7 @@
     "sizing": "hug/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "37×18",
@@ -251,7 +251,7 @@
     "sizing": "hug/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "37×18",
@@ -294,7 +294,7 @@
     "sizing": "hug/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "37×18",
@@ -330,13 +330,13 @@
     "sizing": "fill/hug",
     "layout": "row align min/center",
     "padding": "0 0 0 0",
-    "gap": "12=Core/150"
+    "gap": "12=PADDING/12"
    },
    "Container/table-skeleton-loading": {
     "size": "220×24",
     "sizing": "fixed/fixed",
     "fill": "BACKGROUND/Secondary",
-    "radius": "2=2"
+    "radius": "2=?12104:1047"
    }
   },
   "State=Loading, Alignment=Center": {
@@ -355,13 +355,13 @@
     "sizing": "fill/hug",
     "layout": "row align center/center",
     "padding": "0 0 0 0",
-    "gap": "12=Core/150"
+    "gap": "12=PADDING/12"
    },
    "Container/table-skeleton-loading": {
     "size": "220×24",
     "sizing": "fixed/fixed",
     "fill": "BACKGROUND/Secondary",
-    "radius": "2=2"
+    "radius": "2=?12104:1047"
    }
   },
   "State=Loading, Alignment=Right": {
@@ -380,13 +380,13 @@
     "sizing": "fill/hug",
     "layout": "row align max/center",
     "padding": "0 0 0 0",
-    "gap": "12=Core/150"
+    "gap": "12=PADDING/12"
    },
    "Container/table-skeleton-loading": {
     "size": "220×24",
     "sizing": "fixed/fixed",
     "fill": "BACKGROUND/Secondary",
-    "radius": "2=2"
+    "radius": "2=?12104:1047"
    }
   },
   "State=Hover, Alignment=Left": {
@@ -422,7 +422,7 @@
     "sizing": "hug/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "37×18",
@@ -465,7 +465,7 @@
     "sizing": "hug/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "37×18",
@@ -508,7 +508,7 @@
     "sizing": "hug/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "37×18",
@@ -562,7 +562,7 @@
     "sizing": "hug/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "37×18",
@@ -606,7 +606,7 @@
     "sizing": "hug/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "37×18",
@@ -650,7 +650,7 @@
     "sizing": "hug/fill",
     "layout": "column align center/min",
     "padding": "0 0 0 0",
-    "gap": "2=Core/25"
+    "gap": "2=PADDING/2"
    },
    "Container/Text Container/Main Text": {
     "size": "37×18",

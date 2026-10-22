@@ -1,7 +1,7 @@
 // Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM (page Table)
 //         cell-type-text 771:1082, cell-type-numeric 771:1179, cell-type-progress 4096:6790,
 //         cell-type-action 771:1556, cell-type-icon 789:1532, cell-type-badge 771:1614, cell-type-avatar 779:314
-// Extracted: 2026-10-17
+// Extracted: 2026-10-21
 // Tokens: color-bg-primary, color-bg-secondary, color-border-subtle, color-border-strong, color-input-hover-dark,
 //         color-content-primary, color-content-secondary, color-content-icon, color-content-disabled,
 //         color-content-on-primary, stroke-default, stroke-lg, radius-2, radius-full, space-2, space-8, space-12,
@@ -34,7 +34,7 @@ export interface TableCellProps extends Omit<TdHTMLAttributes<HTMLTableCellEleme
   /** Hover overlay (INPUT/Hover Dark). Off for cells whose control has its own hover. */
   hoverable?: boolean;
   /** 2px BORDER/Strong stroke when something inside has keyboard focus. */
-  focusRing?: boolean | 'thin';
+  focusRing?: boolean;
 }
 
 /** Shared cell: 64px row, 12/16 padding, bottom BORDER/Subtle stroke. */
@@ -47,7 +47,6 @@ export const TableCell = forwardRef<HTMLTableCellElement, TableCellProps>(functi
     styles[align],
     hoverable ? styles.hoverable : '',
     focusRing ? styles.focusable : '',
-    focusRing === 'thin' ? styles.thinFocus : '',
     className ?? '',
   ]
     .filter(Boolean)
@@ -220,7 +219,7 @@ export const TableProgressCell = forwardRef<HTMLTableCellElement, TableProgressC
   ref,
 ) {
   return (
-    <TableCell ref={ref} skeleton="progress" focusRing="thin" className={`${styles.progress} ${className ?? ''}`} {...rest}>
+    <TableCell ref={ref} skeleton="progress" className={`${styles.progress} ${className ?? ''}`} {...rest}>
       <span className={styles.bars}>
         <ProgressBars total={10} filled={filled} aria-label={typeof label === 'string' ? label : undefined} />
       </span>

@@ -1,6 +1,6 @@
 // Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=771-1444 (cell-type-editable-field)
-// Extracted: 2026-10-17
-// Tokens: color-content-icon, color-content-disabled, space-8, space-16, icon-16, icon-64
+// Extracted: 2026-10-21
+// Tokens: color-content-icon, color-content-disabled, space-8, space-16, icon-16, color-border-strong, stroke-lg, stroke-default
 
 'use client';
 

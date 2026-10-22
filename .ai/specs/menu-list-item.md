@@ -1,7 +1,7 @@
 # _Menu list item — 554:1372
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=554-1372
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Menu/MenuItem.figma.ts)
 
 ## Props
@@ -56,7 +56,7 @@
 - `Content` size: 160×34 → 160×28
 - `Content` sizing: fill/hug → fill/fixed
 - `Content` padding: 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 → 4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8
-- `Content` gap: 4=PADDING/4 → 8=8px (0_5rem) (spacing-03)
+- `Content` gap: 4=PADDING/4 → 8=PADDING/8
 - `Content` minWidth: – → 160
 - `Content` maxWidth: – → 288
 - `Content/Text overflow + Menu style` size: 136×18 → 144×15
@@ -65,7 +65,7 @@
 - `Content/Text overflow + Menu style/Text overflow` size: 101×18 → 105×15
 - `Content/Text overflow + Menu style/Text overflow` layout: row align min/min → row align min/center
 - `Content/Text overflow + Menu style/Text overflow/Spacer` size: 20×16 → 24×14
-- `Content/Text overflow + Menu style/Text overflow/Spacer` fill: – → Transparent
+- `Content/Text overflow + Menu style/Text overflow/Spacer` fill: – → TRANSPARENT/white/0
 - `Content/Text overflow + Menu style/Text overflow/wrapper` absent
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Menu item` absent
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Helper text` absent
@@ -83,7 +83,7 @@
 - `Content` gap: 4=PADDING/4 → 12=PADDING/12
 - `Content` fill: – → INPUT/Hover (Dark)@0.04
 - `Content/Text overflow + Menu style/Text overflow` layout: row align min/min → row align min/center
-- `Content/Text overflow + Menu style/Text overflow/Spacer` fill: – → Transparent
+- `Content/Text overflow + Menu style/Text overflow/Spacer` fill: – → TRANSPARENT/white/0
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Menu item` size: 101×18 → 136×18
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Menu item` sizing: fill/hug → fixed/hug
 - `Content/Icons / Checkmark` absent
@@ -104,7 +104,7 @@
 - `Content` size: 160×34 → 160×28
 - `Content` sizing: fill/hug → fill/fixed
 - `Content` padding: 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 → 4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8
-- `Content` gap: 4=PADDING/4 → 8=8px (0_5rem) (spacing-03)
+- `Content` gap: 4=PADDING/4 → 8=PADDING/8
 - `Content` minWidth: – → 160
 - `Content` maxWidth: – → 288
 - `Content/Text overflow + Menu style` size: 136×18 → 144×15
@@ -113,7 +113,7 @@
 - `Content/Text overflow + Menu style/Text overflow` size: 101×18 → 105×15
 - `Content/Text overflow + Menu style/Text overflow` layout: row align min/min → row align min/center
 - `Content/Text overflow + Menu style/Text overflow/Spacer` size: 20×16 → 24×15
-- `Content/Text overflow + Menu style/Text overflow/Spacer` fill: – → Transparent
+- `Content/Text overflow + Menu style/Text overflow/Spacer` fill: – → TRANSPARENT/white/0
 - `Content/Text overflow + Menu style/Text overflow/wrapper` absent
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Menu item` absent
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Helper text` absent
@@ -131,7 +131,7 @@
 - `Content/Text overflow + Menu style/Models` absent
 - `Content/Text overflow + Menu style/Text overflow` size: 101×18 → 97×18
 - `Content/Text overflow + Menu style/Text overflow` layout: row align min/min → row align min/max
-- `Content/Text overflow + Menu style/Text overflow/Spacer` fill: – → Transparent
+- `Content/Text overflow + Menu style/Text overflow/Spacer` fill: – → TRANSPARENT/white/0
 - `Content/Text overflow + Menu style/Text overflow/wrapper` size: 101×18 → 97×18
 - `Content/Text overflow + Menu style/Text overflow/wrapper` layout: column align min/min → column align center/min
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Menu item` size: 101×18 → 97×18
@@ -150,7 +150,7 @@
 - `Content` size: 160×34 → 160×28
 - `Content` sizing: fill/hug → fill/fixed
 - `Content` padding: 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 → 4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8
-- `Content` gap: 4=PADDING/4 → 8=8px (0_5rem) (spacing-03)
+- `Content` gap: 4=PADDING/4 → 8=PADDING/8
 - `Content` minWidth: – → 160
 - `Content` maxWidth: – → 288
 - `Content/Text overflow + Menu style` size: 136×18 → 144×15
@@ -159,7 +159,7 @@
 - `Content/Text overflow + Menu style/Text overflow` size: 101×18 → 105×15
 - `Content/Text overflow + Menu style/Text overflow` layout: row align min/min → row align min/center
 - `Content/Text overflow + Menu style/Text overflow/Spacer` size: 20×16 → 24×14
-- `Content/Text overflow + Menu style/Text overflow/Spacer` fill: – → Transparent
+- `Content/Text overflow + Menu style/Text overflow/Spacer` fill: – → TRANSPARENT/white/0
 - `Content/Text overflow + Menu style/Text overflow/wrapper` absent
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Menu item` absent
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Helper text` absent
@@ -178,7 +178,7 @@
 - `Content` size: 160×34 → 160×28
 - `Content` sizing: fill/hug → fill/fixed
 - `Content` padding: 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 → 4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8
-- `Content` gap: 4=PADDING/4 → 8=8px (0_5rem) (spacing-03)
+- `Content` gap: 4=PADDING/4 → 8=PADDING/8
 - `Content` minWidth: – → 160
 - `Content` maxWidth: – → 288
 - `Content/Text overflow + Menu style` size: 136×18 → 144×15
@@ -187,7 +187,7 @@
 - `Content/Text overflow + Menu style/Text overflow` size: 101×18 → 105×15
 - `Content/Text overflow + Menu style/Text overflow` layout: row align min/min → row align min/center
 - `Content/Text overflow + Menu style/Text overflow/Spacer` size: 20×16 → 24×14
-- `Content/Text overflow + Menu style/Text overflow/Spacer` fill: – → Transparent
+- `Content/Text overflow + Menu style/Text overflow/Spacer` fill: – → TRANSPARENT/white/0
 - `Content/Text overflow + Menu style/Text overflow/wrapper` absent
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Menu item` absent
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Helper text` absent
@@ -203,7 +203,7 @@
 - `Content` size: 160×34 → 160×28
 - `Content` sizing: fill/hug → fill/fixed
 - `Content` padding: 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 → 4=PADDING/4 8=PADDING/8 4=PADDING/4 8=PADDING/8
-- `Content` gap: 4=PADDING/4 → 8=8px (0_5rem) (spacing-03)
+- `Content` gap: 4=PADDING/4 → 8=PADDING/8
 - `Content` minWidth: – → 160
 - `Content` maxWidth: – → 288
 - `Content/Text overflow + Menu style` size: 136×18 → 144×15
@@ -225,7 +225,7 @@
 - `Content` size: 160×34 → 160×36
 - `Content` sizing: fill/hug → fill/fill
 - `Content` padding: 8=PADDING/8 12=PADDING/12 8=PADDING/8 12=PADDING/12 → 7 12=PADDING/12 7 12=PADDING/12
-- `Content` gap: 4=PADDING/4 → 8=8px (0_5rem) (spacing-03)
+- `Content` gap: 4=PADDING/4 → 8=PADDING/8
 - `Content/Text overflow + Menu style/Text overflow` layout: row align min/min → row align min/center
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Menu item` size: 101×18 → 136×18
 - `Content/Text overflow + Menu style/Text overflow/wrapper/Menu item` sizing: fill/hug → fixed/hug
@@ -257,7 +257,6 @@
 | Figma variable | CSS | status |
 |---|---|---|
 | 6 | `var(--radius-6)` | ok |
-| 8px (0_5rem) (spacing-03) | `spacing-03` | external library variable |
 | BACKGROUND/Primary | `var(--color-bg-primary)` | ok |
 | BACKGROUND/Secondary | `var(--color-bg-secondary)` | ok |
 | BORDER/Subtle | `var(--color-border-subtle)` | ok |
@@ -281,13 +280,12 @@
 | size/Small | `var(--text-small)` | ok |
 | size/Tiny | `var(--text-tiny)` | ok |
 | sm | `var(--stroke-sm)` | ok |
-| Transparent | – | external library variable |
+| TRANSPARENT/white/0 | `var(--color-transparent-white-0)` | ok |
 | weight/Medium | `var(--weight-medium)` | ok |
 | weight/Regular | `var(--weight-regular)` | ok |
 
 ## Styles
 
-- fill: Transparent/Transparent
 - text: SYSTEM/Body/sm/bold
 - text: SYSTEM/Body/sm/regular
 - text: SYSTEM/Body/xs/bold

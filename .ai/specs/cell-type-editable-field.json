@@ -34,7 +34,6 @@
    "Text input": {
     "size": "315×40",
     "sizing": "fill/hug",
-    "minWidth": "64=64px (4rem) (spacing-10)",
     "layout": "column align min/min",
     "padding": "0 0 0 0",
     "gap": "0",
@@ -65,7 +64,6 @@
    "Text input": {
     "size": "315×40",
     "sizing": "fill/hug",
-    "minWidth": "64=64px (4rem) (spacing-10)",
     "layout": "column align min/min",
     "padding": "0 0 0 0",
     "gap": "0",
@@ -98,7 +96,7 @@
     "size": "220×24",
     "sizing": "fixed/fixed",
     "fill": "BACKGROUND/Secondary",
-    "radius": "2=2"
+    "radius": "2=?12104:1047"
    }
   },
   "State=Hover": {
@@ -116,7 +114,6 @@
    "Text input": {
     "size": "315×40",
     "sizing": "fill/hug",
-    "minWidth": "64=64px (4rem) (spacing-10)",
     "layout": "column align min/min",
     "padding": "0 0 0 0",
     "gap": "0",
@@ -150,7 +147,6 @@
    "Text input": {
     "size": "299×40",
     "sizing": "fill/hug",
-    "minWidth": "64=64px (4rem) (spacing-10)",
     "layout": "column align min/min",
     "padding": "0 0 0 0",
     "gap": "0",
@@ -158,7 +154,7 @@
     "props": "Placeholder text=\"Placeholder\", Input text=\"$99.00\", Label text=\"Label\", Show helper=false, Show label=false"
    },
    "Text input/Text input": {
-    "stroke": "1=default inside BORDER/Strong"
+    "stroke": "2=lg inside BORDER/Strong"
    },
    "Secondary button": {
     "size": "40×40",

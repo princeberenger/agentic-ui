@@ -1,7 +1,7 @@
 # cell-type-numeric — 771:1179
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=771-1179
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Table/TableNumericCell.figma.ts)
 
 ## Props
@@ -29,7 +29,7 @@
 
 - **Alignment=Left, State=Default** `component` size 379×64 · sizing fixed/fixed · minWidth 124 · maxWidth 400 · layout row align min/center · padding 12=PADDING/12 16=PADDING/16 12=PADDING/12 16=PADDING/16 · gap 16=PADDING/16 · fill BACKGROUND/Primary · stroke 0/0/1/0 inside BORDER/Subtle
   - **Container** `frame` size 315×18 · sizing fill/hug · layout row align min/center · padding 0 0 0 0 · gap 12=PADDING/12
-    - **Container** `frame` size 53×18 · sizing hug/hug · layout row align min/center · padding 0 0 0 0 · gap 2=Core/25
+    - **Price Container** `frame` size 53×18 · sizing hug/hug · layout row align min/center · padding 0 0 0 0 · gap 2=PADDING/2
       - **Price** `text` size 53×18 · sizing hug/hug · text "$120.00" · font SYSTEM/Body/sm/regular · Geist 400 14/18 ls 0 · font.vars family/Body, size/Small, weight/Regular, line-height/Small Text, letter-spacing/normal · color CONTENT/Primary
     - **Badge** `instance` size 49×19 · sizing hug/fixed · layout row align min/center · padding 2=PADDING/2 8=PADDING/8 2=PADDING/2 8=PADDING/8 · gap 4=PADDING/4 · fill BADGE/bg/green · stroke 1=default inside BADGE/stroke/default@0.1 · radius 6=6 · instance Badge › Type=rounded, Size=sm, Color=green, Border=true, iconLeft=false, iconRight=false · props Icon=179:14029, Label="Label", hasCloseIcon=false · hidden true
   - **Edit Icon** `instance` size 16×16 · sizing fixed/fixed · size.vars ICONS/16 × ICONS/16 · instance Icons / Edit
@@ -39,13 +39,13 @@
 
 ### Alignment=Left, State=Disabled
 
-- `Container/Container/Price` color: CONTENT/Primary → CONTENT/Disabled
+- `Container/Price Container/Price` color: CONTENT/Primary → CONTENT/Disabled
 - `Edit Icon/icon-color` fill: CONTENT/Icon → CONTENT/Disabled
 
 ### Alignment=Right, State=Disabled
 
 - `Container` layout: row align min/center → row align max/center
-- `Container/Container/Price` color: CONTENT/Primary → CONTENT/Disabled
+- `Container/Price Container/Price` color: CONTENT/Primary → CONTENT/Disabled
 - `Edit Icon/icon-color` fill: CONTENT/Icon → CONTENT/Disabled
 
 ### Alignment=Right, State=Default
@@ -73,30 +73,30 @@
 ### Alignment=Left, State=Loading
 
 - `Container` absent
-- `Container/Container` absent
-- `Container/Container/Price` absent
+- `Container/Price Container` absent
+- `Container/Price Container/Price` absent
 - `Container/Badge` absent
 - `Edit Icon` absent
 - `Edit Icon/icon-color` absent
-- `table-skeleton-loading` only here: size 80×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=2
+- `table-skeleton-loading` only here: size 80×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=?12104:1047
 
 ### Alignment=Right, State=Loading
 
 - `(root)` layout: row align min/center → row align max/center
 - `Container` absent
-- `Container/Container` absent
-- `Container/Container/Price` absent
+- `Container/Price Container` absent
+- `Container/Price Container/Price` absent
 - `Container/Badge` absent
 - `Edit Icon` absent
 - `Edit Icon/icon-color` absent
-- `table-skeleton-loading` only here: size 80×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=2
+- `table-skeleton-loading` only here: size 80×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=?12104:1047
 
 
 ## Tokens
 
 | Figma variable | CSS | status |
 |---|---|---|
-| 2 | – | no WEB code syntax |
+| ?12104:1047 | – | unresolved id |
 | 6 | `var(--radius-6)` | ok |
 | BACKGROUND/Primary | `var(--color-bg-primary)` | ok |
 | BACKGROUND/Secondary | `var(--color-bg-secondary)` | ok |
@@ -106,7 +106,6 @@
 | BORDER/Subtle | `var(--color-border-subtle)` | ok |
 | CONTENT/Disabled | `var(--color-content-disabled)` | ok |
 | CONTENT/Primary | `var(--color-content-primary)` | ok |
-| Core/25 | – | external library variable |
 | default | `var(--stroke-default)` | ok |
 | family/Body | `var(--font-body)` | ok |
 | ICONS/16 | `var(--icon-16)` | ok |
@@ -114,7 +113,7 @@
 | ICONS/64 | `var(--icon-64)` | ok |
 | INPUT/Hover (Dark) | `var(--color-input-hover-dark)` | ok |
 | letter-spacing/normal | `var(--tracking-normal)` | ok |
-| lg | – | no WEB code syntax |
+| lg | `var(--stroke-lg)` | ok |
 | line-height/Small Text | `var(--leading-small)` | ok |
 | none | – | no WEB code syntax |
 | PADDING/12 | `var(--space-12)` | ok |

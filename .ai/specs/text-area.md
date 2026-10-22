@@ -1,7 +1,7 @@
 # Text area — 2003:3900
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=2003-3900
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Textarea/Textarea.figma.ts)
 
 ## Props
@@ -25,7 +25,7 @@
 
 ## Base tree — State=default
 
-- **State=default** `component` size 288×157 · sizing fixed/hug · minWidth 64=64px (4rem) (spacing-10) · layout column align min/min · padding 0 0 0 0 · gap 0=PADDING/none
+- **State=default** `component` size 288×157 · sizing fixed/hug · layout column align min/min · padding 0 0 0 0 · gap 0=PADDING/none
   - **Input label** `frame` size 288×26 · sizing fill/hug · layout row align min/min · padding 0 0 0 0 · gap 0
     - **Label margin** `frame` size 288×26 · sizing fill/hug · layout row align min/min · padding 0 0 8 0 · gap 8
       - **Label text** `text` size 110×18 · sizing hug/hug · text "Text area label" · font SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper · font.vars family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious · color CONTENT/Primary
@@ -75,7 +75,6 @@
 | Figma variable | CSS | status |
 |---|---|---|
 | 10 | `var(--radius-10)` | ok |
-| 64px (4rem) (spacing-10) | `spacing-10` | external library variable |
 | BACKGROUND/Attention (Light) | `var(--color-bg-attention-light)` | ok |
 | BACKGROUND/Primary | `var(--color-bg-primary)` | ok |
 | BACKGROUND/Secondary | `var(--color-bg-secondary)` | ok |

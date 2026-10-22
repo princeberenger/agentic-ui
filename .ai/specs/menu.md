@@ -1,7 +1,7 @@
 # Menu — 558:659
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=558-659
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Menu/Menu.figma.ts)
 
 ## Props
@@ -82,8 +82,8 @@
 - `_Menu list item#5/Content/Text overflow + Menu style/Keyboard shortcut` absent
 - `_Menu list item#5/Content/Text overflow + Menu style/Keyboard shortcut/Icon/icon` absent
 - `internal-border` size: 160×188 → 128×119
-- `[run 1]` only here: size 160×24 · sizing fixed/hug · minWidth 160=160px (10rem) (spacing-13) · maxWidth 288 · layout column align center/min · padding 0 0 0 0 · gap 0 · fill ?976143227da568d64d2f8a8d947204036a82c73b/142671:0 · instance _Menu list item › Size=Extra small, State=Enabled · props Indented=false, Bottom spacer=false, Top spacer=false, Option text="Menu item", Shortcuts or Trigger =false, Selected=false, Divider=false · hidden true
-- `[run 2]` only here: size 160×24 · sizing fixed/hug · minWidth 160=160px (10rem) (spacing-13) · maxWidth 288 · layout column align center/min · padding 0 0 0 0 · gap 0 · fill ?976143227da568d64d2f8a8d947204036a82c73b/142671:0 · instance _Menu list item › Size=Extra small, State=Enabled · props Indented=false, Bottom spacer=false, Top spacer=false, Option text="Menu item", Shortcuts or Trigger =false, Selected=false, Divider=false · hidden true
+- `[run 1]` only here: size 160×24 · sizing fixed/hug · minWidth 160 · maxWidth 288 · layout column align center/min · padding 0 0 0 0 · gap 0 · fill #f4f4f4 (no variable) · instance _Menu list item › Size=Extra small, State=Enabled · props Indented=false, Bottom spacer=false, Top spacer=false, Option text="Menu item", Shortcuts or Trigger =false, Selected=false, Divider=false · hidden true
+- `[run 2]` only here: size 160×24 · sizing fixed/hug · minWidth 160 · maxWidth 288 · layout column align center/min · padding 0 0 0 0 · gap 0 · fill #f4f4f4 (no variable) · instance _Menu list item › Size=Extra small, State=Enabled · props Indented=false, Bottom spacer=false, Top spacer=false, Option text="Menu item", Shortcuts or Trigger =false, Selected=false, Divider=false · hidden true
 
 ### Size=regular, Type=shortcuts
 
@@ -129,9 +129,7 @@
 
 | Figma variable | CSS | status |
 |---|---|---|
-| ?976143227da568d64d2f8a8d947204036a82c73b/142671:0 | – | unresolved id |
 | 10 | `var(--radius-10)` | ok |
-| 160px (10rem) (spacing-13) | `spacing-13` | external library variable |
 | 6 | `var(--radius-6)` | ok |
 | BACKGROUND/menu/background | `var(--color-bg-menu)` | ok |
 | BACKGROUND/Primary | `var(--color-bg-primary)` | ok |
@@ -164,7 +162,9 @@
 - `internal-border` fixed width 160, height 260 (1/4 variants)
 - `(root)` fixed width 128 (1/4 variants)
 - `blur` fixed width 128, height 48 (1/4 variants)
+- `[run 1]` color #f4f4f4 (1/4 variants)
 - `[run 1]` fixed width 160 (1/4 variants)
+- `[run 2]` color #f4f4f4 (1/4 variants)
 - `[run 2]` fixed width 160 (1/4 variants)
 - `internal-border` fixed width 128, height 119 (1/4 variants)
 - `(root)` fixed width 220 (1/4 variants)

@@ -1,7 +1,7 @@
 # cell-header — 789:320
 
 - Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=789-320
-- Extracted: 2026-10-17
+- Extracted: 2026-10-21
 - Code Connect: yes (app/components/Table/TableHeaderCell.figma.ts)
 
 ## Props
@@ -35,7 +35,7 @@
 - **State=Default, Alignment=Left** `component` size 379×40 · sizing fixed/fixed · minWidth 124 · maxWidth 400 · layout row align min/center · padding 12=PADDING/12 24=PADDING/24 12=PADDING/12 24=PADDING/24 · gap 16=PADDING/16 · fill BACKGROUND/Secondary
   - **Container** `frame` size 61×18 · sizing hug/hug · layout row align min/center · padding 0 0 0 0 · gap 8=PADDING/8
     - **Checkbox** `instance` size 24×24 · sizing hug/hug · size.vars ICONS/24 × ICONS/24 · layout row align min/min · padding 2=PADDING/2 2=PADDING/2 2=PADDING/2 2=PADDING/2 · gap 0 · instance Checkbox › Type=stroke, State=default, Selected=false · hidden true
-    - **Text Container** `frame` size 37×18 · sizing hug/fill · layout column align center/min · padding 0 0 0 0 · gap 2=Core/25
+    - **Text Container** `frame` size 37×18 · sizing hug/fill · layout column align center/min · padding 0 0 0 0 · gap 2=PADDING/2
       - **Main Text** `text` size 37×18 · sizing hug/hug · text "Title" · font SYSTEM/Label/md/regular · Departure Mono 400 11/18 ls 0.3 upper · font.vars family/Labels, Links, size/Button, weight/Medium, line-height/Small Text, letter-spacing/spacious · color CONTENT/Secondary
     - **sort-icon** `instance` size 16×16 · sizing fixed/fixed · size.vars ICONS/16 × ICONS/16 · instance Icons / Arrows--vertical
       - ↳ icon color CONTENT/Secondary
@@ -84,13 +84,13 @@
 - `(root)` fill: BACKGROUND/Secondary → BACKGROUND/Primary
 - `Container` size: 61×18 → 347×24
 - `Container` sizing: hug/hug → fill/hug
-- `Container` gap: 8=PADDING/8 → 12=Core/150
+- `Container` gap: 8=PADDING/8 → 12=PADDING/12
 - `Container/Checkbox` absent
 - `Container/Text Container` absent
 - `Container/Text Container/Main Text` absent
 - `Container/sort-icon` absent
 - `Container/sort-icon/icon-color` absent
-- `Container/table-skeleton-loading` only here: size 220×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=2
+- `Container/table-skeleton-loading` only here: size 220×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=?12104:1047
 
 ### State=Loading, Alignment=Center
 
@@ -100,13 +100,13 @@
 - `Container` size: 61×18 → 347×24
 - `Container` sizing: hug/hug → fill/hug
 - `Container` layout: row align min/center → row align center/center
-- `Container` gap: 8=PADDING/8 → 12=Core/150
+- `Container` gap: 8=PADDING/8 → 12=PADDING/12
 - `Container/Checkbox` absent
 - `Container/Text Container` absent
 - `Container/Text Container/Main Text` absent
 - `Container/sort-icon` absent
 - `Container/sort-icon/icon-color` absent
-- `Container/table-skeleton-loading` only here: size 220×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=2
+- `Container/table-skeleton-loading` only here: size 220×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=?12104:1047
 
 ### State=Loading, Alignment=Right
 
@@ -116,13 +116,13 @@
 - `Container` size: 61×18 → 347×24
 - `Container` sizing: hug/hug → fill/hug
 - `Container` layout: row align min/center → row align max/center
-- `Container` gap: 8=PADDING/8 → 12=Core/150
+- `Container` gap: 8=PADDING/8 → 12=PADDING/12
 - `Container/Checkbox` absent
 - `Container/Text Container` absent
 - `Container/Text Container/Main Text` absent
 - `Container/sort-icon` absent
 - `Container/sort-icon/icon-color` absent
-- `Container/table-skeleton-loading` only here: size 220×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=2
+- `Container/table-skeleton-loading` only here: size 220×24 · sizing fixed/fixed · fill BACKGROUND/Secondary · radius 2=?12104:1047
 
 ### State=Hover, Alignment=Left
 
@@ -179,7 +179,7 @@
 
 | Figma variable | CSS | status |
 |---|---|---|
-| 2 | – | no WEB code syntax |
+| ?12104:1047 | – | unresolved id |
 | BACKGROUND/Primary | `var(--color-bg-primary)` | ok |
 | BACKGROUND/Secondary | `var(--color-bg-secondary)` | ok |
 | BORDER/Strong | `var(--color-border-strong)` | ok |
@@ -187,16 +187,14 @@
 | CONTENT/Disabled | `var(--color-content-disabled)` | ok |
 | CONTENT/Primary | `var(--color-content-primary)` | ok |
 | CONTENT/Secondary | `var(--color-content-secondary)` | ok |
-| Core/150 | – | external library variable |
-| Core/25 | – | external library variable |
 | default | `var(--stroke-default)` | ok |
 | family/Labels, Links | `var(--font-label)` | ok |
 | ICONS/16 | `var(--icon-16)` | ok |
 | ICONS/24 | `var(--icon-24)` | ok |
-| ICONS/40 | `var(--icon-40)` | ok |
 | INPUT/Hover (Dark) | `var(--color-input-hover-dark)` | ok |
+| INPUTS/Regular | `var(--input-regular)` | ok |
 | letter-spacing/spacious | `var(--tracking-spacious)` | ok |
-| lg | – | no WEB code syntax |
+| lg | `var(--stroke-lg)` | ok |
 | line-height/Small Text | `var(--leading-small)` | ok |
 | none | – | no WEB code syntax |
 | PADDING/12 | `var(--space-12)` | ok |
