@@ -1,10 +1,10 @@
 // Source: https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=338-6162
 //         https://www.figma.com/design/Dqy0QA70ThT4iZXNgJljkG/AGENTIC-DESIGN-SYSTEM?node-id=338-6250 (_Search base)
-// Extracted: 2026-10-17
+// Extracted: 2026-10-22
 // Tokens: color-bg-primary, color-bg-secondary, color-bg-tertiary, color-border-subtle, color-input-hover-dark,
 //         color-content-primary, color-content-secondary, color-content-icon, color-content-disabled, color-input-selected,
 //         input-regular, input-small, radius-md, radius-10, radius-xs, stroke-sm, stroke-default, space-2, space-8,
-//         space-12, icon-14, icon-16, icon-20, icon-24, font-body, font-label, text-small, leading-small, text-button,
+//         icon-14, icon-16, icon-20, icon-24, font-body, font-label, text-small, leading-small, text-button,
 //         text-super-tiny, weight-regular, tracking-spacious, duration-hover
 
 'use client';
@@ -22,7 +22,7 @@ export type SearchProps = {
   collapsible?: boolean;
   /** Placeholder state while results load (Figma `State=skeleton`). */
   loading?: boolean;
-  /** Shortcut hint shown while the field is empty and unfocused (Figma `shortcut`, e.g. "⌘S"). Display only. */
+  /** Shortcut hint shown while the field is empty and unfocused (Figma `shortcut`, e.g. "⌘S"). Display only: the app binds the key. */
   shortcut?: string;
   /** Called with an empty value when the clear button is pressed. */
   onClear?: () => void;

@@ -268,14 +268,16 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [ ] Hover : le calque `INPUT/Hover (Dark)` est appliqué avec une opacité de calque de 4 % en plus de l'alpha de la variable.
 
 ### Search — 338:6162, _Search base — 338:6250
-- [ ] lg utilise les icônes `Search` et `Close` d'une librairie distante (avec un fond blanc), sm les icônes locales.
-      La croix distante est plus petite. Le code utilise `Icons / Search` et `Icons / Close` partout.
-- [ ] Couleur de la loupe : lg `CONTENT/Icon`, sm `CONTENT/Secondary` (default), lg `CONTENT/Icon`, sm `CONTENT/Primary` (filled).
-- [ ] Rayon lg disabled : 10 au lieu de 12.
+- [x] lg utilise les icônes `Search` et `Close` d'une librairie distante (avec un fond blanc), sm les icônes locales.
+      La croix distante est plus petite. Décision AUI-25 : icônes locales partout, sans fond, croix lg à 10px.
+- [x] Couleur de la loupe : lg `CONTENT/Icon`, sm `CONTENT/Secondary` (default), lg `CONTENT/Icon`, sm `CONTENT/Primary` (filled).
+      Décision AUI-25 : `CONTENT/Icon` en default, `CONTENT/Primary` en filled, pour les deux tailles.
+- [x] Rayon lg disabled : 10 au lieu de 12. Décision AUI-25 : 12.
 - [ ] Anneau de focus (2px noir 12 %) en effet brut, pas en variable ni en effect style. Le code utilise `--color-input-selected`.
-- [ ] Cadre de la loupe sm : 30px au lieu de 32px.
-- [ ] Base Expanded=false : texte en style `body-short-01` et couleur brute `#150080` (masqués).
-- [ ] Le raccourci « ⌘S » est un texte affiché : aucun comportement défini. Le code l'affiche seulement.
+- [x] Cadre de la loupe sm : 30px au lieu de 32px. Décision AUI-25 : 32px, carré de la hauteur du champ (croix comprise).
+- [x] Base Expanded=false : texte en style `body-short-01` et couleur brute `#150080` (masqués). Supprimé (AUI-25).
+- [x] Le raccourci « ⌘S » est un texte affiché : aucun comportement défini. Décision AUI-25 : décoratif, l'app branche
+      le raccourci.
 - [ ] Largeurs fixes (320 / 240px). Le code remplit le conteneur.
 
 ### MODAL — 4092:1641
