@@ -347,7 +347,6 @@ Quand une entrée est corrigée dans Figma, on met le code à jour et on coche l
 - [x] Changements voulus par berenger pendant AUI-30, alignés dans le code : contour focus 2 (`STROKE/lg`) dans dropdown,
       editable field et progress ; rayon du Price Container de dropdown 8 → 10 (`--radius-10`) ; cell-type-action en hug
       (12 + 40 + 12 = 64, la cellule garde sa hauteur).
-- [ ] Price Container de dropdown : rayon 10 en valeur brute, pas lié à `BORDER RADIUS/10`.
 - [ ] AvatarGroup et squelette multiple : chevauchement -8 sans variable (`--space-8` en négatif).
 
 ### Navigation
