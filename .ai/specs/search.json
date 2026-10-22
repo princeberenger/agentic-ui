@@ -53,6 +53,9 @@
     "gap": "0",
     "instance": "_Search base › Size=md, Expanded=true",
     "props": "Label=\"Search\""
+   },
+   "_Search base/Search icon/Icons / Search/icon": {
+    "fill": "CONTENT/Icon"
    }
   },
   "Size=sm, State=default, Expanded=true": {
@@ -76,7 +79,7 @@
     "props": "Label=\"Search\""
    },
    "_Search base/Search icon/Icons / Search/icon": {
-    "fill": "CONTENT/Secondary"
+    "fill": "CONTENT/Icon"
    },
    "_Search base/Hide text overflow/Text": {
     "color": "CONTENT/Secondary"
@@ -111,7 +114,7 @@
     "instance": "_Search base › Size=md, Expanded=true",
     "props": "Label=\"Search\""
    },
-   "_Search base/Search icon/Search/Vector": {
+   "_Search base/Search icon/Icons / Search/icon": {
     "fill": "CONTENT/Primary"
    }
   },
@@ -169,7 +172,7 @@
     "instance": "_Search base › Size=md, Expanded=true",
     "props": "Label=\"Typing\""
    },
-   "_Search base/Search icon/Search/Vector": {
+   "_Search base/Search icon/Icons / Search/icon": {
     "fill": "CONTENT/Primary"
    },
    "_Search base/Hide text overflow/Text": {
@@ -177,6 +180,9 @@
    },
    "_Search base/shortcut": {
     "hidden": "true"
+   },
+   "_Search base/Clear icon/Icons / Close/icon": {
+    "fill": "CONTENT/Primary"
    }
   },
   "Size=sm, State=focus, Expanded=true": {
@@ -224,11 +230,17 @@
     "instance": "_Search base › Size=md, Expanded=true",
     "props": "Label=\"Filled\""
    },
+   "_Search base/Search icon/Icons / Search/icon": {
+    "fill": "CONTENT/Primary"
+   },
    "_Search base/Hide text overflow/Text": {
     "color": "CONTENT/Primary"
    },
    "_Search base/shortcut": {
     "hidden": "true"
+   },
+   "_Search base/Clear icon/Icons / Close/icon": {
+    "fill": "CONTENT/Primary"
    }
   },
   "Size=sm, State=filled, Expanded=true": {
@@ -269,7 +281,7 @@
     "radius": "10=10"
    },
    "_Search base": {
-    "size": "240×30",
+    "size": "240×32",
     "sizing": "fill/fixed",
     "layout": "row align min/center",
     "padding": "0 0 0 0",
@@ -298,7 +310,7 @@
     "padding": "0 0 0 0",
     "gap": "0",
     "fill": "BACKGROUND/Primary",
-    "radius": "10=10"
+    "radius": "12=12"
    },
    "_Search base": {
     "size": "320×40",
@@ -309,7 +321,7 @@
     "instance": "_Search base › Size=md, Expanded=true",
     "props": "Label=\"Disabled\""
    },
-   "_Search base/Search icon/Search/Vector": {
+   "_Search base/Search icon/Icons / Search/icon": {
     "fill": "CONTENT/Disabled"
    },
    "_Search base/Hide text overflow/Text": {
@@ -331,7 +343,7 @@
     "radius": "10=10"
    },
    "_Search base": {
-    "size": "240×30",
+    "size": "240×32",
     "sizing": "fixed/fixed",
     "layout": "row align min/center",
     "padding": "0 0 0 0",
@@ -369,9 +381,6 @@
     "hidden": "true",
     "instance": "_Search base › Size=md, Expanded=true",
     "props": "Label=\"Search\""
-   },
-   "_Search base/Search icon/Search/Vector": {
-    "fill": "CONTENT/Icon"
    },
    "_Search base/Hide text overflow/Text": {
     "hidden": "true"
@@ -506,7 +515,7 @@
     "instance": "_Search base › Size=md, Expanded=true",
     "props": "Label=\"Typing\""
    },
-   "_Search base/Search icon/Search/Vector": {
+   "_Search base/Search icon/Icons / Search/icon": {
     "fill": "CONTENT/Primary"
    },
    "_Search base/Hide text overflow/Text": {
@@ -514,6 +523,9 @@
    },
    "_Search base/shortcut": {
     "hidden": "true"
+   },
+   "_Search base/Clear icon/Icons / Close/icon": {
+    "fill": "CONTENT/Primary"
    }
   }
  }
